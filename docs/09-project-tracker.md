@@ -43,13 +43,15 @@ Update this file at the end of every work session.
 - [x] Verified on a production build: unauthenticated/forged requests to every admin page redirect; an admin action replayed without a session changes nothing (control with session works); PENDING → PAID → PROCESSING → SHIPPED with shipped email; price change visible on home, warehouse and product pages immediately; fake PNG rejected, real one accepted. Smoke 105/105.
 
 ## Phase 4 — SEO, QA, deploy (Sun 22 Nov, until handover)
-- [ ] Metadata parity, canonical, sitemap, robots, JSON-LD, `/es` `/pt` redirects
-- [ ] Smoke script over all URLs in doc 05
-- [ ] Mobile pass at 390px against live site
-- [ ] Security headers, `typecheck` + `lint` + `build` clean
-- [ ] Deploy to VPS, seed, change admin password, backups
-- [ ] DNS cutover (MX untouched), test order end-to-end
-- [ ] Handover: admin credentials to client, short admin guide
+- [x] Metadata parity (titles/descriptions from the live pages), canonical on every page, `sitemap.xml` (108 URLs), `robots.txt`, JSON-LD Product + Organization, `/es` `/pt` 302
+- [x] Smoke script (`npm run smoke`): 107/107 on the production build
+- [~] Mobile pass: home checked at mobile width (headless Chrome can't go below 512 px here). Still to do on a real phone / DevTools at 390 px: product, cart, checkout
+- [x] Security headers (nosniff, DENY, referrer, permissions; HSTS via Caddy), `typecheck` + `lint` + `build` clean
+- [x] Backups: `npm run backup` / `scripts/backup.sh` (VACUUM INTO + uploads tar, 14 days); restore of the snapshot tested
+- [ ] Lighthouse mobile ≥ 90 (home, product): run in Chrome DevTools on the deployed site (could not run the Lighthouse CLI from the dev environment)
+- [!] Deploy to VPS, seed, change admin password (blocked: B3 VPS + DNS access)
+- [!] DNS cutover (MX untouched), test order end to end on production (blocked: B3; SMTP needs B2)
+- [x] Short admin guide (README "Admin guide"). [ ] Handover of admin credentials (at deploy)
 
 ## Blockers / needs from client
 | # | Item | Owner | Status |

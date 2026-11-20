@@ -46,6 +46,9 @@ async function main() {
     { path: "/login/", status: 200, contains: "Find your order" },
     { path: "/account/", status: 200, contains: "Find your order" },
     { path: "/order/LP-2611-AAAAAA/?t=forged", status: 200, contains: "could not be found" },
+    // SEO files (P6)
+    { path: "/sitemap.xml", status: 200, contains: "/peptide/retatrutide-10mg-rt10.html" },
+    { path: "/robots.txt", status: 200, contains: "Disallow: /admin" },
     // Admin is gated (P5)
     { path: "/admin/", status: 307, location: "/admin/login/" },
     { path: "/admin/orders/", status: 307, location: "/admin/login/" },

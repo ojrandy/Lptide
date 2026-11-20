@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# LPPEPTIDE storefront + admin
 
-## Getting Started
+Rebuild of https://lppeptide.com: a look-alike storefront (same URLs, copy, products and prices), order capture with
+email notifications, and an admin dashboard. One Next.js 16 app, one SQLite file, one uploads folder.
+Project docs live in [`docs/`](docs/) (start with `01-project-brief.md` and `09-project-tracker.md`).
 
-First, run the development server:
+## Quick start (development)
+
+Needs Node 24+ (uses the built-in `node:sqlite`).
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm ci
+cp .env.example .env.local          # set AUTH_SECRET (openssl rand -base64 48); SMTP can stay empty in dev
+npm run db:migrate
+npm run db:seed                     # imports _capture/ (idempotent). Set ADMIN_EMAIL/ADMIN_PASSWORD first to create the admin
+npm run assets:fetch                # product images + COA files from the live site (only while it is still online)
+npm run dev                         # http://localhost:3000 (store), /admin (dashboard)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Without SMTP settings, emails are saved as `.eml` files in `data/mail/` so you can open them in any mail client.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Script | What it does |
+|---|---|
+| `dev` / `build` / `start` | Next.js. **Run `db:migrate` before `build`**: pages are prerendered from the database. |
+| `typecheck` / `lint` | Must pass before a task is done (with `build`). |
+| `db:generate` / `db:migrate` | Drizzle migrations (`drizzle/`), applied with the node:sqlite migrator. |
+| `db:seed` | Imports `_capture/`. Re-running keeps admin edits to shipping rules, checkout rules and payment text. |
+| `admin:create -- <email> <password>` | Creates an admin or resets a password (12+ characters). |
+| `assets:fetch` | Downloads product images and COA files into `UPLOAD_DIR` (skips existing files). |
+| `smoke -- <url>` | URL-parity and safety checks (all product URLs, redirects, 404s, admin gate). |
+| `check:pricing` | Shipping / handling / minimum rules against the examples published on the live site. |
+| `backup` | Consistent DB snapshot + uploads archive into `BACKUP_DIR` (default `./backups`), 14 days kept. |
 
-## Learn More
+## Deploy (VPS)
 
-To learn more about Next.js, take a look at the following resources:
+Full steps, DNS cutover and launch checklist: [`docs/08-security-and-deployment.md`](docs/08-security-and-deployment.md).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+# first deploy, before the DNS cutover
+npm ci && npm run db:migrate && npm run db:seed && npm run assets:fetch && npm run build
+pm2 start npm --name lppeptide -- start && pm2 save
+# every later deploy
+git pull && npm ci && npm run db:migrate && npm run build && pm2 reload lppeptide
+# nightly backup (crontab): 15 3 * * * cd /srv/lppeptide/app && ./scripts/backup.sh
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Keep `data/`, `uploads/` and `backups/` outside the release directory (`DATABASE_PATH`, `UPLOAD_DIR`, `BACKUP_DIR`).
 
-## Deploy on Vercel
+## Admin guide (for the store team)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Sign in at **/admin**. Sessions last 8 hours.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Orders.** New orders arrive as *Pending payment*, and the store inbox gets an email for each one.
+1. When the payment arrives, open the order and choose **Mark as Paid**. Add the payment reference as a note.
+2. **Processing** while it is being packed.
+3. **Shipped**: choose the carrier and enter the tracking number. The customer gets an email with the tracking number.
+4. **Delivered** when it arrives. **Cancel** is possible until the order ships.
+
+The internal note is never shown to the customer. If an email failed, the timeline says "Email failed" and the **Emails**
+box lets you resend it. **Copy** copies the shipping address.
+
+**Products.** The products list shows each warehouse's sale price, list price (shown struck through) and stock. Edit them
+and press **Save**: the store updates at once. Untick *Sold here* to stop selling a product from a warehouse, and use
+**Visible/Hidden** to hide a product completely. Open a product to edit its texts and tags, upload images (JPG, PNG or
+WebP, up to 5 MB; the newest becomes the main image) or add a certificate (PDF, JPG or PNG), which then appears in the
+COA library. The page address (slug) can't be changed, so old links keep working.
+
+**Settings.** Announcement bar, payment instructions (shown to customers after they order), handling fee and order
+minimum, each warehouse's shipping fees and countries, contact details and the store inbox, the order of the
+"hot products" on the home page, and your password.
+
+## Notes
+
+- Styling is the live site's own CSS (`src/styles/live/`, ported verbatim). Our additions are in `src/styles/store-extra.css`.
+- Prices are always re-calculated on the server. The browser cart only holds product ids and quantities.
+- Research use only: product content is reproduced from the live site; do not add medical claims.
