@@ -19,6 +19,19 @@ export function allow(key: string, limit: number, windowMs: number): boolean {
   return true;
 }
 
+/** Number of failures recorded for `key` in the last `windowMs` (does not record anything). */
+export function failures(key: string, windowMs: number): number {
+  const now = Date.now();
+  const recent = (hits.get(key) ?? []).filter((t) => now - t < windowMs);
+  hits.set(key, recent);
+  return recent.length;
+}
+
+/** Records one failure for `key` (used where only failed attempts count, e.g. admin login). */
+export function recordFailure(key: string) {
+  hits.set(key, [...(hits.get(key) ?? []), Date.now()]);
+}
+
 /** Client IP as forwarded by Caddy/Cloudflare; "unknown" when absent (dev). */
 export async function clientIp(): Promise<string> {
   const h = await headers();

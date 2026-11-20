@@ -1,6 +1,6 @@
 # 07 — Admin Dashboard
 
-Path `/admin`. Desktop first, usable on a phone. Built with shadcn/ui (Table, Card, Badge, Button, Input, Select, Textarea, Dialog, Tabs, Sonner toasts). Every mutation is a **Server Action** that re-checks the session.
+Path `/admin`. Desktop first, usable on a phone. Built with small shadcn-style components in `src/components/admin/ui.tsx` (Tailwind only; see docs/09 decisions). Every mutation is a **Server Action** that re-checks the session.
 
 ## Auth
 - `/admin/login` takes email and password. The password hash is bcrypt (cost 12).
@@ -38,7 +38,9 @@ Path `/admin`. Desktop first, usable on a phone. Built with shadcn/ui (Table, Ca
 ### Settings `/admin/settings`
 - Announcement bar (on/off, title, text).
 - Payment instructions (markdown), shown on the order confirmation page and in the customer email.
-- Flat shipping fee per warehouse, and the warehouse active toggle.
+- Per-warehouse shipping rule (per item or per weight step, first/additional fee, country overrides), name, header line and active toggle.
+- Checkout rules: handling fee %, order minimum, payment note.
+- Home "factory hot products" order (SKUs).
 - Contacts: store inbox email, support email, phone, Telegram link and admin handles, WhatsApp.
 - Change own password.
 

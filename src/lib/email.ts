@@ -44,14 +44,15 @@ function transport(): Transporter | null {
   return transporter;
 }
 
-async function send(to: string, subject: string, text: string, html: string, replyTo?: string) {
+/** Sends (or saves as .eml without SMTP). Returns false on failure; never throws. */
+async function send(to: string, subject: string, text: string, html: string, replyTo?: string): Promise<boolean> {
   const from = process.env.MAIL_FROM ?? "LPPEPTIDE <lppeptideofficial@lppeptide.com>";
   const message = { from, to, subject, text, html, ...(replyTo ? { replyTo } : {}) };
   try {
     const t = transport();
     if (t) {
       await t.sendMail(message);
-      return;
+      return true;
     }
     const dev = nodemailer.createTransport({ streamTransport: true, buffer: true, newline: "unix" });
     const info = await dev.sendMail(message);
@@ -60,8 +61,10 @@ async function send(to: string, subject: string, text: string, html: string, rep
     const file = join(dir, `${Date.now()}-${subject.replace(/[^a-z0-9]+/gi, "-").slice(0, 60)}.eml`);
     writeFileSync(file, info.message as Buffer);
     console.info(`[email] SMTP not configured; saved ${file}`);
+    return true;
   } catch (err) {
     console.error(`[email] failed to send "${subject}" to ${to}`, err);
+    return false;
   }
 }
 
@@ -145,7 +148,7 @@ export async function sendNewOrderToStore(o: OrderEmailData, storeInbox: string,
   const title = `New order ${o.number} (${formatCents(o.totalCents)})`;
   const note = o.customerNote ? `<p style="margin:16px 0 0;font:14px Arial,sans-serif"><strong>Customer note:</strong> ${esc(o.customerNote)}</p>` : "";
   const intro = `From ${esc(o.name)} &lt;${esc(o.email)}&gt;. Waiting for payment. <a href="${esc(adminUrl)}">Open in admin</a>.`;
-  await send(
+  return send(
     storeInbox,
     title,
     textBody(title, `From ${o.name} <${o.email}>. Waiting for payment. Admin: ${adminUrl}`, o, o.customerNote ? `Customer note: ${o.customerNote}` : ""),
@@ -162,7 +165,7 @@ export async function sendOrderConfirmation(o: OrderEmailData, paymentInstructio
   const pay = paymentInstructions
     ? `<p style="margin:16px 0 4px;font:bold 14px Arial,sans-serif">Payment</p><p style="margin:0;font:14px/1.5 Arial,sans-serif;white-space:pre-line">${esc(paymentInstructions)}</p>`
     : "";
-  await send(
+  return send(
     o.email,
     title,
     textBody(title, intro, o, paymentInstructions ? `Payment:\n${paymentInstructions}` : ""),
@@ -176,7 +179,7 @@ export async function sendOrderShipped(o: OrderEmailData, contactEmail: string) 
   const title = `Your LPPEPTIDE order ${o.number} has shipped`;
   const tracking = `${o.carrier ? `${o.carrier} ` : ""}${o.trackingNumber ?? ""}`.trim();
   const intro = `Good news: your order is on its way.${tracking ? ` Tracking number: <strong>${esc(tracking)}</strong>.` : ""} Tracking updates may take several hours to appear after the carrier first scans the package.`;
-  await send(
+  return send(
     o.email,
     title,
     textBody(title, intro.replace(/<[^>]+>/g, ""), o),

@@ -34,12 +34,13 @@ Update this file at the end of every work session.
 - [x] Verified end to end on a production build: product → cart ($131 → blocked by minimum; qty 3 → $265) → checkout → order page, DB rows, both emails. Tampering refused (wrong warehouse/country, unknown product, qty 5000, client price ignored, out of stock, honeypot, bad email); 6th order in 10 min refused. Smoke 101/101, pricing 17/17.
 
 ## Phase 3 — Admin (Sat 21 Nov night → Sun 22 Nov morning)
-- [ ] Auth: login, JWT cookie, `proxy.ts`, `requireAdmin()`, rate limit
-- [ ] Overview KPIs
-- [ ] Orders list + filters, order detail, status transitions, tracking + shipped email
-- [ ] Products list with per-warehouse quick price/stock edit
-- [ ] Product edit (basics, image/COA upload, JSON content)
-- [ ] Settings (announcement, payment instructions, shipping fees, contacts, password)
+- [x] Auth: login (generic error, 5 failures/15 min per IP+email), JWT cookie (jose, 8h), `proxy.ts` gate + `requireAdmin()` in every page and action
+- [x] Overview KPIs + latest orders
+- [x] Orders list (filters, search, 25/page), order detail (snapshot items, copy address, timeline, internal note), allowed transitions only, SHIPPED requires carrier + tracking and sends the shipped email; email failures show on the timeline with Resend buttons
+- [x] Products list with per-warehouse quick price/list/stock edit and visible toggle
+- [x] Product edit (basics, slug read-only, image upload with signature check, COA upload into the COA library, Zod-validated JSON content)
+- [x] Settings (announcement, payment instructions, checkout rules, per-warehouse shipping rules + active, contacts/store inbox, home hot products, change password)
+- [x] Verified on a production build: unauthenticated/forged requests to every admin page redirect; an admin action replayed without a session changes nothing (control with session works); PENDING → PAID → PROCESSING → SHIPPED with shipped email; price change visible on home, warehouse and product pages immediately; fake PNG rejected, real one accepted. Smoke 105/105.
 
 ## Phase 4 — SEO, QA, deploy (Sun 22 Nov, until handover)
 - [ ] Metadata parity, canonical, sitemap, robots, JSON-LD, `/es` `/pt` redirects
@@ -90,6 +91,9 @@ Update this file at the end of every work session.
 | 2026-11-20 | Order transaction runs synchronously on the raw `node:sqlite` handle (`BEGIN IMMEDIATE`), re-pricing inside the transaction, so no other request can interleave. Emails are sent with `after()` (after the response) and never fail the order. |
 | 2026-11-20 | Without SMTP credentials, emails are written to `data/mail/*.eml` (dev and pre-handover). Configure `SMTP_*` in production. |
 | 2026-11-20 | Live text-replacement chain (product bundle) mirrored in the seed, incl. CJC-1295 wording and a final `Coze` → `LPPEPTIDE knowledge base` catch-all. |
+| 2026-11-20 | Admin UI: small in-house shadcn-style components (`src/components/admin/ui.tsx`, Tailwind only) instead of installing shadcn/Radix/sonner. Same look, no new packages. Admin has its own root layout (`src/app/(admin)`), full Tailwind with preflight. |
+| 2026-11-20 | Order and admin mutations write with synchronous SQL on the raw handle (transactions where several rows change); every action calls `requireAdmin()` and re-validates with Zod; storefront caches refresh with `updateTag`. Server Actions body limit raised to 6 MB for 5 MB uploads. |
+| 2026-11-20 | Email failures are recorded as "Email failed: …" events on the order (no schema change); the order page shows them and offers Resend. |
 
 ## v2 backlog
 Accounts + Google login · shipping rule engine · payment integrations · tracking automation · affiliate program · reviews/Q&A moderation · es/pt locales · support chat · structured content editor · Postgres if multi-instance

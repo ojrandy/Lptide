@@ -1,7 +1,9 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { sqlite } from "@/db";
+import { SESSION_COOKIE, verifySession } from "@/lib/auth";
 
-// URL parity with the live site (docs/05). Admin gating is added here in P5.
+// Admin: /admin/* (except /admin/login/) needs a valid session cookie; pages and actions re-check with requireAdmin().
+// URL parity with the live site (docs/05):
 //   /peptide/{slug} or /peptide/{slug}/ → 301 /peptide/{slug}.html   (category intros link without .html)
 //   /peptide/{slug}.html/              → 301 /peptide/{slug}.html
 //   /category/{a}-and-{b}/             → 301 /category/{a}-{b}/      (spelling used by live catalog links)
@@ -18,8 +20,17 @@ const exists = {
   ),
 };
 
-export function proxy(request: NextRequest) {
+export async function proxy(request: NextRequest) {
   const { pathname, search } = request.nextUrl;
+
+  if (pathname === "/admin" || pathname.startsWith("/admin/")) {
+    const isLogin = pathname.startsWith("/admin/login");
+    if (!isLogin && !(await verifySession(request.cookies.get(SESSION_COOKIE)?.value)))
+      return NextResponse.redirect(new URL("/admin/login/", request.url));
+    const res = NextResponse.next();
+    res.headers.set("X-Robots-Tag", "noindex, nofollow");
+    return res;
+  }
   const to = (path: string, status: 301 | 302) => NextResponse.redirect(new URL(path + search, request.url), status);
   // Rewriting to an unmatched path renders src/app/global-not-found.tsx with status 404.
   const notFound = () => NextResponse.rewrite(new URL("/__not-found__", request.url), { status: 404 });
@@ -49,5 +60,5 @@ export function proxy(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/peptide/:path*", "/category/:path*", "/warehouse/:path*", "/coa/:path+", "/es", "/es/:path*", "/pt", "/pt/:path*"],
+  matcher: ["/admin", "/admin/:path*", "/peptide/:path*", "/category/:path*", "/warehouse/:path*", "/coa/:path+", "/es", "/es/:path*", "/pt", "/pt/:path*"],
 };

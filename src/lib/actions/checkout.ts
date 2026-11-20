@@ -4,7 +4,7 @@ import { redirect } from "next/navigation";
 import { after } from "next/server";
 import { sendNewOrderToStore, sendOrderConfirmation } from "@/lib/email";
 import { orderPath } from "@/lib/order-token";
-import { createOrderSync, OrderError } from "@/lib/orders";
+import { createOrderSync, OrderError, recordEmailFailure } from "@/lib/orders";
 import { getSettings } from "@/lib/queries/settings";
 import { allow, clientIp } from "@/lib/rate-limit";
 import { cartInputSchema, checkoutSchema, type CheckoutFields } from "@/lib/validation";
@@ -93,8 +93,10 @@ export async function placeOrder(_prev: CheckoutState, form: FormData): Promise<
   };
   // Emails go out after the response; a mail failure never loses the order (doc 02).
   after(async () => {
-    await sendNewOrderToStore(data, settings.storeInbox || settings.contact.email, `${site}/admin/orders/${order.id}/`);
-    await sendOrderConfirmation(data, settings.paymentInstructions, settings.contact.email);
+    if (!(await sendNewOrderToStore(data, settings.storeInbox || settings.contact.email, `${site}/admin/orders/${order.id}/`)))
+      recordEmailFailure(order.id, "store notification");
+    if (!(await sendOrderConfirmation(data, settings.paymentInstructions, settings.contact.email)))
+      recordEmailFailure(order.id, "customer confirmation");
   });
 
   redirect(orderPath(order.number));

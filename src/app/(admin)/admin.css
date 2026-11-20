@@ -1,0 +1,14 @@
+/* Admin stylesheet: full Tailwind (with preflight), shadcn-like neutral UI with the brand navy as primary (doc 06). */
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --color-navy: #0b1e40;
+  --color-navy-btn: #071b3b;
+  --color-teal: #087a73;
+}
+
+body {
+  background: #f6f7f9;
+  color: #0f172a;
+}

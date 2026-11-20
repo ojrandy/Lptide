@@ -46,6 +46,11 @@ async function main() {
     { path: "/login/", status: 200, contains: "Find your order" },
     { path: "/account/", status: 200, contains: "Find your order" },
     { path: "/order/LP-2611-AAAAAA/?t=forged", status: 200, contains: "could not be found" },
+    // Admin is gated (P5)
+    { path: "/admin/", status: 307, location: "/admin/login/" },
+    { path: "/admin/orders/", status: 307, location: "/admin/login/" },
+    { path: "/admin/settings/", status: 307, location: "/admin/login/" },
+    { path: "/admin/login/", status: 200 },
     // Redirects and errors
     { path: "/catalog", status: 308, location: "/catalog/" },
     { path: "/peptide/retatrutide-10mg-rt10/", status: 301, location: "/peptide/retatrutide-10mg-rt10.html" },

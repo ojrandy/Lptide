@@ -192,3 +192,17 @@
 .lp-payment {
   margin-top: 14px;
 }
+
+/* COA library: certificates uploaded as PDF (no image preview). */
+.lp-coa-pdf {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 8px;
+  min-height: 240px;
+  color: #0b1e40;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  background: #f4f7fa;
+}

@@ -204,3 +204,12 @@ export function createOrderSync(cart: CartInput, fields: CheckoutFields, ip: str
 
 /** A problem the customer can fix (message is safe to show). */
 export class OrderError extends Error {}
+
+/** Notes a failed email on the order timeline ("Email failed: …") so an admin sees it and can resend. */
+export function recordEmailFailure(orderId: number, what: string) {
+  const row = sqlite.prepare("SELECT status FROM orders WHERE id = ?").get(orderId) as { status: string } | undefined;
+  if (!row) return;
+  sqlite
+    .prepare("INSERT INTO order_events (orderId, fromStatus, toStatus, note, createdAt) VALUES (?, ?, ?, ?, ?)")
+    .run(orderId, row.status, row.status, `Email failed: ${what}`, Date.now());
+}

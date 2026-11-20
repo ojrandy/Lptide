@@ -13,6 +13,8 @@ const nextConfig: NextConfig = {
   experimental: {
     // One styled 404 across the storefront and admin root layouts (src/app/global-not-found.tsx).
     globalNotFound: true,
+    // Admin uploads: images and COAs up to 5 MB (doc 08) plus multipart overhead. Actions validate size themselves.
+    serverActions: { bodySizeLimit: "6mb" },
   },
   // Storefront data: refreshed every 5 minutes, and at once when the admin saves (revalidateTag).
   cacheLife: {

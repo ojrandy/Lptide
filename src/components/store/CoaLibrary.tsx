@@ -1,6 +1,6 @@
 "use client";
 
-import { ClipboardCheck, FlaskConical, Search, Tag, X } from "lucide-react";
+import { ClipboardCheck, FileText, FlaskConical, Search, Tag, X } from "lucide-react";
 import Image from "next/image";
 import { useMemo, useRef, useState } from "react";
 import type { Settings } from "@/lib/settings-schema";
@@ -67,26 +67,43 @@ export function CoaLibrary({ certificates, initialQuery = "" }: { certificates: 
       </label>
       <section className="coa-grid" aria-label="COA certificate results">
         {shown.length === 0 && <p className="coa-empty">No certificates match “{q}”.</p>}
-        {shown.map((c) => (
+        {shown.map((c) => {
+          // Certificates uploaded as PDF open in a new tab; images open in the viewer.
+          const pdf = c.file.toLowerCase().endsWith(".pdf");
+          return (
           <article key={c.file} className="coa-card">
-            <button className="coa-preview" type="button" aria-label={`View certificate: ${c.report}`} onClick={() => preview(c)}>
-              <Image src={c.file} alt={c.title} width={480} height={640} sizes="(max-width: 760px) 50vw, 280px" />
-            </button>
+            {pdf ? (
+              <a className="coa-preview lp-coa-pdf" href={c.file} target="_blank" rel="noopener noreferrer" aria-label={`View certificate: ${c.report} (PDF)`}>
+                <FileText size={48} aria-hidden="true" />
+                <span>PDF certificate</span>
+              </a>
+            ) : (
+              <button className="coa-preview" type="button" aria-label={`View certificate: ${c.report}`} onClick={() => preview(c)}>
+                <Image src={c.file} alt={c.title} width={480} height={640} sizes="(max-width: 760px) 50vw, 280px" />
+              </button>
+            )}
             <div className="coa-card-body">
               <small className="coa-sku">{c.sku}</small>
               <h2>{c.report}</h2>
               <p className="coa-record-id">{c.recordId}</p>
               <div className="coa-actions">
-                <button type="button" onClick={() => preview(c)}>
-                  View certificate
-                </button>
+                {pdf ? (
+                  <a href={c.file} target="_blank" rel="noopener noreferrer">
+                    View certificate
+                  </a>
+                ) : (
+                  <button type="button" onClick={() => preview(c)}>
+                    View certificate
+                  </button>
+                )}
                 <a href={c.file} target="_blank" rel="noopener noreferrer">
                   Open file
                 </a>
               </div>
             </div>
           </article>
-        ))}
+          );
+        })}
       </section>
       <dialog
         ref={dialog}
