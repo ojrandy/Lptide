@@ -1,0 +1,62 @@
+/*
+ * Storefront additions that have no live equivalent (prefix: lp-). Colours and radii reuse values from
+ * the live CSS (#0b1e40 ink, #536374 muted, #dce3eb line, #138578 teal). Keep this file small.
+ */
+
+/* Warehouse picker shown by catalog/category "Add to Cart" when a product ships from several warehouses. */
+.lp-warehouse-picker > div {
+  padding: 32px;
+  position: relative;
+}
+.lp-warehouse-picker > div > button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.lp-warehouse-picker h2 {
+  margin: 0 0 8px;
+  font: 600 26px/1.2 Georgia, "Times New Roman", serif;
+}
+.lp-warehouse-picker p {
+  color: #536374;
+  margin: 0 0 16px;
+  font-size: 14px;
+}
+.lp-warehouse-picker-options {
+  display: grid;
+  gap: 8px;
+}
+.lp-warehouse-picker-options button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 12px 14px;
+  color: #0b1e40;
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+  background: #fbfdfd;
+  border: 1px solid #d6e2e9;
+  border-radius: 8px;
+}
+.lp-warehouse-picker-options button:hover:not(:disabled) {
+  background: #f0faf7;
+  border-color: #138578;
+}
+.lp-warehouse-picker-options button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+.lp-warehouse-picker-options span {
+  display: grid;
+  gap: 2px;
+}
+.lp-warehouse-picker-options span:last-child {
+  text-align: right;
+}
+.lp-warehouse-picker-options small {
+  color: #536374;
+  font-size: 12px;
+}

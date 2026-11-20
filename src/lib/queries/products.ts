@@ -1,25 +1,95 @@
-import { and, eq, inArray } from "drizzle-orm";
+import { and, asc, eq, inArray } from "drizzle-orm";
 import { cacheLife, cacheTag } from "next/cache";
 import { db } from "@/db";
-import { productPrices, products } from "@/db/schema";
+import { categories, productPrices, products } from "@/db/schema";
+import type { CatalogProduct, ProductCardData, WarehousePrice } from "@/lib/product-utils";
 import { getSettings, getWarehouses } from "./settings";
 
-/** What a product card needs, priced for one warehouse. */
-export type ProductCardData = {
-  id: number;
-  slug: string;
-  name: string;
-  image: string | null;
-  priceCents: number;
-  listCents: number;
-  inStock: boolean;
-};
+const productOrder = [asc(products.sort), asc(products.id)];
 
-export const productHref = (slug: string) => `/peptide/${slug}.html`;
+/** Every enabled product, in catalog order. Tag: "products". */
+export async function getCatalog(): Promise<CatalogProduct[]> {
+  "use cache";
+  cacheLife("catalog");
+  cacheTag("products");
+
+  const rows = await db
+    .select({
+      id: products.id,
+      slug: products.slug,
+      name: products.name,
+      shortName: products.shortName,
+      subtitle: products.subtitle,
+      description: products.description,
+      sku: products.sku,
+      specification: products.specification,
+      categoryId: products.categoryId,
+      images: products.images,
+      tags: products.tags,
+      rating: products.rating,
+      reviewCount: products.reviewCount,
+      coaUrl: products.coaUrl,
+      sort: products.sort,
+      updatedAt: products.updatedAt,
+    })
+    .from(products)
+    .where(eq(products.enabled, true))
+    .orderBy(...productOrder);
+
+  const prices = await db.select().from(productPrices);
+  const byProduct = new Map<number, WarehousePrice[]>();
+  for (const { productId, ...p } of prices) {
+    const list = byProduct.get(productId) ?? [];
+    list.push(p);
+    byProduct.set(productId, list);
+  }
+
+  return rows.map(({ images, updatedAt, ...r }) => ({
+    ...r,
+    image: images[0] ?? null,
+    updatedAt: updatedAt.getTime(),
+    prices: byProduct.get(r.id) ?? [],
+  }));
+}
+
+/** Categories in display order. Tag: "products". */
+export async function getCategories() {
+  "use cache";
+  cacheLife("catalog");
+  cacheTag("products");
+  return db.select().from(categories).orderBy(asc(categories.sort));
+}
+
+/** One enabled product with all its content and prices, or null. Tag: "products". */
+export async function getProduct(slug: string) {
+  "use cache";
+  cacheLife("catalog");
+  cacheTag("products");
+
+  const [row] = await db
+    .select({ product: products, category: categories })
+    .from(products)
+    .innerJoin(categories, eq(categories.id, products.categoryId))
+    .where(and(eq(products.slug, slug), eq(products.enabled, true)))
+    .limit(1);
+  if (!row) return null;
+
+  const prices = await db
+    .select({
+      warehouseCode: productPrices.warehouseCode,
+      priceCents: productPrices.priceCents,
+      listCents: productPrices.listCents,
+      inStock: productPrices.inStock,
+    })
+    .from(productPrices)
+    .where(eq(productPrices.productId, row.product.id));
+
+  return { ...row.product, category: row.category, prices };
+}
 
 /**
  * "Factory hot products by warehouse": the curated `hotProducts` order, keeping the first 10 that are
- * enabled and sold in each warehouse (same rule as the live home page). Tag: "products".
+ * enabled and sold in each warehouse (same rule as the live home page). Tags: "products", "settings".
  */
 export async function getHotProductsByWarehouse() {
   "use cache";

@@ -12,6 +12,9 @@ export type CartLine = { productId: number; qty: number };
 type CartState = {
   warehouseCode: string | null;
   lines: CartLine[];
+  /** Delivery country picked on a product page (ISO code); prefills checkout, re-checked on the server. */
+  country: string | null;
+  setCountry: (country: string | null) => void;
   /** Adds to the cart. Returns false (and changes nothing) if the cart holds another warehouse's items. */
   add: (productId: number, warehouseCode: string, qty?: number) => boolean;
   /** Empties the cart and starts it on `warehouseCode` with this product. */
@@ -29,6 +32,8 @@ export const useCart = create<CartState>()(
     (set, get) => ({
       warehouseCode: null,
       lines: [],
+      country: null,
+      setCountry: (country) => set({ country }),
       add: (productId, warehouseCode, qty = 1) => {
         const state = get();
         if (state.lines.length > 0 && state.warehouseCode !== warehouseCode) return false;

@@ -10,7 +10,8 @@ import { VideoGallery } from "@/components/store/home/VideoGallery";
 import { LandingHeader } from "@/components/store/LandingHeader";
 import { community, hero, popular, ruo, supplyModel, videos, warehouseDispatch } from "@/content/home";
 import { formatCents } from "@/lib/money";
-import { getHotProductsByWarehouse, productHref, type ProductCardData } from "@/lib/queries/products";
+import { productHref, type ProductCardData } from "@/lib/product-utils";
+import { getHotProductsByWarehouse } from "@/lib/queries/products";
 import { getSettings } from "@/lib/queries/settings";
 import "@/styles/live/landing.css";
 

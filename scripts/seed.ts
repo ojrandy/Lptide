@@ -105,15 +105,13 @@ const noticeIn = z.object({ title: z.string(), content: z.string(), enabled: z.b
 const siteContextIn = z.object({ supportEmail: z.string(), supportPhone: z.string(), supportUrl: z.string() });
 
 // ---------- content fixes (doc 01) ----------
-// The live frontend shows "Coze" as the LPPEPTIDE knowledge record; bake that in.
+// The live frontend rewrites "Coze" on display; bake in exactly what it shows (verified on live product pages).
 const COZE_FIXES: [RegExp, string][] = [
   [/Coze describes/g, "The LPPEPTIDE knowledge record describes"],
-  [/The Coze source has/g, "The LPPEPTIDE knowledge record has"],
-  [/Coze source:/g, "LPPEPTIDE knowledge record:"],
-  [/Coze source/g, "LPPEPTIDE knowledge record"], // glance label
-  [/Coze specs/g, "LPPEPTIDE knowledge record specs"], // glance label
-  [/Coze specification match/g, "LPPEPTIDE knowledge record match"],
+  [/Coze specification match/g, "LPPEPTIDE knowledge base specification match"],
   [/Coze preparation pattern/g, "LPPEPTIDE preparation pattern"],
+  [/Coze specs/g, "LPPEPTIDE reference specs"], // glance label
+  [/Coze source/g, "LPPEPTIDE knowledge source"], // "Coze source:", "The Coze source has", glance label
 ];
 
 /** Display-name typos and stray Chinese. Slugs are never touched. */

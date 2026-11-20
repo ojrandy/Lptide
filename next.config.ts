@@ -10,6 +10,10 @@ const securityHeaders = [
 const nextConfig: NextConfig = {
   cacheComponents: true,
   partialPrefetching: true,
+  experimental: {
+    // One styled 404 across the storefront and admin root layouts (src/app/global-not-found.tsx).
+    globalNotFound: true,
+  },
   // Storefront data: refreshed every 5 minutes, and at once when the admin saves (revalidateTag).
   cacheLife: {
     catalog: { stale: 300, revalidate: 300, expire: 86400 },

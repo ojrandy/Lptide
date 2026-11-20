@@ -15,11 +15,12 @@ Update this file at the end of every work session.
 ## Phase 1 — Storefront shell & catalog (Sat 21 Nov, morning)
 - [x] Announcement bar, sticky pill header (warehouse menu, search, account, cart badge), footer, mobile menu, search dialog
 - [x] Home: hero (2-scene crossfade), warehouse hot products, supply model, supply assurance, communities, RUO notice, videos. Checked at desktop and mobile widths.
-- [ ] Warehouse pages ×3 (grouped by category)
-- [ ] Product card component (stock badge, sale/list price, add to cart)
-- [ ] Product page: gallery, buy box (warehouse + country), spec table, tab bar, sections, reviews, Q&A
-- [ ] Catalog + category + best-sellers + search
-- [ ] Styled 404
+- [x] Warehouse pages ×3 (grouped by category, sale + struck list price, add to cart)
+- [x] Product cards: warehouse, catalog, category/best-seller variants; tag pills in live colours
+- [x] Product page: gallery, buy box (warehouse radios, `?warehouse=` lock, delivery-country combobox required before Add to Cart), glance table, tab bar, sections, reviews, Q&A, related products, mobile purchase bar, JSON-LD Product
+- [x] Catalog + category (intro markdown) + best-sellers + search (`/catalog/?q=`), client-side sort
+- [x] Styled 404 (`global-not-found.tsx`); unknown slugs get a real 404 status via `proxy.ts`
+- [x] `npm run smoke -- <url>`: 81/81 on the production build (all 60 product URLs, redirects, 404s)
 
 ## Phase 2 — Content pages & order flow (Sat 21 Nov, afternoon)
 - [ ] About, FAQ, Fees, Shipping (+ track order anchor), Terms, Affiliate (content)
@@ -55,6 +56,7 @@ Update this file at the end of every work session.
 | B3 | VPS + DNS (Cloudflare) access | Client | open |
 | B4 | Payment methods & instructions text | Client | open (placeholder text in v1) |
 | B5 | Shipping fee per warehouse | Client | open (flat fee setting in v1) |
+| B6 | Retatrutide 60mg has SKU "RETATRUTIDE" in the live data (likely should be RT60). Kept as captured; client to confirm, then fix in admin. | Client | open |
 
 ## Decisions log
 | Date | Decision |
@@ -65,7 +67,7 @@ Update this file at the end of every work session.
 | 2026-11-20 | DB driver: built-in `node:sqlite` + Drizzle `sqlite-proxy`. better-sqlite3's compiled addon is blocked by Windows Application Control. Verified working. |
 | 2026-11-20 | Prices are per warehouse with a 20% sale vs list price (captured in `warehouse-prices.txt`) |
 | 2026-11-20 | Seed: captured data is upserted. Admin-owned values that aren't in the capture (warehouse `shippingFee` = 0, `paymentInstructions` placeholder, `storeInbox`, first admin) are set on first insert only, so a re-seed never overwrites admin edits. |
-| 2026-11-20 | "Coze" wording replaced at seed time: "Coze describes" → "The LPPEPTIDE knowledge record describes"; "Coze source/specs/specification" → "LPPEPTIDE knowledge record…"; "Coze preparation pattern" → "LPPEPTIDE preparation pattern". The seed fails if any "Coze" remains. |
+| 2026-11-20 | "Coze" wording replaced at seed time: exactly as the live page displays them: "Coze describes" → "The LPPEPTIDE knowledge record describes"; "Coze source" → "LPPEPTIDE knowledge source"; "Coze specs" → "LPPEPTIDE reference specs"; "Coze specification match" → "LPPEPTIDE knowledge base specification match"; "Coze preparation pattern" → "LPPEPTIDE preparation pattern". The seed fails if any "Coze" remains. |
 | 2026-11-20 | Name fixes: AOD 9064 → 9604 (also in that product's text), Chinese suffixes dropped, full-width brackets → ASCII ("… (Glow)"). Slugs unchanged. |
 | 2026-11-20 | `products.coaUrl` holds the live `coaPath` (`/coa/rt10`, 24 products). Section blocks keep an optional `links` array (one block has COA links). Hidden reviews are skipped (none today). |
 | 2026-11-20 | **Styling = the live site's own CSS**, recovered from its served bundle into `src/styles/live/` (scope attributes stripped, otherwise verbatim), with the live class names in our markup. Fastest route to pixel parity. Never hand-edit the ported files; overrides go in a separate file. |
@@ -73,6 +75,10 @@ Update this file at the end of every work session.
 | 2026-11-20 | Cache Components is on (Next 16): data functions use `'use cache'` + `cacheLife('catalog')` (5 min) + `cacheTag('products' or 'settings')`; admin actions call `updateTag`. Pages prerender from the DB at build, so deploy runs **migrate before build** (doc 08 updated). |
 | 2026-11-20 | Home "hot products" is a curated, ordered list (`settings.hotProducts`, seeded from the live page); each warehouse shows the first 10 it sells. The live list isn't computed from sales either. |
 | 2026-11-20 | Header search submits GET `/catalog/?q=` (works without JS). Dev server falls back to :3001 when :3000 is busy. |
+| 2026-11-20 | Product page follows the **current** live page, which differs from docs/06: no "Buy Now" on the product page (catalog/category cards keep it), breadcrumb "Home > LPPEPTIDE > name", and opening from a warehouse page (`?warehouse=`) locks the order to that warehouse. A delivery country served by the chosen warehouse is required before Add to Cart. |
+| 2026-11-20 | Catalog/category "Add to Cart" picks the warehouse automatically (cart's warehouse, or the only in-stock one) and otherwise asks in a small picker (`lp-warehouse-picker`), matching the live "select a warehouse first" rule. Prices shown without a warehouse = lowest list price (as live). |
+| 2026-11-20 | Unknown product/category/warehouse slugs: `proxy.ts` (Node runtime) checks the DB and rewrites to the global 404 with status 404. Needed because partially prerendered pages would otherwise stream `notFound()` with status 200. Uses Next's documented `experimental.globalNotFound` (also required once the admin has its own root layout). |
+| 2026-11-20 | Category pages are served at the canonical slug; the `-and-` spelling used by live catalog links 301s to it. Descriptions are computed like live ("Browse N … including M COA-verified listings", COA-verified = tagged "COA"). |
 
 ## v2 backlog
 Accounts + Google login · shipping rule engine · payment integrations · tracking automation · affiliate program · reviews/Q&A moderation · es/pt locales · support chat · structured content editor · Postgres if multi-instance

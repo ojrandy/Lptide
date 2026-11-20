@@ -14,6 +14,9 @@
 @import "../../styles/live/announcement.css" layer(components);
 @import "../../styles/live/context-header.css" layer(components);
 
+/* Our own additions (no live equivalent), after the live CSS. */
+@import "../../styles/store-extra.css" layer(components);
+
 /*
  * Look-alike tokens from docs/06-design-system.md (sampled from the live CSS on 2026-11-20).
  * Each token becomes a utility: bg-mall-bg, text-pd-ink, border-mall-line, shadow-mall, rounded-pd, font-serif…

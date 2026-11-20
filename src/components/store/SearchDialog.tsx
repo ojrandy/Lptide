@@ -1,7 +1,12 @@
 "use client";
 
-import { Search } from "lucide-react";
+import { Search, X } from "lucide-react";
 import { useRef, useState } from "react";
+
+const COPY = {
+  landing: { title: "What are you looking for?", placeholder: "Product name, code or strength" },
+  context: { title: "Search the catalog", placeholder: "Search products" },
+};
 
 /**
  * Search icon button + modal. Submits a plain GET to /catalog/?q=… so it works without JS too.
@@ -11,33 +16,30 @@ export function SearchDialog({ variant, buttonClassName }: { variant: "landing" 
   const ref = useRef<HTMLDialogElement>(null);
   const [q, setQ] = useState("");
   const landing = variant === "landing";
+  const copy = COPY[variant];
+  const titleId = `search-title-${variant}`;
 
   return (
     <>
-      <button type="button" className={buttonClassName} aria-label="Search products" onClick={() => ref.current?.showModal()}>
+      <button type="button" className={buttonClassName} aria-label="Search" onClick={() => ref.current?.showModal()}>
         <Search size={20} aria-hidden="true" />
       </button>
       <dialog
         ref={ref}
         className={landing ? "search-panel" : "storefront-context-search"}
-        aria-labelledby={`search-title-${variant}`}
+        aria-labelledby={titleId}
         onClick={(e) => e.target === ref.current && ref.current.close()}
       >
         <div className={landing ? "search-panel-content" : undefined}>
-          <button
-            type="button"
-            className={landing ? "search-close" : undefined}
-            aria-label="Close search"
-            onClick={() => ref.current?.close()}
-          >
-            ×
+          <button type="button" className={landing ? "search-close" : undefined} aria-label="Close search" onClick={() => ref.current?.close()}>
+            {landing ? "×" : <X size={20} aria-hidden="true" />}
           </button>
-          <h2 id={`search-title-${variant}`}>What are you looking for?</h2>
+          <h2 id={titleId}>{copy.title}</h2>
           <form className={landing ? "search-form" : undefined} action="/catalog/" method="get" role="search">
             <input
               type="search"
               name="q"
-              placeholder="Product name, code or strength"
+              placeholder={copy.placeholder}
               required
               maxLength={200}
               value={q}
