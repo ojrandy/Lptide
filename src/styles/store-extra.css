@@ -85,3 +85,110 @@
   border: 1px solid #dce3eb;
   border-radius: 8px;
 }
+
+/* Checkout form and order page (no live equivalent: the live checkout requires an account). */
+.lp-checkout-card {
+  background: #fff;
+  border: 1px solid #d9e4ee;
+  border-radius: 10px;
+  padding: 22px;
+  display: grid;
+  gap: 14px;
+  align-content: start;
+}
+.lp-checkout-card h2 {
+  margin: 6px 0 0;
+  color: #06142b;
+  font: 600 20px/1.2 Georgia, "Times New Roman", serif;
+}
+.lp-field-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+@media (width <= 640px) {
+  .lp-field-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.lp-field {
+  display: grid;
+  gap: 5px;
+  min-width: 0;
+}
+.lp-field > span {
+  color: #40566f;
+  font-size: 12px;
+  font-weight: 800;
+}
+.lp-field > span b {
+  color: #b42318;
+}
+.lp-field input,
+.lp-field select,
+.lp-field textarea {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 40px;
+  padding: 8px 10px;
+  color: #14202a;
+  font: inherit;
+  font-size: 14px;
+  background: #fff;
+  border: 1px solid #cbd8e5;
+  border-radius: 7px;
+}
+.lp-field input:focus,
+.lp-field select:focus,
+.lp-field textarea:focus {
+  border-color: #138578;
+  outline: 3px solid #13857829;
+}
+.lp-field.has-error input,
+.lp-field.has-error select {
+  background: #fff7f6;
+  border-color: #b42318;
+}
+.lp-field small,
+.lp-form-error {
+  color: #b42318;
+  font-size: 12px;
+  font-weight: 700;
+}
+.summary-card .lp-field {
+  margin-bottom: 12px;
+}
+.lp-muted {
+  color: #526985;
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 0;
+}
+.lp-hp {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.lp-summary-lines {
+  list-style: none;
+  margin: 0 0 10px;
+  padding: 0;
+  display: grid;
+  gap: 6px;
+  font-size: 13px;
+}
+.lp-summary-lines li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+.lp-order-address,
+.lp-payment {
+  font-size: 14px;
+  line-height: 1.55;
+}
+.lp-payment {
+  margin-top: 14px;
+}

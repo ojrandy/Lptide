@@ -18,6 +18,7 @@ import {
   warehouses,
   type Section,
 } from "../src/db/schema";
+import { DEFAULT_SHIPPING_RULES } from "../src/lib/pricing";
 import { settingsSchema } from "../src/lib/settings-schema";
 
 const CAPTURE = "_capture";
@@ -105,13 +106,23 @@ const noticeIn = z.object({ title: z.string(), content: z.string(), enabled: z.b
 const siteContextIn = z.object({ supportEmail: z.string(), supportPhone: z.string(), supportUrl: z.string() });
 
 // ---------- content fixes (doc 01) ----------
-// The live frontend rewrites "Coze" on display; bake in exactly what it shows (verified on live product pages).
+// The live frontend rewrites some text on display; bake in exactly what it shows. This is the live
+// replacement chain (from its product-page bundle), most specific first, ending with a catch-all for "Coze".
 const COZE_FIXES: [RegExp, string][] = [
-  [/Coze describes/g, "The LPPEPTIDE knowledge record describes"],
-  [/Coze specification match/g, "LPPEPTIDE knowledge base specification match"],
-  [/Coze preparation pattern/g, "LPPEPTIDE preparation pattern"],
-  [/Coze specs/g, "LPPEPTIDE reference specs"], // glance label
-  [/Coze source/g, "LPPEPTIDE knowledge source"], // "Coze source:", "The Coze source has", glance label
+  [/\b5mg \+ 10mg x 10 vials\b/g, "10mg x 10 vials (CJC-1295 5mg + Ipamorelin 5mg)"],
+  [/\bCJC-1295 Without DAC \+ IPA 5mg \+ 10mg\b/g, "CJC-1295 Without DAC + Ipamorelin 10mg"],
+  [/\bCJC-1295 Without DAC \+ IPA\b/g, "CJC-1295 Without DAC + Ipamorelin"],
+  [/\bCoze describes\b/g, "The LPPEPTIDE knowledge record describes"],
+  [/\bCoze preparation pattern\b/g, "LPPEPTIDE preparation pattern"],
+  [/\bCoze product knowledge manual\b/g, "LPPEPTIDE product knowledge record"],
+  [/\bCoze source handling reference\b/g, "LPPEPTIDE handling reference"],
+  [/\bCoze source matching\b/g, "LPPEPTIDE knowledge mapping"],
+  [/\bmatched Coze source specification\b/g, "matched LPPEPTIDE reference specification"],
+  [/\bCoze source specification\b/g, "LPPEPTIDE reference specification"],
+  [/\bCoze source specs\b/g, "LPPEPTIDE reference specs"],
+  [/\bCoze source\b/g, "LPPEPTIDE knowledge source"],
+  [/\bCoze specs\b/g, "LPPEPTIDE reference specs"],
+  [/\bCoze\b/g, "LPPEPTIDE knowledge base"],
 ];
 
 /** Display-name typos and stray Chinese. Slugs are never touched. */
@@ -210,7 +221,7 @@ async function main() {
       )
       .onConflictDoUpdate({ target: categories.id, set: excludedSet(categories, ["id"]) });
 
-    // warehouses (shippingFee is admin-owned: only set on insert)
+    // warehouses (shippingRule is admin-owned: set only while empty; values from the live Shipping Policy)
     await db
       .insert(warehouses)
       .values(
@@ -219,20 +230,26 @@ async function main() {
           name: w.displayName,
           tagline: TAGLINES[w.warehouseCode] ?? "",
           countries: w.supportedCountries.split(",").map((c) => c.trim()).filter(Boolean),
-          shippingFee: 0,
+          shippingRule: DEFAULT_SHIPPING_RULES[w.warehouseCode] ?? null,
           active: w.active,
           sort: w.sort,
         })),
       )
-      .onConflictDoUpdate({ target: warehouses.code, set: excludedSet(warehouses, ["code", "shippingFee"]) });
+      .onConflictDoUpdate({
+        target: warehouses.code,
+        set: {
+          ...excludedSet(warehouses, ["code", "shippingRule"]),
+          shippingRule: sql.raw(`coalesce("warehouses"."shippingRule", excluded."shippingRule")`),
+        },
+      });
 
     // products
     for (const p of productRows) {
       const categoryId = categoryIdByName.get(p.categories[0]);
       if (categoryId === undefined) throw new Error(`Unknown category "${p.categories[0]}" for ${p.slug}`);
 
-      const name = fixName(p.name);
-      const shortName = fixName(p.shortName ?? "");
+      const name = fixText(fixName(p.name), []);
+      const shortName = fixText(fixName(p.shortName ?? ""), []);
       const renames: [string, string][] = [];
       if (name !== p.name) renames.push([p.name, name]);
       if (shortName !== (p.shortName ?? "")) renames.push([p.shortName ?? "", shortName]);
@@ -362,6 +379,15 @@ async function main() {
       .insert(settings)
       .values([
         { key: "paymentInstructions", value: PAYMENT_INSTRUCTIONS_PLACEHOLDER },
+        // Live cart: 5% handling fee, $199.00 minimum (shipping counts), crypto payments.
+        {
+          key: "checkout",
+          value: settingsSchema.shape.checkout.parse({
+            handlingPercent: 5,
+            minimumOrderCents: 19900,
+            paymentNote: "Encrypted checkout · Crypto (BTC/ETH/USDC) · Card & ACH coming soon",
+          }),
+        },
         { key: "storeInbox", value: process.env.STORE_INBOX || site.supportEmail },
       ])
       .onConflictDoNothing();

@@ -14,6 +14,19 @@ export type QaItem = { question: string; answer: string };
 export type Review = { authorName: string; rating: number; title: string; content: string; date: string };
 export type RatingBreakdownItem = { label: string; percent: number; count: number };
 
+/**
+ * Shipping fee rule of a warehouse (from the live Shipping Policy). per_item: first item + each additional item.
+ * per_weight: first step (e.g. 0.5 kg) + each additional step. `overrides` replace the rates for a destination country.
+ */
+export type ShippingRule = {
+  mode: "per_item" | "per_weight";
+  firstCents: number;
+  additionalCents: number;
+  /** per_weight only: weight step in grams (500 = 0.5 kg). */
+  stepGrams: number;
+  overrides: Record<string, { firstCents: number; additionalCents: number }>;
+};
+
 export const ORDER_STATUSES = [
   "PENDING_PAYMENT",
   "PAID",
@@ -47,7 +60,7 @@ export const warehouses = sqliteTable("warehouses", {
   name: text("name").notNull(),
   tagline: text("tagline").notNull().default(""),
   countries: text("countries", { mode: "json" }).$type<string[]>().notNull(),
-  shippingFee: integer("shippingFee").notNull().default(0), // cents
+  shippingRule: text("shippingRule", { mode: "json" }).$type<ShippingRule>(),
   active: integer("active", { mode: "boolean" }).notNull().default(true),
   sort: integer("sort").notNull().default(0),
 });
@@ -129,6 +142,7 @@ export const orders = sqliteTable(
     customerNote: text("customerNote").notNull().default(""),
     subtotalCents: integer("subtotalCents").notNull(),
     shippingCents: integer("shippingCents").notNull(),
+    handlingCents: integer("handlingCents").notNull().default(0),
     totalCents: integer("totalCents").notNull(),
     trackingNumber: text("trackingNumber"),
     carrier: text("carrier"),

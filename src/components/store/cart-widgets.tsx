@@ -1,7 +1,16 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useSyncExternalStore } from "react";
 import { cartCount, useCart } from "@/store/cart";
+
+/** True once the persisted cart has been loaded from localStorage (false on the server and first render). */
+export function useCartHydrated() {
+  return useSyncExternalStore(
+    (cb) => useCart.persist.onFinishHydration(cb),
+    () => useCart.persist.hasHydrated(),
+    () => false,
+  );
+}
 
 /** Loads the persisted cart from localStorage once, after hydration. Mounted once in the store layout. */
 export function CartHydrator() {

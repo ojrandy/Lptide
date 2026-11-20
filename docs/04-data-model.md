@@ -25,7 +25,7 @@ warehouses
   name          text              -- "Worldwide Warehouse"
   tagline       text              -- "Ships to all other countries worldwide"
   countries     text(json)        -- ["US","GB",...]
-  shippingFee   int (cents)       -- v1 flat fee, admin-editable
+  shippingRule  text(json)        -- {mode: per_item|per_weight, firstCents, additionalCents, stepGrams, overrides{country}}; live Shipping Policy rates, admin-editable
   active        bool
   sort          int
 
@@ -65,7 +65,7 @@ orders
   email, name, phone              text
   country, addressLine1, addressLine2, city, region, postalCode  text
   customerNote  text
-  subtotalCents, shippingCents, totalCents   int
+  subtotalCents, shippingCents, handlingCents, totalCents   int
   trackingNumber text null, carrier text null
   adminNote     text
   ip            text              -- abuse tracing only
@@ -93,6 +93,9 @@ settings                          -- key/value
   -- paymentInstructions (markdown)
   -- contact {email,phone,telegram,telegramAdmins[],whatsapp}
   -- storeInbox (email that receives order notifications)
+  -- checkout {handlingPercent: 5, minimumOrderCents: 19900, paymentNote}
+  -- hotProducts [productId…]  (home "hot products" order)
+  -- coaCertificates [{sku, report, recordId, title, file}]  (COA library)
 ```
 
 ## Order status machine
@@ -108,7 +111,7 @@ PENDING_PAYMENT ──► PAID ──► PROCESSING ──► SHIPPED ──► 
 1. **Re-price on the server.** Checkout ignores client prices. It loads `product_prices` for the cart's warehouse and rejects unavailable items.
 2. **Snapshot** name, SKU and prices into `order_items`. Later product edits never change past orders.
 3. **One warehouse per order.** The destination country must be in `warehouses.countries`.
-4. Totals: `subtotal = Σ line`, `total = subtotal + warehouse.shippingFee`.
+4. Totals (`src/lib/pricing.ts`, same rules as the live cart): `subtotal = Σ line`; `shipping` from the warehouse `shippingRule` (US/AU: first item + per extra item; Asia: per 0.5 kg step, US override; missing weight = 0.075 kg); `handling = ceil(handlingPercent% × (subtotal + shipping))` to whole dollars; `total = subtotal + shipping + handling`; order refused if `total < minimumOrderCents`. Checked by `npm run check:pricing`.
 
 ## Seed
 `npm run db:seed` reads `_capture/` and is idempotent (upsert):

@@ -13,7 +13,8 @@
     "db:seed": "tsx scripts/seed.ts",
     "admin:create": "tsx scripts/create-admin.ts",
     "assets:fetch": "tsx scripts/fetch-assets.ts",
-    "smoke": "tsx scripts/smoke.ts"
+    "smoke": "tsx scripts/smoke.ts",
+    "check:pricing": "tsx scripts/check-pricing.ts"
   },
   "dependencies": {
     "bcryptjs": "^3.0.3",

@@ -3,24 +3,37 @@
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useRef, type ReactNode } from "react";
+import { Suspense, useRef, type ReactNode } from "react";
 
-/** Link that marks itself as the current page (live: router-link-active + aria-current). */
-export function NavLink({
-  href,
-  className,
-  activeClassName = "router-link-active",
-  children,
-}: {
-  href: string;
-  className?: string;
-  activeClassName?: string;
-  children: ReactNode;
-}) {
+type NavLinkProps = { href: string; className?: string; activeClassName?: string; children: ReactNode };
+
+/**
+ * Link that marks itself as the current page (live: router-link-active + aria-current). Reading the pathname is
+ * URL data, so it sits behind <Suspense>; the fallback is the same link without the active state.
+ */
+export function NavLink(props: NavLinkProps) {
+  return (
+    <Suspense
+      fallback={
+        <Link href={props.href} className={props.className}>
+          {props.children}
+        </Link>
+      }
+    >
+      <ActiveLink {...props} />
+    </Suspense>
+  );
+}
+
+function ActiveLink({ href, className, activeClassName = "router-link-active", children }: NavLinkProps) {
   const pathname = usePathname();
   const active = pathname === href || pathname === href.replace(/\/$/, "");
   return (
-    <Link href={href} className={[className, active && activeClassName].filter(Boolean).join(" ") || undefined} aria-current={active ? "page" : undefined}>
+    <Link
+      href={href}
+      className={[className, active && activeClassName].filter(Boolean).join(" ") || undefined}
+      aria-current={active ? "page" : undefined}
+    >
       {children}
     </Link>
   );

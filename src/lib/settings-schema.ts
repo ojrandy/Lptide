@@ -22,6 +22,12 @@ export const settingsSchema = z.object({
   storeInbox: z.string().max(200),
   /** Ordered product ids for "Factory hot products by warehouse" (first 10 sold in each warehouse). */
   hotProducts: z.array(z.number().int()).max(50),
+  /** Cart and checkout rules (live: 5% handling fee, $199 minimum including shipping). */
+  checkout: z.object({
+    handlingPercent: z.number().int().min(0).max(50),
+    minimumOrderCents: z.number().int().min(0).max(10_000_000),
+    paymentNote: z.string().max(200),
+  }),
   /** COA library (/coa/): one entry per certificate file. */
   coaCertificates: z
     .array(
@@ -45,5 +51,6 @@ export const SETTING_DEFAULTS: Settings = {
   paymentInstructions: "",
   storeInbox: "",
   hotProducts: [],
+  checkout: { handlingPercent: 5, minimumOrderCents: 19900, paymentNote: "" },
   coaCertificates: [],
 };

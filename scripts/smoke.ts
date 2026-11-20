@@ -40,6 +40,12 @@ async function main() {
     { path: "/cost-per-dose-calculator/", status: 200, contains: "$0.90" },
     { path: "/vial-duration-calculator/", status: 200, contains: "47 days" },
     { path: "/product-lookup/", status: 200, contains: "Product name or abbreviation" },
+    // Order flow (P4)
+    { path: "/cart/", status: 200, contains: "Your cart" },
+    { path: "/checkout/", status: 200, contains: "Checkout" },
+    { path: "/login/", status: 200, contains: "Find your order" },
+    { path: "/account/", status: 200, contains: "Find your order" },
+    { path: "/order/LP-2611-AAAAAA/?t=forged", status: 200, contains: "could not be found" },
     // Redirects and errors
     { path: "/catalog", status: 308, location: "/catalog/" },
     { path: "/peptide/retatrutide-10mg-rt10/", status: 301, location: "/peptide/retatrutide-10mg-rt10.html" },
