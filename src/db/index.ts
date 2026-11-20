@@ -7,7 +7,8 @@ import * as schema from "./schema";
 const globalForDb = globalThis as unknown as { lppeptideSqlite?: DatabaseSync };
 
 function open(): DatabaseSync {
-  const file = resolve(process.env.DATABASE_PATH ?? "./data/lppeptide.db");
+  // Runtime data path (outside the build): opt out of build-time file tracing.
+  const file = resolve(/*turbopackIgnore: true*/ process.env.DATABASE_PATH ?? "./data/lppeptide.db");
   mkdirSync(dirname(file), { recursive: true });
   const conn = new DatabaseSync(file);
   conn.exec("PRAGMA journal_mode = WAL; PRAGMA foreign_keys = ON; PRAGMA busy_timeout = 5000;");

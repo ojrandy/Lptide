@@ -1,0 +1,51 @@
+/* Ported verbatim from the live site (lppeptide.com /_nuxt/CartPage.BmLo33bI.css, 2026-11-20). Scope attributes stripped. Do not hand-edit values: overrides go in src/styles/store.css. */
+.cart-item-main .cart-item-unavailable,.cart-item-main .cart-unavailable-message,.cart-unavailable-summary{color:#a12b1f}
+.minimum-order-status{color:#70410b;background:#fff9ed;border:1px solid #efc47c;border-radius:6px;gap:10px;margin-top:14px;padding:12px;display:grid}
+.minimum-order-status.is-satisfied{color:#155f49;background:#f1faf6;border-color:#91cbb5}
+.minimum-order-status-copy{gap:3px;display:grid}
+.minimum-order-status-copy strong{font-size:13px}
+.cart-recommendation-state,.cart-recommendations header p,.minimum-order-status-copy span{font-size:12px;line-height:1.45}
+.minimum-order-progress{background:#70410b24;border-radius:3px;height:6px;overflow:hidden}
+.minimum-order-progress span{border-radius:inherit;background:#d68b25;height:100%;transition:width .18s;display:block}
+.is-satisfied .minimum-order-progress span{background:#188060}
+.cart-recommendations{border-top:1px solid #dce4e7;gap:12px;margin-top:16px;padding-top:16px;display:grid}
+.cart-recommendations h2,.cart-recommendations p{margin:0}
+.cart-recommendations h2{color:#06142b;font-size:16px;line-height:1.3}
+.cart-recommendations header p{color:#5b6d78;margin-top:3px}
+.cart-recommendation-list{gap:8px;display:grid}
+.cart-recommendation-item{background:#fff;border:1px solid #dce4e7;border-radius:6px;grid-template-columns:48px minmax(0,1fr) auto;align-items:center;gap:10px;min-width:0;padding:9px;display:grid}
+.cart-recommendation-item img{-o-object-fit:contain;object-fit:contain;width:48px;height:48px}
+.cart-recommendation-item>div{gap:3px;min-width:0;display:grid}
+.cart-recommendation-item strong{color:#06142b;text-overflow:ellipsis;white-space:nowrap;font-size:12px;line-height:1.35;overflow:hidden}
+.cart-recommendation-item span{color:#007569;font-size:12px;font-weight:800}
+.cart-recommendation-item button{color:#00675d;min-height:34px;font:inherit;cursor:pointer;background:#fff;border:1px solid #007569;border-radius:5px;justify-content:center;align-items:center;gap:4px;padding:7px 10px;font-size:12px;font-weight:800;display:inline-flex}
+.cart-recommendation-item button:disabled{cursor:wait;opacity:.55}
+.cart-recommendation-state{color:#5b6d78}
+.cart-item-warehouse{color:#36566c;font-size:12px;font-weight:750;line-height:1.45}
+.cart-item-warehouse-picker{color:#36566c;flex-wrap:wrap;align-items:center;gap:6px;margin-top:7px;font-size:12px;font-weight:750;display:flex}
+.cart-item-warehouse-picker select{color:#06142b;min-width:168px;max-width:100%;min-height:32px;font:inherit;background:#fff;border:1px solid #b8cbd8;border-radius:5px;padding:4px 28px 4px 8px}
+.cart-item-warehouse-picker select:focus-visible{outline-offset:2px;outline:2px solid #007569}
+.cart-item-warehouse-picker select:disabled{cursor:wait;opacity:.65}
+.cart-item-warehouse-missing{color:#a12b1f}
+.cart-item-warehouse-loading{color:#526b7c}
+.cart-item-warehouse-error{color:#9a3412}
+.cart-item-warehouse-error button,.cart-summary-link,.cart-warehouse-notice button{color:#075f6d;cursor:pointer;font:inherit;text-underline-offset:2px;background:0 0;border:0;font-weight:800;text-decoration:underline}
+.cart-warehouse-choice-list{flex-wrap:wrap;gap:7px;margin-top:5px;display:flex}
+.cart-warehouse-choice-list button{color:#5b3c09;background:#fffdf6;border:1px solid #a98645;border-radius:6px;margin:0;padding:7px 10px;font-size:12px;text-decoration:none}
+.cart-warehouse-choice-list button.is-active{color:#fff;background:#075f6d;border-color:#075f6d}
+.cart-warehouse-choice-list button:disabled{cursor:wait;opacity:.65}
+.cart-item-warehouse-error button{padding:0 0 0 4px}
+.cart-warehouse-notice{color:#6d4b12;background:#fff8e8;border:1px solid #e4bd72;border-radius:8px;gap:4px;margin:0 0 14px;padding:12px 14px;font-size:13px;line-height:1.45;display:grid}
+.cart-warehouse-notice strong{color:#5b3c09}
+.cart-warehouse-notice span{color:#725d39}
+.cart-warehouse-notice button{justify-self:start;margin-top:2px;padding:0}
+.cart-summary-link{font-size:inherit;padding:0}
+.summary-promotion-reason{color:#526b7c;margin-top:-6px;font-size:12px;line-height:1.4;display:block}
+.cart-item-main .cart-unavailable-message,.cart-quantity-error,.cart-unavailable-summary{font-size:12px;font-weight:700;line-height:1.45}
+.cart-unavailable-summary{margin:14px 0 0}
+.quantity-control button:disabled,.quantity-control input:disabled{cursor:not-allowed;opacity:.55}
+.cart-quantity-error{color:#a12b1f;margin:6px 0 0}
+@media (width<=620px){.cart-item-warehouse-picker{flex-direction:column;align-items:stretch}
+.cart-item-warehouse-picker select{width:100%;min-height:44px;font-size:16px}
+}
+

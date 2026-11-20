@@ -1,0 +1,152 @@
+// Home page copy, verbatim from the live site (_capture/pages/home.md, _capture/site/supply-model.json,
+// /api/admin/public/pages/community, homepage-videos.json). Not admin-editable in v1.
+
+export const hero = {
+  title: ["Research Peptides", "Supply"],
+  subtitle: "A research catalog with clear product information and warehouse-specific availability.",
+  body: "Explore products, compare specifications and review available documentation. Find a supported delivery route before placing your order.",
+  primary: { label: "Browse all products", href: "/catalog/" },
+  secondary: { label: "Understand the Supply Model", href: "#supply-model" },
+  scenes: [
+    {
+      image: "/scenes/scene-production-vials.png",
+      alt: "Cleanroom operators handling rows of research vials on a production line",
+    },
+    { image: "/scenes/scene-lab-center.png", alt: "Research laboratory workspace with precision glassware" },
+  ],
+  cards: [
+    {
+      eyebrow: "TRANSPORT",
+      title: "Shipping & delivery",
+      body: "Browse the available warehouses and review supported destinations and shipping options for your order.",
+    },
+    {
+      eyebrow: "CUSTOMS",
+      title: "Customs clearance",
+      body: "For cross-border orders, contact our team about destination-specific customs requirements before ordering.",
+    },
+    {
+      eyebrow: "QUALITY",
+      title: "Quality & documentation",
+      body: "Review product specifications and available COA documents. Contact support for product or quality questions.",
+    },
+  ],
+};
+
+export const popular = {
+  title: "Factory hot products by warehouse",
+  body: "Browse current popular products, prices and availability for each active fulfillment warehouse.",
+};
+
+/** Sub-line under each warehouse shelf title on the home page. */
+export const warehouseDispatch: Record<string, string> = {
+  CNFC: "Asia dispatch",
+  USFC: "United States local dispatch",
+  AUSFC: "Australia local dispatch",
+};
+
+export const supplyModel = {
+  title: "Supplying Local Distributors Worldwide",
+  subtitle:
+    "Factory supply structured for repeat purchasing, cleaner local resale and more predictable margin control.",
+  cards: [
+    {
+      title: "Direct Factory Supply",
+      body: "Products move directly from factory production to shipment, with no extra reseller layer added in between.",
+      result: "Result: cleaner sourcing path and more stable batch consistency.",
+    },
+    {
+      title: "Kit-Based Packaging",
+      body: "Supply is organized in standard kits, matching upstream distribution logic rather than retail-style single-vial handling.",
+      bullets: [
+        "Stronger batch consistency",
+        "Cleaner stock planning",
+        "Lower handling cost",
+        "Smoother repeat orders",
+      ],
+    },
+    {
+      title: "Margin-Friendly Pricing",
+      body: "Pricing reflects production, packaging, logistics and risk handling, not inflated brand premiums or stacked reseller markup.",
+      result: "Result: more room for local pricing strategy and repeat business.",
+    },
+    {
+      title: "Built for Repeat Supply",
+      body: "Best suited for local stockists, repeat buyers and distributors who need predictable replenishment with less operational friction.",
+      result: "Best fit: local resale, recurring restocks and long-term supply coordination.",
+    },
+  ] as { title: string; body: string; result?: string; bullets?: string[] }[],
+  assuranceTitle: "Supply Assurance System",
+  assurances: [
+    {
+      icon: "truck",
+      eyebrow: "DISPATCH FLOW",
+      title: "Logistics & Shipping",
+      body: "Fast outbound handling built for repeat supply instead of one-off retail dispatch.",
+      bullets: [
+        "Dispatch uses the selected warehouse",
+        "Destination country is checked at checkout",
+        "Out-of-stock products cannot be ordered",
+      ],
+      result: "Outcome: easier expectation-setting for downstream buyers.",
+    },
+    {
+      icon: "shield",
+      eyebrow: "RISK HANDLING",
+      title: "Customs & After-Sales",
+      body: "Operational risk stays visible in the order and support workflow instead of being hidden from the buyer.",
+      bullets: [
+        "Country-specific delivery eligibility",
+        "Product and COA support remains available",
+        "Order context is retained for follow-up",
+      ],
+      result: "Outcome: less uncertainty when handling cross-border repeat orders.",
+    },
+    {
+      icon: "messages",
+      eyebrow: "COORDINATION",
+      title: "Communication & Support",
+      body: "Repeat purchasing only works when communication stays predictable.",
+      bullets: [
+        "Telegram and WhatsApp can be configured",
+        "Support links are controlled from the backend",
+        "Existing contact and account paths stay available",
+      ],
+      result: "Outcome: fewer blind spots between payment, dispatch and support.",
+    },
+  ] as const,
+};
+
+export const community = {
+  title: "Join Real Buyers In Our Active Communities",
+  body: "Choose a community channel for product, shipping, payment and order updates.",
+  stats: [
+    { value: "7000+", label: "Telegram members" },
+    { value: "Daily", label: "WhatsApp and Discord conversations" },
+    { value: "Real feedback", label: "Delivery and order feedback" },
+  ],
+  proof: "Community copy and links remain controlled from the backend.",
+  links: [
+    {
+      name: "Telegram",
+      body: "Product, shipping and order updates from the buyer community.",
+      href: "https://t.me/LP_Zhong",
+      action: "Join now",
+    },
+  ],
+};
+
+export const ruo = {
+  title: "For research use only",
+  body: "Products sold on this site are intended for research purposes only. They are not for human consumption or use in medical treatment.",
+};
+
+export const videos = {
+  title: "A closer look",
+  items: [
+    { src: "/videos/e7608f4066e748be95e7c5eaa763a815.mp4", title: "videos" },
+    { src: "/videos/3005fa1c0c194034b3ad24d7c4c46052.mp4", title: "videos" },
+    { src: "/videos/4574abc8d58d4f3a8eb9a5132e4b6b53.mp4", title: "videos" },
+    { src: "/videos/f47e9eb8437d4485a592cf57fae7d299.mp4", title: "videos" },
+  ],
+};

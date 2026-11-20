@@ -1,4 +1,18 @@
-@import "tailwindcss";
+/*
+ * Storefront stylesheet. Tailwind WITHOUT preflight: the live site had no CSS reset, and its CSS relies on
+ * browser defaults (list bullets, heading sizes, margins). The admin has its own root layout with full Tailwind.
+ */
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+/*
+ * Live-site CSS (ported verbatim, see src/styles/live/), in the `components` layer so Tailwind utilities
+ * can still override it. Page-specific live CSS is imported by the page that needs it.
+ */
+@import "../../styles/live/base.css" layer(components);
+@import "../../styles/live/announcement.css" layer(components);
+@import "../../styles/live/context-header.css" layer(components);
 
 /*
  * Look-alike tokens from docs/06-design-system.md (sampled from the live CSS on 2026-11-20).
@@ -49,10 +63,4 @@
      "In stock" / "OUT STOCK" badge colours, amber label-pill background. */
 }
 
-body {
-  background: var(--color-body-bg);
-  color: var(--color-body-ink);
-  font-family: var(--font-sans);
-  font-size: 16px;
-  line-height: 1.6;
-}
+/* Body colours, font and resets come from the live base.css. */

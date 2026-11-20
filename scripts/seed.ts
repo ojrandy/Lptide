@@ -18,6 +18,7 @@ import {
   warehouses,
   type Section,
 } from "../src/db/schema";
+import { settingsSchema } from "../src/lib/settings-schema";
 
 const CAPTURE = "_capture";
 const readJson = (path: string): unknown => JSON.parse(readFileSync(join(CAPTURE, path), "utf8"));
@@ -146,6 +147,10 @@ const TAGLINES: Record<string, string> = {
   USFC: "Ships to USA only",
   AUSFC: "Ships to Australia only",
 };
+
+// "Factory hot products by warehouse" order on the live home page (read from the live page, 2026-11-20).
+// BAC Water 3ml, BAC Water 10ml, RT10, RT20, RT30, TSM10, BPC-157 10mg, TR30, NAD+ 500mg, MOTS-C 10mg, GHK-CU 100mg.
+const HOT_PRODUCTS = [26049, 26050, 26001, 26002, 26003, 26010, 26021, 26007, 26015, 26017, 26028];
 
 // Placeholder until the client sends real instructions (tracker B4). The second sentence is live copy from /help/fees.
 const PAYMENT_INSTRUCTIONS_PLACEHOLDER =
@@ -318,20 +323,31 @@ async function main() {
 
     // settings: captured values are upserted, placeholders only inserted
     const telegramAdmins = [...notice.content.matchAll(/@\w+/g)].map((m) => m[0]);
+    const productIds = new Set(productRows.map((p) => p.id));
+    const missingHot = HOT_PRODUCTS.filter((id) => !productIds.has(id));
+    if (missingHot.length) throw new Error(`HOT_PRODUCTS has unknown ids: ${missingHot.join(", ")}`);
     await db
       .insert(settings)
       .values([
-        { key: "announcement", value: { enabled: notice.enabled, title: notice.title, text: notice.content } },
+        {
+          key: "announcement",
+          value: settingsSchema.shape.announcement.parse({
+            enabled: notice.enabled,
+            title: notice.title,
+            text: notice.content,
+          }),
+        },
         {
           key: "contact",
-          value: {
+          value: settingsSchema.shape.contact.parse({
             email: site.supportEmail,
             phone: site.supportPhone,
             telegram: site.supportUrl,
             telegramAdmins,
             whatsapp: "",
-          },
+          }),
         },
+        { key: "hotProducts", value: HOT_PRODUCTS },
       ])
       .onConflictDoUpdate({ target: settings.key, set: { value: sql.raw(`excluded."value"`) } });
     await db

@@ -39,8 +39,8 @@ STORE_INBOX=lppeptideofficial@lppeptide.com
 - Data paths outside the release dir: `/srv/lppeptide/data`, `/srv/lppeptide/uploads`.
 
 ## Deploy steps
-1. `git pull && npm ci && npm run build && npm run db:migrate && pm2 reload lppeptide`
-2. First deploy only: `npm run db:seed`, then sign in and change the admin password.
+1. `git pull && npm ci && npm run db:migrate && npm run build && pm2 reload lppeptide` (migrate **before** build: pages are prerendered from the DB at build time)
+2. First deploy only: `npm run db:migrate && npm run db:seed && npm run assets:fetch` **before** the first build and before the DNS cutover (the live site is the only source of the product images), then sign in and change the admin password.
 
 ## DNS cutover (do not break email)
 1. The live site sits behind Cloudflare. Get access to the Cloudflare/DNS account.

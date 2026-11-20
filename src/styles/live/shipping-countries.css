@@ -1,0 +1,29 @@
+/* Ported verbatim from the live site (lppeptide.com /_nuxt/useShippingCountries.D80elQK-.css, 2026-11-20). Scope attributes stripped. Do not hand-edit values: overrides go in src/styles/store.css. */
+.country-combobox{gap:6px;min-width:0;display:grid;position:relative}
+.country-combobox>label{color:#40566f;font-size:12px;font-weight:850}
+.country-combobox-control{position:relative}
+.country-combobox-control input{box-sizing:border-box;color:#14202a;width:100%;min-height:34px;font:inherit;background:#fff;border:1px solid #cbd8e5;border-radius:7px;padding:0 38px 0 32px;font-size:13px}
+.country-combobox-control input:focus{border-color:#138578;outline:3px solid #13857829}
+.country-combobox-control input.has-error{background:#fff7f6;border-color:#b42318}
+.country-combobox-error{color:#a12b23;font-size:12px;font-weight:700;line-height:1.35}
+.country-combobox-search,.country-combobox-toggle{position:absolute;top:50%;transform:translateY(-50%)}
+.country-combobox-search{color:#587087;pointer-events:none;left:10px}
+.country-combobox-toggle{color:#40566f;cursor:pointer;background:0 0;border:0;border-radius:5px;place-items:center;width:34px;height:30px;display:grid;right:2px}
+.country-combobox-toggle:focus-visible,.country-combobox-toggle:hover{color:#0f766e;background:#eef5f4;outline:none}
+.country-combobox-toggle svg{transition:transform .18s}
+.country-combobox:has([aria-expanded=true]) .country-combobox-toggle svg{transform:rotate(180deg)}
+.country-combobox-list{z-index:20;background:#fff;border:1px solid #b8cbc5;border-radius:7px;width:100%;max-height:240px;padding:4px;position:absolute;top:calc(100% + 5px);left:0;overflow-y:auto;box-shadow:0 6px 8px #06142b1f}
+.country-combobox-list button{color:#14202a;cursor:pointer;text-align:left;background:0 0;border:0;border-radius:5px;justify-content:space-between;align-items:center;gap:12px;width:100%;min-height:42px;padding:6px 9px;display:flex}
+.country-combobox-list button.active,.country-combobox-list button:hover{background:#e9f5f2}
+.country-combobox-list button.selected{color:#0b6f65}
+.country-combobox-list button:disabled{cursor:not-allowed;opacity:.62}
+.country-combobox-list button>span{gap:2px;min-width:0;display:grid}
+.country-combobox-list strong{text-overflow:ellipsis;white-space:nowrap;font-size:13px;font-weight:750;overflow:hidden}
+.country-combobox-list small{color:#587087;font-size:11px}
+.country-combobox-empty{color:#587087;margin:0;padding:12px 10px;font-size:12px}
+@media (width<=720px){.country-combobox-control input{border-radius:8px;min-height:44px;font-size:16px}
+.country-combobox-toggle{width:44px;height:44px}
+}
+@media (prefers-reduced-motion:reduce){.country-combobox-toggle svg{transition:none}
+}
+

@@ -7,14 +7,14 @@ Update this file at the end of every work session.
 - [x] Capture live site → `_capture/` (60 products, prices per warehouse, pages, tokens, screenshots)
 - [x] Docs 01–09, CLAUDE.md, prompt.md
 - [x] Scaffold Next.js 16 + install dependencies
-- [ ] **Download product images, COA files, logo, hero and deal images into `public/` / `uploads/`** (needs approval, see Blockers)
-- [x] Tokens + fonts in `globals.css`, root layout (badge/button colours still to sample, TODO in globals.css)
+- [x] Assets downloaded (B1 approved 2026-11-20): 77 product images → `uploads/products` (`npm run assets:fetch`, re-runnable), logos, hero scenes, favicon → `public/`, 4 home videos → `public/videos`. COA documents: live `/coa/{code}` pages, handled in P3.
+- [x] Tokens + fonts (`src/app/(store)/store.css`), root layout. Exact colours now come from the ported live CSS.
 - [x] Drizzle schema + first migration (`drizzle/0000_*.sql`, `npm run db:migrate`)
 - [x] Seed script (`_capture` → DB, content fixes applied): 60 products, 6 categories, 3 warehouses, 127 prices; idempotent (verified by table hashes). `admin:create` added.
 
 ## Phase 1 — Storefront shell & catalog (Sat 21 Nov, morning)
-- [ ] Announcement bar, sticky pill header (warehouse menu, search, account, cart badge), footer
-- [ ] Home: hero, warehouse hot products, supply model, supply assurance, communities, RUO notice, videos
+- [x] Announcement bar, sticky pill header (warehouse menu, search, account, cart badge), footer, mobile menu, search dialog
+- [x] Home: hero (2-scene crossfade), warehouse hot products, supply model, supply assurance, communities, RUO notice, videos. Checked at desktop and mobile widths.
 - [ ] Warehouse pages ×3 (grouped by category)
 - [ ] Product card component (stock badge, sale/list price, add to cart)
 - [ ] Product page: gallery, buy box (warehouse + country), spec table, tab bar, sections, reviews, Q&A
@@ -50,7 +50,7 @@ Update this file at the end of every work session.
 ## Blockers / needs from client
 | # | Item | Owner | Status |
 |---|---|---|---|
-| B1 | Approval to download images/COAs from live site | Developer | open |
+| B1 | Approval to download images/COAs from live site | Developer | done 2026-11-20 |
 | B2 | SMTP credentials for lppeptideofficial@lppeptide.com | Client | open |
 | B3 | VPS + DNS (Cloudflare) access | Client | open |
 | B4 | Payment methods & instructions text | Client | open (placeholder text in v1) |
@@ -68,6 +68,11 @@ Update this file at the end of every work session.
 | 2026-11-20 | "Coze" wording replaced at seed time: "Coze describes" → "The LPPEPTIDE knowledge record describes"; "Coze source/specs/specification" → "LPPEPTIDE knowledge record…"; "Coze preparation pattern" → "LPPEPTIDE preparation pattern". The seed fails if any "Coze" remains. |
 | 2026-11-20 | Name fixes: AOD 9064 → 9604 (also in that product's text), Chinese suffixes dropped, full-width brackets → ASCII ("… (Glow)"). Slugs unchanged. |
 | 2026-11-20 | `products.coaUrl` holds the live `coaPath` (`/coa/rt10`, 24 products). Section blocks keep an optional `links` array (one block has COA links). Hidden reviews are skipped (none today). |
+| 2026-11-20 | **Styling = the live site's own CSS**, recovered from its served bundle into `src/styles/live/` (scope attributes stripped, otherwise verbatim), with the live class names in our markup. Fastest route to pixel parity. Never hand-edit the ported files; overrides go in a separate file. |
+| 2026-11-20 | Storefront loads Tailwind **without preflight** (the live site had no reset; preflight removed bullets and margins it relies on). Storefront and admin get **separate root layouts**, so the admin can use shadcn + full Tailwind. |
+| 2026-11-20 | Cache Components is on (Next 16): data functions use `'use cache'` + `cacheLife('catalog')` (5 min) + `cacheTag('products' or 'settings')`; admin actions call `updateTag`. Pages prerender from the DB at build, so deploy runs **migrate before build** (doc 08 updated). |
+| 2026-11-20 | Home "hot products" is a curated, ordered list (`settings.hotProducts`, seeded from the live page); each warehouse shows the first 10 it sells. The live list isn't computed from sales either. |
+| 2026-11-20 | Header search submits GET `/catalog/?q=` (works without JS). Dev server falls back to :3001 when :3000 is busy. |
 
 ## v2 backlog
 Accounts + Google login · shipping rule engine · payment integrations · tracking automation · affiliate program · reviews/Q&A moderation · es/pt locales · support chat · structured content editor · Postgres if multi-instance

@@ -1,0 +1,27 @@
+/* Ported verbatim from the live site (lppeptide.com /_nuxt/AffiliateProgramPage.CHHyZaCl.css, 2026-11-20). Scope attributes stripped. Do not hand-edit values: overrides go in src/styles/store.css. */
+.affiliate-program-page{width:min(1180px,100% - 64px);margin:0 auto;padding:34px 0 68px}
+.program-intro,.program-unavailable{gap:14px;max-width:760px;padding:34px 0 30px;display:grid}
+.program-intro>span,.program-unavailable>span{color:#0f766e;text-transform:uppercase;font-size:12px;font-weight:850}
+.program-intro h1,.program-unavailable h1{color:#10202e;text-wrap:balance;max-width:18ch;margin:0;font-size:42px;line-height:1.08}
+.program-intro p,.program-unavailable p{color:#465e74;max-width:65ch;margin:0;font-size:16px;line-height:1.6}
+.program-intro a,.program-unavailable button{color:#fff;cursor:pointer;background:#0f766e;border:0;border-radius:6px;place-items:center;width:fit-content;min-height:40px;padding:0 16px;font-weight:800;display:inline-grid}
+.program-unavailable button:disabled{cursor:wait;opacity:.65}
+.program-facts{background:#fff;border:1px solid #d4e0e7;border-radius:8px;grid-template-columns:repeat(4,minmax(0,1fr));display:grid}
+.program-facts article{border-right:1px solid #dfe8ed;padding:20px}
+.program-facts article:last-child{border-right:0}
+.program-facts small,.program-facts span{color:#596f83;font-size:12px;display:block}
+.program-facts strong{color:#10202e;margin:9px 0;font-size:24px;display:block}
+.program-rules{border-top:1px solid #d8e4ea;grid-template-columns:repeat(2,minmax(0,1fr));gap:42px;margin-top:42px;padding-top:32px;display:grid}
+.program-rules h2{color:#10202e;margin:0;font-size:22px}
+.program-rules ol,.program-rules ul{color:#425a70;gap:14px;margin:18px 0 0;padding-left:20px;line-height:1.55;display:grid}
+@media (width<=760px){.affiliate-program-page{width:calc(100% - 36px)}
+.program-intro h1,.program-unavailable h1{font-size:31px}
+.program-facts{grid-template-columns:repeat(2,1fr)}
+.program-facts article:nth-child(2){border-right:0}
+.program-facts article{border-bottom:1px solid #dfe8ed}
+.program-rules{grid-template-columns:1fr;gap:26px}
+}
+@media (width<=460px){.program-facts{grid-template-columns:1fr}
+.program-facts article{border-right:0}
+}
+
