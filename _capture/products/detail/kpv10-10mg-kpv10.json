@@ -1,0 +1,367 @@
+{
+  "id": 26045,
+  "slug": "kpv10-10mg-kpv10",
+  "name": "KPV10 10mg",
+  "shortName": "KPV10",
+  "subtitle": "10mg x 10 vials",
+  "description": "Tetrapeptide Comprehensive Repair with Anti-Inflammatory KPV",
+  "category": "Repair & Healing",
+  "vendor": "LPPeptide",
+  "price": 60,
+  "oldPrice": 60,
+  "saveLabel": "",
+  "catalogCode": "KPV10",
+  "specification": "10mg x 10 vials",
+  "packageSize": "10 vials / box",
+  "catalogLabel": "",
+  "catalogHref": "/docs/yuan-peptide-catalog.pdf",
+  "amountMg": 10,
+  "weightKg": 0.075,
+  "rating": 4.9,
+  "reviewCount": 1607,
+  "answeredQuestionCount": 158,
+  "imageUrl": "/biz/files/products/2026/07/13/96a46cf819f94855962dc9f33ba1c0b5.jpg",
+  "cornerBadgeUrl": "",
+  "sales": 252,
+  "sort": 26045,
+  "enabled": true,
+  "externalSyncLocked": false,
+  "categories": [
+    "Repair & Healing"
+  ],
+  "stockAvailable": 100099,
+  "stockLocked": 45,
+  "procurementQuantity": 0,
+  "tags": [
+    "Healing"
+  ],
+  "imageUrls": [
+    "/biz/files/products/2026/07/13/96a46cf819f94855962dc9f33ba1c0b5.jpg"
+  ],
+  "glanceItems": [
+    {
+      "id": null,
+      "productId": null,
+      "label": "LPPeptide",
+      "value": "KPV10",
+      "linkUrl": null,
+      "sort": 1
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Specification",
+      "value": "10mg x 10 vials /box",
+      "linkUrl": null,
+      "sort": 2
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Category",
+      "value": "Repair & Healing",
+      "linkUrl": null,
+      "sort": 3
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Form",
+      "value": "Lyophilized powder",
+      "linkUrl": null,
+      "sort": 4
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Knowledge source",
+      "value": "KPV-10",
+      "linkUrl": null,
+      "sort": 5
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Research focus",
+      "value": "Repair & Healing",
+      "linkUrl": null,
+      "sort": 6
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Reconstitution",
+      "value": "A 10 mg vial reconstituted with bacteriostatic water yields about 3.33 mg/mL. This information is for research and educational use only",
+      "linkUrl": null,
+      "sort": 7
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Storage",
+      "value": "Lyophilized: freeze at −20 °C (−4 °F) or below; after reconstitution, refrigerate at 2–8 °C (35.6–46.4 °F) and use within 30 days; avoid freeze–thaw cycles.",
+      "linkUrl": null,
+      "sort": 8
+    }
+  ],
+  "detailSections": [
+    {
+      "id": 5479,
+      "sectionKey": "overview",
+      "label": "Overview",
+      "sort": 1,
+      "blocks": [
+        {
+          "id": 15331,
+          "heading": "What is KPV?",
+          "body": "KPV (Lysine–Proline–Valine) is a C‑terminal tripeptide fragment of α‑melanocyte‑stimulating hormone (α‑MSH) studied for its potent anti‑inflammatory properties without melanotropic side effects. Research demonstrates KPV reduces pro‑inflammatory cytokines in models of inflammatory bowel disease and systemic inflammation. This educational protocol presents a once‑daily subcutaneous approach using a practical dilution for precise insulin‑syringe measurements.",
+          "imageUrl": "",
+          "sort": 1,
+          "links": []
+        },
+        {
+          "id": 15332,
+          "heading": "Research context",
+          "body": "KPV is the C‑terminal tripeptide sequence (residues 11–13) of α‑melanocyte‑stimulating hormone (α‑MSH), retaining potent anti‑inflammatory activity without the hormone’s melanotropic effects. Preclinical studies demonstrate KPV reduces pro‑inflammatory cytokines (TNF‑α, IL‑6, IL‑1β) and modulates immune cell activity in models of inflammatory bowel disease, colitis, and systemic inflammation[3]. The peptide’s mechanism involves inhibition of nuclear factor kappa B (NF‑κB) signaling and modulation of inflammatory mediator release. Subcutaneous administration provides systemic delivery with rapid absorption and sustained anti‑inflammatory effects observed in daily dosing protocols.",
+          "imageUrl": "",
+          "sort": 2,
+          "links": []
+        },
+        {
+          "id": 15333,
+          "heading": "Commonly matched with",
+          "body": "Plan based on an 8–16 week daily protocol with gradual titration.\nPeptide Vials (KPV, 10 mg each):\n8 weeks ≈ 3 vials\n12 weeks ≈ 4 vials\n16 weeks ≈ 6 vials\nInsulin Syringes (U‑100):\nPer week: 7 syringes (1/day)\n8 weeks: 56 syringes\n12 weeks: 84 syringes\n16 weeks: 112 syringes\nBacteriostatic Water (10 mL bottles): Use ~3.0 mL per vial for reconstitution.\n8 weeks (3 vials): 9 mL → 1 × 10 mL bottle\n12 weeks (4 vials): 12 mL → 2 × 10 mL bottles\n16 weeks (6 vials): 18 mL → 2 × 10 mL bottles\nAlcohol Swabs: One for the vial stopper + one for the injection site each day.\nPer week: 14 swabs (2/day)\n8 weeks: 112 swabs → recommend 2 × 100‑count boxes\n12 weeks: 168 swabs → recommend 2 × 100‑count boxes\n16 weeks: 224 swabs → recommend 3 × 100‑count boxes",
+          "imageUrl": "",
+          "sort": 3,
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": 5480,
+      "sectionKey": "research",
+      "label": "Research",
+      "sort": 2,
+      "blocks": [
+        {
+          "id": 15334,
+          "heading": "Reference literature focus",
+          "body": "KPV is the C‑terminal tripeptide sequence (residues 11–13) of α‑melanocyte‑stimulating hormone (α‑MSH), retaining potent anti‑inflammatory activity without the hormone’s melanotropic effects. Preclinical studies demonstrate KPV reduces pro‑inflammatory cytokines (TNF‑α, IL‑6, IL‑1β) and modulates immune cell activity in models of inflammatory bowel disease, colitis, and systemic inflammation[3]. The peptide’s mechanism involves inhibition of nuclear factor kappa B (NF‑κB) signaling and modulation of inflammatory mediator release. Subcutaneous administration provides systemic delivery with rapid absorption and sustained anti‑inflammatory effects observed in daily dosing protocols.",
+          "imageUrl": "",
+          "sort": 1,
+          "links": []
+        },
+        {
+          "id": 15335,
+          "heading": "Important Notes",
+          "body": "Practical considerations for consistency and safety.\nUse new sterile insulin syringes for each administration; dispose in a sharps container immediately after use.\nRotate injection sites systematically (abdomen, thighs, upper arms) at least 1–2 inches apart to reduce local irritation and prevent lipohypertrophy[8].\nInject slowly; wait a few seconds before withdrawing the needle to prevent solution backflow.\nDocument daily dose, injection site, and any observations to maintain consistency and track tolerability.\nIf injection‑site reactions (redness, mild swelling) occur, apply a cool compress and monitor; persistent reactions warrant protocol review.",
+          "imageUrl": "",
+          "sort": 2,
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": 5481,
+      "sectionKey": "dosing",
+      "label": "Dosing & Protocol",
+      "sort": 3,
+      "blocks": [
+        {
+          "id": 15336,
+          "heading": "LPPeptide handling reference",
+          "body": "Start: 200 mcg daily; increase by ~100 mcg weekly as tolerated[4][5].\nTarget: 400–500 mcg daily by Weeks 4–8 for maintenance anti‑inflammatory effects.\nFrequency: Once per day (subcutaneous).\nCycle Length: 8–12 weeks; optional extension to 16 weeks under monitoring.\nTiming: Any consistent time; rotate injection sites systematically.",
+          "imageUrl": "",
+          "sort": 1,
+          "links": []
+        },
+        {
+          "id": 15337,
+          "heading": "Preparation",
+          "body": "Lyophilized: Store at −20 °C (−4 °F) or below in dry, dark conditions; protect from moisture and light[6][7].\nReconstituted: Refrigerate at 2–8 °C (35.6–46.4 °F); use within approximately 30 days[7].\nAllow vials to reach room temperature before opening to minimize condensation uptake.\nAvoid freeze–thaw cycles: Do not refreeze reconstituted peptide solutions; prepare aliquots if long‑term storage is needed",
+          "imageUrl": "",
+          "sort": 2,
+          "links": []
+        },
+        {
+          "id": 15338,
+          "heading": "Storage",
+          "body": "Reconstitution: 3.0 mL per 10 mg vial (~3.33 mg/mL) for accurate unit measurements.\nStorage: Lyophilized frozen at −20 °C (−4 °F) or below; reconstituted refrigerated at 2–8 °C (35.6–46.4 °F); avoid repeated freeze–thaw.",
+          "imageUrl": "",
+          "sort": 3,
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": 5482,
+      "sectionKey": "sideeffects",
+      "label": "Side Effects",
+      "sort": 4,
+      "blocks": [
+        {
+          "id": 15339,
+          "heading": "Anti‑inflammatory activity",
+          "body": "Reduces pro‑inflammatory cytokines and modulates immune responses in models of inflammatory bowel disease and systemic inflammation",
+          "imageUrl": "",
+          "sort": 1,
+          "links": []
+        },
+        {
+          "id": 15340,
+          "heading": "Oral and subcutaneous efficacy",
+          "body": "Multiple routes of administration show activity, with subcutaneous injection favored for systemic delivery and consistent bioavailability",
+          "imageUrl": "",
+          "sort": 2,
+          "links": []
+        },
+        {
+          "id": 15341,
+          "heading": "Wound healing support",
+          "body": "Preclinical data suggest KPV may support tissue repair and wound healing processes through inflammatory modulation",
+          "imageUrl": "",
+          "sort": 3,
+          "links": []
+        },
+        {
+          "id": 15342,
+          "heading": "Generally well tolerated",
+          "body": "Occasional mild injection‑site reactions (redness, slight swelling) may occur; systemic side effects are rarely reported in research protocols",
+          "imageUrl": "",
+          "sort": 4,
+          "links": []
+        },
+        {
+          "id": 15343,
+          "heading": "No melanotropic effects",
+          "body": "Unlike full α‑MSH, KPV does not affect melanocyte activity or skin pigmentation.",
+          "imageUrl": "",
+          "sort": 5,
+          "links": []
+        }
+      ]
+    }
+  ],
+  "qaItems": [],
+  "ratingBreakdown": [
+    {
+      "id": null,
+      "productId": 26045,
+      "label": "5+",
+      "percent": 94,
+      "sort": 1,
+      "count": 138
+    },
+    {
+      "id": null,
+      "productId": 26045,
+      "label": "4+",
+      "percent": 4,
+      "sort": 2,
+      "count": 6
+    },
+    {
+      "id": null,
+      "productId": 26045,
+      "label": "3+",
+      "percent": 2,
+      "sort": 3,
+      "count": 3
+    },
+    {
+      "id": null,
+      "productId": 26045,
+      "label": "2+",
+      "percent": 0,
+      "sort": 4,
+      "count": 0
+    },
+    {
+      "id": null,
+      "productId": 26045,
+      "label": "1+",
+      "percent": 0,
+      "sort": 5,
+      "count": 0
+    }
+  ],
+  "coaPath": null,
+  "reviews": [
+    {
+      "id": 79,
+      "productId": 26045,
+      "userId": 11937,
+      "orderId": 148529,
+      "authorName": "Clinton Childers",
+      "avatarText": "CC",
+      "rating": 5,
+      "title": "Fast service",
+      "content": "Great product",
+      "verifiedLabel": "Verified Buyer",
+      "hidden": false,
+      "reviewDate": "2026-11-13",
+      "sort": 0,
+      "createdAt": "2026-11-13T22:26:27",
+      "updatedAt": "2026-11-13T22:26:27"
+    },
+    {
+      "id": 62,
+      "productId": 26045,
+      "userId": 4043,
+      "orderId": 110477,
+      "authorName": "Stephanie Elisee",
+      "avatarText": "SE",
+      "rating": 5,
+      "title": "Love it",
+      "content": "Love it",
+      "verifiedLabel": "Verified Buyer",
+      "hidden": false,
+      "reviewDate": "2026-11-07",
+      "sort": 0,
+      "createdAt": "2026-11-07T21:38:10",
+      "updatedAt": "2026-11-07T21:38:10"
+    },
+    {
+      "id": 50,
+      "productId": 26045,
+      "userId": 13465,
+      "orderId": 141078,
+      "authorName": "Carly Fraser",
+      "avatarText": "CF",
+      "rating": 5,
+      "title": "Love KPV!",
+      "content": "I can’t live without my KPV! Fast shipping and great quality product!",
+      "verifiedLabel": "Verified Buyer",
+      "hidden": false,
+      "reviewDate": "2026-11-03",
+      "sort": 0,
+      "createdAt": "2026-11-03T08:48:20",
+      "updatedAt": "2026-11-03T08:48:20"
+    },
+    {
+      "id": 38,
+      "productId": 26045,
+      "userId": 8275,
+      "orderId": 127142,
+      "authorName": "Mehdi Millal",
+      "avatarText": "MM",
+      "rating": 5,
+      "title": "Good",
+      "content": "Top",
+      "verifiedLabel": "Verified Buyer",
+      "hidden": false,
+      "reviewDate": "2026-10-22",
+      "sort": 0,
+      "createdAt": "2026-10-22T13:54:14",
+      "updatedAt": "2026-10-22T13:54:14"
+    }
+  ],
+  "offers": [],
+  "purchaseOptions": [],
+  "sizes": [],
+  "warehouseAvailability": {
+    "CNFC": "IN_STOCK",
+    "USFC": "OUT_OF_STOCK",
+    "AUSFC": "IN_STOCK"
+  }
+}

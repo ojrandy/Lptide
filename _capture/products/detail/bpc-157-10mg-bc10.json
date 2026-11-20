@@ -1,0 +1,462 @@
+{
+  "id": 26021,
+  "slug": "bpc-157-10mg-bc10",
+  "name": "BPC 157 10mg",
+  "shortName": "BPC 157",
+  "subtitle": "10mg x 10 vials",
+  "description": "Anti-Inflammatory Activity\nPromotes Tissue Healing & Repair",
+  "category": "Repair & Healing",
+  "vendor": "LPPeptide",
+  "price": 69,
+  "oldPrice": 69,
+  "saveLabel": "",
+  "catalogCode": "BC10",
+  "specification": "10mg x 10 vials",
+  "packageSize": "10 vials / box",
+  "catalogLabel": "",
+  "catalogHref": "/docs/yuan-peptide-catalog.pdf",
+  "amountMg": 10,
+  "weightKg": 0.075,
+  "rating": 4.8,
+  "reviewCount": 3870,
+  "answeredQuestionCount": 230,
+  "imageUrl": "/biz/files/products/2026/07/13/5f70dbb1a8e745059cee7ed836a19e05.jpg",
+  "cornerBadgeUrl": "",
+  "sales": 220,
+  "sort": 26021,
+  "enabled": true,
+  "externalSyncLocked": false,
+  "categories": [
+    "Repair & Healing"
+  ],
+  "stockAvailable": 100283,
+  "stockLocked": 34,
+  "procurementQuantity": 0,
+  "tags": [
+    "Repair",
+    "Healing",
+    "COA"
+  ],
+  "imageUrls": [
+    "/biz/files/products/2026/07/13/5f70dbb1a8e745059cee7ed836a19e05.jpg"
+  ],
+  "glanceItems": [
+    {
+      "id": null,
+      "productId": null,
+      "label": "LPPeptide",
+      "value": "BC10",
+      "linkUrl": null,
+      "sort": 1
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Specification",
+      "value": "10mg x 10 vials /box",
+      "linkUrl": null,
+      "sort": 2
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Category",
+      "value": "Repair & Healing",
+      "linkUrl": null,
+      "sort": 3
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Form",
+      "value": "Lyophilized powder",
+      "linkUrl": null,
+      "sort": 4
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Knowledge source",
+      "value": "BPC-157 (BC5 / BC10)",
+      "linkUrl": null,
+      "sort": 5
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Research focus",
+      "value": "Repair & Healing",
+      "linkUrl": null,
+      "sort": 7
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Reconstitution",
+      "value": "Coze source: add 3.0 mL bacteriostatic water for 1.67 mg/mL. Reference range is once daily 200-600 mcg. At this concentration, 1 U is about 16.7 mcg.",
+      "linkUrl": null,
+      "sort": 8
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Storage",
+      "value": "Lyophilized: -20 deg C, dry and dark. Reconstituted: 2-8 deg C, protect from light, use within about 4 weeks, and avoid freeze-thaw.",
+      "linkUrl": null,
+      "sort": 9
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "COA",
+      "value": "View certificate ↗",
+      "linkUrl": "https://verify.janoshik.com/tests/169778-BC10_D2XDU3QAN2U9",
+      "sort": 10
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Batch",
+      "value": "BC1026060201",
+      "linkUrl": null,
+      "sort": 11
+    }
+  ],
+  "detailSections": [
+    {
+      "id": 5381,
+      "sectionKey": "overview",
+      "label": "Overview",
+      "sort": 10,
+      "blocks": [
+        {
+          "id": 15065,
+          "heading": "What is BC10?",
+          "body": "Body Protection Compound profile for tissue-repair and anti-inflammatory research. Coze describes BPC-157 as a synthetic 15-amino-acid peptide derived from a gastric protein sequence, studied for tissue healing, cytoprotection, wound repair, anti-inflammatory activity, nitric-oxide signaling, and NF-kB pathway context. BPC-157 10mg is mapped to LPPeptide SKU BC10. Current storefront values use our product data: 10mg x 10 vials /box, $69.00 USD per box. LPPeptide reference specs: 5mg x 10 vials / 10mg x 10 vials.",
+          "imageUrl": "",
+          "sort": 10,
+          "links": []
+        },
+        {
+          "id": 15066,
+          "heading": "Research context",
+          "body": "Coze describes BPC-157 as a synthetic 15-amino-acid peptide derived from a gastric protein sequence, studied for tissue healing, cytoprotection, wound repair, anti-inflammatory activity, nitric-oxide signaling, and NF-kB pathway context. Research commonly reviews angiogenesis, tendon and ligament models, soft-tissue repair, and gut mucosal integrity endpoints.",
+          "imageUrl": "",
+          "sort": 20,
+          "links": []
+        },
+        {
+          "id": 15067,
+          "heading": "Commonly matched with",
+          "body": "BC10 is commonly reviewed alongside BB10, BB20, BT10, BBG70, TB-500. Keep each combination tied to a defined research objective and lot record.",
+          "imageUrl": "",
+          "sort": 30,
+          "links": []
+        },
+        {
+          "id": 15068,
+          "heading": "Compliance notice",
+          "body": "BC10 is supplied for research use only. It is not for human or veterinary use, not for consumption, and statements on this page are reference context rather than medical claims.",
+          "imageUrl": "",
+          "sort": 40,
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": 5382,
+      "sectionKey": "research",
+      "label": "Research",
+      "sort": 20,
+      "blocks": [
+        {
+          "id": 15069,
+          "heading": "Reference literature focus",
+          "body": "Coze describes BPC-157 as a synthetic 15-amino-acid peptide derived from a gastric protein sequence, studied for tissue healing, cytoprotection, wound repair, anti-inflammatory activity, nitric-oxide signaling, and NF-kB pathway context. Research commonly reviews angiogenesis, tendon and ligament models, soft-tissue repair, and gut mucosal integrity endpoints.",
+          "imageUrl": "",
+          "sort": 10,
+          "links": []
+        },
+        {
+          "id": 15070,
+          "heading": "Study design notes",
+          "body": "Use the LPPeptide product knowledge record, current LPPeptide COA, and internal lab SOP to confirm identity, concentration, and endpoints before this material enters a study. The matched LPPeptide reference specification is 5mg x 10 vials / 10mg x 10 vials.",
+          "imageUrl": "",
+          "sort": 20,
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": 5383,
+      "sectionKey": "dosing",
+      "label": "Dosing & Protocol",
+      "sort": 30,
+      "blocks": [
+        {
+          "id": 15071,
+          "heading": "LPPeptide handling reference",
+          "body": "Coze source: add 3.0 mL bacteriostatic water for 3.34 mg/mL. Reference range is once daily 200-600 mcg. At this concentration, 1 U is about 16.7 mcg.\n\nCoze preparation pattern: use sterile technique, add diluent slowly down the vial wall, avoid foaming, roll gently until dissolved, label the preparation date, refrigerate at 2-8 deg C, and protect from light.",
+          "imageUrl": "",
+          "sort": 15,
+          "links": []
+        },
+        {
+          "id": 15072,
+          "heading": "Preparation",
+          "body": "BPC-157 10mg ships as Lyophilized powder. Reconstitution note: Coze source: add 3.0 mL bacteriostatic water for 3.34 mg/mL. Reference range is once daily 200-600 mcg. At this concentration, 1 U is about 33.4 mcg.. Record the final concentration and preparation date in the study log.",
+          "imageUrl": "",
+          "sort": 20,
+          "links": []
+        },
+        {
+          "id": 15073,
+          "heading": "Storage",
+          "body": "Lyophilized: -20 deg C, dry and dark. Reconstituted: 2-8 deg C, protect from light, use within about 4 weeks, and avoid freeze-thaw.. Follow the most current lot-specific handling record whenever it is available.",
+          "imageUrl": "",
+          "sort": 30,
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": 5384,
+      "sectionKey": "sideeffects",
+      "label": "Side Effects",
+      "sort": 40,
+      "blocks": [
+        {
+          "id": 15074,
+          "heading": "Safety observations",
+          "body": "Preclinical literature is broad, but long-term human data remains limited. Track injection-site observations and protocol-defined stopping rules.",
+          "imageUrl": "",
+          "sort": 10,
+          "links": []
+        },
+        {
+          "id": 15075,
+          "heading": "Contraindications",
+          "body": "Do not use BC10 outside qualified research workflows. Review the current SDS, COA, and protocol exclusions before handling.",
+          "imageUrl": "",
+          "sort": 20,
+          "links": []
+        },
+        {
+          "id": 15076,
+          "heading": "Interaction review",
+          "body": "Review combinations with TB-500, GHK-Cu, KPV, or other tissue-repair pathway materials before combining study arms.",
+          "imageUrl": "",
+          "sort": 30,
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": 5385,
+      "sectionKey": "coa",
+      "label": "COA & Testing",
+      "sort": 50,
+      "blocks": [
+        {
+          "id": 15077,
+          "heading": "Certificate of Analysis",
+          "body": "Each LPPeptide lot should be confirmed against current batch documentation before shipment or study use. This product page keeps BC10 visible so the SKU can be matched to the active COA.",
+          "imageUrl": "",
+          "sort": 10,
+          "links": []
+        },
+        {
+          "id": 15078,
+          "heading": "Current catalog summary",
+          "body": "- SKU: BC10\n- Product: BPC-157 10mg\n- Storefront specification: 10mg x 10 vials /box\n- LPPeptide reference specs: 5mg x 10 vials / 10mg x 10 vials\n- Listed box price: $69.00 USD\n- Reference: LPPeptide product knowledge record",
+          "imageUrl": "",
+          "sort": 20,
+          "links": []
+        },
+        {
+          "id": 15079,
+          "heading": "Testing checklist",
+          "body": "- Peptide identity or material identity\n- HPLC purity or assay result where applicable\n- Batch ID and test date\n- Sterility/endotoxin or accessory checks when applicable\n- Residual solvent and handling notes where applicable",
+          "imageUrl": "",
+          "sort": 30,
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": 5386,
+      "sectionKey": "about-lppeptide",
+      "label": "About LPPeptide",
+      "sort": 90,
+      "blocks": [
+        {
+          "id": 15080,
+          "heading": "Direct catalog supply",
+          "body": "LPPeptide product pages use our own SKU, package, price, and stock data first. LPPeptide knowledge mapping adds compound education, handling notes, and specification checks while lot-specific editorial content is being prepared.",
+          "imageUrl": "",
+          "sort": 10,
+          "links": []
+        },
+        {
+          "id": 15081,
+          "heading": "Lot-specific content",
+          "body": "For final release decisions, use the current product record, COA, handling sheet, and research SOP as the highest-priority source for this page.",
+          "imageUrl": "",
+          "sort": 20,
+          "links": []
+        }
+      ]
+    }
+  ],
+  "qaItems": [
+    {
+      "id": 3025,
+      "productId": 26021,
+      "question": "Is BC10 sold for research use only?",
+      "answer": "BC10 is supplied by LPPeptide for qualified research use only. It is not for human or veterinary use, not for consumption, and local rules may vary by jurisdiction.",
+      "sort": 1
+    },
+    {
+      "id": 3026,
+      "productId": 26021,
+      "question": "Where do I confirm the current BC10 lot documentation?",
+      "answer": "Use the COA & Testing tab, product label, and current LPPeptide batch record to confirm SKU BC10, specification, identity, and handling details before research use.",
+      "sort": 2
+    },
+    {
+      "id": 3027,
+      "productId": 26021,
+      "question": "Can BC10 be reviewed with related products?",
+      "answer": "Yes, when the study protocol defines the rationale. Common comparison or stack candidates include BB10, BB20, BT10, BBG70. Keep fixed-ratio blends and single-compound materials documented separately.",
+      "sort": 3
+    },
+    {
+      "id": 3028,
+      "productId": 26021,
+      "question": "Why can details differ from reference articles or catalog pages?",
+      "answer": "Reference pages provide general compound context. LPPeptide product pages should follow the current product record, active COA, lot-specific handling sheet, and lab SOP.",
+      "sort": 4
+    }
+  ],
+  "ratingBreakdown": [
+    {
+      "id": null,
+      "productId": 26021,
+      "label": "5+",
+      "percent": 84,
+      "sort": 1,
+      "count": 2400
+    },
+    {
+      "id": null,
+      "productId": 26021,
+      "label": "4+",
+      "percent": 11,
+      "sort": 2,
+      "count": 313
+    },
+    {
+      "id": null,
+      "productId": 26021,
+      "label": "3+",
+      "percent": 3,
+      "sort": 3,
+      "count": 85
+    },
+    {
+      "id": null,
+      "productId": 26021,
+      "label": "2+",
+      "percent": 1,
+      "sort": 4,
+      "count": 28
+    },
+    {
+      "id": null,
+      "productId": 26021,
+      "label": "1+",
+      "percent": 1,
+      "sort": 5,
+      "count": 30
+    }
+  ],
+  "coaPath": null,
+  "reviews": [
+    {
+      "id": 80,
+      "productId": 26021,
+      "userId": 11937,
+      "orderId": 148529,
+      "authorName": "Clinton Childers",
+      "avatarText": "CC",
+      "rating": 5,
+      "title": "Wolverine stack",
+      "content": "Running BpC 157 and Tb 500 together",
+      "verifiedLabel": "Verified Buyer",
+      "hidden": false,
+      "reviewDate": "2026-11-13",
+      "sort": 0,
+      "createdAt": "2026-11-13T22:33:52",
+      "updatedAt": "2026-11-13T22:33:52"
+    },
+    {
+      "id": 74,
+      "productId": 26021,
+      "userId": 11718,
+      "orderId": 141674,
+      "authorName": "anthony macias",
+      "avatarText": "AM",
+      "rating": 5,
+      "title": "Great product!",
+      "content": "Satisfied on the presentation.",
+      "verifiedLabel": "Verified Buyer",
+      "hidden": false,
+      "reviewDate": "2026-11-11",
+      "sort": 0,
+      "createdAt": "2026-11-11T12:37:01",
+      "updatedAt": "2026-11-11T12:37:01"
+    },
+    {
+      "id": 51,
+      "productId": 26021,
+      "userId": 13465,
+      "orderId": 141078,
+      "authorName": "Carly Fraser",
+      "avatarText": "CF",
+      "rating": 5,
+      "title": "Great product!",
+      "content": "Love having BPC-157 on hand. Fast shipping and great quality product!",
+      "verifiedLabel": "Verified Buyer",
+      "hidden": false,
+      "reviewDate": "2026-11-03",
+      "sort": 0,
+      "createdAt": "2026-11-03T08:49:07",
+      "updatedAt": "2026-11-03T08:49:07"
+    },
+    {
+      "id": 45,
+      "productId": 26021,
+      "userId": 12957,
+      "orderId": 143516,
+      "authorName": "luisdpr",
+      "avatarText": "L",
+      "rating": 5,
+      "title": "Top-Notch Quality",
+      "content": "Top-quality product! The packaging was secure, everything looked professional, and the attention to detail was excellent. Really happy with it!.",
+      "verifiedLabel": "Verified Buyer",
+      "hidden": false,
+      "reviewDate": "2026-11-02",
+      "sort": 0,
+      "createdAt": "2026-11-02T23:32:53",
+      "updatedAt": "2026-11-02T23:32:53"
+    }
+  ],
+  "offers": [],
+  "purchaseOptions": [],
+  "sizes": [],
+  "warehouseAvailability": {
+    "CNFC": "IN_STOCK",
+    "USFC": "IN_STOCK",
+    "AUSFC": "IN_STOCK"
+  }
+}

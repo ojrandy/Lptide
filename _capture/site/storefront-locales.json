@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "locale": "en",
+    "label": "English",
+    "pathPrefix": "",
+    "enabled": true,
+    "sort": 0,
+    "createdAt": "2026-08-19T13:01:48",
+    "updatedAt": "2026-08-19T13:01:48"
+  },
+  {
+    "id": 2,
+    "locale": "es-ES",
+    "label": "Español",
+    "pathPrefix": "/es",
+    "enabled": true,
+    "sort": 10,
+    "createdAt": "2026-08-19T13:01:48",
+    "updatedAt": "2026-10-31T19:48:19"
+  },
+  {
+    "id": 5,
+    "locale": "pt-BR",
+    "label": "Português (Brasil)",
+    "pathPrefix": "/pt",
+    "enabled": true,
+    "sort": 20,
+    "createdAt": "2026-09-09T13:50:48",
+    "updatedAt": "2026-09-11T12:51:32"
+  }
+]

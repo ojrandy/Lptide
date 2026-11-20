@@ -1,0 +1,194 @@
+{
+  "id": 26062,
+  "slug": "3ml-pen-cartridge-vial-sterilized",
+  "name": "Pen Cartridge/Vial-STERILIZED(注射套装)",
+  "shortName": "PCV3-S",
+  "subtitle": "3ml x 10 pack",
+  "description": "10 3ml cartridges steam sterilized Individually wrapped for V1 pens, V2 pens, Gansulin, and other peptide research pen.  For research purposes only",
+  "category": "Other Peptides & Accessories",
+  "vendor": "LPPEPTIDE",
+  "price": 15,
+  "oldPrice": 15,
+  "saveLabel": "",
+  "catalogCode": "PCV3-S",
+  "specification": "3ml x 10 pack",
+  "packageSize": "10 pack /box",
+  "catalogLabel": "",
+  "catalogHref": "",
+  "amountMg": 0,
+  "weightKg": 0.075,
+  "rating": 0,
+  "reviewCount": 106,
+  "answeredQuestionCount": 0,
+  "imageUrl": "/biz/files/products/2026/09/11/2a91358fa04c4bae8a8bc7cffcae9405.png",
+  "cornerBadgeUrl": "",
+  "sales": 0,
+  "sort": 26103,
+  "enabled": true,
+  "externalSyncLocked": false,
+  "categories": [
+    "Other Peptides & Accessories"
+  ],
+  "stockAvailable": 251,
+  "stockLocked": 6,
+  "procurementQuantity": 0,
+  "tags": [
+    "Accessories"
+  ],
+  "imageUrls": [
+    "/biz/files/products/2026/09/11/2a91358fa04c4bae8a8bc7cffcae9405.png"
+  ],
+  "glanceItems": [
+    {
+      "id": null,
+      "productId": null,
+      "label": "LPPeptide",
+      "value": "PCV3-S",
+      "linkUrl": null,
+      "sort": 1
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Specification",
+      "value": "10 pack /box",
+      "linkUrl": null,
+      "sort": 2
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Category",
+      "value": "Accessories",
+      "linkUrl": null,
+      "sort": 3
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Form",
+      "value": "pack",
+      "linkUrl": null,
+      "sort": 4
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Knowledge source",
+      "value": "PCV3-S",
+      "linkUrl": null,
+      "sort": 5
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Research focus",
+      "value": "Accessories",
+      "linkUrl": null,
+      "sort": 6
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Material",
+      "value": "glass, rubber, metal",
+      "linkUrl": null,
+      "sort": 8
+    }
+  ],
+  "detailSections": [
+    {
+      "id": 5767,
+      "sectionKey": "overview",
+      "label": "Overview",
+      "sort": 1,
+      "blocks": [
+        {
+          "id": 15852,
+          "heading": "What is Pen Cartridge/Vial-STERILIZED?",
+          "body": "10 3ml cartridges steam sterilized Individually wrapped for V1 pens, V2 pens, Gansulin, and other peptide research pen.  For research purposes only",
+          "imageUrl": "",
+          "sort": 1,
+          "links": []
+        },
+        {
+          "id": 15853,
+          "heading": "Designed Around Patients",
+          "body": "1. Easy to Learn — Pre-filled medication and a simplified workflow reduce the learning curve, enabling \n\nfirst-time users to quickly understand device operation.\n\n2. Easy to Use — Clear dose setting and ergonomic handling support convenient and intuitive daily \n\ninjections.\n\n3. User Feedback — Visible dose indicators and mechanical feedback help users confirm dose settings \n\nand injection progress. \n\n4. Confidence In Use — Consistent and intuitive operation builds confidence in self-administration. \n\n5. Treatment Adherence — Simplified administration supports long-term treatment adherence.",
+          "imageUrl": "",
+          "sort": 2,
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": 5768,
+      "sectionKey": "research",
+      "label": "Research",
+      "sort": 2,
+      "blocks": [
+        {
+          "id": 15854,
+          "heading": "Reference literature focus",
+          "body": "Not all 3ml cartridges are compatible with all injection pens; when prescribing, it is necessary to ensure the cartridge matches the pen device.",
+          "imageUrl": "",
+          "sort": 1,
+          "links": []
+        }
+      ]
+    }
+  ],
+  "qaItems": [],
+  "ratingBreakdown": [
+    {
+      "id": null,
+      "productId": 26062,
+      "label": "5+",
+      "percent": 0,
+      "sort": 1,
+      "count": 0
+    },
+    {
+      "id": null,
+      "productId": 26062,
+      "label": "4+",
+      "percent": 0,
+      "sort": 2,
+      "count": 0
+    },
+    {
+      "id": null,
+      "productId": 26062,
+      "label": "3+",
+      "percent": 0,
+      "sort": 3,
+      "count": 0
+    },
+    {
+      "id": null,
+      "productId": 26062,
+      "label": "2+",
+      "percent": 0,
+      "sort": 4,
+      "count": 0
+    },
+    {
+      "id": null,
+      "productId": 26062,
+      "label": "1+",
+      "percent": 0,
+      "sort": 5,
+      "count": 0
+    }
+  ],
+  "coaPath": null,
+  "reviews": [],
+  "offers": [],
+  "purchaseOptions": [],
+  "sizes": [],
+  "warehouseAvailability": {
+    "CNFC": "OUT_OF_STOCK",
+    "USFC": "IN_STOCK",
+    "AUSFC": "IN_STOCK"
+  }
+}

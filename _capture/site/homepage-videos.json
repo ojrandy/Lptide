@@ -1,0 +1,50 @@
+[
+  {
+    "id": 4,
+    "title": "videos",
+    "subtitle": null,
+    "videoUrl": "/biz/files/homepage-videos/2026/10/30/e7608f4066e748be95e7c5eaa763a815.mp4",
+    "posterUrl": null,
+    "linkUrl": null,
+    "enabled": true,
+    "sort": 2,
+    "createdAt": "2026-10-26T18:00:03",
+    "updatedAt": "2026-10-30T12:52:23"
+  },
+  {
+    "id": 3,
+    "title": "videos",
+    "subtitle": null,
+    "videoUrl": "/biz/files/homepage-videos/2026/10/30/3005fa1c0c194034b3ad24d7c4c46052.mp4",
+    "posterUrl": null,
+    "linkUrl": null,
+    "enabled": true,
+    "sort": 3,
+    "createdAt": "2026-10-26T17:59:53",
+    "updatedAt": "2026-10-30T12:52:17"
+  },
+  {
+    "id": 1,
+    "title": "videos",
+    "subtitle": null,
+    "videoUrl": "/biz/files/homepage-videos/2026/10/30/4574abc8d58d4f3a8eb9a5132e4b6b53.mp4",
+    "posterUrl": null,
+    "linkUrl": null,
+    "enabled": true,
+    "sort": 4,
+    "createdAt": "2026-10-26T17:59:06",
+    "updatedAt": "2026-10-30T12:52:11"
+  },
+  {
+    "id": 2,
+    "title": "videos",
+    "subtitle": null,
+    "videoUrl": "/biz/files/homepage-videos/2026/10/27/f47e9eb8437d4485a592cf57fae7d299.mp4",
+    "posterUrl": null,
+    "linkUrl": null,
+    "enabled": true,
+    "sort": 99,
+    "createdAt": "2026-10-26T17:59:32",
+    "updatedAt": "2026-10-27T14:08:45"
+  }
+]

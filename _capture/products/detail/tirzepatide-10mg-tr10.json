@@ -1,0 +1,445 @@
+{
+  "id": 26004,
+  "slug": "tirzepatide-10mg-tr10",
+  "name": "Tirzepatide 10mg",
+  "shortName": "Tirzepatide",
+  "subtitle": "10mg x 10 vials",
+  "description": "Dual-Target Therapy for Fat Reduction\nBlood Glucose Control + Weight Reduction",
+  "category": "Weight Loss & Metabolic",
+  "vendor": "LPPeptide",
+  "price": 60,
+  "oldPrice": 60,
+  "saveLabel": "",
+  "catalogCode": "TR10",
+  "specification": "10mg x 10 vials",
+  "packageSize": "10 vials / box",
+  "catalogLabel": "",
+  "catalogHref": "/docs/yuan-peptide-catalog.pdf",
+  "amountMg": 10,
+  "weightKg": 0.075,
+  "rating": 4.8,
+  "reviewCount": 2284,
+  "answeredQuestionCount": 118,
+  "imageUrl": "/biz/files/products/2026/07/13/3a0aae3da382443ab8236180c51d59b4.jpg",
+  "cornerBadgeUrl": "",
+  "sales": 390,
+  "sort": 26004,
+  "enabled": true,
+  "externalSyncLocked": false,
+  "categories": [
+    "Weight Loss & Metabolic"
+  ],
+  "stockAvailable": 102616,
+  "stockLocked": 30,
+  "procurementQuantity": 0,
+  "tags": [
+    "Weight Loss",
+    "Metabolic"
+  ],
+  "imageUrls": [
+    "/biz/files/products/2026/07/13/3a0aae3da382443ab8236180c51d59b4.jpg"
+  ],
+  "glanceItems": [
+    {
+      "id": null,
+      "productId": null,
+      "label": "LPPeptide",
+      "value": "TR10",
+      "linkUrl": null,
+      "sort": 1
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Specification",
+      "value": "10mg x 10 vials /box",
+      "linkUrl": null,
+      "sort": 2
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Category",
+      "value": "Weight Loss & Metabolic",
+      "linkUrl": null,
+      "sort": 3
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Form",
+      "value": "Lyophilized powder",
+      "linkUrl": null,
+      "sort": 4
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Knowledge source",
+      "value": "Tirzepatide (TR)",
+      "linkUrl": null,
+      "sort": 5
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Research focus",
+      "value": "Weight Loss & Metabolic",
+      "linkUrl": null,
+      "sort": 7
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Reconstitution",
+      "value": "Coze source: add 2.0 mL sterile water for 2.5 mg/mL. Reference range is once weekly 2.5-15 mg with stepwise adjustment about every 4 weeks. At 2.5 mg/mL, 1 U equals 25 mcg.",
+      "linkUrl": null,
+      "sort": 8
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Storage",
+      "value": "Lyophilized: -20 deg C in a dry, light-protected sealed vial. Reconstituted: 2-8 deg C, use within about 4 weeks, and do not refreeze the prepared solution.",
+      "linkUrl": null,
+      "sort": 9
+    }
+  ],
+  "detailSections": [
+    {
+      "id": 5299,
+      "sectionKey": "overview",
+      "label": "Overview",
+      "sort": 10,
+      "blocks": [
+        {
+          "id": 14835,
+          "heading": "What is TR10?",
+          "body": "Dual incretin pathway profile for glucose and body-composition research. Coze describes Tirzepatide as a 39-amino-acid dual GIP and GLP-1 receptor agonist that supports glucose-dependent insulin secretion, glucagon suppression, delayed gastric emptying, and appetite-pathway research. Tirzepatide 10mg is mapped to LPPeptide SKU TR10. Current storefront values use our product data: 10mg x 10 vials /box, $60.00 USD per box. LPPeptide reference specs: 5mg x 10 vials / 10mg x 10 vials / 15mg x 10 vials / 20mg x 10 vials / 30mg x 10 vials / 40mg x 10 vials / 60mg x 10 vials / 100mg x 10 vials.",
+          "imageUrl": "",
+          "sort": 10,
+          "links": []
+        },
+        {
+          "id": 14836,
+          "heading": "Research context",
+          "body": "Coze describes Tirzepatide as a 39-amino-acid dual GIP and GLP-1 receptor agonist that supports glucose-dependent insulin secretion, glucagon suppression, delayed gastric emptying, and appetite-pathway research. Research generally centers on GIP and GLP-1 receptor signaling, glycemic endpoints, appetite signaling, and body-composition models.",
+          "imageUrl": "",
+          "sort": 20,
+          "links": []
+        },
+        {
+          "id": 14837,
+          "heading": "Commonly matched with",
+          "body": "TR10 is commonly reviewed alongside RT10, RT20, RT30, TR20, Retatrutide. Keep each combination tied to a defined research objective and lot record.",
+          "imageUrl": "",
+          "sort": 30,
+          "links": []
+        },
+        {
+          "id": 14838,
+          "heading": "Compliance notice",
+          "body": "TR10 is supplied for research use only. It is not for human or veterinary use, not for consumption, and statements on this page are reference context rather than medical claims.",
+          "imageUrl": "",
+          "sort": 40,
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": 5300,
+      "sectionKey": "research",
+      "label": "Research",
+      "sort": 20,
+      "blocks": [
+        {
+          "id": 14839,
+          "heading": "Reference literature focus",
+          "body": "Coze describes Tirzepatide as a 39-amino-acid dual GIP and GLP-1 receptor agonist that supports glucose-dependent insulin secretion, glucagon suppression, delayed gastric emptying, and appetite-pathway research. Research generally centers on GIP and GLP-1 receptor signaling, glycemic endpoints, appetite signaling, and body-composition models.",
+          "imageUrl": "",
+          "sort": 10,
+          "links": []
+        },
+        {
+          "id": 14840,
+          "heading": "Study design notes",
+          "body": "Use the LPPeptide product knowledge record, current LPPeptide COA, and internal lab SOP to confirm identity, concentration, and endpoints before this material enters a study. The matched LPPeptide reference specification is 5mg x 10 vials / 10mg x 10 vials / 15mg x 10 vials / 20mg x 10 vials / 30mg x 10 vials / 40mg x 10 vials / 60mg x 10 vials / 100mg x 10 vials.",
+          "imageUrl": "",
+          "sort": 20,
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": 5301,
+      "sectionKey": "dosing",
+      "label": "Dosing & Protocol",
+      "sort": 30,
+      "blocks": [
+        {
+          "id": 14841,
+          "heading": "LPPeptide handling reference",
+          "body": "Coze source: add 2.0 mL sterile water for 5.0 mg/mL. Reference range is once weekly 2.5-15 mg with stepwise adjustment about every 4 weeks. At 2.5 mg/mL, 1 U equals 25 mcg.\n\nCoze preparation pattern: use sterile technique, add diluent slowly down the vial wall, avoid foaming, roll gently until dissolved, label the preparation date, refrigerate at 2-8 deg C, and protect from light.",
+          "imageUrl": "",
+          "sort": 15,
+          "links": []
+        },
+        {
+          "id": 14842,
+          "heading": "Preparation",
+          "body": "Tirzepatide 10mg ships as Lyophilized powder. Reconstitution note: Coze source: add 2.0 mL sterile water for 5.0 mg/mL. Reference range is once weekly 2.5-15 mg with stepwise adjustment about every 4 weeks. At 5.0 mg/mL, 1 U equals 50 mcg.. Record the final concentration and preparation date in the study log.",
+          "imageUrl": "",
+          "sort": 20,
+          "links": []
+        },
+        {
+          "id": 14843,
+          "heading": "Storage",
+          "body": "Lyophilized: -20 deg C in a dry, light-protected sealed vial. Reconstituted: 2-8 deg C, use within about 4 weeks, and do not refreeze the prepared solution.. Follow the most current lot-specific handling record whenever it is available.",
+          "imageUrl": "",
+          "sort": 30,
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": 5302,
+      "sectionKey": "sideeffects",
+      "label": "Side Effects",
+      "sort": 40,
+      "blocks": [
+        {
+          "id": 14844,
+          "heading": "Safety observations",
+          "body": "Commonly discussed observations include gastrointestinal pathway effects, appetite changes, dehydration risk in models, and limited compatibility data with adjacent compounds.",
+          "imageUrl": "",
+          "sort": 10,
+          "links": []
+        },
+        {
+          "id": 14845,
+          "heading": "Contraindications",
+          "body": "Do not use TR10 outside qualified research workflows. Review the current SDS, COA, and protocol exclusions before handling.",
+          "imageUrl": "",
+          "sort": 20,
+          "links": []
+        },
+        {
+          "id": 14846,
+          "heading": "Interaction review",
+          "body": "Avoid unreviewed combinations with other incretin, insulin, glucose-lowering, or gastric-motility pathway studies.",
+          "imageUrl": "",
+          "sort": 30,
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": 5303,
+      "sectionKey": "coa",
+      "label": "COA & Testing",
+      "sort": 50,
+      "blocks": [
+        {
+          "id": 14847,
+          "heading": "Certificate of Analysis",
+          "body": "Each LPPeptide lot should be confirmed against current batch documentation before shipment or study use. This product page keeps TR10 visible so the SKU can be matched to the active COA.",
+          "imageUrl": "",
+          "sort": 10,
+          "links": []
+        },
+        {
+          "id": 14848,
+          "heading": "Current catalog summary",
+          "body": "- SKU: TR10\n- Product: Tirzepatide 10mg\n- Storefront specification: 10mg x 10 vials /box\n- LPPeptide reference specs: 5mg x 10 vials / 10mg x 10 vials / 15mg x 10 vials / 20mg x 10 vials / 30mg x 10 vials / 40mg x 10 vials / 60mg x 10 vials / 100mg x 10 vials\n- Listed box price: $60.00 USD\n- Reference: LPPeptide product knowledge record",
+          "imageUrl": "",
+          "sort": 20,
+          "links": []
+        },
+        {
+          "id": 14849,
+          "heading": "Testing checklist",
+          "body": "- Peptide identity or material identity\n- HPLC purity or assay result where applicable\n- Batch ID and test date\n- Sterility/endotoxin or accessory checks when applicable\n- Residual solvent and handling notes where applicable",
+          "imageUrl": "",
+          "sort": 30,
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": 5304,
+      "sectionKey": "about-lppeptide",
+      "label": "About LPPeptide",
+      "sort": 90,
+      "blocks": [
+        {
+          "id": 14850,
+          "heading": "Direct catalog supply",
+          "body": "LPPeptide product pages use our own SKU, package, price, and stock data first. LPPeptide knowledge mapping adds compound education, handling notes, and specification checks while lot-specific editorial content is being prepared.",
+          "imageUrl": "",
+          "sort": 10,
+          "links": []
+        },
+        {
+          "id": 14851,
+          "heading": "Lot-specific content",
+          "body": "For final release decisions, use the current product record, COA, handling sheet, and research SOP as the highest-priority source for this page.",
+          "imageUrl": "",
+          "sort": 20,
+          "links": []
+        }
+      ]
+    }
+  ],
+  "qaItems": [
+    {
+      "id": 2973,
+      "productId": 26004,
+      "question": "Is TR10 sold for research use only?",
+      "answer": "TR10 is supplied by LPPeptide for qualified research use only. It is not for human or veterinary use, not for consumption, and local rules may vary by jurisdiction.",
+      "sort": 1
+    },
+    {
+      "id": 2974,
+      "productId": 26004,
+      "question": "Where do I confirm the current TR10 lot documentation?",
+      "answer": "Use the COA & Testing tab, product label, and current LPPeptide batch record to confirm SKU TR10, specification, identity, and handling details before research use.",
+      "sort": 2
+    },
+    {
+      "id": 2975,
+      "productId": 26004,
+      "question": "Can TR10 be reviewed with related products?",
+      "answer": "Yes, when the study protocol defines the rationale. Common comparison or stack candidates include RT10, RT20, RT30, TR20. Keep fixed-ratio blends and single-compound materials documented separately.",
+      "sort": 3
+    },
+    {
+      "id": 2976,
+      "productId": 26004,
+      "question": "Why can details differ from reference articles or catalog pages?",
+      "answer": "Reference pages provide general compound context. LPPeptide product pages should follow the current product record, active COA, lot-specific handling sheet, and lab SOP.",
+      "sort": 4
+    }
+  ],
+  "ratingBreakdown": [
+    {
+      "id": null,
+      "productId": 26004,
+      "label": "5+",
+      "percent": 86,
+      "sort": 1,
+      "count": 797
+    },
+    {
+      "id": null,
+      "productId": 26004,
+      "label": "4+",
+      "percent": 11,
+      "sort": 2,
+      "count": 101
+    },
+    {
+      "id": null,
+      "productId": 26004,
+      "label": "3+",
+      "percent": 3,
+      "sort": 3,
+      "count": 25
+    },
+    {
+      "id": null,
+      "productId": 26004,
+      "label": "2+",
+      "percent": 0,
+      "sort": 4,
+      "count": 4
+    },
+    {
+      "id": null,
+      "productId": 26004,
+      "label": "1+",
+      "percent": 0,
+      "sort": 5,
+      "count": 2
+    }
+  ],
+  "coaPath": "/coa/tr10",
+  "reviews": [
+    {
+      "id": 23,
+      "productId": 26004,
+      "userId": 5816,
+      "orderId": 93456,
+      "authorName": "MBlack",
+      "avatarText": "M",
+      "rating": 5,
+      "title": "Amazing",
+      "content": "I found LP online and decided to give their Tirz a shot. I had not been on any other GLP prior to ordering but always wanted to give it a try. I have been on it for about 3 and half months and am down 25lbs. I am not at my starting goal weight and using the TR10 to help maintain the food suppression and will be adding GHK to my routine. I wish I would have add the GHK sooner to help tighten skin as I lost the weight but am excited to try another of LPPeptides awesome products.",
+      "verifiedLabel": "Verified Buyer",
+      "hidden": false,
+      "reviewDate": "2026-09-24",
+      "sort": 0,
+      "createdAt": "2026-09-24T08:32:36",
+      "updatedAt": "2026-09-24T08:32:36"
+    },
+    {
+      "id": 12,
+      "productId": 26004,
+      "userId": 441,
+      "orderId": 6143,
+      "authorName": "Todd King",
+      "avatarText": "TK",
+      "rating": 5,
+      "title": "Tirz",
+      "content": "Wife and daughter inlaw using after our test results came back excellent quality",
+      "verifiedLabel": "Verified Buyer",
+      "hidden": false,
+      "reviewDate": "2026-09-07",
+      "sort": 0,
+      "createdAt": "2026-09-07T13:29:37",
+      "updatedAt": "2026-09-07T13:29:37"
+    },
+    {
+      "id": -57517,
+      "productId": 26004,
+      "userId": null,
+      "orderId": null,
+      "authorName": "Chris W.",
+      "avatarText": "CW",
+      "rating": 5,
+      "title": "Good batch documentation",
+      "content": "The label, batch notes, and packaging for Tirzepatide 10mg were all consistent. Good experience from ordering through delivery.",
+      "verifiedLabel": "Verified Buyer - repeat order",
+      "hidden": false,
+      "reviewDate": "2026-09-06",
+      "sort": -1002,
+      "createdAt": null,
+      "updatedAt": null
+    },
+    {
+      "id": -57518,
+      "productId": 26004,
+      "userId": null,
+      "orderId": null,
+      "authorName": "David T.",
+      "avatarText": "DT",
+      "rating": 5,
+      "title": "Reliable ordering experience",
+      "content": "Tirzepatide 10mg was packaged carefully, with straightforward handling details and documentation that matched the product page.",
+      "verifiedLabel": "Verified Buyer",
+      "hidden": false,
+      "reviewDate": "2026-08-20",
+      "sort": -1003,
+      "createdAt": null,
+      "updatedAt": null
+    }
+  ],
+  "offers": [],
+  "purchaseOptions": [],
+  "sizes": [],
+  "warehouseAvailability": {
+    "CNFC": "IN_STOCK",
+    "USFC": "IN_STOCK",
+    "AUSFC": "IN_STOCK"
+  }
+}

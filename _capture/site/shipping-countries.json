@@ -1,0 +1,282 @@
+[
+  {
+    "id": 1,
+    "code": "US",
+    "name": "United States",
+    "enabled": true,
+    "sort": 10
+  },
+  {
+    "id": 3,
+    "code": "GB",
+    "name": "United Kingdom",
+    "enabled": true,
+    "sort": 30
+  },
+  {
+    "id": 40,
+    "code": "AU",
+    "name": "Australia",
+    "enabled": true,
+    "sort": 99
+  },
+  {
+    "id": 17,
+    "code": "AT",
+    "name": "Austria",
+    "enabled": true,
+    "sort": 99
+  },
+  {
+    "id": 7,
+    "code": "BH",
+    "name": "Bahrain",
+    "enabled": true,
+    "sort": 99
+  },
+  {
+    "id": 18,
+    "code": "BE",
+    "name": "Belgium",
+    "enabled": true,
+    "sort": 99
+  },
+  {
+    "id": 36,
+    "code": "BG",
+    "name": "Bulgaria",
+    "enabled": true,
+    "sort": 99
+  },
+  {
+    "id": 46,
+    "code": "CH",
+    "name": "CHE",
+    "enabled": true,
+    "sort": 99
+  },
+  {
+    "id": 38,
+    "code": "HR",
+    "name": "Croatia",
+    "enabled": true,
+    "sort": 99
+  },
+  {
+    "id": 42,
+    "code": "CY",
+    "name": "Cyprus‌",
+    "enabled": true,
+    "sort": 99
+  },
+  {
+    "id": 19,
+    "code": "CZ",
+    "name": "Czech Republic",
+    "enabled": true,
+    "sort": 99
+  },
+  {
+    "id": 20,
+    "code": "DK",
+    "name": "Denmark",
+    "enabled": true,
+    "sort": 99
+  },
+  {
+    "id": 21,
+    "code": "EE",
+    "name": "Estonia",
+    "enabled": true,
+    "sort": 99
+  },
+  {
+    "id": 23,
+    "code": "FI",
+    "name": "Finland",
+    "enabled": true,
+    "sort": 99
+  },
+  {
+    "id": 24,
+    "code": "FR",
+    "name": "France",
+    "enabled": true,
+    "sort": 99
+  },
+  {
+    "id": 16,
+    "code": "DE",
+    "name": "Germany",
+    "enabled": true,
+    "sort": 99
+  },
+  {
+    "id": 25,
+    "code": "GR",
+    "name": "Greece",
+    "enabled": true,
+    "sort": 99
+  },
+  {
+    "id": 26,
+    "code": "HU",
+    "name": "Hungary",
+    "enabled": true,
+    "sort": 99
+  },
+  {
+    "id": 39,
+    "code": "IE",
+    "name": "Ireland",
+    "enabled": true,
+    "sort": 99
+  },
+  {
+    "id": 27,
+    "code": "IT",
+    "name": "Italy",
+    "enabled": true,
+    "sort": 99
+  },
+  {
+    "id": 9,
+    "code": "KW",
+    "name": "Kuwait",
+    "enabled": true,
+    "sort": 99
+  },
+  {
+    "id": 35,
+    "code": "LV",
+    "name": "Latvia",
+    "enabled": true,
+    "sort": 99
+  },
+  {
+    "id": 28,
+    "code": "LT",
+    "name": "Lithuania",
+    "enabled": true,
+    "sort": 99
+  },
+  {
+    "id": 29,
+    "code": "LU",
+    "name": "Luxembourg",
+    "enabled": true,
+    "sort": 99
+  },
+  {
+    "id": 12,
+    "code": "MY",
+    "name": "Malaysia",
+    "enabled": true,
+    "sort": 99
+  },
+  {
+    "id": 30,
+    "code": "NL",
+    "name": "Netherlands",
+    "enabled": true,
+    "sort": 99
+  },
+  {
+    "id": 47,
+    "code": "NO",
+    "name": "Norway",
+    "enabled": true,
+    "sort": 99
+  },
+  {
+    "id": 8,
+    "code": "QM",
+    "name": "Oman",
+    "enabled": true,
+    "sort": 99
+  },
+  {
+    "id": 15,
+    "code": "PH",
+    "name": "Philippines",
+    "enabled": true,
+    "sort": 99
+  },
+  {
+    "id": 31,
+    "code": "PL",
+    "name": "Poland",
+    "enabled": true,
+    "sort": 99
+  },
+  {
+    "id": 34,
+    "code": "PT",
+    "name": "Portugal",
+    "enabled": true,
+    "sort": 99
+  },
+  {
+    "id": 44,
+    "code": "PR",
+    "name": "Puerto Rico",
+    "enabled": true,
+    "sort": 99
+  },
+  {
+    "id": 6,
+    "code": "QA",
+    "name": "Qatar",
+    "enabled": true,
+    "sort": 99
+  },
+  {
+    "id": 37,
+    "code": "RO",
+    "name": "Romania",
+    "enabled": true,
+    "sort": 99
+  },
+  {
+    "id": 5,
+    "code": "SA",
+    "name": "Saudi Arabia",
+    "enabled": true,
+    "sort": 99
+  },
+  {
+    "id": 11,
+    "code": "SG",
+    "name": "Singapore",
+    "enabled": true,
+    "sort": 99
+  },
+  {
+    "id": 33,
+    "code": "SK",
+    "name": "Slovakia",
+    "enabled": true,
+    "sort": 99
+  },
+  {
+    "id": 22,
+    "code": "ES",
+    "name": "Spain",
+    "enabled": true,
+    "sort": 99
+  },
+  {
+    "id": 32,
+    "code": "SE",
+    "name": "Sweden",
+    "enabled": true,
+    "sort": 99
+  },
+  {
+    "id": 4,
+    "code": "AE",
+    "name": "United Arab Emirates",
+    "enabled": true,
+    "sort": 99
+  }
+]

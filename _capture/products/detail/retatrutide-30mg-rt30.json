@@ -1,0 +1,463 @@
+{
+  "id": 26003,
+  "slug": "retatrutide-30mg-rt30",
+  "name": "Retatrutide 30mg",
+  "shortName": "Retatrutide",
+  "subtitle": "30mg x 10 vials",
+  "description": "Triple Receptor Agonist — Most Effective for Fat Loss\n(24% Weight Reduction in Clinical Trials)",
+  "category": "Weight Loss & Metabolic",
+  "vendor": "LPPeptide",
+  "price": 199,
+  "oldPrice": 199,
+  "saveLabel": "",
+  "catalogCode": "RT30",
+  "specification": "30mg x 10 vials",
+  "packageSize": "10 vials / box",
+  "catalogLabel": "",
+  "catalogHref": "/docs/yuan-peptide-catalog.pdf",
+  "amountMg": 30,
+  "weightKg": 0.075,
+  "rating": 4.8,
+  "reviewCount": 4241,
+  "answeredQuestionCount": 124,
+  "imageUrl": "/biz/files/products/2026/07/13/0d273d94141b4d58b0ad474eafdfa69a.jpg",
+  "cornerBadgeUrl": "",
+  "sales": 400,
+  "sort": 26003,
+  "enabled": true,
+  "externalSyncLocked": false,
+  "categories": [
+    "Weight Loss & Metabolic"
+  ],
+  "stockAvailable": 100088,
+  "stockLocked": 105,
+  "procurementQuantity": 0,
+  "tags": [
+    "Best Sellers",
+    "COA",
+    "Weight Loss",
+    "Metabolic"
+  ],
+  "imageUrls": [
+    "/biz/files/products/2026/07/13/0d273d94141b4d58b0ad474eafdfa69a.jpg"
+  ],
+  "glanceItems": [
+    {
+      "id": null,
+      "productId": null,
+      "label": "LPPeptide",
+      "value": "RT30",
+      "linkUrl": null,
+      "sort": 1
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Specification",
+      "value": "30mg x 10 vials /box",
+      "linkUrl": null,
+      "sort": 2
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Category",
+      "value": "Weight Loss & Metabolic",
+      "linkUrl": null,
+      "sort": 3
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Form",
+      "value": "Lyophilized powder",
+      "linkUrl": null,
+      "sort": 4
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Knowledge source",
+      "value": "Retatrutide (RT)",
+      "linkUrl": null,
+      "sort": 5
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Research focus",
+      "value": "Weight Loss & Metabolic",
+      "linkUrl": null,
+      "sort": 7
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Reconstitution",
+      "value": "LPPEPTIDE Knowledge Source: Add 2.0 mL bacteriostatic water to prepare a 15 mg/mL solution. Reference range is 2.5–15 mg once weekly, with dose adjustments approximately every 4 weeks. At 15 mg/mL, 1 U equals 150 mcg · 1:1.",
+      "linkUrl": null,
+      "sort": 8
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Storage",
+      "value": "Lyophilized powder: Store frozen at -20°C or below. Stable for up to 24 months when stored under these conditions.  After reconstitution: Store refrigerated at 2–8°C. Reconstituted solution is stable for up to 4 weeks.  Allow the vial to equilibrate to room temperature prior to opening to minimize condensation.",
+      "linkUrl": null,
+      "sort": 9
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "COA",
+      "value": "View certificate ↗",
+      "linkUrl": "https://verify.janoshik.com/tests/169776-RT30_NRJVH1XPCDS3",
+      "sort": 10
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Batch",
+      "value": "RT3026060201",
+      "linkUrl": null,
+      "sort": 11
+    }
+  ],
+  "detailSections": [
+    {
+      "id": 5547,
+      "sectionKey": "overview",
+      "label": "Overview",
+      "sort": 10,
+      "blocks": [
+        {
+          "id": 15485,
+          "heading": "What is RT30?",
+          "body": "Triple-receptor incretin agonist profile for metabolic research. Coze describes Retatrutide as an investigational GLP-1, GIP, and glucagon receptor agonist studied in obesity and type 2 diabetes models, with phase II research reporting high-dose body-weight reduction up to 24% over 48 weeks. Retatrutide 30mg is mapped to LPPeptide SKU RT30. Current storefront values use our product data: 30mg x 10 vials /box, $199.00 USD per box. LPPeptide reference specs: 5mg x 10 vials / 10mg x 10 vials / 15mg x 10 vials / 20mg x 10 vials / 30mg x 10 vials / 40mg x 10 vials / 60mg x 10 vials.",
+          "imageUrl": "",
+          "sort": 10,
+          "links": []
+        },
+        {
+          "id": 15486,
+          "heading": "Research context",
+          "body": "Coze describes Retatrutide as an investigational GLP-1, GIP, and glucagon receptor agonist studied in obesity and type 2 diabetes models, with phase II research reporting high-dose body-weight reduction up to 24% over 48 weeks. Research typically centers on GLP-1, GIP, and glucagon receptor signaling, with endpoints such as appetite signaling, glucose handling, and energy balance models.",
+          "imageUrl": "",
+          "sort": 20,
+          "links": []
+        },
+        {
+          "id": 15487,
+          "heading": "Commonly matched with",
+          "body": "RT30 is commonly reviewed alongside RT10, RT20, TR10, TR20, Tirzepatide. Keep each combination tied to a defined research objective and lot record.",
+          "imageUrl": "",
+          "sort": 30,
+          "links": []
+        },
+        {
+          "id": 15488,
+          "heading": "Compliance notice",
+          "body": "RT30 is supplied for research use only. It is not for human or veterinary use, not for consumption, and statements on this page are reference context rather than medical claims.",
+          "imageUrl": "",
+          "sort": 40,
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": 5548,
+      "sectionKey": "research",
+      "label": "Research",
+      "sort": 20,
+      "blocks": [
+        {
+          "id": 15489,
+          "heading": "Reference literature focus",
+          "body": "Coze describes Retatrutide as an investigational GLP-1, GIP, and glucagon receptor agonist studied in obesity and type 2 diabetes models, with phase II research reporting high-dose body-weight reduction up to 24% over 48 weeks. Research typically centers on GLP-1, GIP, and glucagon receptor signaling, with endpoints such as appetite signaling, glucose handling, and energy balance models.",
+          "imageUrl": "",
+          "sort": 10,
+          "links": []
+        },
+        {
+          "id": 15490,
+          "heading": "Study design notes",
+          "body": "Use the LPPeptide product knowledge record, current LPPeptide COA, and internal lab SOP to confirm identity, concentration, and endpoints before this material enters a study. The matched LPPeptide reference specification is 5mg x 10 vials / 10mg x 10 vials / 15mg x 10 vials / 20mg x 10 vials / 30mg x 10 vials / 40mg x 10 vials / 60mg x 10 vials.",
+          "imageUrl": "",
+          "sort": 20,
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": 5549,
+      "sectionKey": "dosing",
+      "label": "Dosing & Protocol",
+      "sort": 30,
+      "blocks": [
+        {
+          "id": 15491,
+          "heading": "LPPeptide handling reference",
+          "body": "1.Using a sterile syringe, withdraw 1.0 mL of bacteriostatic water.\n\n2.Slowly inject the diluent along the inner wall of the vial; avoid foaming.\n\n3.Gently swirl or roll the vial until completely dissolved. Do not shake.\n\n4.Label the vial with the date of reconstitution and store refrigerated at 2–8°C, protected from light.\n\n5.Use the reconstituted solution within 4 weeks.",
+          "imageUrl": "",
+          "sort": 15,
+          "links": []
+        },
+        {
+          "id": 15492,
+          "heading": "Preparation",
+          "body": "Reconstitution: Add 1.0 mL of bacteriostatic water to yield a concentration of approximately 5.0 mg/mL.\nDosage Regimen: The typical dose range is 2–8 mg administered once weekly, with gradual titration over 8–12 weeks.\nDose Conversion: At a concentration of 5.0 mg/mL, 1 unit (0.01 mL) on a U-100 insulin syringe is equivalent to approximately 50 mcg.",
+          "imageUrl": "",
+          "sort": 20,
+          "links": []
+        },
+        {
+          "id": 15493,
+          "heading": "Storage",
+          "body": "Lyophilized: -20 deg C or below, dry and dark. Reconstituted: 2-8 deg C, protect from light, use within about 4 weeks, and let the sealed vial reach room temperature before opening to reduce condensation.. Follow the most current lot-specific handling record whenever it is available.",
+          "imageUrl": "",
+          "sort": 30,
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": 5550,
+      "sectionKey": "sideeffects",
+      "label": "Side Effects",
+      "sort": 40,
+      "blocks": [
+        {
+          "id": 15494,
+          "heading": "Safety observations",
+          "body": "Published discussion commonly focuses on gastrointestinal tolerance, hydration status, appetite-pathway effects, and limited long-term human safety data.",
+          "imageUrl": "",
+          "sort": 10,
+          "links": []
+        },
+        {
+          "id": 15495,
+          "heading": "Contraindications",
+          "body": "Do not use RT30 outside qualified research workflows. Review the current SDS, COA, and protocol exclusions before handling.",
+          "imageUrl": "",
+          "sort": 20,
+          "links": []
+        },
+        {
+          "id": 15496,
+          "heading": "Interaction review",
+          "body": "Use extra caution in models involving other incretin, glucose-lowering, appetite, or gastric-emptying pathways.",
+          "imageUrl": "",
+          "sort": 30,
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": 5551,
+      "sectionKey": "coa",
+      "label": "COA & Testing",
+      "sort": 50,
+      "blocks": [
+        {
+          "id": 15497,
+          "heading": "Certificate of Analysis",
+          "body": "Each LPPeptide lot should be confirmed against current batch documentation before shipment or study use. This product page keeps RT30 visible so the SKU can be matched to the active COA.",
+          "imageUrl": "",
+          "sort": 10,
+          "links": []
+        },
+        {
+          "id": 15498,
+          "heading": "Current catalog summary",
+          "body": "- SKU: RT30\n- Product: Retatrutide 30mg\n- Storefront specification: 30mg x 10 vials /box\n- LPPeptide reference specs: 5mg x 10 vials / 10mg x 10 vials / 15mg x 10 vials / 20mg x 10 vials / 30mg x 10 vials / 40mg x 10 vials / 60mg x 10 vials\n- Listed box price: $199.00 USD\n- Reference: LPPeptide product knowledge record",
+          "imageUrl": "",
+          "sort": 20,
+          "links": []
+        },
+        {
+          "id": 15499,
+          "heading": "Testing checklist",
+          "body": "- Peptide identity or material identity\n- HPLC purity or assay result where applicable\n- Batch ID and test date\n- Sterility/endotoxin or accessory checks when applicable\n- Residual solvent and handling notes where applicable",
+          "imageUrl": "",
+          "sort": 30,
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": 5552,
+      "sectionKey": "about-lppeptide",
+      "label": "About LPPeptide",
+      "sort": 90,
+      "blocks": [
+        {
+          "id": 15500,
+          "heading": "Direct catalog supply",
+          "body": "LPPeptide product pages use our own SKU, package, price, and stock data first. LPPeptide knowledge mapping adds compound education, handling notes, and specification checks while lot-specific editorial content is being prepared.",
+          "imageUrl": "",
+          "sort": 10,
+          "links": []
+        },
+        {
+          "id": 15501,
+          "heading": "Lot-specific content",
+          "body": "For final release decisions, use the current product record, COA, handling sheet, and research SOP as the highest-priority source for this page.",
+          "imageUrl": "",
+          "sort": 20,
+          "links": []
+        }
+      ]
+    }
+  ],
+  "qaItems": [
+    {
+      "id": 3081,
+      "productId": 26003,
+      "question": "Is RT30 sold for research use only?",
+      "answer": "RT30 is supplied by LPPeptide for qualified research use only. It is not for human or veterinary use, not for consumption, and local rules may vary by jurisdiction.",
+      "sort": 1
+    },
+    {
+      "id": 3082,
+      "productId": 26003,
+      "question": "Where do I confirm the current RT30 lot documentation?",
+      "answer": "Use the COA & Testing tab, product label, and current LPPeptide batch record to confirm SKU RT30, specification, identity, and handling details before research use.",
+      "sort": 2
+    },
+    {
+      "id": 3083,
+      "productId": 26003,
+      "question": "Can RT30 be reviewed with related products?",
+      "answer": "Yes, when the study protocol defines the rationale. Common comparison or stack candidates include RT10, RT20, TR10, TR20. Keep fixed-ratio blends and single-compound materials documented separately.",
+      "sort": 3
+    },
+    {
+      "id": 3084,
+      "productId": 26003,
+      "question": "Why can details differ from reference articles or catalog pages?",
+      "answer": "Reference pages provide general compound context. LPPeptide product pages should follow the current product record, active COA, lot-specific handling sheet, and lab SOP.",
+      "sort": 4
+    }
+  ],
+  "ratingBreakdown": [
+    {
+      "id": null,
+      "productId": 26003,
+      "label": "5+",
+      "percent": 80,
+      "sort": 1,
+      "count": 852
+    },
+    {
+      "id": null,
+      "productId": 26003,
+      "label": "4+",
+      "percent": 18,
+      "sort": 2,
+      "count": 189
+    },
+    {
+      "id": null,
+      "productId": 26003,
+      "label": "3+",
+      "percent": 1,
+      "sort": 3,
+      "count": 14
+    },
+    {
+      "id": null,
+      "productId": 26003,
+      "label": "2+",
+      "percent": 1,
+      "sort": 4,
+      "count": 8
+    },
+    {
+      "id": null,
+      "productId": 26003,
+      "label": "1+",
+      "percent": 0,
+      "sort": 5,
+      "count": 1
+    }
+  ],
+  "coaPath": "/coa/rt30",
+  "reviews": [
+    {
+      "id": 81,
+      "productId": 26003,
+      "userId": 9956,
+      "orderId": 148752,
+      "authorName": "Heather Spence",
+      "avatarText": "HS",
+      "rating": 5,
+      "title": "Great company!",
+      "content": "I have ordered several times and have been very pleased with my products every time. So glad I came across LPP",
+      "verifiedLabel": "Verified Buyer",
+      "hidden": false,
+      "reviewDate": "2026-11-14",
+      "sort": 0,
+      "createdAt": "2026-11-14T01:28:14",
+      "updatedAt": "2026-11-14T01:28:14"
+    },
+    {
+      "id": 70,
+      "productId": 26003,
+      "userId": 8166,
+      "orderId": 127115,
+      "authorName": "Olukemi Bello",
+      "avatarText": "OB",
+      "rating": 5,
+      "title": "RT30",
+      "content": "I am well happy with my order well packaged and great customer service.",
+      "verifiedLabel": "Verified Buyer",
+      "hidden": false,
+      "reviewDate": "2026-11-10",
+      "sort": 0,
+      "createdAt": "2026-11-10T19:47:30",
+      "updatedAt": "2026-11-10T19:47:30"
+    },
+    {
+      "id": 67,
+      "productId": 26003,
+      "userId": 14652,
+      "orderId": 149887,
+      "authorName": "Angeewest_",
+      "avatarText": "A",
+      "rating": 5,
+      "title": "Rt30",
+      "content": "Shipping was quick in the US loving the product so far",
+      "verifiedLabel": "Verified Buyer",
+      "hidden": false,
+      "reviewDate": "2026-11-10",
+      "sort": 0,
+      "createdAt": "2026-11-10T14:28:13",
+      "updatedAt": "2026-11-10T14:28:13"
+    },
+    {
+      "id": 66,
+      "productId": 26003,
+      "userId": 9434,
+      "orderId": 152610,
+      "authorName": "Justin Speagle",
+      "avatarText": "JS",
+      "rating": 5,
+      "title": "Rt30",
+      "content": "I am impressed with the product I received from lpp",
+      "verifiedLabel": "Verified Buyer",
+      "hidden": false,
+      "reviewDate": "2026-11-10",
+      "sort": 0,
+      "createdAt": "2026-11-10T01:24:18",
+      "updatedAt": "2026-11-10T01:24:18"
+    }
+  ],
+  "offers": [],
+  "purchaseOptions": [],
+  "sizes": [],
+  "warehouseAvailability": {
+    "CNFC": "IN_STOCK",
+    "USFC": "OUT_OF_STOCK",
+    "AUSFC": "IN_STOCK"
+  }
+}

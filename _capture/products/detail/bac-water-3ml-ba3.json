@@ -1,0 +1,360 @@
+{
+  "id": 26049,
+  "slug": "bac-water-3ml-ba3",
+  "name": "BAC WATER 3ml",
+  "shortName": "BAC WATER",
+  "subtitle": "3ml x 10 vials",
+  "description": "Bacteriostatic Water (BAC Water) is sterile water that contains 0.9% benzyl alcohol as a bacteriostatic preservative, designed to inhibit the growth of most bacteria while maintaining compatibility with peptide reconstitution and dilution applications.",
+  "category": "Other Peptides & Accessories",
+  "vendor": "LPPeptide",
+  "price": 10,
+  "oldPrice": 10,
+  "saveLabel": "",
+  "catalogCode": "BA3",
+  "specification": "3ml x 10 vials",
+  "packageSize": "10 vials / box",
+  "catalogLabel": "",
+  "catalogHref": "/docs/yuan-peptide-catalog.pdf",
+  "amountMg": 0,
+  "weightKg": 0.103,
+  "rating": 5,
+  "reviewCount": 7868,
+  "answeredQuestionCount": 23,
+  "imageUrl": "/biz/files/products/2026/08/19/feb7b2e4418a478a9927ced1d8e88f24.png",
+  "cornerBadgeUrl": "",
+  "sales": 0,
+  "sort": 26048,
+  "enabled": true,
+  "externalSyncLocked": false,
+  "categories": [
+    "Other Peptides & Accessories"
+  ],
+  "stockAvailable": 102640,
+  "stockLocked": 187,
+  "procurementQuantity": 0,
+  "tags": [
+    "Accessories",
+    "Other Peptides"
+  ],
+  "imageUrls": [
+    "/biz/files/products/2026/08/19/feb7b2e4418a478a9927ced1d8e88f24.png"
+  ],
+  "glanceItems": [
+    {
+      "id": null,
+      "productId": null,
+      "label": "LPPeptide",
+      "value": "BA3",
+      "linkUrl": null,
+      "sort": 1
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Specification",
+      "value": "3ml x 10 vials /box",
+      "linkUrl": null,
+      "sort": 2
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Category",
+      "value": "Other Peptides & Accessories",
+      "linkUrl": null,
+      "sort": 3
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Form",
+      "value": "Colorless Solution",
+      "linkUrl": null,
+      "sort": 4
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Knowledge source",
+      "value": "BAC WATER",
+      "linkUrl": null,
+      "sort": 5
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Research focus",
+      "value": "Other Peptides & Accessories",
+      "linkUrl": null,
+      "sort": 6
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Reconstitution",
+      "value": "Swirling the vial gently rather than shaking is generally recommended to facilitate dissolution while minimizing mechanical stress on the peptide molecules.",
+      "linkUrl": null,
+      "sort": 7
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Storage",
+      "value": "Once reconstituted, peptide solutions should typically be stored under refrigeration at 2-8°C and used within the timeframe specified for each particular compound.",
+      "linkUrl": null,
+      "sort": 8
+    }
+  ],
+  "detailSections": [
+    {
+      "id": 5763,
+      "sectionKey": "overview",
+      "label": "Overview",
+      "sort": 1,
+      "blocks": [
+        {
+          "id": 15840,
+          "heading": "What is BA3?",
+          "body": "Bacteriostatic Water (BAC Water) is sterile water that contains 0.9% benzyl alcohol as a bacteriostatic preservative, designed to inhibit the growth of most bacteria while maintaining compatibility with peptide reconstitution and dilution applications.This specialized diluent has been reported by researchers to be the preferred vehicle for reconstituting lyophilized peptides due to its ability to maintain sterility across multiple uses while preserving peptide stability and biological activity. Bacteriostatic water represents an essential component in peptide research laboratories worldwide.",
+          "imageUrl": "",
+          "sort": 1,
+          "links": []
+        },
+        {
+          "id": 15841,
+          "heading": "Research context",
+          "body": "Researchers find that the benzyl alcohol preservative in bacteriostatic water may function through multiple mechanisms to prevent microbial proliferation. The preservative is believed to disrupt bacterial cell membrane integrity and interfere with essential cellular processes, effectively preventing contamination during the reconstitution process and subsequent storage periods.Unlike sterile water for injection, which must be discarded after single use, bacteriostatic water may be used for multiple withdrawals within a designated timeframe, typically 28 days after initial puncture, making it more practical and economical for research applications involving repeated peptide preparations.",
+          "imageUrl": "",
+          "sort": 2,
+          "links": []
+        },
+        {
+          "id": 15842,
+          "heading": "Commonly matched with",
+          "body": "The pH of bacteriostatic water typically ranges from 4.5 to 7.0, which is compatible with most peptides used in research applications. However, some peptides may require specific pH conditions for optimal stability, and researchers should consult relevant literature or manufacturer recommendations for each specific compound to ensure proper handling and storage conditions.",
+          "imageUrl": "",
+          "sort": 3,
+          "links": []
+        },
+        {
+          "id": 15843,
+          "heading": "Compliance notice",
+          "body": "Bacteriostatic Water is available for research and laboratory purposes only. Please review and adhere to our Terms and Conditions before ordering.",
+          "imageUrl": "",
+          "sort": 4,
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": 5764,
+      "sectionKey": "research",
+      "label": "Research",
+      "sort": 2,
+      "blocks": [
+        {
+          "id": 15844,
+          "heading": "Reference literature focus",
+          "body": "Bacteriostatic water has been widely utilized in research settings for its compatibility with a broad range of peptides and proteins. The 0.9% benzyl alcohol concentration has been determined through extensive testing to provide effective antimicrobial protection while remaining at sufficiently low levels to minimize potential interference with biological activity of reconstituted compounds. This balance between preservation and biocompatibility makes bacteriostatic water the diluent of choice for most peptide research applications.",
+          "imageUrl": "",
+          "sort": 1,
+          "links": []
+        },
+        {
+          "id": 15845,
+          "heading": "Study design notes",
+          "body": "Use the LPPeptide product knowledge record, current LPPeptide COA, and internal lab SOP to confirm identity, concentration, and endpoints before this material enters a study. The matched LPPeptide reference specification is 3ml x 10 vials / 10mg x 10 vials",
+          "imageUrl": "",
+          "sort": 2,
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": 5765,
+      "sectionKey": "dosing",
+      "label": "Dosing & Protocol",
+      "sort": 3,
+      "blocks": [
+        {
+          "id": 15846,
+          "heading": "LPPeptide handling reference",
+          "body": "Bacteriostatic water is essential for the proper reconstitution of lyophilized peptides in research settings. When reconstituting peptides,researchers should follow established protocols to ensure peptide integrity and accurate experimental results. The recommended procedure involves calculating the appropriate volume of bacteriostatic water based on desired final concentration, then slowly introducing the diluent into the vial while avoiding vigorous agitation that could cause peptide degradation or foam formation.",
+          "imageUrl": "",
+          "sort": 1,
+          "links": []
+        },
+        {
+          "id": 15847,
+          "heading": "Preparation",
+          "body": "Studies have demonstrated that proper reconstitution technique significantly impacts peptide stability and experimental reproducibility. Swirling the vial gently rather than shaking is generally recommended to facilitate dissolution while minimizing mechanical stress on the peptide molecules. Once reconstituted, peptide solutions should typically be stored under refrigeration at 2-8°C and used within the timeframe specified for each particular compound.",
+          "imageUrl": "",
+          "sort": 2,
+          "links": []
+        },
+        {
+          "id": 15848,
+          "heading": "Storage",
+          "body": "Research indicates that storage conditions significantly impact the stability of both bacteriostatic water and reconstituted peptide solutions.(7) Unopened vials of bacteriostatic water should be stored at controlled room temperature, protected from light, and used before the expiration date indicated on the packaging. Once opened, the multi-dose vial should be stored under refrigeration and used within 28 days to ensure continued sterility and preservative effectiveness.\n\nThe antimicrobial effectiveness of benzyl alcohol may diminish over time or with repeated punctures, making adherence to recommended use periods essential for maintaining sterility. Researchers should also inspect bacteriostatic water before each use, discarding any vials showing visible particulates, cloudiness, or discoloration that may indicate contamination or degradation.",
+          "imageUrl": "",
+          "sort": 3,
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": 5766,
+      "sectionKey": "sideeffects",
+      "label": "Side Effects",
+      "sort": 4,
+      "blocks": [
+        {
+          "id": 15849,
+          "heading": "Safety observations",
+          "body": "Quality considerations are paramount when selecting bacteriostatic water for peptide research applications. High-quality bacteriostatic water should meet or exceed United States Pharmacopeia (USP) standards for sterility, pyrogen content, and particulate matter. Researchers should source bacteriostatic water from reputable suppliers that provide certificates of analysis documenting compliance with relevant quality specifications.",
+          "imageUrl": "",
+          "sort": 1,
+          "links": []
+        },
+        {
+          "id": 15850,
+          "heading": "Contraindications",
+          "body": "The importance of using appropriate grade diluents cannot be overstated in peptide research. Contaminated or improperly preserved diluents may introduce variables that compromise experimental validity or lead to erroneous results. Establishing standard operating procedures for diluent handling and peptide reconstitution helps ensure consistency and reliability across research studies.",
+          "imageUrl": "",
+          "sort": 2,
+          "links": []
+        },
+        {
+          "id": 15851,
+          "heading": "Interaction review",
+          "body": "Sterile laboratory research diluent containing 0.9% benzyl alcohol for controlled analytical and laboratory workflows. Research use only. Not for human or animal use. Not for injection.",
+          "imageUrl": "",
+          "sort": 3,
+          "links": []
+        }
+      ]
+    }
+  ],
+  "qaItems": [],
+  "ratingBreakdown": [
+    {
+      "id": null,
+      "productId": 26049,
+      "label": "5+",
+      "percent": 99,
+      "sort": 1,
+      "count": 759
+    },
+    {
+      "id": null,
+      "productId": 26049,
+      "label": "4+",
+      "percent": 0,
+      "sort": 2,
+      "count": 2
+    },
+    {
+      "id": null,
+      "productId": 26049,
+      "label": "3+",
+      "percent": 0,
+      "sort": 3,
+      "count": 1
+    },
+    {
+      "id": null,
+      "productId": 26049,
+      "label": "2+",
+      "percent": 0,
+      "sort": 4,
+      "count": 0
+    },
+    {
+      "id": null,
+      "productId": 26049,
+      "label": "1+",
+      "percent": 0,
+      "sort": 5,
+      "count": 2
+    }
+  ],
+  "coaPath": null,
+  "reviews": [
+    {
+      "id": 30,
+      "productId": 26049,
+      "userId": 6010,
+      "orderId": 80015,
+      "authorName": "Patricia Borges dos Santos",
+      "avatarText": "PB",
+      "rating": 5,
+      "title": "Água bariostatica",
+      "content": "Ótima de excelente qualidade",
+      "verifiedLabel": "Verified Buyer",
+      "hidden": false,
+      "reviewDate": "2026-10-02",
+      "sort": 0,
+      "createdAt": "2026-10-02T22:43:05",
+      "updatedAt": "2026-10-02T22:43:05"
+    },
+    {
+      "id": -636597,
+      "productId": 26049,
+      "userId": null,
+      "orderId": null,
+      "authorName": "Jordan P.",
+      "avatarText": "JP",
+      "rating": 5,
+      "title": "COA notes matched the listing",
+      "content": "The listing for BAC WATER 3ml had the details I needed, and the received item felt consistent with the stated batch notes.",
+      "verifiedLabel": "Verified Buyer - repeat order",
+      "hidden": false,
+      "reviewDate": "2026-08-13",
+      "sort": -1001,
+      "createdAt": null,
+      "updatedAt": null
+    },
+    {
+      "id": -636598,
+      "productId": 26049,
+      "userId": null,
+      "orderId": null,
+      "authorName": "James M.",
+      "avatarText": "JM",
+      "rating": 5,
+      "title": "Clear label and consistent packaging",
+      "content": "BAC WATER 3ml arrived with clear labeling and tidy packaging. The product information matched the catalog details and was easy to verify.",
+      "verifiedLabel": "Verified Buyer",
+      "hidden": false,
+      "reviewDate": "2026-07-27",
+      "sort": -1002,
+      "createdAt": null,
+      "updatedAt": null
+    },
+    {
+      "id": -636599,
+      "productId": 26049,
+      "userId": null,
+      "orderId": null,
+      "authorName": "Mina L.",
+      "avatarText": "ML",
+      "rating": 5,
+      "title": "Good batch documentation",
+      "content": "The label, batch notes, and packaging for BAC WATER 3ml were all consistent. Good experience from ordering through delivery.",
+      "verifiedLabel": "Verified Buyer - product received",
+      "hidden": false,
+      "reviewDate": "2026-11-07",
+      "sort": -1003,
+      "createdAt": null,
+      "updatedAt": null
+    }
+  ],
+  "offers": [],
+  "purchaseOptions": [],
+  "sizes": [],
+  "warehouseAvailability": {
+    "CNFC": "IN_STOCK",
+    "USFC": "IN_STOCK",
+    "AUSFC": "IN_STOCK"
+  }
+}

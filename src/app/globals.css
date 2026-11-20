@@ -1,26 +1,58 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/*
+ * Look-alike tokens from docs/06-design-system.md (sampled from the live CSS on 2026-11-20).
+ * Each token becomes a utility: bg-mall-bg, text-pd-ink, border-mall-line, shadow-mall, rounded-pd, font-serif…
+ * Do not add colours or fonts that are not in docs/06.
+ */
+@theme {
+  /* fonts: Inter is loaded by next/font in layout.tsx; Georgia is the system serif for display headings */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-serif: Georgia, "Times New Roman", Times, serif;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* storefront ("mall") */
+  --color-mall-bg: #f3f8fb;
+  --color-mall-ink: #10232d;
+  --color-mall-muted: #5f7380;
+  --color-mall-line: #d7e5ec;
+  --color-mall-panel: #ffffff;
+  --color-mall-panel-soft: #edf7fa;
+  --color-mall-green: #0f8f88;
+  --color-mall-teal: #2563a6;
+  --color-mall-amber: #c9822f;
+  --color-mall-clay: #a3513c;
+  --shadow-mall: 0 18px 46px #112d381c;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* product detail ("pd") */
+  --color-pd-bg: #f6f8f9;
+  --color-pd-ink: #10212a;
+  --color-pd-muted: #63737d;
+  --color-pd-soft: #eef6f5;
+  --color-pd-surface: #ffffff;
+  --color-pd-line: #dfe9e8;
+  --color-pd-teal: #087a73;
+  --color-pd-teal-dark: #066d67;
+  --color-pd-blue: #285f91;
+  --color-pd-coral: #e76f51;
+  --color-pd-gold: #d99a32;
+  --shadow-pd: 0 18px 52px #15343c12;
+  --radius-pd: 8px;
+
+  /* sampled computed colours */
+  --color-body-bg: #f4f6f8;
+  --color-body-ink: #16212c;
+  --color-navy: #0b1e40; /* header links, card headings, announcement bar */
+  --color-navy-btn: #071b3b; /* primary button bg */
+  --color-footer-bg: #162734;
+
+  /* TODO(docs/06): sample from the live site — add-to-cart yellow, sale-price red,
+     "In stock" / "OUT STOCK" badge colours, amber label-pill background. */
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-body-bg);
+  color: var(--color-body-ink);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
 }

@@ -1,0 +1,470 @@
+{
+  "id": 26028,
+  "slug": "ghk-cu-100mg-ghk-cu100",
+  "name": "GHK-CU 100mg",
+  "shortName": "GHK-CU",
+  "subtitle": "100mg x 10 vials",
+  "description": "Copper Peptide, boosts collagen production\nAnti-aging & accelerates wound healing",
+  "category": "Repair & Healing",
+  "vendor": "LPPeptide",
+  "price": 50,
+  "oldPrice": 50,
+  "saveLabel": "",
+  "catalogCode": "GHK-CU100",
+  "specification": "100mg x 10 vials",
+  "packageSize": "10 vials / box",
+  "catalogLabel": "",
+  "catalogHref": "/docs/yuan-peptide-catalog.pdf",
+  "amountMg": 100,
+  "weightKg": 0.075,
+  "rating": 4.8,
+  "reviewCount": 2748,
+  "answeredQuestionCount": 121,
+  "imageUrl": "/biz/files/products/2026/07/13/92d4bffa96a64b63a68655f3ad7f2a86.jpg",
+  "cornerBadgeUrl": "",
+  "sales": 150,
+  "sort": 26028,
+  "enabled": true,
+  "externalSyncLocked": false,
+  "categories": [
+    "Repair & Healing"
+  ],
+  "stockAvailable": 99581,
+  "stockLocked": 63,
+  "procurementQuantity": 0,
+  "tags": [
+    "Healing",
+    "Repair",
+    "Best Sellers"
+  ],
+  "imageUrls": [
+    "/biz/files/products/2026/07/13/92d4bffa96a64b63a68655f3ad7f2a86.jpg"
+  ],
+  "glanceItems": [
+    {
+      "id": null,
+      "productId": null,
+      "label": "LPPeptide",
+      "value": "GHK-Cu100",
+      "linkUrl": null,
+      "sort": 1
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Specification",
+      "value": "100mg x 10 vials /box",
+      "linkUrl": null,
+      "sort": 2
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Category",
+      "value": "Repair & Healing",
+      "linkUrl": null,
+      "sort": 3
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Form",
+      "value": "Lyophilized powder",
+      "linkUrl": null,
+      "sort": 4
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Knowledge source",
+      "value": "GHK-Cu (CU50 / CU100)",
+      "linkUrl": null,
+      "sort": 5
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Research focus",
+      "value": "Repair & Healing",
+      "linkUrl": null,
+      "sort": 7
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Reconstitution",
+      "value": "Coze source: add 3.0 mL bacteriostatic water for about 16.7 mg/mL. Reference range is once daily 200-500 mcg. At this concentration, 1 U is about 1.67 mg.",
+      "linkUrl": null,
+      "sort": 8
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Storage",
+      "value": "Lyophilized: -20 deg C, dry and dark. Reconstituted: 2-8 deg C, protect from light, use within about 2-4 weeks, and avoid vigorous shaking.",
+      "linkUrl": null,
+      "sort": 9
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "COA",
+      "value": "View certificate ↗️",
+      "linkUrl": "https://verify.janoshik.com/tests/200523-CU100_UBVQ1RJUPCCC",
+      "sort": 10
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Batch",
+      "value": "CU100260528",
+      "linkUrl": null,
+      "sort": 11
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Reference",
+      "value": "LPPeptide product knowledge record",
+      "linkUrl": null,
+      "sort": 12
+    }
+  ],
+  "detailSections": [
+    {
+      "id": 5423,
+      "sectionKey": "overview",
+      "label": "Overview",
+      "sort": 10,
+      "blocks": [
+        {
+          "id": 15184,
+          "heading": "What is GHK-Cu100?",
+          "body": "Copper tripeptide profile for skin, collagen, antioxidant, and tissue-regeneration research. Coze describes GHK-Cu as glycyl-L-histidyl-L-lysine copper, a naturally occurring tripeptide in plasma, urine, and saliva, reviewed for collagen and glycosaminoglycan synthesis, wound healing, skin regeneration, antioxidant activity, and anti-inflammatory signaling. GHK-Cu 100mg is mapped to LPPeptide SKU CU100. Current storefront values use our product data: 100mg x 10 vials /box, $50.00 USD per box. LPPeptide reference specs: 50mg x 10 vials / 100mg x 10 vials.",
+          "imageUrl": "",
+          "sort": 10,
+          "links": []
+        },
+        {
+          "id": 15185,
+          "heading": "Research context",
+          "body": "Coze describes GHK-Cu as glycyl-L-histidyl-L-lysine copper, a naturally occurring tripeptide in plasma, urine, and saliva, reviewed for collagen and glycosaminoglycan synthesis, wound healing, skin regeneration, antioxidant activity, and anti-inflammatory signaling. Research commonly reviews copper-peptide signaling, extracellular matrix remodeling, collagen markers, and skin-barrier models.",
+          "imageUrl": "",
+          "sort": 20,
+          "links": []
+        },
+        {
+          "id": 15186,
+          "heading": "Commonly matched with",
+          "body": "GHK-Cu100 is commonly reviewed alongside BC10, BB10, BB20, BT10, BPC-157. Keep each combination tied to a defined research objective and lot record.",
+          "imageUrl": "",
+          "sort": 30,
+          "links": []
+        },
+        {
+          "id": 15187,
+          "heading": "Compliance notice",
+          "body": "GHK-Cu100 is supplied for research use only. It is not for human or veterinary use, not for consumption, and statements on this page are reference context rather than medical claims.",
+          "imageUrl": "",
+          "sort": 40,
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": 5424,
+      "sectionKey": "research",
+      "label": "Research",
+      "sort": 20,
+      "blocks": [
+        {
+          "id": 15188,
+          "heading": "Reference literature focus",
+          "body": "Coze describes GHK-Cu as glycyl-L-histidyl-L-lysine copper, a naturally occurring tripeptide in plasma, urine, and saliva, reviewed for collagen and glycosaminoglycan synthesis, wound healing, skin regeneration, antioxidant activity, and anti-inflammatory signaling. Research commonly reviews copper-peptide signaling, extracellular matrix remodeling, collagen markers, and skin-barrier models.",
+          "imageUrl": "",
+          "sort": 10,
+          "links": []
+        },
+        {
+          "id": 15189,
+          "heading": "Study design notes",
+          "body": "Use the LPPeptide product knowledge record, current LPPeptide COA, and internal lab SOP to confirm identity, concentration, and endpoints before this material enters a study. The matched LPPeptide reference specification is 50mg x 10 vials / 100mg x 10 vials.",
+          "imageUrl": "",
+          "sort": 20,
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": 5425,
+      "sectionKey": "dosing",
+      "label": "Dosing & Protocol",
+      "sort": 30,
+      "blocks": [
+        {
+          "id": 15190,
+          "heading": "LPPeptide handling reference",
+          "body": "Coze source: add 3.0 mL bacteriostatic water for about 33.4 mg/mL. Reference range is once daily 200-500 mcg. At this concentration, 1 U is about 3.34 mg.\n\nCoze preparation pattern: use sterile technique, add diluent slowly down the vial wall, avoid foaming, roll gently until dissolved, label the preparation date, refrigerate at 2-8 deg C, and protect from light.",
+          "imageUrl": "",
+          "sort": 15,
+          "links": []
+        },
+        {
+          "id": 15191,
+          "heading": "Preparation",
+          "body": "GHK-Cu 100mg ships as Lyophilized powder. Reconstitution note: Coze source: add 3.0 mL bacteriostatic water for about 33.4 mg/mL. Reference range is once daily 200-500 mcg. At this concentration, 1 U is about 3.34 mg.. Record the final concentration and preparation date in the study log.",
+          "imageUrl": "",
+          "sort": 20,
+          "links": []
+        },
+        {
+          "id": 15192,
+          "heading": "Storage",
+          "body": "Lyophilized: -20 deg C, dry and dark. Reconstituted: 2-8 deg C, protect from light, use within about 2-4 weeks, and avoid vigorous shaking.. Follow the most current lot-specific handling record whenever it is available.",
+          "imageUrl": "",
+          "sort": 30,
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": 5426,
+      "sectionKey": "sideeffects",
+      "label": "Side Effects",
+      "sort": 40,
+      "blocks": [
+        {
+          "id": 15193,
+          "heading": "Safety observations",
+          "body": "Review copper sensitivity, local irritation signals, and model-specific handling limits in the active protocol.",
+          "imageUrl": "",
+          "sort": 10,
+          "links": []
+        },
+        {
+          "id": 15194,
+          "heading": "Contraindications",
+          "body": "Do not use GHK-Cu100 outside qualified research workflows. Review the current SDS, COA, and protocol exclusions before handling.",
+          "imageUrl": "",
+          "sort": 20,
+          "links": []
+        },
+        {
+          "id": 15195,
+          "heading": "Interaction review",
+          "body": "Review combinations with BPC-157, TB-500, KPV, or other skin and connective-tissue materials.",
+          "imageUrl": "",
+          "sort": 30,
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": 5427,
+      "sectionKey": "coa",
+      "label": "COA & Testing",
+      "sort": 50,
+      "blocks": [
+        {
+          "id": 15196,
+          "heading": "Certificate of Analysis",
+          "body": "Each LPPeptide lot should be confirmed against current batch documentation before shipment or study use. This product page keeps CU100 visible so the SKU can be matched to the active COA.",
+          "imageUrl": "",
+          "sort": 10,
+          "links": []
+        },
+        {
+          "id": 15197,
+          "heading": "Current catalog summary",
+          "body": "- SKU: CU100\n- Product: GHK-Cu 100mg\n- Storefront specification: 100mg x 10 vials /box\n- LPPeptide reference specs: 50mg x 10 vials / 100mg x 10 vials\n- Listed box price: $50.00 USD\n- Reference: LPPeptide product knowledge record",
+          "imageUrl": "",
+          "sort": 20,
+          "links": []
+        },
+        {
+          "id": 15198,
+          "heading": "Testing checklist",
+          "body": "- Peptide identity or material identity\n- HPLC purity or assay result where applicable\n- Batch ID and test date\n- Sterility/endotoxin or accessory checks when applicable\n- Residual solvent and handling notes where applicable",
+          "imageUrl": "",
+          "sort": 30,
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": 5428,
+      "sectionKey": "about-lppeptide",
+      "label": "About LPPeptide",
+      "sort": 90,
+      "blocks": [
+        {
+          "id": 15199,
+          "heading": "Direct catalog supply",
+          "body": "LPPeptide product pages use our own SKU, package, price, and stock data first. LPPeptide knowledge mapping adds compound education, handling notes, and specification checks while lot-specific editorial content is being prepared.",
+          "imageUrl": "",
+          "sort": 10,
+          "links": []
+        },
+        {
+          "id": 15200,
+          "heading": "Lot-specific content",
+          "body": "For final release decisions, use the current product record, COA, handling sheet, and research SOP as the highest-priority source for this page.",
+          "imageUrl": "",
+          "sort": 20,
+          "links": []
+        }
+      ]
+    }
+  ],
+  "qaItems": [
+    {
+      "id": 3053,
+      "productId": 26028,
+      "question": "Is GHK-Cu100 sold for research use only?",
+      "answer": "GHK-Cu100 is supplied by LPPeptide for qualified research use only. It is not for human or veterinary use, not for consumption, and local rules may vary by jurisdiction.",
+      "sort": 1
+    },
+    {
+      "id": 3054,
+      "productId": 26028,
+      "question": "Where do I confirm the current GHK-Cu100 lot documentation?",
+      "answer": "Use the COA & Testing tab, product label, and current LPPeptide batch record to confirm SKU CU100, specification, identity, and handling details before research use.",
+      "sort": 2
+    },
+    {
+      "id": 3055,
+      "productId": 26028,
+      "question": "Can GHK-Cu100 be reviewed with related products?",
+      "answer": "Yes, when the study protocol defines the rationale. Common comparison or stack candidates include BC10, BB10, BB20, BT10. Keep fixed-ratio blends and single-compound materials documented separately.",
+      "sort": 3
+    },
+    {
+      "id": 3056,
+      "productId": 26028,
+      "question": "Why can details differ from reference articles or catalog pages?",
+      "answer": "Reference pages provide general compound context. LPPeptide product pages should follow the current product record, active COA, lot-specific handling sheet, and lab SOP.",
+      "sort": 4
+    }
+  ],
+  "ratingBreakdown": [
+    {
+      "id": null,
+      "productId": 26028,
+      "label": "5+",
+      "percent": 87,
+      "sort": 1,
+      "count": 878
+    },
+    {
+      "id": null,
+      "productId": 26028,
+      "label": "4+",
+      "percent": 10,
+      "sort": 2,
+      "count": 104
+    },
+    {
+      "id": null,
+      "productId": 26028,
+      "label": "3+",
+      "percent": 2,
+      "sort": 3,
+      "count": 24
+    },
+    {
+      "id": null,
+      "productId": 26028,
+      "label": "2+",
+      "percent": 0,
+      "sort": 4,
+      "count": 2
+    },
+    {
+      "id": null,
+      "productId": 26028,
+      "label": "1+",
+      "percent": 0,
+      "sort": 5,
+      "count": 0
+    }
+  ],
+  "coaPath": "/coa/ghk-cu100",
+  "reviews": [
+    {
+      "id": 65,
+      "productId": 26028,
+      "userId": 12046,
+      "orderId": 149115,
+      "authorName": "Queenpeppers501",
+      "avatarText": "Q",
+      "rating": 5,
+      "title": "Re: Fast shipping",
+      "content": "Fast shipping and great product.",
+      "verifiedLabel": "Verified Buyer",
+      "hidden": false,
+      "reviewDate": "2026-11-09",
+      "sort": 0,
+      "createdAt": "2026-11-09T07:12:42",
+      "updatedAt": "2026-11-09T07:12:42"
+    },
+    {
+      "id": 63,
+      "productId": 26028,
+      "userId": 4043,
+      "orderId": 110477,
+      "authorName": "Stephanie Elisee",
+      "avatarText": "SE",
+      "rating": 5,
+      "title": "My favorite",
+      "content": "I love this product",
+      "verifiedLabel": "Verified Buyer",
+      "hidden": false,
+      "reviewDate": "2026-11-07",
+      "sort": 0,
+      "createdAt": "2026-11-07T21:38:33",
+      "updatedAt": "2026-11-07T21:38:33"
+    },
+    {
+      "id": 46,
+      "productId": 26028,
+      "userId": 12957,
+      "orderId": 143516,
+      "authorName": "luisdpr",
+      "avatarText": "L",
+      "rating": 5,
+      "title": "Great Experience",
+      "content": "Very impressed with the service and quality, overall presentation. Everything was well packaged and exactly as described. Great experience from start to finish!",
+      "verifiedLabel": "Verified Buyer",
+      "hidden": false,
+      "reviewDate": "2026-11-02",
+      "sort": 0,
+      "createdAt": "2026-11-02T23:34:03",
+      "updatedAt": "2026-11-02T23:34:03"
+    },
+    {
+      "id": 29,
+      "productId": 26028,
+      "userId": 6010,
+      "orderId": 80015,
+      "authorName": "Patricia Borges dos Santos",
+      "avatarText": "PB",
+      "rating": 5,
+      "title": "Ghkcu",
+      "content": "Gostei do produto!! dentro dos parâmetros de pureza",
+      "verifiedLabel": "Verified Buyer",
+      "hidden": false,
+      "reviewDate": "2026-10-02",
+      "sort": 0,
+      "createdAt": "2026-10-02T22:42:36",
+      "updatedAt": "2026-10-02T22:42:36"
+    }
+  ],
+  "offers": [],
+  "purchaseOptions": [],
+  "sizes": [],
+  "warehouseAvailability": {
+    "CNFC": "IN_STOCK",
+    "USFC": "OUT_OF_STOCK",
+    "AUSFC": "OUT_OF_STOCK"
+  }
+}

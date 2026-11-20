@@ -1,0 +1,463 @@
+{
+  "id": 26015,
+  "slug": "nad-plus-500mg-nj500",
+  "name": "NAD+ 500mg",
+  "shortName": "NAD+",
+  "subtitle": "500mg x 10 vials",
+  "description": "DNA Repair\nCellular Energy Coenzyme",
+  "category": "Anti-Aging & Longevity",
+  "vendor": "LPPeptide",
+  "price": 59,
+  "oldPrice": 59,
+  "saveLabel": "",
+  "catalogCode": "NJ500",
+  "specification": "500mg x 10 vials",
+  "packageSize": "10 vials / box",
+  "catalogLabel": "",
+  "catalogHref": "/docs/yuan-peptide-catalog.pdf",
+  "amountMg": 500,
+  "weightKg": 0.163,
+  "rating": 4.8,
+  "reviewCount": 3232,
+  "answeredQuestionCount": 149,
+  "imageUrl": "/biz/files/products/2026/07/13/086f98c9a6824c739e7e75e2af03bbff.jpg",
+  "cornerBadgeUrl": "",
+  "sales": 280,
+  "sort": 26015,
+  "enabled": true,
+  "externalSyncLocked": false,
+  "categories": [
+    "Anti-Aging & Longevity"
+  ],
+  "stockAvailable": 99614,
+  "stockLocked": 51,
+  "procurementQuantity": 0,
+  "tags": [
+    "Anti-Aging",
+    "COA",
+    "Best Sellers",
+    "Longevity"
+  ],
+  "imageUrls": [
+    "/biz/files/products/2026/07/13/086f98c9a6824c739e7e75e2af03bbff.jpg"
+  ],
+  "glanceItems": [
+    {
+      "id": null,
+      "productId": null,
+      "label": "LPPeptide",
+      "value": "NJ500",
+      "linkUrl": null,
+      "sort": 1
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Specification",
+      "value": "500mg x 10 vials /box",
+      "linkUrl": null,
+      "sort": 2
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Category",
+      "value": "Anti-Aging & Longevity",
+      "linkUrl": null,
+      "sort": 3
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Form",
+      "value": "Lyophilized powder",
+      "linkUrl": null,
+      "sort": 4
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Knowledge source",
+      "value": "NAD+ (NJ100 / NJ500 / NJ1000)",
+      "linkUrl": null,
+      "sort": 5
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Research focus",
+      "value": "Anti-Aging & Longevity",
+      "linkUrl": null,
+      "sort": 7
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Reconstitution",
+      "value": "Coze source: add 3.0 mL bacteriostatic water for 166.7 mg/mL. Reference range is once daily 50-100 mg. At this concentration, 1 U equals 1.67 mg; 50 mg is about 30 U, 75 mg about 45 U, and 100 mg about 60 U.",
+      "linkUrl": null,
+      "sort": 8
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Storage",
+      "value": "Lyophilized: -20 deg C or below, ideally -80 deg C for multi-year storage, dry and dark. Reconstituted: 2-8 deg C, protect from light, use within about 14 days, and avoid repeated freeze-thaw.",
+      "linkUrl": null,
+      "sort": 9
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "COA",
+      "value": "View certificate ↗",
+      "linkUrl": "https://verify.janoshik.com/tests/200520-NJ500_SLTB3CZBTCX6",
+      "sort": 10
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Batch",
+      "value": "NJ05260528",
+      "linkUrl": null,
+      "sort": 11
+    }
+  ],
+  "detailSections": [
+    {
+      "id": 5345,
+      "sectionKey": "overview",
+      "label": "Overview",
+      "sort": 10,
+      "blocks": [
+        {
+          "id": 14961,
+          "heading": "What is NJ500?",
+          "body": "Cellular coenzyme profile for DNA repair, mitochondrial, and energy-metabolism research. Coze describes NAD+ as a key coenzyme involved in cellular energy metabolism, DNA repair, mitochondrial function, ATP synthesis context, and sirtuin-pathway research. NAD+ 500mg is mapped to LPPeptide SKU NJ500. Current storefront values use our product data: 500mg x 10 vials /box, $59.00 USD per box. LPPeptide reference specs: 100mg x 10 vials / 500mg x 10 vials / 1000mg x 10 vials.",
+          "imageUrl": "",
+          "sort": 10,
+          "links": []
+        },
+        {
+          "id": 14962,
+          "heading": "Research context",
+          "body": "Coze describes NAD+ as a key coenzyme involved in cellular energy metabolism, DNA repair, mitochondrial function, ATP synthesis context, and sirtuin-pathway research. Research commonly centers on NAD+/NADH balance, sirtuin pathway context, DNA repair models, and cellular energy markers.",
+          "imageUrl": "",
+          "sort": 20,
+          "links": []
+        },
+        {
+          "id": 14963,
+          "heading": "Commonly matched with",
+          "body": "NJ500 is commonly reviewed alongside 2s10, ET10, NJ1000, MS10, SS-31. Keep each combination tied to a defined research objective and lot record.",
+          "imageUrl": "",
+          "sort": 30,
+          "links": []
+        },
+        {
+          "id": 14964,
+          "heading": "Compliance notice",
+          "body": "NJ500 is supplied for research use only. It is not for human or veterinary use, not for consumption, and statements on this page are reference context rather than medical claims.",
+          "imageUrl": "",
+          "sort": 40,
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": 5346,
+      "sectionKey": "research",
+      "label": "Research",
+      "sort": 20,
+      "blocks": [
+        {
+          "id": 14965,
+          "heading": "Reference literature focus",
+          "body": "Coze describes NAD+ as a key coenzyme involved in cellular energy metabolism, DNA repair, mitochondrial function, ATP synthesis context, and sirtuin-pathway research. Research commonly centers on NAD+/NADH balance, sirtuin pathway context, DNA repair models, and cellular energy markers.",
+          "imageUrl": "",
+          "sort": 10,
+          "links": []
+        },
+        {
+          "id": 14966,
+          "heading": "Study design notes",
+          "body": "Use the LPPeptide product knowledge record, current LPPeptide COA, and internal lab SOP to confirm identity, concentration, and endpoints before this material enters a study. The matched LPPeptide reference specification is 100mg x 10 vials / 500mg x 10 vials / 1000mg x 10 vials.",
+          "imageUrl": "",
+          "sort": 20,
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": 5347,
+      "sectionKey": "dosing",
+      "label": "Dosing & Protocol",
+      "sort": 30,
+      "blocks": [
+        {
+          "id": 14967,
+          "heading": "LPPeptide handling reference",
+          "body": "Coze source: add 3.0 mL bacteriostatic water for 166.7 mg/mL. Reference range is once daily 50-100 mg. At this concentration, 1 U equals 1.67 mg; 50 mg is about 30 U, 75 mg about 45 U, and 100 mg about 60 U.\n\nCoze preparation pattern: let the lyophilized vial reach room temperature before opening, add 3.0 mL sterile water slowly down the vial wall, roll gently until clear and colorless, discard if discolored or precipitated, label the date, refrigerate, and protect from light.",
+          "imageUrl": "",
+          "sort": 15,
+          "links": []
+        },
+        {
+          "id": 14968,
+          "heading": "Preparation",
+          "body": "NAD+ 500mg ships as Lyophilized powder. Reconstitution note: Coze source: add 3.0 mL bacteriostatic water for 166.7 mg/mL. Reference range is once daily 50-100 mg. At this concentration, 1 U equals 1.67 mg; 50 mg is about 30 U, 75 mg about 45 U, and 100 mg about 60 U.. Record the final concentration and preparation date in the study log.",
+          "imageUrl": "",
+          "sort": 20,
+          "links": []
+        },
+        {
+          "id": 14969,
+          "heading": "Storage",
+          "body": "Lyophilized: -20 deg C or below, ideally -80 deg C for multi-year storage, dry and dark. Reconstituted: 2-8 deg C, protect from light, use within about 14 days, and avoid repeated freeze-thaw.. Follow the most current lot-specific handling record whenever it is available.",
+          "imageUrl": "",
+          "sort": 30,
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": 5348,
+      "sectionKey": "sideeffects",
+      "label": "Side Effects",
+      "sort": 40,
+      "blocks": [
+        {
+          "id": 14970,
+          "heading": "Safety observations",
+          "body": "Handling and interpretation depend on route and model. Use lot-specific documentation and avoid extrapolating assay data to consumer outcomes.",
+          "imageUrl": "",
+          "sort": 10,
+          "links": []
+        },
+        {
+          "id": 14971,
+          "heading": "Contraindications",
+          "body": "Do not use NJ500 outside qualified research workflows. Review the current SDS, COA, and protocol exclusions before handling.",
+          "imageUrl": "",
+          "sort": 20,
+          "links": []
+        },
+        {
+          "id": 14972,
+          "heading": "Interaction review",
+          "body": "Review compatibility with SS-31, MOTS-C, glutathione, and other redox or mitochondrial study materials.",
+          "imageUrl": "",
+          "sort": 30,
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": 5349,
+      "sectionKey": "coa",
+      "label": "COA & Testing",
+      "sort": 50,
+      "blocks": [
+        {
+          "id": 14973,
+          "heading": "Certificate of Analysis",
+          "body": "Each LPPeptide lot should be confirmed against current batch documentation before shipment or study use. This product page keeps NJ500 visible so the SKU can be matched to the active COA.",
+          "imageUrl": "",
+          "sort": 10,
+          "links": []
+        },
+        {
+          "id": 14974,
+          "heading": "Current catalog summary",
+          "body": "- SKU: NJ500\n- Product: NAD+ 500mg\n- Storefront specification: 500mg x 10 vials /box\n- LPPeptide reference specs: 100mg x 10 vials / 500mg x 10 vials / 1000mg x 10 vials\n- Listed box price: $59.00 USD\n- Reference: LPPeptide product knowledge record",
+          "imageUrl": "",
+          "sort": 20,
+          "links": []
+        },
+        {
+          "id": 14975,
+          "heading": "Testing checklist",
+          "body": "- Peptide identity or material identity\n- HPLC purity or assay result where applicable\n- Batch ID and test date\n- Sterility/endotoxin or accessory checks when applicable\n- Residual solvent and handling notes where applicable",
+          "imageUrl": "",
+          "sort": 30,
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": 5350,
+      "sectionKey": "about-lppeptide",
+      "label": "About LPPeptide",
+      "sort": 90,
+      "blocks": [
+        {
+          "id": 14976,
+          "heading": "Direct catalog supply",
+          "body": "LPPeptide product pages use our own SKU, package, price, and stock data first. LPPeptide knowledge mapping adds compound education, handling notes, and specification checks while lot-specific editorial content is being prepared.",
+          "imageUrl": "",
+          "sort": 10,
+          "links": []
+        },
+        {
+          "id": 14977,
+          "heading": "Lot-specific content",
+          "body": "For final release decisions, use the current product record, COA, handling sheet, and research SOP as the highest-priority source for this page.",
+          "imageUrl": "",
+          "sort": 20,
+          "links": []
+        }
+      ]
+    }
+  ],
+  "qaItems": [
+    {
+      "id": 3001,
+      "productId": 26015,
+      "question": "Is NJ500 sold for research use only?",
+      "answer": "NJ500 is supplied by LPPeptide for qualified research use only. It is not for human or veterinary use, not for consumption, and local rules may vary by jurisdiction.",
+      "sort": 1
+    },
+    {
+      "id": 3002,
+      "productId": 26015,
+      "question": "Where do I confirm the current NJ500 lot documentation?",
+      "answer": "Use the COA & Testing tab, product label, and current LPPeptide batch record to confirm SKU NJ500, specification, identity, and handling details before research use.",
+      "sort": 2
+    },
+    {
+      "id": 3003,
+      "productId": 26015,
+      "question": "Can NJ500 be reviewed with related products?",
+      "answer": "Yes, when the study protocol defines the rationale. Common comparison or stack candidates include 2s10, ET10, NJ1000, MS10. Keep fixed-ratio blends and single-compound materials documented separately.",
+      "sort": 3
+    },
+    {
+      "id": 3004,
+      "productId": 26015,
+      "question": "Why can details differ from reference articles or catalog pages?",
+      "answer": "Reference pages provide general compound context. LPPeptide product pages should follow the current product record, active COA, lot-specific handling sheet, and lab SOP.",
+      "sort": 4
+    }
+  ],
+  "ratingBreakdown": [
+    {
+      "id": null,
+      "productId": 26015,
+      "label": "5+",
+      "percent": 84,
+      "sort": 1,
+      "count": 1526
+    },
+    {
+      "id": null,
+      "productId": 26015,
+      "label": "4+",
+      "percent": 11,
+      "sort": 2,
+      "count": 197
+    },
+    {
+      "id": null,
+      "productId": 26015,
+      "label": "3+",
+      "percent": 3,
+      "sort": 3,
+      "count": 54
+    },
+    {
+      "id": null,
+      "productId": 26015,
+      "label": "2+",
+      "percent": 1,
+      "sort": 4,
+      "count": 18
+    },
+    {
+      "id": null,
+      "productId": 26015,
+      "label": "1+",
+      "percent": 1,
+      "sort": 5,
+      "count": 17
+    }
+  ],
+  "coaPath": "/coa/nj500",
+  "reviews": [
+    {
+      "id": 86,
+      "productId": 26015,
+      "userId": 10803,
+      "orderId": 113201,
+      "authorName": "Amodisette",
+      "avatarText": "A",
+      "rating": 5,
+      "title": "Great",
+      "content": "Great product",
+      "verifiedLabel": "Verified Buyer",
+      "hidden": false,
+      "reviewDate": "2026-11-17",
+      "sort": 0,
+      "createdAt": "2026-11-17T00:51:48",
+      "updatedAt": "2026-11-17T00:51:48"
+    },
+    {
+      "id": 78,
+      "productId": 26015,
+      "userId": 11937,
+      "orderId": 124837,
+      "authorName": "Clinton Childers",
+      "avatarText": "CC",
+      "rating": 5,
+      "title": "LP Quality",
+      "content": "Starting a new NAD plus cycle, already noticing the benefits, good quality product",
+      "verifiedLabel": "Verified Buyer",
+      "hidden": false,
+      "reviewDate": "2026-11-13",
+      "sort": 0,
+      "createdAt": "2026-11-13T22:25:21",
+      "updatedAt": "2026-11-13T22:25:21"
+    },
+    {
+      "id": 49,
+      "productId": 26015,
+      "userId": 11718,
+      "orderId": 124331,
+      "authorName": "anthony macias",
+      "avatarText": "AM",
+      "rating": 5,
+      "title": "NAD+",
+      "content": "I love NAD in my current protocol. I plan to add SS31 as a yearly treatment to give it the best affect. LP had really pulled through in delivering a good product.",
+      "verifiedLabel": "Verified Buyer",
+      "hidden": false,
+      "reviewDate": "2026-11-03",
+      "sort": 0,
+      "createdAt": "2026-11-03T04:27:36",
+      "updatedAt": "2026-11-03T04:27:36"
+    },
+    {
+      "id": 28,
+      "productId": 26015,
+      "userId": 2943,
+      "orderId": 46021,
+      "authorName": "Robert Hyatt",
+      "avatarText": "RH",
+      "rating": 5,
+      "title": "NAD+",
+      "content": "This has me focused and alert. Works great for me",
+      "verifiedLabel": "Verified Buyer",
+      "hidden": false,
+      "reviewDate": "2026-10-01",
+      "sort": 0,
+      "createdAt": "2026-10-01T06:44:37",
+      "updatedAt": "2026-10-01T06:44:37"
+    }
+  ],
+  "offers": [],
+  "purchaseOptions": [],
+  "sizes": [],
+  "warehouseAvailability": {
+    "CNFC": "IN_STOCK",
+    "USFC": "OUT_OF_STOCK",
+    "AUSFC": "OUT_OF_STOCK"
+  }
+}

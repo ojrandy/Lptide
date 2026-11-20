@@ -1,0 +1,32 @@
+[
+  {
+    "warehouseCode": "CNFC",
+    "displayName": "Worldwide Warehouse",
+    "visibleToStorefront": true,
+    "active": true,
+    "acceptNewOrders": true,
+    "supportedCountries": "AE,AT,AU,BE,BG,BH,BR,CH,CY,CZ,DE,DK,EE,ES,FI,FR,GB,GR,HR,HU,ID,IE,IT,JO,KW,LT,LU,LV,MX,MY,NL,NO,PH,PL,PR,PT,QA,QM,RO,SA,SE,SG,SK,TH,US",
+    "sort": 10,
+    "updatedByAdminId": null
+  },
+  {
+    "warehouseCode": "USFC",
+    "displayName": "Us Warehouse",
+    "visibleToStorefront": true,
+    "active": true,
+    "acceptNewOrders": true,
+    "supportedCountries": "US",
+    "sort": 20,
+    "updatedByAdminId": null
+  },
+  {
+    "warehouseCode": "AUSFC",
+    "displayName": "Aus Warehouse",
+    "visibleToStorefront": true,
+    "active": true,
+    "acceptNewOrders": true,
+    "supportedCountries": "AU",
+    "sort": 30,
+    "updatedByAdminId": null
+  }
+]

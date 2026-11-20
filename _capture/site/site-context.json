@@ -1,0 +1,16 @@
+{
+  "siteId": 1,
+  "siteKey": "MAIN",
+  "siteName": "LPPEPTIDE Main Storefront",
+  "brandName": "LPPEPTIDE",
+  "logoUrl": "/brand/lppeptide-logo-center.png",
+  "siteUrl": "https://lppeptide.com",
+  "supportEmail": "lppeptideofficial@lppeptide.com",
+  "supportPhone": "+14409414499",
+  "supportUrl": "https://t.me/lppeptide",
+  "googleLoginEnabled": true,
+  "matchedDomain": true,
+  "available": true,
+  "seoIndexable": true,
+  "canonicalSiteUrl": "https://lppeptide.com"
+}

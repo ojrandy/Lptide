@@ -1,0 +1,194 @@
+{
+  "id": 26063,
+  "slug": "reusable-research-v2-pep-pen",
+  "name": "Reusable Research V2 Pep Pen（笔）",
+  "shortName": "RRP2",
+  "subtitle": "1 stick",
+  "description": "This reusable peptide research pen is designed to support laboratory and research workflows by reducing the need for traditional syringes.",
+  "category": "Other Peptides & Accessories",
+  "vendor": "LPPEPTIDE",
+  "price": 30,
+  "oldPrice": 30,
+  "saveLabel": "",
+  "catalogCode": "RRP2",
+  "specification": "1 stick",
+  "packageSize": "1 stick",
+  "catalogLabel": "",
+  "catalogHref": "",
+  "amountMg": 0,
+  "weightKg": 0.075,
+  "rating": 0,
+  "reviewCount": 117,
+  "answeredQuestionCount": 0,
+  "imageUrl": "/biz/files/products/2026/09/11/ad3d7d16b7ed4a58987ac3c1b266f11e.png",
+  "cornerBadgeUrl": "",
+  "sales": 0,
+  "sort": 26104,
+  "enabled": true,
+  "externalSyncLocked": false,
+  "categories": [
+    "Other Peptides & Accessories"
+  ],
+  "stockAvailable": 794,
+  "stockLocked": 9,
+  "procurementQuantity": 0,
+  "tags": [
+    "Accessories"
+  ],
+  "imageUrls": [
+    "/biz/files/products/2026/09/11/ad3d7d16b7ed4a58987ac3c1b266f11e.png"
+  ],
+  "glanceItems": [
+    {
+      "id": null,
+      "productId": null,
+      "label": "LPPeptide",
+      "value": "RRP2",
+      "linkUrl": null,
+      "sort": 1
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Specification",
+      "value": "1 stick",
+      "linkUrl": null,
+      "sort": 2
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Category",
+      "value": "Accessories",
+      "linkUrl": null,
+      "sort": 3
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Form",
+      "value": "stick",
+      "linkUrl": null,
+      "sort": 4
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Knowledge source",
+      "value": "RRP2",
+      "linkUrl": null,
+      "sort": 5
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Research focus",
+      "value": "Accessories",
+      "linkUrl": null,
+      "sort": 6
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Product Features",
+      "value": "Fits standard 3mL glass cartridges",
+      "linkUrl": null,
+      "sort": 7
+    }
+  ],
+  "detailSections": [
+    {
+      "id": 5769,
+      "sectionKey": "overview",
+      "label": "Overview",
+      "sort": 1,
+      "blocks": [
+        {
+          "id": 15855,
+          "heading": "What is RRV2?",
+          "body": "This reusable peptide research pen is designed to support laboratory and research workflows by reducing the need for traditional syringes. It is compatible with standard 3mL cartridges commonly used in peptide or insulin research environments.",
+          "imageUrl": "",
+          "sort": 1,
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": 5770,
+      "sectionKey": "research",
+      "label": "Research",
+      "sort": 2,
+      "blocks": [
+        {
+          "id": 15856,
+          "heading": "Product Features",
+          "body": "Reusable design for ongoing research projects\nFits standard 3mL glass cartridges\nCompatible with V1 & V2 reusable pep pen systems\nLightweight, durable construction\nMultiple colors available (subject to stock)",
+          "imageUrl": "",
+          "sort": 1,
+          "links": []
+        },
+        {
+          "id": 15857,
+          "heading": "Color Availability Notice",
+          "body": "Due to supplier inventory variations, the exact color shown may not be available.\nIf your selected color is out of stock, a different available color will be substituted.\nBuyers may be contacted via eBay messages if confirmation is needed before shipping.",
+          "imageUrl": "",
+          "sort": 2,
+          "links": []
+        }
+      ]
+    }
+  ],
+  "qaItems": [],
+  "ratingBreakdown": [
+    {
+      "id": null,
+      "productId": 26063,
+      "label": "5+",
+      "percent": 0,
+      "sort": 1,
+      "count": 0
+    },
+    {
+      "id": null,
+      "productId": 26063,
+      "label": "4+",
+      "percent": 0,
+      "sort": 2,
+      "count": 0
+    },
+    {
+      "id": null,
+      "productId": 26063,
+      "label": "3+",
+      "percent": 0,
+      "sort": 3,
+      "count": 0
+    },
+    {
+      "id": null,
+      "productId": 26063,
+      "label": "2+",
+      "percent": 0,
+      "sort": 4,
+      "count": 0
+    },
+    {
+      "id": null,
+      "productId": 26063,
+      "label": "1+",
+      "percent": 0,
+      "sort": 5,
+      "count": 0
+    }
+  ],
+  "coaPath": null,
+  "reviews": [],
+  "offers": [],
+  "purchaseOptions": [],
+  "sizes": [],
+  "warehouseAvailability": {
+    "CNFC": "OUT_OF_STOCK",
+    "USFC": "IN_STOCK",
+    "AUSFC": "IN_STOCK"
+  }
+}

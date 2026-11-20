@@ -1,0 +1,242 @@
+{
+  "id": 26058,
+  "slug": "vaginal-probiotics-vp-1",
+  "name": "Vaginal Probiotics 1",
+  "shortName": "VP-1",
+  "subtitle": "1vials*10vials",
+  "description": "Premium Vaginal Probiotics Formula for Feminine Balance – Specially formulated with targeted beneficial lactic acid bacteria to support healthy vaginal microflora, effectively maintain optimal intimate pH levels, and improve unbalanced private odor caused by daily fatigue, lifestyle changes and intimate activities. It provides all-round daily intimate care and keeps feminine private areas fresh and balanced all day long.",
+  "category": "Fragrance Intimate Lyophilized Balls",
+  "vendor": "LPPeptide",
+  "price": 35,
+  "oldPrice": 35,
+  "saveLabel": "",
+  "catalogCode": "VP-1",
+  "specification": "1vials*10vials",
+  "packageSize": "1vials*10vials",
+  "catalogLabel": "",
+  "catalogHref": "",
+  "amountMg": 0,
+  "weightKg": 0.1,
+  "rating": 0,
+  "reviewCount": 194,
+  "answeredQuestionCount": 22,
+  "imageUrl": "/biz/files/products/2026/08/20/85d3d666a5bf4b5d9117b8be912f4694.png",
+  "cornerBadgeUrl": "",
+  "sales": 210,
+  "sort": 26107,
+  "enabled": true,
+  "externalSyncLocked": false,
+  "categories": [
+    "Fragrance Intimate Lyophilized Balls"
+  ],
+  "stockAvailable": 116,
+  "stockLocked": 17,
+  "procurementQuantity": 0,
+  "tags": [
+    "Lyophilized Balls"
+  ],
+  "imageUrls": [
+    "/biz/files/products/2026/08/20/85d3d666a5bf4b5d9117b8be912f4694.png"
+  ],
+  "glanceItems": [
+    {
+      "id": null,
+      "productId": null,
+      "label": "LPPeptide",
+      "value": "VP-1",
+      "linkUrl": null,
+      "sort": 1
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Specification",
+      "value": "1vials*10vials /box",
+      "linkUrl": null,
+      "sort": 2
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Category",
+      "value": "Lyophilized Balls",
+      "linkUrl": null,
+      "sort": 3
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Knowledge source",
+      "value": "Vaginal Probiotics 1",
+      "linkUrl": null,
+      "sort": 5
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Research focus",
+      "value": "Lyophilized Balls",
+      "linkUrl": null,
+      "sort": 6
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Product Highlights",
+      "value": "Lyophilized Solid Active-Lock Form  Lyophilized at low temperature to preserve active nutrients, reducing reliance on preservatives. Upon contact with the intimate environment, it gradually releases nutrients—no messy dripping, for a cleaner and more discreet experience.",
+      "linkUrl": null,
+      "sort": 6
+    }
+  ],
+  "detailSections": [
+    {
+      "id": 5733,
+      "sectionKey": "overview",
+      "label": "Overview",
+      "sort": 1,
+      "blocks": [
+        {
+          "id": 15791,
+          "heading": "Product Efficacy",
+          "body": "Help maintain intimate mucosal barrier, support skin self\u001eprotection\nSupply hyaluronic acid & collagen, relieve dry & tight discomfor\nSoothe & stabilize intimate environment, reduce unpleasant odor\nNourish & soften mucosa, improve rough feeling, boost moisturizing feeling",
+          "imageUrl": "",
+          "sort": 1,
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": 5734,
+      "sectionKey": "research",
+      "label": "Research",
+      "sort": 2,
+      "blocks": [
+        {
+          "id": 15792,
+          "heading": "Key Ingredients",
+          "body": "Pullulan: Forms a breathable protective film that locks in mucosal moisture, soothing and protecting.\nSodium Hyaluronate + Hydrolyzed Sodium Hyaluronate:** Multi-layer hydration that nourishes delicate intimate mucosa and improves dryness.\nβ-Glucan: Soothes and stabilizes, strengthening the mucosal barrier.\nHydrolyzed Collagen + Soluble Collagen:** Replenishes collagen for a soft, supple feel.\nOligopeptide-1, Tetrapeptide-4, Glycoprotein:** Multiple active peptides that care for the mucosa and help maintain a healthy intimate state.\nGlyceryl Citrate / Lactate / Linoleate / Oleate:** Mimics the sebum feel of mucosa, providing soft hydration and helping maintain a mildly acidic environment.\nTrace Fragrance: Aromatic ingredients that create different scent profiles and help neutralize unwanted odors (the source of variation across the 8 scents).",
+          "imageUrl": "",
+          "sort": 1,
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": 5735,
+      "sectionKey": "dosing",
+      "label": "Dosing & Protocol",
+      "sort": 3,
+      "blocks": [
+        {
+          "id": 15793,
+          "heading": "Instructions for Use",
+          "body": "1.Clean hands thoroughly\n2.Put on the disposable finger cot\n3.Take out lyophilized ball, gently insert deep into vagina\n\nNote：The ball will gradually dissolve and release nutrients under intimate environment.",
+          "imageUrl": "",
+          "sort": 1,
+          "links": []
+        },
+        {
+          "id": 15794,
+          "heading": "Usage Frequency",
+          "body": "Daily maintenance: 2-3 times per week\nDry & sensitive period: once per night, 7 days as one care cycle",
+          "imageUrl": "",
+          "sort": 2,
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": 5736,
+      "sectionKey": "coa",
+      "label": "COA & Testing",
+      "sort": 5,
+      "blocks": [
+        {
+          "id": 15795,
+          "heading": "Certificate of Analysis",
+          "body": "Each LPPeptide lot should be confirmed against current batch documentation before shipment or study use. This product page keeps VP-1 visible so the SKU can be matched to the active COA.",
+          "imageUrl": "",
+          "sort": 1,
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": 5737,
+      "sectionKey": "about-yuanpeptide",
+      "label": "About LPPEPTIDE",
+      "sort": 6,
+      "blocks": [
+        {
+          "id": 15796,
+          "heading": "Direct catalog supply",
+          "body": "LPPeptide product pages use our own SKU, package, price, and stock data first. LPPeptide knowledge mapping adds compound education, handling notes, and specification checks while lot-specific editorial content is being prepared.",
+          "imageUrl": "",
+          "sort": 1,
+          "links": []
+        },
+        {
+          "id": 15797,
+          "heading": "Lot-specific content",
+          "body": "For final release decisions, use the current product record, COA, handling sheet, and research SOP as the highest-priority source for this page.",
+          "imageUrl": "",
+          "sort": 2,
+          "links": []
+        }
+      ]
+    }
+  ],
+  "qaItems": [],
+  "ratingBreakdown": [
+    {
+      "id": null,
+      "productId": 26058,
+      "label": "5+",
+      "percent": 0,
+      "sort": 1,
+      "count": 0
+    },
+    {
+      "id": null,
+      "productId": 26058,
+      "label": "4+",
+      "percent": 0,
+      "sort": 2,
+      "count": 0
+    },
+    {
+      "id": null,
+      "productId": 26058,
+      "label": "3+",
+      "percent": 0,
+      "sort": 3,
+      "count": 0
+    },
+    {
+      "id": null,
+      "productId": 26058,
+      "label": "2+",
+      "percent": 0,
+      "sort": 4,
+      "count": 0
+    },
+    {
+      "id": null,
+      "productId": 26058,
+      "label": "1+",
+      "percent": 0,
+      "sort": 5,
+      "count": 0
+    }
+  ],
+  "coaPath": null,
+  "reviews": [],
+  "offers": [],
+  "purchaseOptions": [],
+  "sizes": [],
+  "warehouseAvailability": {
+    "CNFC": "OUT_OF_STOCK",
+    "USFC": "IN_STOCK",
+    "AUSFC": "OUT_OF_STOCK"
+  }
+}

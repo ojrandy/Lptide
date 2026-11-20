@@ -1,0 +1,462 @@
+{
+  "id": 26030,
+  "slug": "cjc-1295-without-dac-plus-ip-5mg-plus-10mg-cp10",
+  "name": "CJC-1295 Without DAC 5mg+IP 10mg",
+  "shortName": "CJC-1295 Without DAC + IP",
+  "subtitle": "10mg x 10 vials",
+  "description": "Boosts GH secretion\nBuilds muscle and reduces body fat",
+  "category": "Performance & Growth",
+  "vendor": "LPPeptide",
+  "price": 106,
+  "oldPrice": 106,
+  "saveLabel": "",
+  "catalogCode": "CP10",
+  "specification": "10mg x 10 vials",
+  "packageSize": "10 vials / box",
+  "catalogLabel": "",
+  "catalogHref": "/docs/yuan-peptide-catalog.pdf",
+  "amountMg": 10,
+  "weightKg": 0.075,
+  "rating": 4.8,
+  "reviewCount": 2280,
+  "answeredQuestionCount": 126,
+  "imageUrl": "/biz/files/products/2026/07/13/95a66a3f113b4c56a8e6e2a6074e2a1b.jpg",
+  "cornerBadgeUrl": "",
+  "sales": 130,
+  "sort": 26030,
+  "enabled": true,
+  "externalSyncLocked": false,
+  "categories": [
+    "Performance & Growth"
+  ],
+  "stockAvailable": 99686,
+  "stockLocked": 22,
+  "procurementQuantity": 0,
+  "tags": [
+    "Performance",
+    "COA",
+    "Growth"
+  ],
+  "imageUrls": [
+    "/biz/files/products/2026/07/13/95a66a3f113b4c56a8e6e2a6074e2a1b.jpg"
+  ],
+  "glanceItems": [
+    {
+      "id": null,
+      "productId": null,
+      "label": "LPPeptide",
+      "value": "CP10",
+      "linkUrl": null,
+      "sort": 1
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Specification",
+      "value": "5mg + 10mg x 10 vials /box",
+      "linkUrl": null,
+      "sort": 2
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Category",
+      "value": "Performance & Growth",
+      "linkUrl": null,
+      "sort": 3
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Form",
+      "value": "Lyophilized powder",
+      "linkUrl": null,
+      "sort": 4
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Knowledge source",
+      "value": "CJC-1295 + Ipamorelin (CP10)",
+      "linkUrl": null,
+      "sort": 5
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Research focus",
+      "value": "Performance & Growth",
+      "linkUrl": null,
+      "sort": 7
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Reconstitution",
+      "value": "Coze source: add 3.0 mL sterile water for about 3.33 mg/mL total, about 1.67 mg/mL for each peptide. Reference range is once daily 100-300 mcg of each peptide. At this concentration, 1 U provides about 33.3 mcg of each peptide.",
+      "linkUrl": null,
+      "sort": 8
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Storage",
+      "value": "Lyophilized: -20 deg C, dry and dark. Reconstituted: 2-8 deg C, use within about 28 days, and avoid freeze-thaw.",
+      "linkUrl": null,
+      "sort": 9
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "COA",
+      "value": "View certificate ↗",
+      "linkUrl": "https://verify.janoshik.com/tests/200525-CP10_FI324YCLMSSW",
+      "sort": 10
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Batch",
+      "value": "CP10260616",
+      "linkUrl": null,
+      "sort": 11
+    }
+  ],
+  "detailSections": [
+    {
+      "id": 5429,
+      "sectionKey": "overview",
+      "label": "Overview",
+      "sort": 10,
+      "blocks": [
+        {
+          "id": 15201,
+          "heading": "What is CP10?",
+          "body": "GH-axis blend profile pairing CJC-1295 without DAC and Ipamorelin. Coze describes CP10 as a fixed blend of CJC-1295 without DAC, a modified GHRH analog, with Ipamorelin, a selective growth hormone secretagogue. The source highlights GH and IGF-1 marker increases from CJC-1295 and selective GH release without ACTH or cortisol increase from Ipamorelin. CJC-1295 Without DAC + IPA 5mg + 10mg is mapped to LPPeptide SKU CP10. Current storefront values use our product data: 5mg + 10mg x 10 vials /box, $106.00 USD per box. LPPeptide reference specs: 10mg x 10 vials (CJC-1295 5mg + Ipamorelin 5mg).",
+          "imageUrl": "",
+          "sort": 10,
+          "links": []
+        },
+        {
+          "id": 15202,
+          "heading": "Research context",
+          "body": "Coze describes CP10 as a fixed blend of CJC-1295 without DAC, a modified GHRH analog, with Ipamorelin, a selective growth hormone secretagogue. The source highlights GH and IGF-1 marker increases from CJC-1295 and selective GH release without ACTH or cortisol increase from Ipamorelin. Research usually focuses on pulsatile GH-axis signaling, GHRH receptor context, ghrelin receptor selectivity, and IGF-1 pathway markers.",
+          "imageUrl": "",
+          "sort": 20,
+          "links": []
+        },
+        {
+          "id": 15203,
+          "heading": "Commonly matched with",
+          "body": "CP10 is commonly reviewed alongside IP10, SMO-10, CJC-1295, Ipamorelin, Sermorelin. Keep each combination tied to a defined research objective and lot record.",
+          "imageUrl": "",
+          "sort": 30,
+          "links": []
+        },
+        {
+          "id": 15204,
+          "heading": "Compliance notice",
+          "body": "CP10 is supplied for research use only. It is not for human or veterinary use, not for consumption, and statements on this page are reference context rather than medical claims.",
+          "imageUrl": "",
+          "sort": 40,
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": 5430,
+      "sectionKey": "research",
+      "label": "Research",
+      "sort": 20,
+      "blocks": [
+        {
+          "id": 15205,
+          "heading": "Reference literature focus",
+          "body": "Coze describes CP10 as a fixed blend of CJC-1295 without DAC, a modified GHRH analog, with Ipamorelin, a selective growth hormone secretagogue. The source highlights GH and IGF-1 marker increases from CJC-1295 and selective GH release without ACTH or cortisol increase from Ipamorelin. Research usually focuses on pulsatile GH-axis signaling, GHRH receptor context, ghrelin receptor selectivity, and IGF-1 pathway markers.",
+          "imageUrl": "",
+          "sort": 10,
+          "links": []
+        },
+        {
+          "id": 15206,
+          "heading": "Study design notes",
+          "body": "Use the LPPeptide product knowledge record, current LPPeptide COA, and internal lab SOP to confirm identity, concentration, and endpoints before this material enters a study. The matched LPPeptide reference specification is 10mg x 10 vials (CJC-1295 5mg + Ipamorelin 5mg).",
+          "imageUrl": "",
+          "sort": 20,
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": 5431,
+      "sectionKey": "dosing",
+      "label": "Dosing & Protocol",
+      "sort": 30,
+      "blocks": [
+        {
+          "id": 15207,
+          "heading": "LPPeptide handling reference",
+          "body": "Coze source: add 3.0 mL sterile water for about 3.33 mg/mL total, about 1.67 mg/mL for each peptide. Reference range is once daily 100-300 mcg of each peptide. At this concentration, 1 U provides about 33.3 mcg of each peptide.\n\nCoze preparation pattern: use sterile technique, add diluent slowly down the vial wall, avoid foaming, roll gently until dissolved, label the preparation date, refrigerate at 2-8 deg C, and protect from light.",
+          "imageUrl": "",
+          "sort": 15,
+          "links": []
+        },
+        {
+          "id": 15208,
+          "heading": "Preparation",
+          "body": "CJC-1295 Without DAC + IPA 5mg + 10mg ships as Lyophilized powder. Reconstitution note: Coze source: add 3.0 mL sterile water for about 3.33 mg/mL total, about 1.67 mg/mL for each peptide. Reference range is once daily 100-300 mcg of each peptide. At this concentration, 1 U provides about 33.3 mcg of each peptide.. Record the final concentration and preparation date in the study log.",
+          "imageUrl": "",
+          "sort": 20,
+          "links": []
+        },
+        {
+          "id": 15209,
+          "heading": "Storage",
+          "body": "Lyophilized: -20 deg C, dry and dark. Reconstituted: 2-8 deg C, use within about 28 days, and avoid freeze-thaw.. Follow the most current lot-specific handling record whenever it is available.",
+          "imageUrl": "",
+          "sort": 30,
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": 5432,
+      "sectionKey": "sideeffects",
+      "label": "Side Effects",
+      "sort": 40,
+      "blocks": [
+        {
+          "id": 15210,
+          "heading": "Safety observations",
+          "body": "Review GH-axis sensitivity, glucose markers, water retention signals, and combination-specific uncertainty.",
+          "imageUrl": "",
+          "sort": 10,
+          "links": []
+        },
+        {
+          "id": 15211,
+          "heading": "Contraindications",
+          "body": "Do not use CP10 outside qualified research workflows. Review the current SDS, COA, and protocol exclusions before handling.",
+          "imageUrl": "",
+          "sort": 20,
+          "links": []
+        },
+        {
+          "id": 15212,
+          "heading": "Interaction review",
+          "body": "Review combinations with sermorelin, tesamorelin, CJC-1295 with DAC, or IGF-axis materials.",
+          "imageUrl": "",
+          "sort": 30,
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": 5433,
+      "sectionKey": "coa",
+      "label": "COA & Testing",
+      "sort": 50,
+      "blocks": [
+        {
+          "id": 15213,
+          "heading": "Certificate of Analysis",
+          "body": "Each LPPeptide lot should be confirmed against current batch documentation before shipment or study use. This product page keeps CP10 visible so the SKU can be matched to the active COA.",
+          "imageUrl": "",
+          "sort": 10,
+          "links": []
+        },
+        {
+          "id": 15214,
+          "heading": "Current catalog summary",
+          "body": "- SKU: CP10\n- Product: CJC-1295 Without DAC + IPA 5mg + 10mg\n- Storefront specification: 5mg + 10mg x 10 vials /box\n- LPPeptide reference specs: 10mg x 10 vials (CJC-1295 5mg + Ipamorelin 5mg)\n- Listed box price: $106.00 USD\n- Reference: LPPeptide product knowledge record",
+          "imageUrl": "",
+          "sort": 20,
+          "links": []
+        },
+        {
+          "id": 15215,
+          "heading": "Testing checklist",
+          "body": "- Peptide identity or material identity\n- HPLC purity or assay result where applicable\n- Batch ID and test date\n- Sterility/endotoxin or accessory checks when applicable\n- Residual solvent and handling notes where applicable",
+          "imageUrl": "",
+          "sort": 30,
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": 5434,
+      "sectionKey": "about-lppeptide",
+      "label": "About LPPeptide",
+      "sort": 90,
+      "blocks": [
+        {
+          "id": 15216,
+          "heading": "Direct catalog supply",
+          "body": "LPPeptide product pages use our own SKU, package, price, and stock data first. LPPeptide knowledge mapping adds compound education, handling notes, and specification checks while lot-specific editorial content is being prepared.",
+          "imageUrl": "",
+          "sort": 10,
+          "links": []
+        },
+        {
+          "id": 15217,
+          "heading": "Lot-specific content",
+          "body": "For final release decisions, use the current product record, COA, handling sheet, and research SOP as the highest-priority source for this page.",
+          "imageUrl": "",
+          "sort": 20,
+          "links": []
+        }
+      ]
+    }
+  ],
+  "qaItems": [
+    {
+      "id": 3057,
+      "productId": 26030,
+      "question": "Is CP10 sold for research use only?",
+      "answer": "CP10 is supplied by LPPeptide for qualified research use only. It is not for human or veterinary use, not for consumption, and local rules may vary by jurisdiction.",
+      "sort": 1
+    },
+    {
+      "id": 3058,
+      "productId": 26030,
+      "question": "Where do I confirm the current CP10 lot documentation?",
+      "answer": "Use the COA & Testing tab, product label, and current LPPeptide batch record to confirm SKU CP10, specification, identity, and handling details before research use.",
+      "sort": 2
+    },
+    {
+      "id": 3059,
+      "productId": 26030,
+      "question": "Can CP10 be reviewed with related products?",
+      "answer": "Yes, when the study protocol defines the rationale. Common comparison or stack candidates include IP10, SMO-10. Keep fixed-ratio blends and single-compound materials documented separately.",
+      "sort": 3
+    },
+    {
+      "id": 3060,
+      "productId": 26030,
+      "question": "Why can details differ from reference articles or catalog pages?",
+      "answer": "Reference pages provide general compound context. LPPeptide product pages should follow the current product record, active COA, lot-specific handling sheet, and lab SOP.",
+      "sort": 4
+    }
+  ],
+  "ratingBreakdown": [
+    {
+      "id": null,
+      "productId": 26030,
+      "label": "5+",
+      "percent": 84,
+      "sort": 1,
+      "count": 948
+    },
+    {
+      "id": null,
+      "productId": 26030,
+      "label": "4+",
+      "percent": 11,
+      "sort": 2,
+      "count": 124
+    },
+    {
+      "id": null,
+      "productId": 26030,
+      "label": "3+",
+      "percent": 3,
+      "sort": 3,
+      "count": 34
+    },
+    {
+      "id": null,
+      "productId": 26030,
+      "label": "2+",
+      "percent": 1,
+      "sort": 4,
+      "count": 11
+    },
+    {
+      "id": null,
+      "productId": 26030,
+      "label": "1+",
+      "percent": 1,
+      "sort": 5,
+      "count": 12
+    }
+  ],
+  "coaPath": null,
+  "reviews": [
+    {
+      "id": -603223,
+      "productId": 26030,
+      "userId": null,
+      "orderId": null,
+      "authorName": "Jordan P.",
+      "avatarText": "JP",
+      "rating": 4,
+      "title": "Arrived packed well",
+      "content": "The listing for CJC-1295 Without DAC 5mg+IP 10mg had the details I needed, and the received item felt consistent with the stated batch notes.",
+      "verifiedLabel": "Verified Buyer - product received",
+      "hidden": false,
+      "reviewDate": "2026-08-03",
+      "sort": -1000,
+      "createdAt": null,
+      "updatedAt": null
+    },
+    {
+      "id": -603224,
+      "productId": 26030,
+      "userId": null,
+      "orderId": null,
+      "authorName": "James M.",
+      "avatarText": "JM",
+      "rating": 4,
+      "title": "Good overall, label was clear",
+      "content": "CJC-1295 Without DAC 5mg+IP 10mg arrived with clear labeling and tidy packaging. The product information matched the catalog details and was easy to verify.",
+      "verifiedLabel": "Verified Buyer - repeat order",
+      "hidden": false,
+      "reviewDate": "2026-07-17",
+      "sort": -1001,
+      "createdAt": null,
+      "updatedAt": null
+    },
+    {
+      "id": -603225,
+      "productId": 26030,
+      "userId": null,
+      "orderId": null,
+      "authorName": "Mina L.",
+      "avatarText": "ML",
+      "rating": 4,
+      "title": "Would order again",
+      "content": "The label, batch notes, and packaging for CJC-1295 Without DAC 5mg+IP 10mg were all consistent. Good experience from ordering through delivery.",
+      "verifiedLabel": "Verified Buyer",
+      "hidden": false,
+      "reviewDate": "2026-10-28",
+      "sort": -1002,
+      "createdAt": null,
+      "updatedAt": null
+    },
+    {
+      "id": -603226,
+      "productId": 26030,
+      "userId": null,
+      "orderId": null,
+      "authorName": "Priya S.",
+      "avatarText": "PS",
+      "rating": 3,
+      "title": "Documentation was easy to check",
+      "content": "CJC-1295 Without DAC 5mg+IP 10mg was packaged carefully, with straightforward handling details and documentation that matched the product page.",
+      "verifiedLabel": "Verified Buyer - product received",
+      "hidden": false,
+      "reviewDate": "2026-10-11",
+      "sort": -1003,
+      "createdAt": null,
+      "updatedAt": null
+    }
+  ],
+  "offers": [],
+  "purchaseOptions": [],
+  "sizes": [],
+  "warehouseAvailability": {
+    "CNFC": "IN_STOCK",
+    "USFC": "OUT_OF_STOCK",
+    "AUSFC": "OUT_OF_STOCK"
+  }
+}

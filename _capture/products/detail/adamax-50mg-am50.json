@@ -1,0 +1,284 @@
+{
+  "id": 26078,
+  "slug": "adamax-50mg-am50",
+  "name": "5-Amino-1MQ 50mg",
+  "shortName": "50AM",
+  "subtitle": "50mg x 10 vials",
+  "description": "5-Amino-1MQ is a small molecule investigated as an inhibitor of nicotinamide N-methyltransferase (NNMT), not a peptide. Research in cultured fat cells and diet-induced obese mice measured changes in cellular metabolites and animal obesity measures. ",
+  "category": "Weight Loss & Metabolic",
+  "vendor": "LPPeptide",
+  "price": 68,
+  "oldPrice": 68,
+  "saveLabel": "",
+  "catalogCode": "50AM",
+  "specification": "50mg x 10 vials",
+  "packageSize": "10 vials / box",
+  "catalogLabel": "",
+  "catalogHref": "",
+  "amountMg": 0,
+  "weightKg": 0.075,
+  "rating": 5,
+  "reviewCount": 162,
+  "answeredQuestionCount": 0,
+  "imageUrl": "/biz/files/products/2026/11/06/c311bc24457043a2a68c6097861e313d.png",
+  "cornerBadgeUrl": "",
+  "sales": 0,
+  "sort": 26119,
+  "enabled": true,
+  "externalSyncLocked": false,
+  "categories": [
+    "Weight Loss & Metabolic"
+  ],
+  "stockAvailable": 99836,
+  "stockLocked": 3,
+  "procurementQuantity": 0,
+  "tags": [
+    "Weight Loss",
+    "Metabolic"
+  ],
+  "imageUrls": [
+    "/biz/files/products/2026/11/06/c311bc24457043a2a68c6097861e313d.png"
+  ],
+  "glanceItems": [
+    {
+      "id": null,
+      "productId": null,
+      "label": "LPPeptide",
+      "value": "50AM",
+      "linkUrl": null,
+      "sort": 1
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Specification",
+      "value": "50mg x 10 vials /box",
+      "linkUrl": null,
+      "sort": 2
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Category",
+      "value": "Weight Loss & Metabolic",
+      "linkUrl": null,
+      "sort": 3
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Form",
+      "value": "Lyophilized powder",
+      "linkUrl": null,
+      "sort": 4
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Knowledge source",
+      "value": "5-Amino-1MQ 50mg",
+      "linkUrl": null,
+      "sort": 5
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Research focus",
+      "value": "Weight Loss & Metabolic",
+      "linkUrl": null,
+      "sort": 6
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Reconstitution",
+      "value": "Add 1.0 mL bacteriostatic water → 5 mg/mL concentration.",
+      "linkUrl": null,
+      "sort": 7
+    },
+    {
+      "id": null,
+      "productId": null,
+      "label": "Storage",
+      "value": "Lyophilized: freeze at −20 °C (−4 °F); after reconstitution, refrigerate at 2–8 °C (35.6–46.4 °F); follow product-specific use-by instructions.",
+      "linkUrl": null,
+      "sort": 8
+    }
+  ],
+  "detailSections": [
+    {
+      "id": 5812,
+      "sectionKey": "overview",
+      "label": "Overview",
+      "sort": 1,
+      "blocks": [
+        {
+          "id": 15919,
+          "heading": "What is 50AM?",
+          "body": "5-Amino-1MQ is a small molecule investigated as an inhibitor of nicotinamide N-methyltransferase (NNMT), not a peptide. Research in cultured fat cells and diet-induced obese mice measured changes in cellular metabolites and animal obesity measures. NNMT stands for nicotinamide N-methyltransferase. Researchers have investigated this enzyme as a metabolic target, but different kinds of experiments answer different questions.",
+          "imageUrl": "",
+          "sort": 1,
+          "links": []
+        },
+        {
+          "id": 15920,
+          "heading": "Research context",
+          "body": "5-Amino-1MQ 50 mg dosage information begins with the identity of the material. 5-Amino-1MQ, or 5-amino-1-methylquinolinium, is a small molecule investigated as an NNMT inhibitor, not a peptide.\nA 10 mg vial states a total mass. Before interpreting that mass, the product documentation must identify the chemical form and the basis of the label claim. A concentration calculation cannot verify the vial’s contents.",
+          "imageUrl": "",
+          "sort": 2,
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": 5813,
+      "sectionKey": "research",
+      "label": "Research",
+      "sort": 2,
+      "blocks": [
+        {
+          "id": 15921,
+          "heading": "What NNMT Inhibition Means",
+          "body": "The 2014 NNMT knockdown study reduced the enzyme’s expression in mice. It was not a trial of a commercial 5-Amino-1MQ vial. Later small-molecule research examined NNMT inhibitors in cultured fat cells and diet-induced obese mice. Investigators measured changes in cellular metabolites and animal obesity measures, not outcomes in people using this 5 mg format.\nThis is why the mechanism and the dosage question must remain separate. Evidence that an NNMT inhibitor changes a laboratory endpoint does not determine a human dose, route, frequency, or treatment duration.",
+          "imageUrl": "",
+          "sort": 1,
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": 5814,
+      "sectionKey": "dosing",
+      "label": "Dosing & Protocol",
+      "sort": 3,
+      "blocks": [
+        {
+          "id": 15922,
+          "heading": "LPPeptide handling reference",
+          "body": "Amounts and measurements for the 5 mg vial format.\n\nStart: 2.5 mg once daily to assess tolerance.\n\nTarget: 5 mg once daily or 2.5 mg twice daily (BID).\n\nFrequency: Once or twice per day (subcutaneous).\n\nVial Duration: Single 5 mg vial lasts 1–2 days at 2.5–5 mg per day.\n\nTiming: Morning administration preferred; BID dosing may be split AM/PM.",
+          "imageUrl": "",
+          "sort": 1,
+          "links": []
+        },
+        {
+          "id": 15923,
+          "heading": "Storage",
+          "body": "5-Amino-1MQ is a small molecule. A generic peptide-storage guide cannot establish its shelf life, solubility, or sterile handling conditions.\n\nThe exact material needs documented preparation and stability instructions. A mouse experiment that used a saline formulation cannot validate a bacteriostatic-water preparation or a multiweek refrigerated use-by limit for a different product.",
+          "imageUrl": "",
+          "sort": 2,
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": 5815,
+      "sectionKey": "sideeffects",
+      "label": "Side Effects",
+      "sort": 4,
+      "blocks": [
+        {
+          "id": 15924,
+          "heading": "Safety observations",
+          "body": "The cited 5-Amino-1MQ studies are primarily preclinical. In obese mice, researchers observed changes in body composition when NNMT inhibition was combined with a change in diet. These findings do not establish human benefit or the safety of this preparation.\n\nThe pharmacokinetic paper measured the compound after intravenous and oral administration in rats. Rat half-life results do not establish the timing of human subcutaneous exposure.\n\nThose papers cannot provide a reliable rate of headache, jitteriness, local reactions, or long-term adverse effects in people. Calling the compound generally well tolerated in humans would go beyond the evidence they supply.",
+          "imageUrl": "",
+          "sort": 1,
+          "links": []
+        },
+        {
+          "id": 15925,
+          "heading": "Reading Animal Studies Without Overextending Them",
+          "body": "Diet was part of the experiment, not background noise. The mouse study compared NNMT inhibition plus a lean-diet substitution with the diet change alone. Its result belongs to that model and comparison.\n\nWhen comparing a paper with a vial, check the species, compound form, route, and diluent before considering the outcome. A mechanism involving NAD+ does not, by itself, justify adding other compounds to a human regimen.",
+          "imageUrl": "",
+          "sort": 2,
+          "links": []
+        }
+      ]
+    }
+  ],
+  "qaItems": [],
+  "ratingBreakdown": [
+    {
+      "id": null,
+      "productId": 26078,
+      "label": "5+",
+      "percent": 100,
+      "sort": 1,
+      "count": 2
+    },
+    {
+      "id": null,
+      "productId": 26078,
+      "label": "4+",
+      "percent": 0,
+      "sort": 2,
+      "count": 0
+    },
+    {
+      "id": null,
+      "productId": 26078,
+      "label": "3+",
+      "percent": 0,
+      "sort": 3,
+      "count": 0
+    },
+    {
+      "id": null,
+      "productId": 26078,
+      "label": "2+",
+      "percent": 0,
+      "sort": 4,
+      "count": 0
+    },
+    {
+      "id": null,
+      "productId": 26078,
+      "label": "1+",
+      "percent": 0,
+      "sort": 5,
+      "count": 0
+    }
+  ],
+  "coaPath": null,
+  "reviews": [
+    {
+      "id": -58734,
+      "productId": 26078,
+      "userId": null,
+      "orderId": null,
+      "authorName": "Alex R.",
+      "avatarText": "AR",
+      "rating": 5,
+      "title": "Clear label and consistent packaging",
+      "content": "5-Amino-1MQ 50mg arrived with clear labeling and tidy packaging. The product information matched the catalog details and was easy to verify.",
+      "verifiedLabel": "Verified Buyer",
+      "hidden": false,
+      "reviewDate": "2026-10-31",
+      "sort": -1000,
+      "createdAt": null,
+      "updatedAt": null
+    },
+    {
+      "id": -58735,
+      "productId": 26078,
+      "userId": null,
+      "orderId": null,
+      "authorName": "Chris W.",
+      "avatarText": "CW",
+      "rating": 5,
+      "title": "Good batch documentation",
+      "content": "The label, batch notes, and packaging for 5-Amino-1MQ 50mg were all consistent. Good experience from ordering through delivery.",
+      "verifiedLabel": "Verified Buyer - product received",
+      "hidden": false,
+      "reviewDate": "2026-10-14",
+      "sort": -1001,
+      "createdAt": null,
+      "updatedAt": null
+    }
+  ],
+  "offers": [],
+  "purchaseOptions": [],
+  "sizes": [],
+  "warehouseAvailability": {
+    "CNFC": "IN_STOCK"
+  }
+}
