@@ -11,7 +11,9 @@ function open(): DatabaseSync {
   const file = resolve(/*turbopackIgnore: true*/ process.env.DATABASE_PATH ?? "./data/lppeptide.db");
   mkdirSync(dirname(file), { recursive: true });
   const conn = new DatabaseSync(file);
-  conn.exec("PRAGMA journal_mode = WAL; PRAGMA foreign_keys = ON; PRAGMA busy_timeout = 5000;");
+  // busy_timeout first: switching to WAL needs a brief lock, and several processes (build workers, PM2)
+  // may open the file at the same moment.
+  conn.exec("PRAGMA busy_timeout = 5000; PRAGMA journal_mode = WAL; PRAGMA foreign_keys = ON;");
   return conn;
 }
 

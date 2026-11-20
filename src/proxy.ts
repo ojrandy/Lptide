@@ -6,13 +6,16 @@ import { sqlite } from "@/db";
 //   /peptide/{slug}.html/              → 301 /peptide/{slug}.html
 //   /category/{a}-and-{b}/             → 301 /category/{a}-{b}/      (spelling used by live catalog links)
 //   /es/* and /pt/*                    → 302 English path            (locales are v2)
-// Unknown product, category and warehouse slugs get a real 404 status here: pages are partially
+// Unknown product, category, warehouse and COA codes get a real 404 status here: pages are partially
 // prerendered, so a notFound() thrown while streaming would arrive with status 200 (a soft 404).
 
 const exists = {
   product: sqlite.prepare("SELECT 1 FROM products WHERE slug = ? AND enabled = 1"),
   category: sqlite.prepare("SELECT 1 FROM categories WHERE slug = ?"),
   warehouse: sqlite.prepare("SELECT 1 FROM warehouses WHERE code = ? COLLATE NOCASE AND active = 1"),
+  coa: sqlite.prepare(
+    "SELECT 1 FROM settings, json_each(settings.value) WHERE settings.key = 'coaCertificates' AND upper(json_extract(json_each.value, '$.sku')) = upper(?)",
+  ),
 };
 
 export function proxy(request: NextRequest) {
@@ -39,9 +42,12 @@ export function proxy(request: NextRequest) {
   const warehouse = pathname.match(/^\/warehouse\/([^/]+)\/$/);
   if (warehouse && !exists.warehouse.get(decodeURIComponent(warehouse[1]))) return notFound();
 
+  const coa = pathname.match(/^\/coa\/([^/]+)\/$/);
+  if (coa && !exists.coa.get(decodeURIComponent(coa[1]))) return notFound();
+
   return NextResponse.next();
 }
 
 export const config = {
-  matcher: ["/peptide/:path*", "/category/:path*", "/warehouse/:path*", "/es", "/es/:path*", "/pt", "/pt/:path*"],
+  matcher: ["/peptide/:path*", "/category/:path*", "/warehouse/:path*", "/coa/:path+", "/es", "/es/:path*", "/pt", "/pt/:path*"],
 };

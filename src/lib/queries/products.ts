@@ -23,6 +23,8 @@ export async function getCatalog(): Promise<CatalogProduct[]> {
       description: products.description,
       sku: products.sku,
       specification: products.specification,
+      packageSize: products.packageSize,
+      amountMg: products.amountMg,
       categoryId: products.categoryId,
       images: products.images,
       tags: products.tags,

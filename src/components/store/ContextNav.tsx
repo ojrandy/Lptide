@@ -6,11 +6,21 @@ import { usePathname } from "next/navigation";
 import { useRef, type ReactNode } from "react";
 
 /** Link that marks itself as the current page (live: router-link-active + aria-current). */
-export function NavLink({ href, className, children }: { href: string; className?: string; children: ReactNode }) {
+export function NavLink({
+  href,
+  className,
+  activeClassName = "router-link-active",
+  children,
+}: {
+  href: string;
+  className?: string;
+  activeClassName?: string;
+  children: ReactNode;
+}) {
   const pathname = usePathname();
   const active = pathname === href || pathname === href.replace(/\/$/, "");
   return (
-    <Link href={href} className={[className, active && "router-link-active"].filter(Boolean).join(" ") || undefined} aria-current={active ? "page" : undefined}>
+    <Link href={href} className={[className, active && activeClassName].filter(Boolean).join(" ") || undefined} aria-current={active ? "page" : undefined}>
       {children}
     </Link>
   );

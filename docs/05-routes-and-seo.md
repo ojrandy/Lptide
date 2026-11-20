@@ -11,8 +11,11 @@
 | `/category/[slug]/` | category pages | hero + `introMd` + grid |
 | `/best-sellers/` | popular | products tagged "Best Sellers" |
 | `/peptide/[slug].html` | product | **also accept `/peptide/[slug]`** (category intros link without `.html`); canonical = `.html`. `?warehouse=CNFC` preselects warehouse |
-| `/coa/` | COA library | searchable grid of products with `coaUrl` |
-| `/reconstitution-calculator/` | calculator | client-side only; tabs: Reconstitution, Cost per dose, Vial duration |
+| `/coa/` | COA library | searchable grid of the 24 certificate files (`settings.coaCertificates`) |
+| `/coa/{code}/` | COA library | same, pre-filtered; product "View certificate" links here (product `coaUrl`) |
+| `/reconstitution-calculator/` | calculator | client-side; tabs are **separate live URLs** (below) |
+| `/cost-per-dose-calculator/` `/vial-duration-calculator/` `/product-lookup/` | calculator tabs | found on the live site 2026-11-20 (not in the original route list) |
+| `/contact/` | contact | company template copy; calculator "WhatsApp" button links here |
 | `/affiliate-program/` | affiliate | content + "contact us" CTA (program logic is v2) |
 | `/about/` `/help/faq/` `/help/fees/` `/help/shipping/` `/legal/terms/` | content | copy from `_capture/pages` |
 | `/cart/` | cart | |

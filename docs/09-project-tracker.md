@@ -23,9 +23,10 @@ Update this file at the end of every work session.
 - [x] `npm run smoke -- <url>`: 81/81 on the production build (all 60 product URLs, redirects, 404s)
 
 ## Phase 2 — Content pages & order flow (Sat 21 Nov, afternoon)
-- [ ] About, FAQ, Fees, Shipping (+ track order anchor), Terms, Affiliate (content)
-- [ ] COA library (search)
-- [ ] Reconstitution calculator (3 tabs, client-side)
+- [x] About, Contact, FAQ, Fees, Shipping (+ `#track-order` panel), Terms, Affiliate (content; CTA → contact). Copy generated verbatim from the live pages into `src/content/pages.ts`
+- [x] COA library (search, preview) + `/coa/{code}/`; 24 certificate files in `uploads/coa` (`assets:fetch`)
+- [x] Research tools: reconstitution, cost per dose, vial duration, product lookup (live formulas and rounding; 5 mg / 2 mL / 250 mcg matches live)
+- [x] Smoke: 96/96 on the production build
 - [ ] Cart store + cart page (one warehouse per cart)
 - [ ] Checkout + `placeOrder` action (Zod, rate limit, honeypot, server pricing, transaction)
 - [ ] Order confirmation page + order lookup (`/login`, `/account`)
@@ -55,7 +56,7 @@ Update this file at the end of every work session.
 | B2 | SMTP credentials for lppeptideofficial@lppeptide.com | Client | open |
 | B3 | VPS + DNS (Cloudflare) access | Client | open |
 | B4 | Payment methods & instructions text | Client | open (placeholder text in v1) |
-| B5 | Shipping fee per warehouse | Client | open (flat fee setting in v1) |
+| B5 | Shipping fee per warehouse | Client | **answered by the live Shipping Policy**: US $30 first item + $5/item; AU $20 + $5/item; Asia→US $85 first 0.5 kg + $25/0.5 kg; Asia→other $60 + $25/0.5 kg. Implemented at checkout (P4), admin-editable. |
 | B6 | Retatrutide 60mg has SKU "RETATRUTIDE" in the live data (likely should be RT60). Kept as captured; client to confirm, then fix in admin. | Client | open |
 
 ## Decisions log
@@ -79,6 +80,11 @@ Update this file at the end of every work session.
 | 2026-11-20 | Catalog/category "Add to Cart" picks the warehouse automatically (cart's warehouse, or the only in-stock one) and otherwise asks in a small picker (`lp-warehouse-picker`), matching the live "select a warehouse first" rule. Prices shown without a warehouse = lowest list price (as live). |
 | 2026-11-20 | Unknown product/category/warehouse slugs: `proxy.ts` (Node runtime) checks the DB and rewrites to the global 404 with status 404. Needed because partially prerendered pages would otherwise stream `notFound()` with status 200. Uses Next's documented `experimental.globalNotFound` (also required once the admin has its own root layout). |
 | 2026-11-20 | Category pages are served at the canonical slug; the `-and-` spelling used by live catalog links 301s to it. Descriptions are computed like live ("Browse N … including M COA-verified listings", COA-verified = tagged "COA"). |
+| 2026-11-20 | COA certificates are their own records (24 files with SKU, report no., record id), stored as the `coaCertificates` setting (seeded from `scripts/data/coa-certificates.json`), so no schema change; editable as JSON in the admin. |
+| 2026-11-20 | Calculator tabs, `/product-lookup/` and `/contact/` are separate live URLs; added for URL parity (docs/05 updated). Syringe scale follows live exactly: U-100 = 100, U-50 = 50, U-30 = 30 units/mL, or custom. |
+| 2026-11-20 | Shipping tracking panel: an LP order number opens the order lookup; other numbers open the chosen carrier's public tracking page in a new tab (a link, not an API call). |
+| 2026-11-20 | Shipping fees follow the **published live Shipping Policy** (per-item for US/AU, per-0.5 kg by destination for Asia) instead of a flat fee: a flat fee would contradict the site's own policy page. |
+| 2026-11-20 | DB connection sets `busy_timeout` before switching to WAL (parallel build workers hit "database is locked" otherwise). |
 
 ## v2 backlog
 Accounts + Google login · shipping rule engine · payment integrations · tracking automation · affiliate program · reviews/Q&A moderation · es/pt locales · support chat · structured content editor · Postgres if multi-instance

@@ -346,6 +346,16 @@ async function main() {
           }),
         },
         { key: "hotProducts", value: HOT_PRODUCTS },
+        {
+          key: "coaCertificates",
+          // Extracted from the live /coa/ page (scripts/data). Files are fetched by `npm run assets:fetch`.
+          value: settingsSchema.shape.coaCertificates.parse(
+            (JSON.parse(readFileSync("scripts/data/coa-certificates.json", "utf8")) as { file: string }[]).map((c) => ({
+              ...c,
+              file: `/uploads/coa/${basename(c.file)}`,
+            })),
+          ),
+        },
       ])
       .onConflictDoUpdate({ target: settings.key, set: { value: sql.raw(`excluded."value"`) } });
     await db

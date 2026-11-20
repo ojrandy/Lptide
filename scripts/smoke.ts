@@ -23,6 +23,23 @@ async function main() {
     ...whs.map((w) => ({ path: `/warehouse/${w.code.toLowerCase()}/`, status: 200 })),
     ...cats.map((c) => ({ path: `/category/${c.slug}/`, status: 200 })),
     ...productPaths.map((p) => ({ path: p, status: 200 })),
+    // Content pages and tools (P3)
+    { path: "/about/", status: 200, contains: "Our story" },
+    { path: "/contact/", status: 200, contains: "Messaging channels" },
+    { path: "/help/faq/", status: 200, contains: "On this page" },
+    { path: "/help/fees/", status: 200, contains: "Payment confirmation" },
+    { path: "/help/shipping/", status: 200, contains: "Track your shipment" },
+    { path: "/legal/terms/", status: 200, contains: "Acceptance of terms" },
+    { path: "/affiliate-program/", status: 200, contains: "Earn 10% from every eligible referral order." },
+    { path: "/coa/", status: 200, contains: "COA Certificates" },
+    { path: "/coa/rt10/", status: 200, contains: "RT10" },
+    { path: "/coa/zz99/", status: 404 },
+    // Live defaults 5 mg / 2 mL / 250 mcg / U-100 → 5,000 mcg · 2,500.0 mcg/mL · 25.0 mcg · 10.0 units · 0.1 mL · 20.0 doses
+    { path: "/reconstitution-calculator/", status: 200, contains: "2,500.0 mcg/mL" },
+    { path: "/reconstitution-calculator/", status: 200, contains: "10.0 units" },
+    { path: "/cost-per-dose-calculator/", status: 200, contains: "$0.90" },
+    { path: "/vial-duration-calculator/", status: 200, contains: "47 days" },
+    { path: "/product-lookup/", status: 200, contains: "Product name or abbreviation" },
     // Redirects and errors
     { path: "/catalog", status: 308, location: "/catalog/" },
     { path: "/peptide/retatrutide-10mg-rt10/", status: 301, location: "/peptide/retatrutide-10mg-rt10.html" },

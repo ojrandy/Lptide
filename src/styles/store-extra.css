@@ -60,3 +60,28 @@
   color: #536374;
   font-size: 12px;
 }
+
+/* COA certificate viewer (live opens a preview; same dialog shell as the header search). */
+.lp-coa-viewer {
+  width: min(900px, 100% - 32px);
+}
+.lp-coa-viewer > div {
+  padding: 28px;
+  position: relative;
+}
+.lp-coa-viewer > div > button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.lp-coa-viewer h2 {
+  margin: 0 48px 16px 0;
+  font: 600 22px/1.25 Georgia, "Times New Roman", serif;
+}
+.lp-coa-viewer img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid #dce3eb;
+  border-radius: 8px;
+}

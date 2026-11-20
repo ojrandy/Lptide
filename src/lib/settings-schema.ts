@@ -22,6 +22,18 @@ export const settingsSchema = z.object({
   storeInbox: z.string().max(200),
   /** Ordered product ids for "Factory hot products by warehouse" (first 10 sold in each warehouse). */
   hotProducts: z.array(z.number().int()).max(50),
+  /** COA library (/coa/): one entry per certificate file. */
+  coaCertificates: z
+    .array(
+      z.object({
+        sku: z.string().max(40),
+        report: z.string().max(80),
+        recordId: z.string().max(120),
+        title: z.string().max(200),
+        file: z.string().max(300),
+      }),
+    )
+    .max(500),
 });
 
 export type Settings = z.infer<typeof settingsSchema>;
@@ -33,4 +45,5 @@ export const SETTING_DEFAULTS: Settings = {
   paymentInstructions: "",
   storeInbox: "",
   hotProducts: [],
+  coaCertificates: [],
 };

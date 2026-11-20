@@ -23,6 +23,8 @@ export type CatalogProduct = {
   description: string;
   sku: string;
   specification: string;
+  packageSize: string;
+  amountMg: number | null;
   categoryId: number;
   image: string | null;
   tags: string[];
