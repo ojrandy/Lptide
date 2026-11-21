@@ -52,7 +52,7 @@ Update this file at the end of every work session.
 - [x] Security headers (nosniff, DENY, referrer, permissions; HSTS via Caddy), `typecheck` + `lint` + `build` clean
 - [x] Backups: `npm run backup` / `scripts/backup.sh` (VACUUM INTO + uploads tar, 14 days); restore of the snapshot tested
 - [ ] Lighthouse mobile ≥ 90 (home, product): run in Chrome DevTools on the deployed site (could not run the Lighthouse CLI from the dev environment)
-- [~] Deploy to Namecheap cPanel (docs/08): app created 2026-11-21; first deploy, data upload and admin password change in progress
+- [x] Deployed to Namecheap cPanel (docs/08) 2026-11-21: https://lppeptide.co live, Namecheap PositiveSSL, www + http 301 to https apex, smoke 131/131 against production. [ ] Admin password change + remove ADMIN_* env (client), SMTP_* for info@lppeptide.co (B2)
 - [!] DNS cutover (MX untouched), test order end to end on production (blocked: B3; SMTP needs B2)
 - [x] Short admin guide (README "Admin guide"). [ ] Handover of admin credentials (at deploy)
 
@@ -61,7 +61,7 @@ Update this file at the end of every work session.
 |---|---|---|---|
 | B1 | Approval to download images/COAs from live site | Developer | done 2026-11-20 |
 | B2 | SMTP credentials for info@lppeptide.co (mailbox on the new domain) | Client | open |
-| B3 | VPS + DNS access for lppeptide.co, plus Cloudflare access to lppeptide.com for the 301 redirect | Client | open |
+| B3 | Hosting + DNS for lppeptide.co: done 2026-11-21 (Namecheap cPanel, Namecheap Web Hosting DNS). Still open: Cloudflare access to lppeptide.com for the 301 redirect | Client | partly done |
 | B4 | Payment methods & instructions text | Client | partly answered: live cart says "Crypto (BTC/ETH/USDC) · Card & ACH coming soon". Still need the actual payment instructions (wallet addresses / process); placeholder text until then, editable in admin. |
 | B5 | Shipping fee per warehouse | Client | **answered by the live Shipping Policy**: US $30 first item + $5/item; AU $20 + $5/item; Asia→US $85 first 0.5 kg + $25/0.5 kg; Asia→other $60 + $25/0.5 kg. Implemented at checkout (P4), admin-editable. |
 | B6 | Retatrutide 60mg has SKU "RETATRUTIDE" in the live data (likely should be RT60). Kept as captured; client to confirm, then fix in admin. | Client | open |
@@ -129,6 +129,7 @@ One migration (`drizzle/0003_v2.sql`) adds the tables and moves the data (v1 shi
 - [x] **V2-3 Payments & fulfilment**: admin-editable payment methods, customer picks one at checkout; unique payment reference per order (order page + email); Mark paid with private proof file (admin-only route) + payment-confirmed email; carrier list with tracking URL templates (shipped email + order page link); public tracking panel checks local shipment records first; counted stock per warehouse (optional) with decrement, restore on cancel, low-stock alert email + overview list. Provider integration: B9.
 - [x] **V2-4 Affiliate program**: application (signed in, verified, published $3,000 qualifying paid orders), admin approve/reject/suspend + rate, referral link `?ref=CODE` (cookie 30 days, one click per new cookie, no self-referral), commission on PAID (rate × product subtotal), voided on cancel, 30-day hold, payout log (min $100, 3 per 30 days), affiliate dashboard (clicks, orders, commission, payouts). Program rules editable in admin.
 - [x] **V2-5 Reviews, Q&A, i18n, support**: reviews (verified buyers only, one per product) and questions (anyone, honeypot + rate limit) with admin moderation; JSON columns replaced by tables (209 reviews, 120 questions migrated). `/es` and `/pt` served for every storefront page (UI strings translated, page and product content English as on live; optional per-product es/pt name/subtitle/description), hreflang + per-locale canonical on every page and in the sitemap, footer language picker. First-party support widget (Telegram / WhatsApp / email / tracking / FAQ), no third-party script.
+- [x] Sitemap lists every language version as its own `<url>` (324 = 108 pages × en/es/pt), each with the full hreflang set (2026-11-21).
 - [x] Verified 2026-11-21 on a production build: typecheck, lint, build clean; smoke 131/131 (v1 locale-302 checks replaced by v2 locale checks, + referral, account and admin-gate checks); parity 11/11; pricing 29/29; `npm run check:v2` 28/28 (rules engine at checkout, stock decrement/low-stock/restore, payment ref, referral + self-referral, commission earn/idempotent/void/hold/minimum/payout, email-verified order linking, migrated reviews); fresh install (migrate + seed on an empty DB, re-seed identical); all 11 admin pages render with a session; browser run in Spanish: register → product → cart → checkout (address saved, payment method, ref) → order page, emails written; private proof upload (fake PNG refused, admin-only, not under /uploads); referral cookie + click; review eligibility; support widget; backup now includes `PRIVATE_DIR`.
 - [ ] Deploy steps for v2: set PRIVATE_DIR (outside the release dir), GOOGLE_* when B8 is done, run `db:migrate` before `build`. Re-run smoke against production.
 
