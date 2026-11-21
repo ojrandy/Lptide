@@ -2,17 +2,18 @@
 2:"/_next/static/chunks/0wj0noag-9_fs.js"
 3:I[39756,["$2"],"default"]
 4:I[37457,["$2"],"default"]
-15:"/_next/static/chunks/1feaf7x9atxyg.js"
-16:"/_next/static/chunks/1acs71kilm29d.js"
-17:"/_next/static/chunks/2_wfe6cz2rmvg.js"
-18:"/_next/static/chunks/0ggr-xecwljh8.js"
-19:I[83128,["$15","$16","$17","$18"],"NavLink"]
-21:"ViewportBoundary"
-22:I[97367,["$2"],"$21"]
-23:"MetadataBoundary"
-24:I[97367,["$2"],"$23"]
-25:"$Sreact.suspense"
-:HL["/_next/static/chunks/36l0sm7fo27yt.css","style"]
+15:"/_next/static/chunks/1yl3wmxrdu1-r.js"
+16:"/_next/static/chunks/1feaf7x9atxyg.js"
+17:"/_next/static/chunks/3gc47zirdt08v.js"
+18:"/_next/static/chunks/2_wfe6cz2rmvg.js"
+19:"/_next/static/chunks/0ggr-xecwljh8.js"
+1a:I[83128,["$15","$16","$17","$18","$19"],"NavLink"]
+22:"ViewportBoundary"
+23:I[97367,["$2"],"$22"]
+24:"MetadataBoundary"
+25:I[97367,["$2"],"$24"]
+26:"$Sreact.suspense"
+:HL["/_next/static/chunks/1r7zr0eiaaaag.css","style"]
 6:X
 6:C
 7:X
@@ -23,28 +24,28 @@ d:X
 d:C
 11:X
 11:C
-20:X
-20:C
-14:[["children",{"s":"__PAGE__","h":49312,"d":{"r":["$","$1","c",{"children":[["$","div",null,{"className":"site-shell calculator-shell","children":["$","main",null,{"className":"calculator-page","children":[["$","section",null,{"className":"calculator-hero","children":["$","div",null,{"className":"calculator-hero-copy","children":[["$","p",null,{"className":"calculator-kicker","children":"Research calculation tools"}],["$","h1",null,{"children":"Cost per Dose Calculator"}],["$","p",null,{"children":"Estimate total doses per vial, doses per kit, and cost per desired research dose."}],["$","div",null,{"className":"calculator-hero-actions","aria-label":"WhatsApp contact action","children":["$","a",null,{"href":"https://wa.me/16162742128","target":"_blank","rel":"noopener noreferrer","className":"calculator-action primary","children":"WhatsApp"}]}]]}]}],["$","div",null,{"className":"calculator-tool-layout","children":[["$","nav",null,{"className":"calculator-tabs","aria-label":"Research calculator pages","children":[["$","$L19","/reconstitution-calculator/",{"href":"/reconstitution-calculator/","activeClassName":"active","children":"Reconstitution"}],["$","$L19","/cost-per-dose-calculator/",{"href":"/cost-per-dose-calculator/","activeClassName":"active","children":"Cost per Dose"}],["$","$L19","/vial-duration-calculator/",{"href":"/vial-duration-calculator/","activeClassName":"active","children":"Vial Duration"}],["$","$L19","/product-lookup/",{"href":"/product-lookup/","activeClassName":"active","children":"Product Lookup"}],["$","$L19","/contact/",{"href":"/contact/","activeClassName":"active","children":"Contact"}]]}],["$","section",null,{"className":"calculator-workspace","aria-live":"polite","children":"$L1a"}]]}],"$undefined","$L1b"]}]}],["$L1c","$L1d"],"$L1e"]}],"p":"$@1f","v":"$20","s":"$7"}}]]
+21:X
+21:C
+14:[["children",{"s":"__PAGE__","h":49312,"d":{"r":["$","$1","c",{"children":[["$","div",null,{"className":"site-shell calculator-shell","children":["$","main",null,{"className":"calculator-page","children":[["$","section",null,{"className":"calculator-hero","children":["$","div",null,{"className":"calculator-hero-copy","children":[["$","p",null,{"className":"calculator-kicker","children":"Research calculation tools"}],["$","h1",null,{"children":"Cost per Dose Calculator"}],["$","p",null,{"children":"Estimate total doses per vial, doses per kit, and cost per desired research dose."}],["$","div",null,{"className":"calculator-hero-actions","aria-label":"WhatsApp contact action","children":["$","a",null,{"href":"https://wa.me/16162742128","target":"_blank","rel":"noopener noreferrer","className":"calculator-action primary","children":"WhatsApp"}]}]]}]}],["$","div",null,{"className":"calculator-tool-layout","children":[["$","nav",null,{"className":"calculator-tabs","aria-label":"Research calculator pages","children":[["$","$L1a","/reconstitution-calculator/",{"href":"/reconstitution-calculator/","activeClassName":"active","children":"Reconstitution"}],["$","$L1a","/cost-per-dose-calculator/",{"href":"/cost-per-dose-calculator/","activeClassName":"active","children":"Cost per Dose"}],["$","$L1a","/vial-duration-calculator/",{"href":"/vial-duration-calculator/","activeClassName":"active","children":"Vial Duration"}],["$","$L1a","/product-lookup/",{"href":"/product-lookup/","activeClassName":"active","children":"Product Lookup"}],["$","$L1a","/contact/",{"href":"/contact/","activeClassName":"active","children":"Contact"}]]}],"$L1b"]}],"$undefined","$L1c"]}]}],["$L1d","$L1e"],"$L1f"]}],"p":"$@20","v":"$21","s":"$7"}}]]
 12:[["children",{"s":"cost-per-dose-calculator","h":49248,"d":{"r":["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@13","v":"$6","s":"$7"},"c":"$Q14"}]]
 e:[["children",{"s":"(shop)","h":49248,"d":{"r":["$","$1","c",{"children":[[["$","script","script-0",{"src":"/_next/static/chunks/2_wfe6cz2rmvg.js","async":true}]],["$Lf",["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]]}],"p":"$@10","v":"$11","s":"$7"},"c":"$Q12"}]]
-a:[["children",{"s":{"n":"lang","t":"d","k":null,"s":["admin","auth","uploads"]},"h":49264,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/36l0sm7fo27yt.css","precedence":"next"}],["$","script","script-0",{"src":"/_next/static/chunks/1feaf7x9atxyg.js","async":true}],["$","script","script-1",{"src":"/_next/static/chunks/1acs71kilm29d.js","async":true}]],"$Lb"]}],"p":"$@c","v":"$d","s":"$7"},"c":"$Qe"}]]
+a:[["children",{"s":{"n":"lang","t":"d","k":null,"s":["admin","auth","uploads"]},"h":49264,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/1r7zr0eiaaaag.css","precedence":"next"}],["$","script","script-0",{"src":"/_next/static/chunks/1yl3wmxrdu1-r.js","async":true}],["$","script","script-1",{"src":"/_next/static/chunks/1feaf7x9atxyg.js","async":true}],["$","script","script-2",{"src":"/_next/static/chunks/3gc47zirdt08v.js","async":true}]],"$Lb"]}],"p":"$@c","v":"$d","s":"$7"},"c":"$Qe"}]]
 8:[["children",{"s":"(store)","h":49264,"d":{"r":["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}],"notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":"$0:t:t:d:r:props:children:1:props:notFound:0:1:props:style","children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":"$0:t:t:d:r:props:children:1:props:notFound:0:1:props:children:props:children:1:props:style","children":404}],["$","div",null,{"style":"$0:t:t:d:r:props:children:1:props:notFound:0:1:props:children:props:children:2:props:style","children":["$","h2",null,{"style":"$0:t:t:d:r:props:children:1:props:notFound:0:1:props:children:props:children:2:props:children:props:style","children":"This page could not be found."}]}]]}]}]],[]]}]]}],"p":"$@9","v":"$6","s":"$7"},"c":"$Qa"}]]
-28:X
-28:C
-2b:X
-2b:C
-0:{"t":{"t":{"s":"","h":49232,"d":{"r":["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}],"notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"},"h":{"r":["$","$1","h",{"children":[null,["$","$L22",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","2",{"name":"theme-color","content":"#0b1e40"}]]}],["$","$L24",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$25",null,{"name":"Next.Metadata","children":"$L26"}]}],null]}],null]}],"p":"$@27","v":"$28","s":"$7"}},"a":"$@29","u":"$@2a","b":"L8XXGGr9LWlAAkNH9kwXz","r":"$2b"}
-2c:I[91428,["$15","$16","$17","$18"],"CostPerDoseTool"]
-2d:I[97367,["$2"],"OutletBoundary"]
+29:X
+29:C
+2c:X
+2c:C
+0:{"t":{"t":{"s":"","h":49232,"d":{"r":["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}],"notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"},"h":{"r":["$","$1","h",{"children":[null,["$","$L23",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","2",{"name":"theme-color","content":"#0b1e40"}]]}],["$","$L25",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$26",null,{"name":"Next.Metadata","children":"$L27"}]}],null]}],null]}],"p":"$@28","v":"$29","s":"$7"}},"a":"$@2a","u":"$@2b","b":"C2TZu8jfuuA6nmUKycdfY","r":"$2c"}
+2d:I[91428,["$15","$16","$17","$18","$19"],"CostPerDoseTool"]
+2e:I[97367,["$2"],"OutletBoundary"]
 :HL["/_next/static/chunks/2odl09id3o0z-.css","style"]
-1a:["$","$L2c",null,{}]
-1b:["$","section",null,{"className":"research-disclaimer","children":[["$","strong",null,{"children":"Research-use disclaimer"}],["$","p",null,{"children":"This calculator is provided for research-use planning only. It does not provide medical advice, treatment guidance, or human-use instructions. Product availability, COA status, and pricing should be confirmed with sales before ordering."}]]}]
-1c:["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/2odl09id3o0z-.css","precedence":"next"}]
-1d:["$","script","script-0",{"src":"/_next/static/chunks/0ggr-xecwljh8.js","async":true}]
-1e:["$","$L2d",null,{"children":["$","$25",null,{"name":"Next.MetadataOutlet","children":"$@2e"}]}]
-2a:false
-29:null
+1b:["$","section",null,{"className":"calculator-workspace","aria-live":"polite","children":["$","$L2d",null,{}]}]
+1c:["$","section",null,{"className":"research-disclaimer","children":[["$","strong",null,{"children":"Research-use disclaimer"}],["$","p",null,{"children":"This calculator is provided for research-use planning only. It does not provide medical advice, treatment guidance, or human-use instructions. Product availability, COA status, and pricing should be confirmed with sales before ordering."}]]}]
+1d:["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/2odl09id3o0z-.css","precedence":"next"}]
+1e:["$","script","script-0",{"src":"/_next/static/chunks/0ggr-xecwljh8.js","async":true}]
+1f:["$","$L2e",null,{"children":["$","$26",null,{"name":"Next.MetadataOutlet","children":"$@2f"}]}]
+2b:false
+2a:null
 13:"$undefined"
 9:"$undefined"
 5:"$undefined"

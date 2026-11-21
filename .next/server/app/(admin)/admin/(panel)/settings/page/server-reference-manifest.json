@@ -1,6 +1,6 @@
 {
   "node": {
-    "0069294ebbdc2edb2ae3b5373617c436b8b5153da6": {
+    "009a03ee96cc39dc4deaefc6c9061dac48d940223d": {
       "workers": {
         "app/(admin)/admin/(panel)/settings/page": {
           "moduleId": 90806,
@@ -10,7 +10,7 @@
       "exportedName": "pullCart",
       "filename": "src/lib/actions/customer.ts"
     },
-    "400ee5db51a6d986f2cfceb8d1bc1f904575b08bad": {
+    "409780d3c081553c6e5d6fe7a0263f1fc5494c9679": {
       "workers": {
         "app/(admin)/admin/(panel)/settings/page": {
           "moduleId": 90806,
@@ -20,17 +20,7 @@
       "exportedName": "pushCart",
       "filename": "src/lib/actions/customer.ts"
     },
-    "8018e71dd474c0da3345f9407c1a931ff25760621b": {
-      "workers": {
-        "app/(admin)/admin/(panel)/settings/page": {
-          "moduleId": 90806,
-          "async": false
-        }
-      },
-      "exportedName": "$$RSC_SERVER_CACHE_0",
-      "filename": "src/lib/queries/settings.ts"
-    },
-    "801c756ce7d94d9487124a71716f7dadee134baa25": {
+    "8090d3832a6a943e422de2e98f76505c4606f29ccd": {
       "workers": {
         "app/(admin)/admin/(panel)/settings/page": {
           "moduleId": 90806,
@@ -40,7 +30,17 @@
       "exportedName": "$$RSC_SERVER_CACHE_1",
       "filename": "src/lib/queries/settings.ts"
     },
-    "00fa85075d48a58ffafd4c0662edcddd38c0c70c9b": {
+    "8090e3acd68c36e58373338a29958a9f7eafe048f3": {
+      "workers": {
+        "app/(admin)/admin/(panel)/settings/page": {
+          "moduleId": 90806,
+          "async": false
+        }
+      },
+      "exportedName": "$$RSC_SERVER_CACHE_0",
+      "filename": "src/lib/queries/settings.ts"
+    },
+    "009e3e60f2b59fe2d18081f9a50740828cba19f86f": {
       "workers": {
         "app/(admin)/admin/(panel)/settings/page": {
           "moduleId": 90806,
@@ -50,17 +50,7 @@
       "exportedName": "logout",
       "filename": "src/lib/actions/auth.ts"
     },
-    "60a944910aba274698563b78e3a4426a3b6fb29216": {
-      "workers": {
-        "app/(admin)/admin/(panel)/settings/page": {
-          "moduleId": 90806,
-          "async": false
-        }
-      },
-      "exportedName": "login",
-      "filename": "src/lib/actions/auth.ts"
-    },
-    "60cdacef163ac0e012ed3045474518c8c503f0f00e": {
+    "602695f3f5699c42ae521019cb2005c30789584fda": {
       "workers": {
         "app/(admin)/admin/(panel)/settings/page": {
           "moduleId": 90806,
@@ -70,7 +60,17 @@
       "exportedName": "changePassword",
       "filename": "src/lib/actions/auth.ts"
     },
-    "60c2c41fb1d3e49eef187d03d89baab4024498c1a9": {
+    "6078d1eb6932000ad7690b4be8b01fa824b74fe17b": {
+      "workers": {
+        "app/(admin)/admin/(panel)/settings/page": {
+          "moduleId": 90806,
+          "async": false
+        }
+      },
+      "exportedName": "login",
+      "filename": "src/lib/actions/auth.ts"
+    },
+    "60df3ce8d50c0bf59c9ce810e22209a5e2c0bec22a": {
       "workers": {
         "app/(admin)/admin/(panel)/settings/page": {
           "moduleId": 90806,
@@ -80,7 +80,7 @@
       "exportedName": "saveAnnouncement",
       "filename": "src/lib/actions/admin-settings.ts"
     },
-    "60c19bc5fad15b5847e4406e06a5bd4a858e1809eb": {
+    "608d774599477f6448a22b1cf34555f394dce070ce": {
       "workers": {
         "app/(admin)/admin/(panel)/settings/page": {
           "moduleId": 90806,
@@ -90,7 +90,7 @@
       "exportedName": "saveCarriers",
       "filename": "src/lib/actions/admin-settings.ts"
     },
-    "60fac4a33a18db71d253a1d06d3d5e91967bb45994": {
+    "600f9c9c7133be05c885669972888a65f75f463d83": {
       "workers": {
         "app/(admin)/admin/(panel)/settings/page": {
           "moduleId": 90806,
@@ -100,7 +100,7 @@
       "exportedName": "saveCheckout",
       "filename": "src/lib/actions/admin-settings.ts"
     },
-    "60b56ba8366aba23da1a5b992995fb9704aeaec305": {
+    "6037c15473944d1f133b6d1879faba93b7bc5d7b9c": {
       "workers": {
         "app/(admin)/admin/(panel)/settings/page": {
           "moduleId": 90806,
@@ -110,7 +110,7 @@
       "exportedName": "saveContacts",
       "filename": "src/lib/actions/admin-settings.ts"
     },
-    "609365d4ee0235fd95bcaae86bb0993ed24c9b48f2": {
+    "60029780731719b4bb42b6d26ec95c1061e99d8dee": {
       "workers": {
         "app/(admin)/admin/(panel)/settings/page": {
           "moduleId": 90806,
@@ -120,7 +120,7 @@
       "exportedName": "saveHotProducts",
       "filename": "src/lib/actions/admin-settings.ts"
     },
-    "6073df0168f995add4abfcad30def86325eabd8a10": {
+    "609b04a71be3723683ed36fa6c5ef776ed59a4dc1b": {
       "workers": {
         "app/(admin)/admin/(panel)/settings/page": {
           "moduleId": 90806,
@@ -130,7 +130,7 @@
       "exportedName": "savePaymentMethods",
       "filename": "src/lib/actions/admin-settings.ts"
     },
-    "6016b8984e4e2e5947975fec6151170b8897d7e657": {
+    "608821d44e2ce6fa49b7128c3b42a5dd7e0b149c90": {
       "workers": {
         "app/(admin)/admin/(panel)/settings/page": {
           "moduleId": 90806,

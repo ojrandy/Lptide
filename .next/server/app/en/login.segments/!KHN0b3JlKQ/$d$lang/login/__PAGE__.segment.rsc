@@ -2,20 +2,21 @@
 5:"/_next/static/chunks/0wj0noag-9_fs.js"
 6:I[39756,["$5"],"default"]
 7:I[37457,["$5"],"default"]
-c:"/_next/static/chunks/1feaf7x9atxyg.js"
-d:"/_next/static/chunks/1acs71kilm29d.js"
-e:"/_next/static/chunks/1jglgk9xc9njl.js"
-f:I[48085,["$c","$d","$e"],"LocaleLink"]
-10:I[5500,["$c","$d","$e"],"Image"]
-11:I[5014,["$c","$d","$e"],"default"]
-12:"$Sreact.suspense"
-14:I[93890,["$c","$d","$e"],"OrderLookupForm"]
-15:I[97367,["$5"],"OutletBoundary"]
-19:"ViewportBoundary"
-1a:I[97367,["$5"],"$19"]
-1b:"MetadataBoundary"
-1c:I[97367,["$5"],"$1b"]
-1d:I[27201,["$5"],"IconMark"]
+c:"/_next/static/chunks/1yl3wmxrdu1-r.js"
+d:"/_next/static/chunks/1feaf7x9atxyg.js"
+e:"/_next/static/chunks/3gc47zirdt08v.js"
+f:"/_next/static/chunks/3pddz-leq7pvd.js"
+10:I[48085,["$c","$d","$e","$f"],"LocaleLink"]
+11:I[5500,["$c","$d","$e","$f"],"Image"]
+12:I[5014,["$c","$d","$e","$f"],"default"]
+13:"$Sreact.suspense"
+15:I[93890,["$c","$d","$e","$f"],"OrderLookupForm"]
+16:I[97367,["$5"],"OutletBoundary"]
+1a:"ViewportBoundary"
+1b:I[97367,["$5"],"$1a"]
+1c:"MetadataBoundary"
+1d:I[97367,["$5"],"$1c"]
+1e:I[27201,["$5"],"IconMark"]
 :HL["/_next/static/chunks/1knfcmfi0b6j-.css","style"]
 9:X
 9:C
@@ -23,19 +24,19 @@ a:X
 a:300
 a:300
 a:C
-18:X
-18:C
-b:[["children",{"s":"__PAGE__","h":49312,"d":{"r":["$","$4","c",{"children":[["$","main",null,{"className":"login-shell","children":[["$","div",null,{"className":"login-topbar","children":["$","$Lf",null,{"href":"/catalog/","className":"brand","aria-label":"LPPEPTIDE catalog","children":[["$","$L10",null,{"className":"brand-logo","src":"/brand/lppeptide-logo-center.png","alt":"LPPEPTIDE","width":52,"height":52}],["$","span",null,{"className":"brand-copy","children":[["$","strong",null,{"children":"LPPEPTIDE"}],["$","small",null,{"children":"Source manufacturer"}]]}]]}]}],["$","section",null,{"className":"login-layout","aria-labelledby":"login-title","children":[["$","div",null,{"className":"login-story","children":[["$","p",null,{"className":"eyebrow","children":"Order status"}],["$","h1",null,{"id":"login-title","children":[["$","span",null,{"className":"desktop-title","children":"Check an order, its payment status and tracking."}],["$","span",null,{"className":"mobile-title","children":"Find your order"}]]}],["$","p",null,{"className":"story-copy","children":[["$","span",null,{"className":"desktop-copy","children":"Use the order number from your confirmation email and the email you checked out with."}],["$","span",null,{"className":"mobile-copy","children":"Order number and checkout email."}]]}],["$","ul",null,{"className":"trust-list trust-list-desktop","children":[["$","li","Payment instructions and status",{"children":[["$","$L11",null,{"icon":{"name":"check","size":24,"node":[["path",{"d":"M20 6 9 17l-5-5","key":"1gmf2c"}]]},"size":16,"aria-hidden":"true"}],["$","span",null,{"children":"Payment instructions and status"}]]}],["$","li","Tracking number once shipped",{"children":[["$","$L11",null,{"icon":"$b:0:1:d:r:props:children:0:props:children:1:props:children:0:props:children:3:props:children:0:props:children:0:props:icon","size":16,"aria-hidden":"true"}],["$","span",null,{"children":"Tracking number once shipped"}]]}],["$","li","No account needed",{"children":[["$","$L11",null,{"icon":"$b:0:1:d:r:props:children:0:props:children:1:props:children:0:props:children:3:props:children:0:props:children:0:props:icon","size":16,"aria-hidden":"true"}],["$","span",null,{"children":"No account needed"}]]}]]}]]}],["$","div",null,{"className":"lp-auth-cards","children":[["$","$12",null,{"fallback":null,"children":"$L13"}],["$","$12",null,{"children":["$","$L14",null,{}]}]]}]]}]]}],[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/1knfcmfi0b6j-.css","precedence":"next"}],["$","script","script-0",{"src":"/_next/static/chunks/1jglgk9xc9njl.js","async":true}]],["$","$L15",null,{"children":["$","$12",null,{"name":"Next.MetadataOutlet","children":"$@16"}]}]]}],"p":"$@17","v":"$18","s":"$a"}}]]
+19:X
+19:C
+b:[["children",{"s":"__PAGE__","h":49312,"d":{"r":["$","$4","c",{"children":[["$","main",null,{"className":"login-shell","children":[["$","div",null,{"className":"login-topbar","children":["$","$L10",null,{"href":"/catalog/","className":"brand","aria-label":"LPPEPTIDE catalog","children":[["$","$L11",null,{"className":"brand-logo","src":"/brand/lppeptide-logo-center.png","alt":"LPPEPTIDE","width":52,"height":52}],["$","span",null,{"className":"brand-copy","children":[["$","strong",null,{"children":"LPPEPTIDE"}],["$","small",null,{"children":"Source manufacturer"}]]}]]}]}],["$","section",null,{"className":"login-layout","aria-labelledby":"login-title","children":[["$","div",null,{"className":"login-story","children":[["$","p",null,{"className":"eyebrow","children":"Order status"}],["$","h1",null,{"id":"login-title","children":[["$","span",null,{"className":"desktop-title","children":"Check an order, its payment status and tracking."}],["$","span",null,{"className":"mobile-title","children":"Find your order"}]]}],["$","p",null,{"className":"story-copy","children":[["$","span",null,{"className":"desktop-copy","children":"Use the order number from your confirmation email and the email you checked out with."}],["$","span",null,{"className":"mobile-copy","children":"Order number and checkout email."}]]}],["$","ul",null,{"className":"trust-list trust-list-desktop","children":[["$","li","Payment instructions and status",{"children":[["$","$L12",null,{"icon":{"name":"check","size":24,"node":[["path",{"d":"M20 6 9 17l-5-5","key":"1gmf2c"}]]},"size":16,"aria-hidden":"true"}],["$","span",null,{"children":"Payment instructions and status"}]]}],["$","li","Tracking number once shipped",{"children":[["$","$L12",null,{"icon":"$b:0:1:d:r:props:children:0:props:children:1:props:children:0:props:children:3:props:children:0:props:children:0:props:icon","size":16,"aria-hidden":"true"}],["$","span",null,{"children":"Tracking number once shipped"}]]}],["$","li","No account needed",{"children":[["$","$L12",null,{"icon":"$b:0:1:d:r:props:children:0:props:children:1:props:children:0:props:children:3:props:children:0:props:children:0:props:icon","size":16,"aria-hidden":"true"}],["$","span",null,{"children":"No account needed"}]]}]]}]]}],["$","div",null,{"className":"lp-auth-cards","children":[["$","$13",null,{"fallback":null,"children":"$L14"}],["$","$13",null,{"children":["$","$L15",null,{}]}]]}]]}]]}],[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/1knfcmfi0b6j-.css","precedence":"next"}],["$","script","script-0",{"src":"/_next/static/chunks/3pddz-leq7pvd.js","async":true}]],["$","$L16",null,{"children":["$","$13",null,{"name":"Next.MetadataOutlet","children":"$@17"}]}]]}],"p":"$@18","v":"$19","s":"$a"}}]]
 3:[["children",{"s":"login","h":49216,"d":{"r":["$","$4","c",{"children":[null,["$","$L6",null,{"parallelRouterKey":"children","template":["$","$L7",null,{}]}]]}],"p":"$@8","v":"$9","s":"$a"},"c":"$Qb"}]]
 2:[["children",{"s":{"n":"lang","t":"d","k":null,"s":["admin","auth","uploads"]},"h":49200,"c":"$Q3"}]]
 1:[["children",{"s":"(store)","h":49264,"c":"$Q2"}]]
-1f:X
-1f:T4,lang1f:C
-22:X
-22:T4,lang22:C
-0:{"t":{"t":{"s":"","h":49232,"c":"$Q1"},"h":{"r":["$","$4","h",{"children":[null,["$","$L1a",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","2",{"name":"theme-color","content":"#0b1e40"}]]}],["$","$L1c",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$12",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Login | LPPEPTIDE"}],["$","meta","1",{"name":"description","content":"Sign in to your LPPEPTIDE account, or look up an order with your order number and checkout email."}],["$","meta","2",{"name":"robots","content":"noindex"}],["$","link","3",{"rel":"canonical","href":"https://lppeptide.co/login/"}],["$","link","4",{"rel":"alternate","hrefLang":"en","href":"https://lppeptide.co/login/"}],["$","link","5",{"rel":"alternate","hrefLang":"es-ES","href":"https://lppeptide.co/es/login/"}],["$","link","6",{"rel":"alternate","hrefLang":"pt-BR","href":"https://lppeptide.co/pt/login/"}],["$","link","7",{"rel":"alternate","hrefLang":"x-default","href":"https://lppeptide.co/login/"}],["$","meta","8",{"property":"og:title","content":"Login | LPPEPTIDE"}],["$","meta","9",{"property":"og:description","content":"Sign in to your LPPEPTIDE account, or look up an order with your order number and checkout email."}],["$","meta","10",{"property":"og:site_name","content":"LPPEPTIDE"}],["$","meta","11",{"property":"og:image","content":"https://lppeptide.co/brand/lppeptide-logo-center.png"}],["$","meta","12",{"property":"og:type","content":"website"}],["$","meta","13",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","14",{"name":"twitter:title","content":"Login | LPPEPTIDE"}],["$","meta","15",{"name":"twitter:description","content":"Sign in to your LPPEPTIDE account, or look up an order with your order number and checkout email."}],["$","meta","16",{"name":"twitter:image","content":"https://lppeptide.co/brand/lppeptide-logo-center.png"}],["$","link","17",{"rel":"icon","href":"/favicon.ico"}],["$","$L1d","18",{}]]}]}],null]}],null]}],"p":"$@1e","v":"$1f","s":"$a"}},"a":"$@20","u":"$@21","b":"L8XXGGr9LWlAAkNH9kwXz","r":"$22"}
-16:null
-21:false
-20:null
+20:X
+20:T4,lang20:C
+23:X
+23:T4,lang23:C
+0:{"t":{"t":{"s":"","h":49232,"c":"$Q1"},"h":{"r":["$","$4","h",{"children":[null,["$","$L1b",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","2",{"name":"theme-color","content":"#0b1e40"}]]}],["$","$L1d",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$13",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Login | LPPEPTIDE"}],["$","meta","1",{"name":"description","content":"Sign in to your LPPEPTIDE account, or look up an order with your order number and checkout email."}],["$","meta","2",{"name":"robots","content":"noindex"}],["$","link","3",{"rel":"canonical","href":"https://lppeptide.co/login/"}],["$","link","4",{"rel":"alternate","hrefLang":"en","href":"https://lppeptide.co/login/"}],["$","link","5",{"rel":"alternate","hrefLang":"es-ES","href":"https://lppeptide.co/es/login/"}],["$","link","6",{"rel":"alternate","hrefLang":"pt-BR","href":"https://lppeptide.co/pt/login/"}],["$","link","7",{"rel":"alternate","hrefLang":"x-default","href":"https://lppeptide.co/login/"}],["$","meta","8",{"property":"og:title","content":"Login | LPPEPTIDE"}],["$","meta","9",{"property":"og:description","content":"Sign in to your LPPEPTIDE account, or look up an order with your order number and checkout email."}],["$","meta","10",{"property":"og:site_name","content":"LPPEPTIDE"}],["$","meta","11",{"property":"og:image","content":"https://lppeptide.co/brand/lppeptide-logo-center.png"}],["$","meta","12",{"property":"og:type","content":"website"}],["$","meta","13",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","14",{"name":"twitter:title","content":"Login | LPPEPTIDE"}],["$","meta","15",{"name":"twitter:description","content":"Sign in to your LPPEPTIDE account, or look up an order with your order number and checkout email."}],["$","meta","16",{"name":"twitter:image","content":"https://lppeptide.co/brand/lppeptide-logo-center.png"}],["$","link","17",{"rel":"icon","href":"/favicon.ico"}],["$","$L1e","18",{}]]}]}],null]}],null]}],"p":"$@1f","v":"$20","s":"$a"}},"a":"$@21","u":"$@22","b":"C2TZu8jfuuA6nmUKycdfY","r":"$23"}
+17:null
+22:false
+21:null
 8:"$undefined"
-1e:"$undefined"
+1f:"$undefined"

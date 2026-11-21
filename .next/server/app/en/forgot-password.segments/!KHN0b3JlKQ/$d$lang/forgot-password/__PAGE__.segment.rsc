@@ -2,19 +2,20 @@
 5:"/_next/static/chunks/0wj0noag-9_fs.js"
 6:I[39756,["$5"],"default"]
 7:I[37457,["$5"],"default"]
-c:"/_next/static/chunks/1feaf7x9atxyg.js"
-d:"/_next/static/chunks/1acs71kilm29d.js"
-e:"/_next/static/chunks/2wvwp9c79lewg.js"
-f:I[48085,["$c","$d","$e"],"LocaleLink"]
-10:I[5500,["$c","$d","$e"],"Image"]
-11:I[21440,["$c","$d","$e"],"ForgotForm"]
-12:I[97367,["$5"],"OutletBoundary"]
-13:"$Sreact.suspense"
-17:"ViewportBoundary"
-18:I[97367,["$5"],"$17"]
-19:"MetadataBoundary"
-1a:I[97367,["$5"],"$19"]
-1b:I[27201,["$5"],"IconMark"]
+c:"/_next/static/chunks/1yl3wmxrdu1-r.js"
+d:"/_next/static/chunks/1feaf7x9atxyg.js"
+e:"/_next/static/chunks/3gc47zirdt08v.js"
+f:"/_next/static/chunks/0j2vidt8nqk2_.js"
+10:I[48085,["$c","$d","$e","$f"],"LocaleLink"]
+11:I[5500,["$c","$d","$e","$f"],"Image"]
+12:I[21440,["$c","$d","$e","$f"],"ForgotForm"]
+13:I[97367,["$5"],"OutletBoundary"]
+14:"$Sreact.suspense"
+18:"ViewportBoundary"
+19:I[97367,["$5"],"$18"]
+1a:"MetadataBoundary"
+1b:I[97367,["$5"],"$1a"]
+1c:I[27201,["$5"],"IconMark"]
 :HL["/_next/static/chunks/1knfcmfi0b6j-.css","style"]
 9:X
 9:C
@@ -22,20 +23,20 @@ a:X
 a:300
 a:300
 a:C
-16:X
-16:C
-b:[["children",{"s":"__PAGE__","h":49312,"d":{"r":["$","$4","c",{"children":[["$","main",null,{"className":"login-shell","children":[["$","div",null,{"className":"login-topbar","children":["$","$Lf",null,{"href":"/catalog/","className":"brand","aria-label":"LPPEPTIDE catalog","children":[["$","$L10",null,{"className":"brand-logo","src":"/brand/lppeptide-logo-center.png","alt":"LPPEPTIDE","width":52,"height":52}],["$","span",null,{"className":"brand-copy","children":[["$","strong",null,{"children":"LPPEPTIDE"}],["$","small",null,{"children":"Source manufacturer"}]]}]]}]}],["$","section",null,{"className":"login-layout lp-auth-single","aria-labelledby":"login-title","children":["$undefined",["$","div",null,{"className":"lp-auth-cards","children":["$","$L11",null,{}]}]]}]]}],[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/1knfcmfi0b6j-.css","precedence":"next"}],["$","script","script-0",{"src":"/_next/static/chunks/2wvwp9c79lewg.js","async":true}]],["$","$L12",null,{"children":["$","$13",null,{"name":"Next.MetadataOutlet","children":"$@14"}]}]]}],"p":"$@15","v":"$16","s":"$a"}}]]
+17:X
+17:C
+b:[["children",{"s":"__PAGE__","h":49312,"d":{"r":["$","$4","c",{"children":[["$","main",null,{"className":"login-shell","children":[["$","div",null,{"className":"login-topbar","children":["$","$L10",null,{"href":"/catalog/","className":"brand","aria-label":"LPPEPTIDE catalog","children":[["$","$L11",null,{"className":"brand-logo","src":"/brand/lppeptide-logo-center.png","alt":"LPPEPTIDE","width":52,"height":52}],["$","span",null,{"className":"brand-copy","children":[["$","strong",null,{"children":"LPPEPTIDE"}],["$","small",null,{"children":"Source manufacturer"}]]}]]}]}],["$","section",null,{"className":"login-layout lp-auth-single","aria-labelledby":"login-title","children":["$undefined",["$","div",null,{"className":"lp-auth-cards","children":["$","$L12",null,{}]}]]}]]}],[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/1knfcmfi0b6j-.css","precedence":"next"}],["$","script","script-0",{"src":"/_next/static/chunks/0j2vidt8nqk2_.js","async":true}]],["$","$L13",null,{"children":["$","$14",null,{"name":"Next.MetadataOutlet","children":"$@15"}]}]]}],"p":"$@16","v":"$17","s":"$a"}}]]
 3:[["children",{"s":"forgot-password","h":49216,"d":{"r":["$","$4","c",{"children":[null,["$","$L6",null,{"parallelRouterKey":"children","template":["$","$L7",null,{}]}]]}],"p":"$@8","v":"$9","s":"$a"},"c":"$Qb"}]]
 2:[["children",{"s":{"n":"lang","t":"d","k":null,"s":["admin","auth","uploads"]},"h":49200,"c":"$Q3"}]]
 1:[["children",{"s":"(store)","h":49264,"c":"$Q2"}]]
-1d:X
-1d:T4,lang1d:C
-20:X
-20:T4,lang20:C
-0:{"t":{"t":{"s":"","h":49232,"c":"$Q1"},"h":{"r":["$","$4","h",{"children":[null,["$","$L18",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","2",{"name":"theme-color","content":"#0b1e40"}]]}],["$","$L1a",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$13",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Reset your password | LPPEPTIDE"}],["$","meta","1",{"name":"description","content":"Get a link to choose a new password for your LPPEPTIDE account."}],["$","meta","2",{"name":"robots","content":"noindex"}],["$","link","3",{"rel":"canonical","href":"https://lppeptide.co/forgot-password/"}],["$","link","4",{"rel":"alternate","hrefLang":"en","href":"https://lppeptide.co/forgot-password/"}],["$","link","5",{"rel":"alternate","hrefLang":"es-ES","href":"https://lppeptide.co/es/forgot-password/"}],["$","link","6",{"rel":"alternate","hrefLang":"pt-BR","href":"https://lppeptide.co/pt/forgot-password/"}],["$","link","7",{"rel":"alternate","hrefLang":"x-default","href":"https://lppeptide.co/forgot-password/"}],["$","meta","8",{"property":"og:title","content":"Reset your password | LPPEPTIDE"}],["$","meta","9",{"property":"og:description","content":"Get a link to choose a new password for your LPPEPTIDE account."}],["$","meta","10",{"property":"og:site_name","content":"LPPEPTIDE"}],["$","meta","11",{"property":"og:image","content":"https://lppeptide.co/brand/lppeptide-logo-center.png"}],["$","meta","12",{"property":"og:type","content":"website"}],["$","meta","13",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","14",{"name":"twitter:title","content":"Reset your password | LPPEPTIDE"}],["$","meta","15",{"name":"twitter:description","content":"Get a link to choose a new password for your LPPEPTIDE account."}],["$","meta","16",{"name":"twitter:image","content":"https://lppeptide.co/brand/lppeptide-logo-center.png"}],["$","link","17",{"rel":"icon","href":"/favicon.ico"}],["$","$L1b","18",{}]]}]}],null]}],null]}],"p":"$@1c","v":"$1d","s":"$a"}},"a":"$@1e","u":"$@1f","b":"L8XXGGr9LWlAAkNH9kwXz","r":"$20"}
-14:null
-1f:false
-1e:null
+1e:X
+1e:T4,lang1e:C
+21:X
+21:T4,lang21:C
+0:{"t":{"t":{"s":"","h":49232,"c":"$Q1"},"h":{"r":["$","$4","h",{"children":[null,["$","$L19",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","2",{"name":"theme-color","content":"#0b1e40"}]]}],["$","$L1b",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$14",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Reset your password | LPPEPTIDE"}],["$","meta","1",{"name":"description","content":"Get a link to choose a new password for your LPPEPTIDE account."}],["$","meta","2",{"name":"robots","content":"noindex"}],["$","link","3",{"rel":"canonical","href":"https://lppeptide.co/forgot-password/"}],["$","link","4",{"rel":"alternate","hrefLang":"en","href":"https://lppeptide.co/forgot-password/"}],["$","link","5",{"rel":"alternate","hrefLang":"es-ES","href":"https://lppeptide.co/es/forgot-password/"}],["$","link","6",{"rel":"alternate","hrefLang":"pt-BR","href":"https://lppeptide.co/pt/forgot-password/"}],["$","link","7",{"rel":"alternate","hrefLang":"x-default","href":"https://lppeptide.co/forgot-password/"}],["$","meta","8",{"property":"og:title","content":"Reset your password | LPPEPTIDE"}],["$","meta","9",{"property":"og:description","content":"Get a link to choose a new password for your LPPEPTIDE account."}],["$","meta","10",{"property":"og:site_name","content":"LPPEPTIDE"}],["$","meta","11",{"property":"og:image","content":"https://lppeptide.co/brand/lppeptide-logo-center.png"}],["$","meta","12",{"property":"og:type","content":"website"}],["$","meta","13",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","14",{"name":"twitter:title","content":"Reset your password | LPPEPTIDE"}],["$","meta","15",{"name":"twitter:description","content":"Get a link to choose a new password for your LPPEPTIDE account."}],["$","meta","16",{"name":"twitter:image","content":"https://lppeptide.co/brand/lppeptide-logo-center.png"}],["$","link","17",{"rel":"icon","href":"/favicon.ico"}],["$","$L1c","18",{}]]}]}],null]}],null]}],"p":"$@1d","v":"$1e","s":"$a"}},"a":"$@1f","u":"$@20","b":"C2TZu8jfuuA6nmUKycdfY","r":"$21"}
+15:null
+20:false
+1f:null
 8:"$undefined"
-1c:"$undefined"
-15:"$undefined"
+1d:"$undefined"
+16:"$undefined"
