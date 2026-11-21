@@ -4,7 +4,7 @@ import { productHref } from "@/lib/product-utils";
 import { getCatalog, getCategories } from "@/lib/queries/products";
 import { getSettings, getWarehouses } from "@/lib/queries/settings";
 
-// /sitemap.xml (docs/05): every public, indexable URL with its canonical form. v2: each entry lists its /es and /pt
+// /sitemap.xml (docs/05): every public, indexable URL with its canonical form, in all three languages. Each entry lists its
 // versions as hreflang alternates (same as the pages' own <link rel="alternate">).
 
 const SITE = (process.env.SITE_URL ?? "https://lppeptide.co").replace(/\/$/, "");
@@ -51,5 +51,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     })),
     ...[...new Set(coaCertificates.map((c) => c.sku.toLowerCase()))].map((code) => ({ url: url(`/coa/${code}/`), priority: 0.4 })),
   ];
-  return entries.map((e) => ({ ...e, alternates: alternates(e.url.slice(SITE.length)) }));
+  // Each language version is its own self-canonical page, so each gets its own <url> carrying the full hreflang set
+  // (Google: every URL in a hreflang cluster lists all versions, itself included).
+  return entries.flatMap((e) => {
+    const path = e.url.slice(SITE.length);
+    return LOCALES.map((l) => ({ ...e, url: url(localePath(l, path)), alternates: alternates(path) }));
+  });
 }
