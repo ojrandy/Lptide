@@ -126,14 +126,17 @@ export const community = {
     { value: "Real feedback", label: "Delivery and order feedback" },
   ],
   proof: "Community copy and links remain controlled from the backend.",
-  links: [
-    {
-      name: "Telegram",
-      body: "Product, shipping and order updates from the buyer community.",
-      href: "https://t.me/LP_Zhong",
-      action: "Join now",
-    },
-  ],
+  // Links come from the contact settings (Admin > Settings); only the card copy lives here.
+  telegram: {
+    name: "Telegram",
+    body: "Product, shipping and order updates from the buyer community.",
+    action: "Join now",
+  },
+  whatsapp: {
+    name: "WhatsApp",
+    body: "Message our team directly for orders, payment and shipping questions.",
+    action: "Message us",
+  },
 };
 
 export const ruo = {

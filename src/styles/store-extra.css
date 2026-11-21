@@ -683,3 +683,91 @@
   grid-template-columns: minmax(0, 480px);
   justify-content: center;
 }
+
+/* Announcement bar as a marquee (client request 2026-11-21). Live colours and sizes are kept; only the text moves. */
+.lp-announcement-marquee .storefront-announcement-row {
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+}
+.lp-announcement-marquee .storefront-announcement-icon {
+  margin-top: 0;
+}
+.lp-announcement-marquee .storefront-announcement-title {
+  white-space: nowrap;
+}
+.lp-marquee {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 24px, #000 calc(100% - 24px), transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 24px, #000 calc(100% - 24px), transparent);
+}
+.lp-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: lp-marquee var(--lp-marquee-duration, 40s) linear infinite;
+}
+.lp-marquee:hover .lp-marquee-track,
+.lp-marquee:focus-within .lp-marquee-track {
+  animation-play-state: paused;
+}
+.lp-marquee-item {
+  flex: none;
+  padding-right: 72px;
+  white-space: nowrap;
+}
+@keyframes lp-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .lp-marquee {
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+  .lp-marquee-track {
+    width: auto;
+    animation: none;
+  }
+  .lp-marquee-item {
+    padding-right: 0;
+    white-space: normal;
+  }
+  .lp-marquee-item[aria-hidden="true"] {
+    display: none;
+  }
+}
+
+/* Contact page: direct links to the store's messaging channels. */
+.lp-contact-channels a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 40px;
+  padding: 8px 12px;
+  border: 1px solid #d7dfd2;
+  border-radius: 8px;
+  color: #1a241f;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  transition: border-color 0.16s, background-color 0.16s;
+}
+.lp-contact-channels a svg {
+  flex: none;
+  color: #1f6f52;
+}
+.lp-contact-channels a:hover {
+  border-color: #1f6f52;
+  background: #fbfcf8;
+}
+.lp-contact-channels a:focus-visible {
+  outline: 3px solid #f0aa20;
+  outline-offset: 2px;
+}

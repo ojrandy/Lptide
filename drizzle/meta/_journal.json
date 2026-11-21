@@ -36,6 +36,20 @@
       "when": 1795270129492,
       "tag": "0004_nice_sheva_callister",
       "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "6",
+      "when": 1795292659877,
+      "tag": "0005_contact_links",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "6",
+      "when": 1795292719877,
+      "tag": "0006_remove_phone",
+      "breakpoints": true
     }
   ]
 }

@@ -1,5 +1,6 @@
 import { LocaleLink as Link } from "@/i18n/client";
 import type { ReactNode } from "react";
+import { getSettings } from "@/lib/queries/settings";
 import { NavLink } from "../ContextNav";
 import "@/styles/live/calculator.css";
 
@@ -14,7 +15,7 @@ const TABS = [
   { href: "/contact/", label: "Contact" },
 ];
 
-export function CalculatorShell({
+export async function CalculatorShell({
   title,
   intro,
   children,
@@ -25,6 +26,7 @@ export function CalculatorShell({
   children: ReactNode;
   after?: ReactNode;
 }) {
+  const { contact } = await getSettings();
   return (
     <div className="site-shell calculator-shell">
       <main className="calculator-page">
@@ -34,9 +36,15 @@ export function CalculatorShell({
             <h1>{title}</h1>
             <p>{intro}</p>
             <div className="calculator-hero-actions" aria-label="WhatsApp contact action">
-              <Link href="/contact/?channel=whatsapp" className="calculator-action primary">
-                WhatsApp
-              </Link>
+              {contact.whatsapp ? (
+                <a href={contact.whatsapp} target="_blank" rel="noopener noreferrer" className="calculator-action primary">
+                  WhatsApp
+                </a>
+              ) : (
+                <Link href="/contact/?channel=whatsapp" className="calculator-action primary">
+                  WhatsApp
+                </Link>
+              )}
             </div>
           </div>
         </section>

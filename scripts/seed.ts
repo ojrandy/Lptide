@@ -109,7 +109,9 @@ const productIn = z.object({
 const noticeIn = z.object({ title: z.string(), content: z.string(), enabled: z.boolean(), sort: z.number() });
 // Domain moved to lppeptide.co (2026-11-21): the captured supportEmail is the old lppeptide.com address.
 const SUPPORT_EMAIL = "info@lppeptide.co";
-const siteContextIn = z.object({ supportEmail: z.string(), supportPhone: z.string(), supportUrl: z.string() });
+// Client's official messaging links (2026-11-21), replacing the captured t.me/lppeptide. Also set by migration 0005.
+const TELEGRAM_URL = "https://t.me/LPPeptide_00012";
+const WHATSAPP_URL = "https://wa.me/16162742128";
 
 // ---------- content fixes (doc 01) ----------
 // The live frontend rewrites some text on display; bake in exactly what it shows. This is the live
@@ -203,7 +205,6 @@ async function main() {
     .filter((f) => f.endsWith(".json"))
     .map((f) => productIn.parse(readJson(`products/detail/${f}`)));
   const notice = z.array(noticeIn).parse(readJson("site/notices.json")).filter((n) => n.enabled).sort(bySort)[0];
-  const site = siteContextIn.parse(readJson("site/site-context.json"));
   const prices = parsePrices();
 
   const categoryIdByName = new Map(categoryRows.map((c) => [c.name, c.id]));
@@ -400,10 +401,10 @@ async function main() {
           key: "contact",
           value: settingsSchema.shape.contact.parse({
             email: SUPPORT_EMAIL,
-            phone: site.supportPhone,
-            telegram: site.supportUrl,
+            phone: "", // client no longer has the captured support phone (2026-11-21)
+            telegram: TELEGRAM_URL,
             telegramAdmins,
-            whatsapp: "",
+            whatsapp: WHATSAPP_URL,
           }),
         },
         { key: "hotProducts", value: HOT_PRODUCTS },

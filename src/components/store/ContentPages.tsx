@@ -63,7 +63,7 @@ export function Blocks({ blocks }: { blocks: Block[] }) {
   });
 }
 
-export function CompanyPage({ page }: { page: CompanyPageContent }) {
+export function CompanyPage({ page, asideExtra }: { page: CompanyPageContent; asideExtra?: ReactNode }) {
   return (
     <div className="site-shell company-shell">
       <main className="company-page">
@@ -94,6 +94,7 @@ export function CompanyPage({ page }: { page: CompanyPageContent }) {
                 <Blocks blocks={s} />
               </div>
             ))}
+            {asideExtra}
           </aside>
         </section>
       </main>

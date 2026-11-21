@@ -1,4 +1,4 @@
-import { ExternalLink, Headphones, Send, ShieldCheck, Truck } from "lucide-react";
+import { ExternalLink, Headphones, MessageCircle, Send, ShieldCheck, Truck } from "lucide-react";
 import { localized } from "@/i18n/metadata";
 import Image from "next/image";
 import { LocaleLink as Link } from "@/i18n/client";
@@ -27,6 +27,7 @@ const ASSURANCE_ICONS = { truck: Truck, shield: ShieldCheck, headphones: Headpho
 export default async function HomePage() {
   const [shelves, { contact }] = await Promise.all([getHotProductsByWarehouse(), getSettings()]);
 
+  const profiles = [contact.telegram, contact.whatsapp].filter(Boolean);
   const organization = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -35,8 +36,13 @@ export default async function HomePage() {
     logo: `${process.env.SITE_URL ?? "https://lppeptide.co"}/brand/lppeptide-logo-center.png`,
     email: contact.email || undefined,
     telephone: contact.phone || undefined,
-    sameAs: contact.telegram ? [contact.telegram] : undefined,
+    sameAs: profiles.length ? profiles : undefined,
   };
+  // Community channels come from the contact settings (Admin > Settings), so links stay editable.
+  const communityLinks = [
+    contact.telegram && { ...community.telegram, href: contact.telegram, icon: Send },
+    contact.whatsapp && { ...community.whatsapp, href: contact.whatsapp, icon: MessageCircle },
+  ].filter((l) => !!l);
 
   return (
     <div className="landing-preview">
@@ -169,10 +175,10 @@ export default async function HomePage() {
           </div>
           <p className="community-proof">{community.proof}</p>
           <div className="community-links">
-            {community.links.map((l) => (
+            {communityLinks.map((l) => (
               <a key={l.href} href={l.href} target="_blank" rel="noopener noreferrer">
                 <span className="community-icon">
-                  <Send size={20} aria-hidden="true" />
+                  <l.icon size={20} aria-hidden="true" />
                 </span>
                 <span className="community-copy">
                   <strong>{l.name}</strong>

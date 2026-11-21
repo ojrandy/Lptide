@@ -179,6 +179,12 @@ async function OrderDetails({ params, searchParams }: PageProps<"/[lang]/order/[
                   Telegram {contact.telegramAdmins.join(" ")}
                 </a>
               )}
+              {contact.telegram && contact.whatsapp && <br />}
+              {contact.whatsapp && (
+                <a href={contact.whatsapp} target="_blank" rel="noopener noreferrer">
+                  WhatsApp
+                </a>
+              )}
             </p>
           </section>
         </aside>

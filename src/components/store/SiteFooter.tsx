@@ -1,4 +1,4 @@
-import { Mail, Phone } from "lucide-react";
+import { Mail, MessageCircle, Phone, Send } from "lucide-react";
 import Image from "next/image";
 import { LocaleLink as Link } from "@/i18n/client";
 import { getI18n } from "@/i18n/server";
@@ -47,6 +47,18 @@ export async function SiteFooter() {
               <a className="footer-contact-link" href={`tel:${contact.phone.replace(/[^\d+]/g, "")}`}>
                 <Phone size={16} aria-hidden="true" />
                 <span>{contact.phone}</span>
+              </a>
+            )}
+            {contact.telegram && (
+              <a className="footer-contact-link" href={contact.telegram} target="_blank" rel="noopener noreferrer">
+                <Send size={16} aria-hidden="true" />
+                <span>Telegram</span>
+              </a>
+            )}
+            {contact.whatsapp && (
+              <a className="footer-contact-link" href={contact.whatsapp} target="_blank" rel="noopener noreferrer">
+                <MessageCircle size={16} aria-hidden="true" />
+                <span>WhatsApp</span>
               </a>
             )}
           </address>
