@@ -1,6 +1,6 @@
 {
   "node": {
-    "00420c2b84496fdba05471ea24e1f21836d5e85a01": {
+    "00ab90e0982ece697fd2c5c2b315e339559f3443d8": {
       "workers": {
         "app/(store)/[lang]/(shop)/legal/terms/page": {
           "moduleId": 57589,
@@ -10,7 +10,7 @@
       "exportedName": "pullCart",
       "filename": "src/lib/actions/customer.ts"
     },
-    "40a037789de4ae91db0702ee5a63c99427ec346a0a": {
+    "400a81e3a3ff2f0b247fc71ada1d93351c6fb9d3ec": {
       "workers": {
         "app/(store)/[lang]/(shop)/legal/terms/page": {
           "moduleId": 57589,
@@ -20,7 +20,7 @@
       "exportedName": "pushCart",
       "filename": "src/lib/actions/customer.ts"
     },
-    "800f242d5331e2970ecbb58babdb7630e86c96377e": {
+    "80327ea897df03b1b667068d5444f20fee988b031a": {
       "workers": {
         "app/(store)/[lang]/(shop)/legal/terms/page": {
           "moduleId": 57589,
@@ -30,7 +30,7 @@
       "exportedName": "$$RSC_SERVER_CACHE_1",
       "filename": "src/lib/queries/settings.ts"
     },
-    "80eaf978c4b001032c1b30bf2cb96874b33b0702bc": {
+    "80cdccd5269ffc6ba29c0a09dbc7a7dbc281f8a26d": {
       "workers": {
         "app/(store)/[lang]/(shop)/legal/terms/page": {
           "moduleId": 57589,
