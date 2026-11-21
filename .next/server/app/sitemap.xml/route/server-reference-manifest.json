@@ -1,16 +1,6 @@
 {
   "node": {
-    "80407132aa7ef00c15d1c1abd0b3fcb9122afacd12": {
-      "workers": {
-        "app/sitemap.xml/route": {
-          "moduleId": 95011,
-          "async": false
-        }
-      },
-      "exportedName": "$$RSC_SERVER_CACHE_1",
-      "filename": "src/lib/queries/products.ts"
-    },
-    "80bebef967da21bb7996f413456ca7d02eb91021fb": {
+    "808836ca6f676a5edc285e2fdcb7f165cc03912bbb": {
       "workers": {
         "app/sitemap.xml/route": {
           "moduleId": 95011,
@@ -20,7 +10,7 @@
       "exportedName": "$$RSC_SERVER_CACHE_3",
       "filename": "src/lib/queries/products.ts"
     },
-    "80cc38a44537b6e5991105235053806ce12bfaf813": {
+    "80ccf7527368adb5b6be73bea0862131440bf17ddd": {
       "workers": {
         "app/sitemap.xml/route": {
           "moduleId": 95011,
@@ -30,7 +20,17 @@
       "exportedName": "$$RSC_SERVER_CACHE_0",
       "filename": "src/lib/queries/products.ts"
     },
-    "c03187b39a32a10ec627ca92de0636a5df7125d24b": {
+    "80e07627fa9bb119171de69babca2bafda19e0b3c9": {
+      "workers": {
+        "app/sitemap.xml/route": {
+          "moduleId": 95011,
+          "async": false
+        }
+      },
+      "exportedName": "$$RSC_SERVER_CACHE_1",
+      "filename": "src/lib/queries/products.ts"
+    },
+    "c0953d68b093b62f4101c64064cd4461e6a7cd2948": {
       "workers": {
         "app/sitemap.xml/route": {
           "moduleId": 95011,
@@ -40,7 +40,7 @@
       "exportedName": "$$RSC_SERVER_CACHE_2",
       "filename": "src/lib/queries/products.ts"
     },
-    "e056dc757e7e5906872fde63ef593c314e7221b1c1": {
+    "e07d61b49e09867eea665ab9486d7a16fc9de629e5": {
       "workers": {
         "app/sitemap.xml/route": {
           "moduleId": 95011,
@@ -50,7 +50,7 @@
       "exportedName": "$$RSC_SERVER_CACHE_4",
       "filename": "src/lib/queries/products.ts"
     },
-    "804edbaefd23207a6d3fbedfb4277e302cc82b3813": {
+    "807f6638461c6ff33c00a98d5f150da80a73ebf745": {
       "workers": {
         "app/sitemap.xml/route": {
           "moduleId": 95011,
@@ -60,7 +60,7 @@
       "exportedName": "$$RSC_SERVER_CACHE_0",
       "filename": "src/lib/queries/settings.ts"
     },
-    "80e2d4d0053d6e98546c0849becd05b52475964916": {
+    "8088c0d60522a556c721921c2bf8b51cc987e6d307": {
       "workers": {
         "app/sitemap.xml/route": {
           "moduleId": 95011,

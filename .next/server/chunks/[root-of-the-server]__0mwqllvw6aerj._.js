@@ -1,0 +1,9 @@
+module.exports=[66680,(e,t,r)=>{t.exports=e.x("node:crypto",()=>require("node:crypto"))},2157,(e,t,r)=>{t.exports=e.x("node:fs",()=>require("node:fs"))},50227,(e,t,r)=>{t.exports=e.x("node:path",()=>require("node:path"))},2521,e=>{"use strict";var t=e.i(50227),r=e.i(66680),i=e.i(2157),a=e.i(33102);async function o(e,t,o){let s=function(e){let t=e.migrationsFolder,a=[],o=`${t}/meta/_journal.json`;if(!i.default.existsSync(o))throw Error("Can't find meta/_journal.json file");for(let e of JSON.parse(i.default.readFileSync(`${t}/meta/_journal.json`).toString()).entries){let o=`${t}/${e.tag}.sql`;try{let o=i.default.readFileSync(`${t}/${e.tag}.sql`).toString(),s=o.split("--> statement-breakpoint").map(e=>e);a.push({sql:s,bps:e.breakpoints,folderMillis:e.when,hash:r.default.createHash("sha256").update(o).digest("hex")})}catch{throw Error(`No file ${o} found in ${t} folder`)}}return a}(o),n="string"==typeof o?"__drizzle_migrations":o.migrationsTable??"__drizzle_migrations",l=a.B`
+		CREATE TABLE IF NOT EXISTS ${a.B.identifier(n)} (
+			id SERIAL PRIMARY KEY,
+			hash text NOT NULL,
+			created_at numeric
+		)
+	`;await e.run(l);let d=(await e.values(a.B`SELECT id, hash, created_at FROM ${a.B.identifier(n)} ORDER BY created_at DESC LIMIT 1`))[0]??void 0,c=[];for(let e of s)(!d||Number(d[2])<e.folderMillis)&&c.push(...e.sql,`INSERT INTO \`${n}\` ("hash", "created_at") VALUES('${e.hash}', '${e.folderMillis}')`);await t(c)}var s=e.i(33680);async function n(){await o(s.db,async e=>{s.sqlite.exec("BEGIN IMMEDIATE");try{for(let t of e)s.sqlite.exec(t);s.sqlite.exec("COMMIT")}catch(e){throw s.sqlite.exec("ROLLBACK"),e}},{migrationsFolder:(0,t.resolve)(process.cwd(),"drizzle")})}e.s(["runMigrations",0,n],2521)}];
+
+//# sourceMappingURL=%5Broot-of-the-server%5D__0mwqllvw6aerj._.js.map
