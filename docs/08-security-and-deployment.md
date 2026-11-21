@@ -36,7 +36,20 @@ GOOGLE_CLIENT_ID=           # v2: optional customer Google sign-in (redirect {SI
 GOOGLE_CLIENT_SECRET=
 ```
 
-## Hosting
+## Hosting: Namecheap shared cPanel (in use, decided 2026-11-21)
+- cPanel **Setup Node.js App** (CloudLinux + Passenger): Node **26.13.1**, Production, app root `~/lppeptide-app`, URL `lppeptide.co` (sub-path box empty), startup file `server.js`. Environment variables are set in that screen (names as above; `DATABASE_PATH`, `UPLOAD_DIR`, `PRIVATE_DIR` point into `~/lppeptide-data/`). `ADMIN_*` are not read at runtime.
+- No SSH/Terminal and too little memory to build on the host, so GitHub Actions (`.github/workflows/deploy.yml`) builds `output: "standalone"` against a freshly seeded copy of `_capture`, adds `public/`, `.next/static`, `drizzle/` and `deploy/.cpanel.yml`, and commits the bundle to the **`deploy`** branch.
+- cPanel **Git Version Control** clones the repo, checked out on `deploy`, into `~/repositories/lptide`. *Deploy HEAD Commit* runs `.cpanel.yml`: copies the bundle into `~/lppeptide-app` and touches `tmp/restart.txt`.
+- Pending migrations are applied by the server at start (`src/instrumentation.ts` → `src/db/migrate.ts`). The seed never runs on the host.
+- Data lives outside the app root in `~/lppeptide-data/` (`lppeptide.db`, `uploads/`, `private/`, `mail/`), so deploys never touch it. Do **not** click *Run NPM Install*: the bundle ships its own `node_modules`.
+
+### Deploy steps (Namecheap)
+1. Push to `master`; wait for the *Build deploy branch* action to finish green.
+2. cPanel → Git Version Control → Manage → Pull or Deploy → **Update from Remote**, then **Deploy HEAD Commit**.
+3. First deploy only: run `npm run db:migrate && npm run db:seed` locally on a fresh `DATABASE_PATH` (with `ADMIN_EMAIL`/`ADMIN_PASSWORD`), zip the DB with `uploads/`, upload it to `~/lppeptide-data/` with File Manager, extract, then **Restart** the app. Sign in at `/admin/` and change the password.
+4. Prerendered pages show the build-time (seed) data until their cache refreshes (`catalog` profile, 5 min) or an admin save expires the tag.
+
+## Hosting: VPS (alternative, not used)
 - **VPS:** 1 vCPU / 2 GB, Ubuntu 24.04 (Hetzner CX22 or a DigitalOcean basic droplet).
 - Node 24 LTS, PM2 (`pm2 start npm --name lppeptide -- start`, `pm2 save`, `pm2 startup`), Caddy reverse proxy to :3000 with automatic HTTPS.
 - `/etc/caddy/Caddyfile`: list **both** hostnames, so Caddy gets an HTTPS certificate for each. The app then 301s `www` to `SITE_URL` (src/proxy.ts), whichever form `SITE_URL` uses:

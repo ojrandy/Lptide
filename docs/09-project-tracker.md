@@ -52,7 +52,7 @@ Update this file at the end of every work session.
 - [x] Security headers (nosniff, DENY, referrer, permissions; HSTS via Caddy), `typecheck` + `lint` + `build` clean
 - [x] Backups: `npm run backup` / `scripts/backup.sh` (VACUUM INTO + uploads tar, 14 days); restore of the snapshot tested
 - [ ] Lighthouse mobile ≥ 90 (home, product): run in Chrome DevTools on the deployed site (could not run the Lighthouse CLI from the dev environment)
-- [!] Deploy to VPS, seed, change admin password (blocked: B3 VPS + DNS access)
+- [~] Deploy to Namecheap cPanel (docs/08): app created 2026-11-21; first deploy, data upload and admin password change in progress
 - [!] DNS cutover (MX untouched), test order end to end on production (blocked: B3; SMTP needs B2)
 - [x] Short admin guide (README "Admin guide"). [ ] Handover of admin credentials (at deploy)
 
@@ -119,6 +119,7 @@ Update this file at the end of every work session.
 | 2026-11-21 | Domain change requested by the client: the store keeps the LPPEPTIDE name but launches on **https://lppeptide.co**, contact/sender **info@lppeptide.co** (to keep customers safe). `SITE_URL` fallbacks, mail defaults, the seed (`SUPPORT_EMAIL` overrides the captured supportEmail), the Terms contact line and the local DB settings (contact, storeInbox) updated. Paths unchanged; lppeptide.com should 301 to the same path on lppeptide.co (docs/08). `_capture/`, `scripts/fetch-assets.ts` and CSS provenance comments keep lppeptide.com (they name the source site). |
 | 2026-11-21 | One canonical host: `src/proxy.ts` 301s `www.` ↔ bare host to `SITE_URL` (same path and query), so www.lppeptide.co works and cookies/SEO stay on one host. Caddy must list both hostnames and DNS needs the `www` record (docs/08). |
 | 2026-11-21 | Admin restyled as a plain back-office UI (the earlier look read as template/AI-made): system fonts (Inter dropped, like the storefront), neutral greys, 4–6px radii, no shadows/gradients/glows. Overview: plain heading + buttons instead of the welcome banner; one divided stats strip (no icon tiles, sparklines or pill deltas; shows the prior value and a +/−%); status mix and top products as small tables; "To do" list. Sidebar: flat active state, plain group labels, amber counts, text sign-out. Table headers sentence case; status badges flat. `Sparkline`/`BarList` removed. |
+| 2026-11-21 | Hosting is the client's Namecheap shared cPanel instead of a VPS: Node 26.13.1 under Passenger, no SSH/Terminal. `output: "standalone"`; GitHub Actions builds and commits the bundle to a `deploy` branch; cPanel Git deploys it with `deploy/.cpanel.yml`. Migrations run at server start (`src/instrumentation.ts`) because there is no shell; the first DB + images are seeded locally and uploaded. Repo: github.com/ojrandy/Lptide (public for now; private needs a cPanel SSH deploy key). |
 
 ## v2 — Full logistics & growth (built 2026-11-21, design: docs/10)
 All five V2 prompts built in one pass; the owner asked for all of v2, so docs/10 is the schema/route proposal and the record.

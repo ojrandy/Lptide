@@ -1,0 +1,67 @@
+# Builds the standalone app and commits it to the `deploy` branch, which cPanel Git Version Control
+# pulls and deploys with deploy/.cpanel.yml (docs/08). The host is too small to build on.
+name: Build deploy branch
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      # Baked into prerendered pages (canonical URLs, sitemap). Set the repo variable SITE_URL to change it.
+      SITE_URL: ${{ vars.SITE_URL || 'https://lppeptide.co' }}
+      DATABASE_PATH: ./data/lppeptide.db
+      UPLOAD_DIR: ./uploads
+      PRIVATE_DIR: ./data/private
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 26
+          cache: npm
+
+      - run: npm ci
+
+      # Pages are prerendered from the DB at build time: build against a freshly seeded copy of _capture.
+      # The server's real DB is never touched here; the app migrates it itself at start.
+      - run: npm run db:migrate && npm run db:seed
+
+      - name: Build
+        run: |
+          export AUTH_SECRET="$(openssl rand -base64 48)"
+          npm run build
+
+      - name: Assemble bundle
+        run: |
+          B=.next/standalone
+          rm -rf "$B/data" "$B/uploads" "$B"/.env*
+          cp -r public "$B/"
+          cp -r .next/static "$B/.next/"
+          cp -r drizzle "$B/"
+          cp deploy/.cpanel.yml "$B/"
+
+      - name: Commit to deploy branch
+        run: |
+          REPO="https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git"
+          if git clone --depth 1 --branch deploy "$REPO" out; then :; else
+            git init -b deploy out && git -C out remote add origin "$REPO"
+          fi
+          find out -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+          cp -a .next/standalone/. out/
+          cd out
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A -f
+          git commit -q -m "Build ${GITHUB_SHA::7}" || { echo "No changes"; exit 0; }
+          git push origin deploy

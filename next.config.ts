@@ -8,6 +8,8 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+  // Self-contained .next/standalone (server.js + traced node_modules) for the Namecheap Passenger host (docs/08).
+  output: "standalone",
   // No `partialPrefetching`: with it, Next 16.4 serves a param route's fallback shell (old prices) on the first
   // request after updateTag() and only upgrades the page in the background. Without it that request re-renders.
   cacheComponents: true,
