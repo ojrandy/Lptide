@@ -7,7 +7,7 @@
 .storefront-context-primary a{color:#0b1e40;white-space:nowrap;align-items:center;min-height:44px;text-decoration:none;display:inline-flex}
 .storefront-context-primary a:hover{color:#086875}
 .storefront-context-primary .storefront-context-warehouse-link{flex-direction:column;justify-content:center;gap:3px;line-height:1.1}
-.storefront-context-warehouse-link small{color:#68798a;font-size:10px;font-weight:500;line-height:1.2}
+.storefront-context-warehouse-link small{color:#667787;font-size:10px;font-weight:500;line-height:1.2}
 .storefront-context-warehouse-link:hover small{color:#086875}
 .storefront-context-tools{align-items:center;gap:4px;display:flex}
 .storefront-context-mobile-button,.storefront-context-tools a,.storefront-context-tools button{color:#0b1e40;cursor:pointer;background:0 0;border:0;border-radius:50%;place-items:center;width:42px;height:42px;display:grid}

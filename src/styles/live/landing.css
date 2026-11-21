@@ -50,7 +50,7 @@
 .primary-nav a{min-height:44px;color:var(--ink);align-items:center;display:inline-flex}
 .primary-nav a:hover{color:#086875}
 .primary-nav .warehouse-nav-link{flex-direction:column;justify-content:center;gap:3px;line-height:1.1}
-.warehouse-nav-link small{color:#68798a;white-space:nowrap;font-size:10px;font-weight:500;line-height:1.2}
+.warehouse-nav-link small{color:#667787;white-space:nowrap;font-size:10px;font-weight:500;line-height:1.2}
 .warehouse-nav-link:hover small{color:#086875}
 .header-utilities{justify-content:flex-end;align-items:center;gap:1px;display:flex}
 .mobile-header-controls{display:none}

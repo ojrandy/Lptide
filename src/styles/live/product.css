@@ -35,7 +35,7 @@
 .rating-line>span{color:#f90}
 .catalog-stock-summary{flex-wrap:wrap;align-items:baseline;gap:4px;display:inline-flex}
 .catalog-code{color:#0d3b66}
-.catalog-label{color:#60758c}
+.catalog-label{color:#5e7389}
 .catalog-stock-count{color:#ff7a00}
 .shipping-line a,.shipping-line span,.summary-badges a,.summary-badges span{color:#095d54;background:#f2fffa;border:1px solid #abdccf;border-radius:999px;place-items:center;min-height:26px;padding:0 12px;font-size:11px;font-weight:900;text-decoration:none;display:inline-grid}
 .content-panel,.factory-card,.glance-card,.purchase-card{background:#fff;border:1px solid #d9e4eb;border-radius:14px}
@@ -51,7 +51,7 @@
 .glance-card dl{gap:10px;margin:0;display:grid}
 .glance-card dl div{grid-template-columns:180px minmax(0,1fr);gap:16px;font-size:12px;display:grid}
 .glance-card dd,.glance-card dt{margin:0}
-.glance-card dt{color:#60758c}
+.glance-card dt{color:#5e7389}
 .glance-card dd{color:#06142b;font-weight:850}
 .purchase-column{gap:16px;display:grid;position:sticky;top:18px}
 .purchase-card .price{color:#06142b;font-size:36px;line-height:1;display:block}
@@ -66,7 +66,7 @@
 .warehouse-selector-heading{justify-content:space-between;align-items:flex-start;gap:12px;display:flex}
 .warehouse-selector-heading>div{gap:3px;display:grid}
 .warehouse-selector-heading strong{color:#17354a;font-size:13px}
-.warehouse-helper,.warehouse-selector-heading span{color:#60758c;font-size:11px;line-height:1.35}
+.warehouse-helper,.warehouse-selector-heading span{color:#5e7389;font-size:11px;line-height:1.35}
 .warehouse-option-status,.warehouse-sync-label{color:#557083;white-space:nowrap;font-size:11px;font-weight:850}
 .warehouse-status-in_stock{color:#087565}
 .warehouse-status-out_of_stock{color:#b42318}
@@ -78,7 +78,7 @@
 .warehouse-option input{accent-color:#138578;width:15px;height:15px}
 .warehouse-option-copy{gap:2px;min-width:0;display:grid}
 .warehouse-option-copy strong{color:#17354a;text-overflow:ellipsis;white-space:nowrap;font-size:12px;overflow:hidden}
-.warehouse-option-copy small{color:#60758c;text-overflow:ellipsis;white-space:nowrap;font-size:10px;overflow:hidden}
+.warehouse-option-copy small{color:#5e7389;text-overflow:ellipsis;white-space:nowrap;font-size:10px;overflow:hidden}
 .warehouse-block-message{color:#a12b23;margin:0;font-size:12px;font-weight:750;line-height:1.4}
 .purchase-card small,.trust-copy{color:#526883;font-size:12px}
 .delivery-copy{color:#203243;border-top:1px solid #d7e1eb;margin-top:16px;padding-top:14px;font-size:13px}
@@ -185,7 +185,7 @@
 .factory-card article,.gallery-summary-grid,.glance-card dl div,.manufacturer-strip,.purchase-column,.review-card,.review-summary{grid-template-columns:1fr}
 .product-summary{grid-column:auto}
 .product-hero-image{aspect-ratio:1;justify-self:center;width:min(100%,382px);max-height:none}
-.product-summary h1{color:#0ea5d7;font-size:28px;line-height:1.08}
+.product-summary h1{color:#0d98c6;font-size:28px;line-height:1.08}
 .product-summary h1 span{margin-top:8px;font-size:14px}
 .product-summary p{color:#334155;margin-top:10px;font-size:16px;line-height:1.58}
 .detail-rating-line{align-items:baseline;gap:7px;font-size:13px}

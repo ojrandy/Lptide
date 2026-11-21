@@ -1,7 +1,6 @@
 import { localized } from "@/i18n/metadata";
-import { Suspense } from "react";
 import { ShelfHero, SubscribePromo } from "@/components/store/ShelfHero";
-import { ShelfResults, ShelfResultsFromUrl } from "@/components/store/ShelfResults";
+import { ShelfResults } from "@/components/store/ShelfResults";
 import { shelfStats } from "@/lib/catalog";
 import { getCatalog } from "@/lib/queries/products";
 import { getWarehouses } from "@/lib/queries/settings";
@@ -30,9 +29,7 @@ export default async function BestSellersPage() {
     <div className="site-shell">
       <main>
         <ShelfHero tone="hero-tone-best-sellers" eyebrow="Backend category shelf" title="Best Sellers" text={DESCRIPTION} stats={shelfStats(products)} />
-        <Suspense fallback={<ShelfResults {...props} />}>
-          <ShelfResultsFromUrl {...props} />
-        </Suspense>
+        <ShelfResults {...props} />
         <SubscribePromo />
       </main>
     </div>

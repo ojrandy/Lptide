@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { localeAlternates } from "@/i18n/metadata";
 import { LocaleLink as Link } from "@/i18n/client";
-import { Suspense } from "react";
-import { ShelfResults, ShelfResultsFromUrl } from "@/components/store/ShelfResults";
+import { ShelfResults } from "@/components/store/ShelfResults";
 import { catalogDescription, shelfStats } from "@/lib/catalog";
 import { getCatalog, getCategories } from "@/lib/queries/products";
 import { getWarehouses } from "@/lib/queries/settings";
@@ -63,9 +62,7 @@ export default async function CatalogPage() {
             <p className="hero-text">{catalogDescription(s.count, s.coaCount)}</p>
           </div>
         </section>
-        <Suspense fallback={<ShelfResults {...props} />}>
-          <ShelfResultsFromUrl {...props} />
-        </Suspense>
+        <ShelfResults {...props} />
         <section className="promo-band" aria-label="Subscribe promotion">
           <div>
             <p className="section-kicker">Catalog support</p>

@@ -845,7 +845,7 @@ body{background:var(--pd-bg);color:var(--pd-ink)}
 .site-footer .footer-contact-link svg{color:#54c9be;flex:none}
 .site-footer .footer-contact-link:hover{color:#087565;transform:translate(2px)}
 .site-footer .footer-notice{color:#ffffffad;max-width:390px;margin:18px 0 0;font-size:13px;line-height:1.7}
-.site-footer .footer-copyright{color:#ffffff75;margin:18px 0 0;font-size:11px;line-height:1.5}
+.site-footer .footer-copyright{color:#ffffff7b;margin:18px 0 0;font-size:11px;line-height:1.5}
 .site-footer .footer-columns{display:contents}
 .site-footer .footer-column{min-width:0}
 .site-footer .footer-column h2{color:#fff;letter-spacing:.03em;margin:2px 0 12px;font-size:14px;font-weight:850}

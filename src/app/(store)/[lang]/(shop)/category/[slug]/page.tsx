@@ -3,9 +3,8 @@ import { localeAlternates } from "@/i18n/metadata";
 import { LocaleLink as Link } from "@/i18n/client";
 import { notFound } from "next/navigation";
 import Markdown, { type Components } from "react-markdown";
-import { Suspense } from "react";
 import { ShelfHero, SubscribePromo } from "@/components/store/ShelfHero";
-import { ShelfResults, ShelfResultsFromUrl } from "@/components/store/ShelfResults";
+import { ShelfResults } from "@/components/store/ShelfResults";
 import { categoryDescription, heroTone, shelfStats } from "@/lib/catalog";
 import { getCatalog, getCategories } from "@/lib/queries/products";
 import { getWarehouses } from "@/lib/queries/settings";
@@ -114,9 +113,7 @@ export default async function CategoryPage({ params }: PageProps<"/[lang]/catego
           text={categoryDescription(category.name, stats.count, stats.coaCount)}
           stats={stats}
         />
-        <Suspense fallback={<ShelfResults {...props} />}>
-          <ShelfResultsFromUrl {...props} />
-        </Suspense>
+        <ShelfResults {...props} />
         {category.introMd && (
           <section className="category-intro" aria-label="Category guide">
             <Markdown components={introComponents}>{category.introMd}</Markdown>
