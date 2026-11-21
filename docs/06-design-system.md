@@ -30,7 +30,7 @@ Still to sample during the build (open the live page): Add-to-cart yellow, sale-
 ## Typography
 | Use | Font | Size / weight |
 |---|---|---|
-| Body | **Inter** (`next/font/google`) | 16px / 400; small copy 13–14px, line-height 1.6 |
+| Body | Live stack `Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif`, **no web font loaded** (live never loads Inter, so visitors see Segoe UI on Windows, San Francisco on Apple) | 16px / 400; small copy 13–14px, line-height 1.6 |
 | Display headings (hero, section titles, card titles) | **Georgia**, serif (system) | H1 ≈ 44px / 700 / lh 1.1; section H2 ≈ 40px / 700; card H3 19–24px / 600–700 |
 | Product page headings, "A closer look" | Inter | 700 |
 | Buttons | Inter | 13px / 600 |
@@ -44,7 +44,7 @@ Still to sample during the build (open the live page): Add-to-cart yellow, sale-
 - **Numbered cards** (supply model). White cards with a dark top border, a navy number circle, serif title, muted body, divider and "Result:" line.
 - **Feature cards** (supply assurance). Icon tile, amber full-width pill label, serif title, amber-bullet list, divider and "Outcome:" line.
 - **Product card** (warehouse grid). White card, square image, "In stock" (light) or "OUT STOCK" (red text) badge top-right, name bold, **sale price red + list price struck grey**, full-width yellow "Add to cart" button, or a disabled grey "OUT STOCK" button.
-- **Product page.** Breadcrumb. Left: image plus title block (H1, spec, description, stars + ratings + answered questions + SKU, tag pills). Right sticky buy box: price, "Ships from" warehouse card with stock badge, delivery-country select, spec, yellow Add to Cart, outline Buy Now, "Secure checkout". Below: specs table (Form, Knowledge source, Research focus, Reconstitution, Storage, COA link). Then a tab bar (Overview, Research, Dosing & Protocol, Side Effects, COA & Testing, Reviews – N, Q&A – N, About) followed by the stacked section panels.
+- **Product page.** Breadcrumb. Left: image plus title block (H1, spec, description, stars + ratings + answered questions + SKU, tag pills). Right sticky buy box: price, "Ships from" warehouse card with stock badge, delivery-country select, spec, yellow Add to Cart, "Secure checkout" (the outline Buy Now in screen 07 has since been removed from the live product page; see docs/09 decisions). Below: specs table (Form, Knowledge source, Research focus, Reconstitution, Storage, COA link). Then a tab bar (Overview, Research, Dosing & Protocol, Side Effects, COA & Testing, Reviews – N, Q&A – N, About) followed by the stacked section panels.
 - **Footer.** Dark `#162734`. Logo and "FOR RESEARCH USE ONLY", email, phone, RUO disclaimer paragraph, © line. Columns: Support (Contact us, Account, Calculator, FAQ, Delivery tracking) and Quick links (About, Buy peptides, COA results, Fees, Terms).
 - **Calculator.** Green-accented hero card with a WhatsApp button, left tab list, form grid, dark results panel.
 

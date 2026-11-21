@@ -54,12 +54,39 @@ async function main() {
     { path: "/admin/orders/", status: 307, location: "/admin/login/" },
     { path: "/admin/settings/", status: 307, location: "/admin/login/" },
     { path: "/admin/login/", status: 200 },
-    // Redirects and errors
+    { path: "/admin", status: 307, location: "/admin/login/" },
+    { path: "/admin/login", status: 308, location: "/admin/login/" },
+    // Redirects: every one lands on its final URL in a single hop (the target is fetched and must be 200)
     { path: "/catalog", status: 308, location: "/catalog/" },
+    { path: "/help/faq", status: 308, location: "/help/faq/" },
+    { path: "/catalog?q=bpc", status: 308, location: "/catalog/?q=bpc" },
+    { path: "/peptide/retatrutide-10mg-rt10", status: 301, location: "/peptide/retatrutide-10mg-rt10.html" },
     { path: "/peptide/retatrutide-10mg-rt10/", status: 301, location: "/peptide/retatrutide-10mg-rt10.html" },
+    { path: "/peptide/retatrutide-10mg-rt10.html/", status: 301, location: "/peptide/retatrutide-10mg-rt10.html" },
+    { path: "/peptide/retatrutide-10mg-rt10?warehouse=usfc", status: 301, location: "/peptide/retatrutide-10mg-rt10.html?warehouse=usfc" },
     { path: "/category/weight-loss-and-metabolic/", status: 301, location: "/category/weight-loss-metabolic/" },
-    { path: "/es/catalog/", status: 302, location: "/catalog/" },
-    { path: "/pt/", status: 302, location: "/" },
+    { path: "/category/weight-loss-and-metabolic", status: 301, location: "/category/weight-loss-metabolic/" },
+    { path: "/warehouse/usfc", status: 308, location: "/warehouse/usfc/" },
+    // v2 locales (docs/10 V4): /es and /pt are real pages; English stays unprefixed and /en/* folds into it.
+    { path: "/es/catalog/", status: 200, contains: 'lang="es-ES"' },
+    { path: "/es/catalog/", status: 200, contains: '/pt/catalog/"/>' },
+    { path: "/es/catalog", status: 308, location: "/es/catalog/" },
+    { path: "/es/peptide/retatrutide-10mg-rt10", status: 301, location: "/es/peptide/retatrutide-10mg-rt10.html" },
+    { path: "/es/peptide/retatrutide-10mg-rt10.html", status: 200, contains: "Añadir al carrito" },
+    { path: "/pt/", status: 200, contains: 'lang="pt-BR"' },
+    { path: "/pt", status: 308, location: "/pt/" },
+    { path: "/pt/category/weight-loss-and-metabolic/", status: 301, location: "/pt/category/weight-loss-metabolic/" },
+    { path: "/en/catalog/", status: 301, location: "/catalog/" },
+    { path: "/catalog/", status: 200, contains: 'hrefLang="x-default"' },
+    { path: "/es/peptide/does-not-exist.html", status: 404 },
+    { path: "/de/", status: 404 },
+    // v2 referral links: ?ref is dropped from the URL (302); unknown codes set nothing.
+    { path: "/catalog/?ref=NOPE1234", status: 302, location: "/catalog/" },
+    // v2 account pages and private admin routes
+    { path: "/register/", status: 200 },
+    { path: "/es/login/", status: 200, contains: "Iniciar sesión" },
+    { path: "/admin/shipping/", status: 307, location: "/admin/login/" },
+    { path: "/admin/orders/1/proof/", status: 307, location: "/admin/login/" },
     { path: "/peptide/does-not-exist.html", status: 404 },
     { path: "/warehouse/xx/", status: 404 },
     { path: "/uploads/../package.json", status: 404 },
@@ -70,7 +97,10 @@ async function main() {
     const res = await fetch(BASE + c.path, { redirect: "manual" });
     const location = res.headers.get("location")?.replace(BASE, "");
     const body = c.contains ? await res.text() : "";
+    // No redirect chains: the target of a redirect must answer 200 directly.
+    const hop = c.location && location === c.location ? (await fetch(BASE + location, { redirect: "manual" })).status : 200;
     const problems = [
+      hop !== 200 && `redirect target answered ${hop} (want 200, one hop)`,
       res.status !== c.status && `status ${res.status} (want ${c.status})`,
       c.location && location !== c.location && `location ${location} (want ${c.location})`,
       c.contains && !body.includes(c.contains) && `missing "${c.contains}"`,

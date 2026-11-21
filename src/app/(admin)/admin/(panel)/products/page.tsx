@@ -50,7 +50,7 @@ export default async function AdminProductsPage() {
                     <QuickPrice
                       productId={p.id}
                       warehouseCode={w.code}
-                      price={price ? { priceCents: price.priceCents, listCents: price.listCents, inStock: price.inStock } : null}
+                      price={price ? { priceCents: price.priceCents, listCents: price.listCents, inStock: price.inStock, stockQty: price.stockQty } : null}
                     />
                   </Td>
                 );

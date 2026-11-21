@@ -1,0 +1,1 @@
+ALTER TABLE `product_reviews` ADD `verifiedLabel` text DEFAULT '' NOT NULL;

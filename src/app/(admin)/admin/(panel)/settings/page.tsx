@@ -2,11 +2,12 @@ import { asc, inArray } from "drizzle-orm";
 import type { Metadata } from "next";
 import {
   AnnouncementForm,
+  CarriersForm,
   CheckoutRulesForm,
   ContactsForm,
   HotProductsForm,
   PasswordForm,
-  PaymentForm,
+  PaymentMethodsForm,
   WarehouseForm,
 } from "@/components/admin/SettingsForms";
 import { Card, PageHeader } from "@/components/admin/ui";
@@ -32,8 +33,11 @@ export default async function AdminSettingsPage() {
         <Card title="Announcement bar">
           <AnnouncementForm value={settings.announcement} />
         </Card>
-        <Card title="Payment instructions">
-          <PaymentForm value={settings.paymentInstructions} />
+        <Card title="Payment methods">
+          <PaymentMethodsForm methods={settings.paymentMethods} />
+        </Card>
+        <Card title="Carriers and tracking links">
+          <CarriersForm carriers={settings.carriers} />
         </Card>
         <Card title="Checkout rules">
           <CheckoutRulesForm value={settings.checkout} />
@@ -43,7 +47,7 @@ export default async function AdminSettingsPage() {
         </Card>
         {whs.map((w) => (
           <Card key={w.code} title={`Warehouse ${w.code}`}>
-            <WarehouseForm w={{ code: w.code, name: w.name, tagline: w.tagline, active: w.active, countries: w.countries, rule: w.shippingRule }} />
+            <WarehouseForm w={{ code: w.code, name: w.name, tagline: w.tagline, active: w.active, countries: w.countries, lowStockThreshold: w.lowStockThreshold }} />
           </Card>
         ))}
         <Card title="Home: factory hot products">

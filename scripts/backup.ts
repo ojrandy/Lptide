@@ -1,4 +1,4 @@
-// Nightly backup (doc 08): consistent DB snapshot + uploads archive, 14 days kept.
+// Nightly backup (doc 08): consistent DB snapshot + uploads archive + private files (v2 payment proofs), 14 days kept.
 // Usage: npm run backup   (BACKUP_DIR defaults to ./backups). Copy the folder offsite (e.g. rclone) afterwards.
 import "./env";
 import { execFileSync } from "node:child_process";
@@ -9,12 +9,14 @@ import { DatabaseSync } from "node:sqlite";
 const KEEP_DAYS = 14;
 const dbFile = resolve(process.env.DATABASE_PATH ?? "./data/lppeptide.db");
 const uploads = resolve(process.env.UPLOAD_DIR ?? "./uploads");
+const privateDir = resolve(process.env.PRIVATE_DIR ?? "./data/private");
 const out = resolve(process.env.BACKUP_DIR ?? "./backups");
 mkdirSync(out, { recursive: true });
 
 const stamp = new Date().toISOString().slice(0, 16).replace(/[:T]/g, "-");
 const dbOut = join(out, `lp-${stamp}.db`);
 const upOut = join(out, `uploads-${stamp}.tar.gz`);
+const privOut = join(out, `private-${stamp}.tar.gz`);
 
 // VACUUM INTO writes a consistent copy while the app keeps running (WAL mode).
 const db = new DatabaseSync(dbFile);
@@ -30,10 +32,17 @@ if (existsSync(uploads)) {
   console.log(`uploads  → ${upOut}`);
 }
 
+// Payment proofs (docs/10 V9). Contains customer documents: keep the offsite copy private too.
+if (existsSync(privateDir)) {
+  const cwd = dirname(privateDir);
+  execFileSync("tar", ["-czf", relative(cwd, privOut), basename(privateDir)], { cwd });
+  console.log(`private  → ${privOut}`);
+}
+
 const cutoff = Date.now() - KEEP_DAYS * 86_400_000;
 for (const f of readdirSync(out)) {
   const p = join(out, f);
-  if (/^(lp-|uploads-)/.test(f) && statSync(p).mtimeMs < cutoff) {
+  if (/^(lp-|uploads-|private-)/.test(f) && statSync(p).mtimeMs < cutoff) {
     unlinkSync(p);
     console.log(`pruned   ${f}`);
   }

@@ -14,7 +14,9 @@
     "admin:create": "tsx scripts/create-admin.ts",
     "assets:fetch": "tsx scripts/fetch-assets.ts",
     "smoke": "tsx scripts/smoke.ts",
+    "parity": "tsx scripts/parity.ts",
     "check:pricing": "tsx scripts/check-pricing.ts",
+    "check:v2": "tsx scripts/check-v2.ts",
     "backup": "tsx scripts/backup.ts"
   },
   "dependencies": {

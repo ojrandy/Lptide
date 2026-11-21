@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import { LocaleLink as Link } from "@/i18n/client";
 import type { ReactNode } from "react";
 import type { Block, CompanyPageContent, ContentPageContent } from "@/content/pages";
 
@@ -79,7 +79,8 @@ export function CompanyPage({ page }: { page: CompanyPageContent }) {
             </div>
           )}
         </section>
-        <section className="company-content">
+        {/* Live adds contact-content on the contact page (tinted first card, wider article column). */}
+        <section className={page.heroClass.includes("contact-hero") ? "company-content contact-content" : "company-content"}>
           <article className="company-article">
             {page.sections.map((s, i) => (
               <section key={i} className="content-section">

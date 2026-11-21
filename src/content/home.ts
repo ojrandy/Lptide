@@ -103,7 +103,7 @@ export const supplyModel = {
       result: "Outcome: less uncertainty when handling cross-border repeat orders.",
     },
     {
-      icon: "messages",
+      icon: "headphones",
       eyebrow: "COORDINATION",
       title: "Communication & Support",
       body: "Repeat purchasing only works when communication stays predictable.",

@@ -1,9 +1,10 @@
 "use client";
 
 import { ChevronDown, Search } from "lucide-react";
-import Link from "next/link";
+import { LocaleLink as Link } from "@/i18n/client";
 import { useSearchParams } from "next/navigation";
 import { createContext, use, useEffect, useId, useMemo, useRef, useState, type ReactNode } from "react";
+import { useI18n } from "@/i18n/client";
 import { formatCents } from "@/lib/money";
 import { useCart } from "@/store/cart";
 import { useAddToCart } from "../AddToCart";
@@ -53,7 +54,8 @@ export function PurchaseProvider({
       productId,
       catalogCents,
       warehouses,
-      selected: warehouses.find((w) => w.code === selectedCode && w.price) ?? null,
+      // Like live, a warehouse that doesn't sell the product can still be picked: it shows as out of stock.
+      selected: warehouses.find((w) => w.code === selectedCode) ?? null,
       select: setCode,
       locked,
       lock: (c: string) => {
@@ -80,6 +82,7 @@ export function WarehouseFromUrl() {
 function useAdd() {
   const { productId, selected } = usePurchase();
   const add = useAddToCart();
+  const { t, href } = useI18n();
   const country = useCart((s) => s.country);
   const [feedback, setFeedback] = useState<ReactNode>("");
   const countryOk = !!selected && selected.countries.some((c) => c.code === country);
@@ -89,7 +92,7 @@ function useAdd() {
     if (add(productId, selected.code, selected.name))
       setFeedback(
         <>
-          Added to cart from {selected.name}. <Link href="/cart/">View cart</Link>
+          {t("product.addedFrom", { warehouse: selected.name })} <Link href={href("/cart/")}>{t("common.viewCart")}</Link>
         </>,
       );
   };
@@ -99,16 +102,17 @@ function useAdd() {
 export function BuyBox({ specification }: { specification: string }) {
   const { warehouses, selected, select, catalogCents, locked } = usePurchase();
   const { canAdd, countryOk, onAdd, feedback } = useAdd();
+  const { t } = useI18n();
   const price = selected?.price;
   const shown = locked && selected ? [selected] : warehouses;
 
   const stockText = !selected
-    ? "Choose a warehouse to check stock and order"
+    ? t("product.stockChoose")
     : !price?.inStock
-      ? `Out of stock at ${selected.name}`
+      ? t("product.stockOut", { warehouse: selected.name })
       : !countryOk
-        ? "Choose a delivery country before ordering"
-        : "In stock";
+        ? t("product.stockCountry")
+        : t("common.inStock");
 
   return (
     <section className="purchase-card">
@@ -123,11 +127,11 @@ export function BuyBox({ specification }: { specification: string }) {
       <section className="warehouse-selector" aria-labelledby="warehouse-selector-heading">
         <div className="warehouse-selector-heading">
           <div>
-            <strong id="warehouse-selector-heading">Ships from</strong>
-            <span>{locked ? "Warehouse selected from this route" : "Choose a public warehouse"}</span>
+            <strong id="warehouse-selector-heading">{t("product.shipsFrom")}</strong>
+            <span>{locked ? t("product.lockedWarehouse") : t("product.chooseWarehouse")}</span>
           </div>
         </div>
-        <div className="warehouse-options" role="radiogroup" aria-label="Warehouse">
+        <div className="warehouse-options" role="radiogroup" aria-label={t("product.warehouse")}>
           {shown.map((w) => (
             <label key={w.code} className={`warehouse-option${selected?.code === w.code ? " selected" : ""}${locked ? " warehouse-option-locked" : ""}`}>
               <input
@@ -135,7 +139,7 @@ export function BuyBox({ specification }: { specification: string }) {
                 name="product-warehouse"
                 value={w.code}
                 checked={selected?.code === w.code}
-                disabled={!w.price || locked}
+                disabled={locked}
                 onChange={() => select(w.code)}
               />
               <span className="warehouse-option-copy">
@@ -143,26 +147,23 @@ export function BuyBox({ specification }: { specification: string }) {
                 <small>{w.dispatch}</small>
               </span>
               <span className={`warehouse-option-status warehouse-status-${w.price?.inStock ? "in_stock" : "out_of_stock"}`}>
-                {!w.price ? "Not sold here" : w.price.inStock ? "In stock" : "Out of stock"}
+                {/* Live labels anything not in stock (including "not sold here") as OUT STOCK. */}
+                {w.price?.inStock ? t("common.inStock") : t("common.outStockShort")}
               </span>
             </label>
           ))}
         </div>
         {locked && selected && (
-          <p className="warehouse-helper">
-            This product is opened from {selected.name}. Only this warehouse can be used for this order.
-          </p>
+          <p className="warehouse-helper">{t("product.lockedHelp", { warehouse: selected.name })}</p>
         )}
         <CountryCombobox />
         <p className="warehouse-helper">
-          {locked
-            ? "Choose a delivery country. Only countries supported by this warehouse can be selected."
-            : "Choose a warehouse above before adding this product to your cart. Your delivery country is checked again at checkout."}
+          {locked ? t("product.countryHelpLocked") : t("product.countryHelp")}
         </p>
       </section>
 
       <div className="delivery-copy">
-        <strong>Product specification</strong>
+        <strong>{t("product.specification")}</strong>
         <p>{specification}</p>
       </div>
       <button
@@ -172,12 +173,15 @@ export function BuyBox({ specification }: { specification: string }) {
         aria-describedby="purchase-stock-status"
         onClick={onAdd}
       >
-        Add to Cart
+        {t("common.addToCart")}
       </button>
-      <p className="purchase-action-feedback" role="status" aria-live="polite">
-        {feedback}
-      </p>
-      <p className="trust-copy">Secure checkout</p>
+      {/* Rendered only with a message, like live: the empty paragraph's 34px min-height opens a gap above "Secure checkout". */}
+      {feedback && (
+        <p className="purchase-action-feedback" role="status" aria-live="polite">
+          {feedback}
+        </p>
+      )}
+      <p className="trust-copy">{t("product.secureCheckout")}</p>
     </section>
   );
 }
@@ -185,13 +189,14 @@ export function BuyBox({ specification }: { specification: string }) {
 export function MobilePurchaseBar() {
   const { selected, catalogCents } = usePurchase();
   const { canAdd, onAdd } = useAdd();
+  const { t } = useI18n();
   return (
-    <div className="mobile-purchase-bar" aria-label="Mobile purchase actions">
+    <div className="mobile-purchase-bar" aria-label={t("product.mobileActions")}>
       <div>
         <strong>{formatCents(selected?.price ? selected.price.priceCents : catalogCents)}</strong>
       </div>
       <button type="button" className={canAdd ? undefined : "is-out-of-stock"} disabled={!canAdd} aria-describedby="purchase-stock-status" onClick={onAdd}>
-        Add to Cart
+        {t("common.addToCart")}
       </button>
     </div>
   );
@@ -203,6 +208,7 @@ export function MobilePurchaseBar() {
  */
 function CountryCombobox() {
   const { warehouses, selected, select } = usePurchase();
+  const { t } = useI18n();
   const country = useCart((s) => s.country);
   const setCountry = useCart((s) => s.setCountry);
   const id = useId();
@@ -242,7 +248,7 @@ function CountryCombobox() {
 
   return (
     <div className="country-combobox" ref={box}>
-      <label htmlFor={id}>Delivery country</label>
+      <label htmlFor={id}>{t("product.deliveryCountry")}</label>
       <div className="country-combobox-control">
         <Search className="country-combobox-search" size={15} aria-hidden="true" />
         <input
@@ -253,7 +259,7 @@ function CountryCombobox() {
           aria-autocomplete="list"
           aria-controls={`${id}-listbox`}
           aria-expanded={open}
-          placeholder="Search or choose a country"
+          placeholder={t("product.countryPlaceholder")}
           value={shown}
           onFocus={() => setOpen(true)}
           onChange={(e) => {
@@ -271,7 +277,7 @@ function CountryCombobox() {
         <button
           type="button"
           className="country-combobox-toggle"
-          aria-label="Open country list"
+          aria-label={t("product.openCountryList")}
           aria-expanded={open}
           aria-controls={`${id}-listbox`}
           onClick={() => setOpen((o) => !o)}
@@ -281,7 +287,7 @@ function CountryCombobox() {
       </div>
       {open && (
         <div id={`${id}-listbox`} className="country-combobox-list" role="listbox">
-          {filtered.length === 0 && <p className="country-combobox-empty">No matching delivery country.</p>}
+          {filtered.length === 0 && <p className="country-combobox-empty">{t("product.noCountry")}</p>}
           {filtered.map((o) => (
             <button
               key={o.code}

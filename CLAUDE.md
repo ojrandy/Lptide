@@ -2,7 +2,7 @@
 
 @AGENTS.md
 
-Rebuild of https://lppeptide.com (research-peptide store) after the client lost its source code.
+Rebuild of https://lppeptide.com (research-peptide store), moving to **https://lppeptide.co** (contact info@lppeptide.co) after the client lost its source code.
 **v1 deadline: Sun 22 Nov 2026.** Scope, stack and decisions are fixed in `/docs`. Read the relevant doc before coding.
 
 | Need | Read |
@@ -16,6 +16,7 @@ Rebuild of https://lppeptide.com (research-peptide store) after the client lost 
 | Admin screens, auth, emails | docs/07-admin-dashboard.md |
 | Security baseline, env, deploy, DNS | docs/08-security-and-deployment.md |
 | What's done / next / blocked | docs/09-project-tracker.md |
+| v2 design: schema, routes, decisions (accounts, shipping rules, payments, affiliates, reviews, i18n) | docs/10-v2-design.md |
 | Session prompts (v1, v2) | prompt.md |
 
 ## Stack (don't add to it without a reason written in docs/09 decisions log)

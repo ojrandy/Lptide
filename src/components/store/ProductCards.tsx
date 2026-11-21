@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
-import Link from "next/link";
+import { LocaleLink as Link } from "@/i18n/client";
+import { useI18n } from "@/i18n/client";
 import { tagStyle } from "@/content/tag-styles";
 import { formatCount, stars } from "@/lib/catalog";
 import { formatCents } from "@/lib/money";
@@ -19,20 +22,21 @@ export function CatalogCard({
   categoryName: string;
   warehouses: PickWarehouse[];
 }) {
+  const { t, href: lp } = useI18n();
   const price = formatCents(catalogPriceCents(p));
-  const href = productHref(p.slug);
+  const href = lp(productHref(p.slug));
   return (
     <div className="catalog-product-row">
       <article className="product-card card-catalog">
-        <Link href={href} className="product-card-detail-link" aria-label={`View ${p.name}`} />
+        <Link href={href} className="product-card-detail-link" aria-label={t("card.view", { name: p.name })} />
         <div className="product-media">
           {p.image && <Image src={p.image} alt={p.name} width={400} height={400} sizes={imageSizes} />}
         </div>
         <div className="product-body">
-          <p className="brand-name catalog-stock-line" aria-label="Catalog stock">
+          <p className="brand-name catalog-stock-line" aria-label={t("card.catalogStock")}>
             <span className="product-catalog-code">{p.sku}</span>
-            <span className="product-catalog-label">SKU:</span>
-            <span className="product-catalog-count">{inStockAnywhere(p) ? "In stock" : "OUT STOCK"}</span>
+            <span className="product-catalog-label">{t("card.sku")}</span>
+            <span className="product-catalog-count">{inStockAnywhere(p) ? t("common.inStock") : t("common.outStockShort")}</span>
           </p>
           <h3>{p.name}</h3>
           <Rating product={p} className="rating-row product-summary-rating" />
@@ -41,10 +45,10 @@ export function CatalogCard({
           <div className="price-row">
             <strong>{price}</strong>
           </div>
-          <p className="timer">2026 LPPEPTIDE catalog</p>
+          <p className="timer">{t("card.catalogYear")}</p>
           <div className="card-actions">
             <Link href={href} className="add-button">
-              View product
+              {t("common.viewProduct")}
             </Link>
           </div>
         </div>
@@ -62,7 +66,7 @@ export function CatalogCard({
       </div>
       <div className="catalog-rating">
         <strong>{categoryName}</strong>
-        <span>2026 LPPEPTIDE catalog</span>
+        <span>{t("card.catalogYear")}</span>
       </div>
       <div className="catalog-price">
         <strong>{price}</strong>
@@ -72,24 +76,25 @@ export function CatalogCard({
 }
 
 export function CategoryCard({ product: p, warehouses }: { product: CatalogProduct; warehouses: PickWarehouse[] }) {
+  const { t, href } = useI18n();
   return (
     <article className="product-card card-category">
-      <Link href={productHref(p.slug)} className="product-card-detail-link" aria-label={`View ${p.name}`} />
+      <Link href={href(productHref(p.slug))} className="product-card-detail-link" aria-label={t("card.view", { name: p.name })} />
       <div className="product-media">
         {p.image && <Image src={p.image} alt={p.name} width={400} height={400} sizes={imageSizes} />}
       </div>
       <div className="product-body">
-        <p className="brand-name">SKU {p.sku}</p>
+        <p className="brand-name">{t("card.skuPrefix", { sku: p.sku })}</p>
         <h3>{p.name}</h3>
         <p className="strength category-description">{p.description}</p>
         <Tags tags={p.tags} className="product-tag-row category-tag-row" />
-        <Rating product={p} className="rating-row" label="Customer rating" />
+        <Rating product={p} className="rating-row" label={t("card.customerRating")} />
       </div>
-      <aside className="category-action-box" aria-label="Purchase actions">
+      <aside className="category-action-box" aria-label={t("card.purchaseActions")}>
         <div className="price-row category-price-row">
           <strong>{formatCents(catalogPriceCents(p))}</strong>
         </div>
-        <p className="category-stock-line">{inStockAnywhere(p) ? "In stock" : "OUT STOCK"}</p>
+        <p className="category-stock-line">{inStockAnywhere(p) ? t("common.inStock") : t("common.outStockShort")}</p>
         <ChooseWarehouseButtons
           productId={p.id}
           productName={p.name}
@@ -106,23 +111,26 @@ export function CategoryCard({ product: p, warehouses }: { product: CatalogProdu
   );
 }
 
-function Rating({ product: p, className, label = "Product rating" }: { product: CatalogProduct; className: string; label?: string }) {
+function Rating({ product: p, className, label }: { product: CatalogProduct; className: string; label?: string }) {
+  const { t } = useI18n();
   if (!p.rating) return null;
   return (
-    <div className={className} aria-label={label}>
+    <div className={className} aria-label={label ?? t("card.productRating")}>
       <span className="stars" aria-hidden="true">
         {stars(p.rating)}
       </span>
-      <strong>{p.rating.toFixed(1)}</strong>
+      {/* Raw number like live: "4.8", "5" (not "5.0"). */}
+      <strong>{p.rating}</strong>
       <span className="rating-count">({formatCount(p.reviewCount)})</span>
     </div>
   );
 }
 
 function Tags({ tags, className }: { tags: string[]; className: string }) {
+  const { t } = useI18n();
   if (!tags.length) return null;
   return (
-    <div className={className} aria-label="Product tags">
+    <div className={className} aria-label={t("card.productTags")}>
       {tags.map((t) => (
         <span key={t} style={tagStyle(t)}>
           {t}

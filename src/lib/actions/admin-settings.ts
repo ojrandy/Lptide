@@ -3,7 +3,6 @@
 import { updateTag } from "next/cache";
 import { z } from "zod";
 import { sqlite } from "@/db";
-import type { ShippingRule } from "@/db/schema";
 import { requireAdmin } from "@/lib/auth";
 import { settingsSchema, type SettingKey } from "@/lib/settings-schema";
 import type { FormState } from "./auth";
@@ -32,14 +31,6 @@ export async function saveAnnouncement(_prev: FormState, form: FormData): Promis
   if (!p.success) return { error: firstIssue(p.error) };
   put("announcement", p.data);
   return saved("Announcement saved.");
-}
-
-export async function savePayment(_prev: FormState, form: FormData): Promise<FormState> {
-  await requireAdmin();
-  const p = settingsSchema.shape.paymentInstructions.safeParse(str(form, "paymentInstructions"));
-  if (!p.success) return { error: "Payment instructions are too long (5000 characters max)." };
-  put("paymentInstructions", p.data);
-  return saved("Payment instructions saved.");
 }
 
 export async function saveCheckout(_prev: FormState, form: FormData): Promise<FormState> {
@@ -91,9 +82,7 @@ export async function saveHotProducts(_prev: FormState, form: FormData): Promise
   return saved("Home hot products saved.");
 }
 
-const overrideLine = /^([A-Za-z]{2})\s+(\d{1,7}(?:\.\d{1,2})?)\s+(\d{1,7}(?:\.\d{1,2})?)$/;
-
-/** Warehouse: display name, tagline, active, and its shipping rule (doc 04). */
+/** Warehouse: display name, tagline, active, low-stock threshold. Shipping fees live in /admin/shipping/ (v2). */
 export async function saveWarehouse(_prev: FormState, form: FormData): Promise<FormState> {
   await requireAdmin();
   const code = str(form, "code").toUpperCase();
@@ -101,25 +90,46 @@ export async function saveWarehouse(_prev: FormState, form: FormData): Promise<F
   const name = str(form, "name");
   const tagline = str(form, "tagline");
   if (name.length < 2 || name.length > 80 || tagline.length > 120) return { error: "Name 2–80 characters, tagline up to 120." };
-
-  const mode = str(form, "mode");
-  const first = toCents(str(form, "first"));
-  const additional = toCents(str(form, "additional"));
-  const stepGrams = Number(str(form, "stepGrams") || "500");
-  if (mode !== "per_item" && mode !== "per_weight") return { error: "Choose how shipping is charged." };
-  if (Number.isNaN(first) || Number.isNaN(additional)) return { error: "Shipping fees look like 30 or 30.00." };
-  if (!Number.isInteger(stepGrams) || stepGrams < 50 || stepGrams > 10_000) return { error: "Weight step must be 50–10000 g." };
-
-  const overrides: ShippingRule["overrides"] = {};
-  for (const raw of str(form, "overrides").split("\n").map((l) => l.trim()).filter(Boolean)) {
-    const m = raw.match(overrideLine);
-    if (!m) return { error: `Override "${raw}": use COUNTRY FIRST ADDITIONAL, e.g. "US 85 25".` };
-    overrides[m[1].toUpperCase()] = { firstCents: toCents(m[2]), additionalCents: toCents(m[3]) };
-  }
-  const rule: ShippingRule = { mode, firstCents: first, additionalCents: additional, stepGrams, overrides };
+  const threshold = Number(str(form, "lowStockThreshold") || "5");
+  if (!Number.isInteger(threshold) || threshold < 0 || threshold > 10_000) return { error: "Low-stock threshold: a whole number 0–10000." };
   sqlite
-    .prepare("UPDATE warehouses SET name = ?, tagline = ?, active = ?, shippingRule = ? WHERE code = ?")
-    .run(name, tagline, bool(form.get("active")) ? 1 : 0, JSON.stringify(rule), code);
+    .prepare("UPDATE warehouses SET name = ?, tagline = ?, active = ?, lowStockThreshold = ? WHERE code = ?")
+    .run(name, tagline, bool(form.get("active")) ? 1 : 0, threshold, code);
   updateTag("products");
   return saved(`${name} saved.`);
+}
+
+/** Payment methods (docs/10 V5): one row per method; a row with an empty label is dropped. */
+export async function savePaymentMethods(_prev: FormState, form: FormData): Promise<FormState> {
+  await requireAdmin();
+  const ids = form.getAll("methodId").map(String);
+  const rows = ids
+    .map((id, i) => ({
+      id: id.trim().toLowerCase(),
+      label: String(form.getAll("methodLabel")[i] ?? "").trim(),
+      instructions: String(form.getAll("methodInstructions")[i] ?? "").trim(),
+      enabled: form.getAll("methodEnabled").map(String).includes(id),
+    }))
+    .filter((m) => m.label);
+  const p = settingsSchema.shape.paymentMethods.safeParse(rows);
+  if (!p.success) return { error: firstIssue(p.error) };
+  if (new Set(p.data.map((m) => m.id)).size !== p.data.length) return { error: "Each method needs its own id." };
+  if (!p.data.some((m) => m.enabled)) return { error: "Keep at least one method enabled, or customers cannot check out." };
+  put("paymentMethods", p.data);
+  return saved("Payment methods saved.");
+}
+
+/** Carriers: one per line, "code | Name | https://…{number}…". */
+export async function saveCarriers(_prev: FormState, form: FormData): Promise<FormState> {
+  await requireAdmin();
+  const rows = str(form, "carriers")
+    .split("\n")
+    .map((l) => l.trim())
+    .filter(Boolean)
+    .map((l) => l.split("|").map((x) => x.trim()));
+  if (rows.some((r) => r.length !== 3)) return { error: 'Each line: code | Name | https://…{number}' };
+  const p = settingsSchema.shape.carriers.safeParse(rows.map(([code, name, trackingUrl]) => ({ code: code.toLowerCase(), name, trackingUrl })));
+  if (!p.success) return { error: firstIssue(p.error) };
+  put("carriers", p.data);
+  return saved("Carriers saved.");
 }

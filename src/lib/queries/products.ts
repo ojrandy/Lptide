@@ -1,7 +1,7 @@
-import { and, asc, eq, inArray } from "drizzle-orm";
+import { and, asc, desc, eq, inArray } from "drizzle-orm";
 import { cacheLife, cacheTag } from "next/cache";
 import { db } from "@/db";
-import { categories, productPrices, products } from "@/db/schema";
+import { categories, productPrices, productQuestions, productReviews, products, productTranslations } from "@/db/schema";
 import type { CatalogProduct, ProductCardData, WarehousePrice } from "@/lib/product-utils";
 import { getSettings, getWarehouses } from "./settings";
 
@@ -86,7 +86,29 @@ export async function getProduct(slug: string) {
     .from(productPrices)
     .where(eq(productPrices.productId, row.product.id));
 
-  return { ...row.product, category: row.category, prices };
+  // v2: approved reviews and answered questions from the moderation tables (imported ones keep the live order).
+  const [reviews, qa] = await Promise.all([
+    db
+      .select({
+        authorName: productReviews.authorName,
+        rating: productReviews.rating,
+        title: productReviews.title,
+        content: productReviews.content,
+        date: productReviews.reviewDate,
+        verified: productReviews.verified,
+        verifiedLabel: productReviews.verifiedLabel,
+      })
+      .from(productReviews)
+      .where(and(eq(productReviews.productId, row.product.id), eq(productReviews.status, "APPROVED")))
+      .orderBy(desc(productReviews.source), asc(productReviews.sort), desc(productReviews.createdAt)),
+    db
+      .select({ question: productQuestions.question, answer: productQuestions.answer })
+      .from(productQuestions)
+      .where(and(eq(productQuestions.productId, row.product.id), eq(productQuestions.status, "APPROVED")))
+      .orderBy(desc(productQuestions.source), asc(productQuestions.sort), desc(productQuestions.createdAt)),
+  ]);
+
+  return { ...row.product, category: row.category, prices, reviews, qa };
 }
 
 /**
@@ -135,4 +157,27 @@ export async function getHotProductsByWarehouse() {
         }),
       ),
   }));
+}
+
+/** es/pt override of a product's name, subtitle and description (V2-5); empty fields fall back to English. Tag: "products". */
+export async function getProductTranslation(productId: number, locale: string) {
+  "use cache";
+  cacheLife("catalog");
+  cacheTag("products");
+  if (locale === "en") return null;
+  const [row] = await db
+    .select({ name: productTranslations.name, subtitle: productTranslations.subtitle, description: productTranslations.description })
+    .from(productTranslations)
+    .where(and(eq(productTranslations.productId, productId), eq(productTranslations.locale, locale)))
+    .limit(1);
+  return row ?? null;
+}
+
+/** Applies a translation's non-empty fields over the English product. */
+export function withTranslation<T extends { name: string; subtitle: string; description: string }>(
+  p: T,
+  tr: { name: string; subtitle: string; description: string } | null,
+): T {
+  if (!tr) return p;
+  return { ...p, name: tr.name || p.name, subtitle: tr.subtitle || p.subtitle, description: tr.description || p.description };
 }

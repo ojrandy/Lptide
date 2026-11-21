@@ -1,16 +1,15 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import Link from "next/link";
+import { LocaleLink as Link } from "@/i18n/client";
 import { CartHydrator } from "@/components/store/cart-widgets";
 import { ContextHeader } from "@/components/store/ContextHeader";
 import { SiteFooter } from "@/components/store/SiteFooter";
+import { I18nProvider } from "@/i18n/client";
+import { MESSAGES } from "@/i18n/translate";
 import "./(store)/store.css";
 import "@/styles/live/product.css";
 
 // 404 for any unmatched URL (and unknown product/category/warehouse slugs, rewritten here by src/proxy.ts).
 // Uses the live "unavailable product" component. Bypasses layouts, so it brings its own html/body and CSS.
-
-const inter = Inter({ variable: "--font-inter", subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
   title: "Page not found | LPPEPTIDE",
@@ -19,8 +18,10 @@ export const metadata: Metadata = {
 
 export default function GlobalNotFound() {
   return (
-    <html lang="en" className={`${inter.variable} antialiased`}>
+    <html lang="en">
       <body suppressHydrationWarning>
+        {/* Outside the [lang] tree: English chrome. */}
+        <I18nProvider locale="en" messages={MESSAGES.en}>
         <CartHydrator />
         <ContextHeader />
         <div className="site-shell">
@@ -34,6 +35,7 @@ export default function GlobalNotFound() {
           </main>
         </div>
         <SiteFooter />
+        </I18nProvider>
       </body>
     </html>
   );

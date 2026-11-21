@@ -1,7 +1,7 @@
 # 01 — Project Brief
 
 ## Context
-LPPEPTIDE (https://lppeptide.com) is a research-peptide storefront. The client lost the source code of the current site, a Nuxt app with a custom backend. We are rebuilding it from scratch so existing customers find the same products, URLs and content.
+LPPEPTIDE (old: https://lppeptide.com, new domain: **https://lppeptide.co**) is a research-peptide storefront. The site name stays LPPEPTIDE; the rebuild launches on lppeptide.co to keep customers safe. The client lost the source code of the current site, a Nuxt app with a custom backend. We are rebuilding it from scratch so existing customers find the same products, URLs and content.
 
 ## Deadline
 - Start: Fri 20 Nov 2026
@@ -35,7 +35,7 @@ The live site was captured on 2026-11-20 into `/_capture`:
 - **60 products** in 6 categories. One product is one SKU; there are no size variants (10 mg and 20 mg are separate products).
 - **3 warehouses:** `CNFC` Worldwide, `USFC` US only, `AUSFC` Australia only. **Price and stock are per warehouse.** Every price is shown as a 20% discount off a struck-through list price.
 - 24 products link a COA certificate.
-- Contact: lppeptideofficial@lppeptide.com, +1 440 941 4499, Telegram t.me/lppeptide (@LP_Long, @LP_Zhong).
+- Contact: **info@lppeptide.co** (replaces lppeptideofficial@lppeptide.com from the capture), +1 440 941 4499, Telegram t.me/lppeptide (@LP_Long, @LP_Zhong).
 - Languages: en, es (`/es`), pt-BR (`/pt`).
 - Google login and customer accounts exist on the current site.
 

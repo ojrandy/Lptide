@@ -223,7 +223,7 @@ export const terms: CompanyPageContent = {
       },
       {
         "type": "p",
-        "text": "Questions about these terms can be sent to legal@LPPEPTIDE.com."
+        "text": "Questions about these terms can be sent to info@lppeptide.co."
       }
     ]
   ],

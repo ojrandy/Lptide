@@ -31,6 +31,8 @@ const priceSchema = z.object({
   price: z.string().optional(),
   list: z.string().optional(),
   inStock: bool,
+  /** v2: counted stock; empty = not counted. */
+  stockQty: z.union([z.literal(""), z.undefined()]).transform(() => null).or(z.coerce.number().int().min(0).max(1_000_000)),
 });
 
 /** Quick edit (products list): sale price, list price and stock for one warehouse; unticking "sold" removes it. */
@@ -38,7 +40,9 @@ export async function savePrice(_prev: FormState, form: FormData): Promise<FormS
   await requireAdmin();
   const p = priceSchema.safeParse(Object.fromEntries(form));
   if (!p.success) return { error: p.error.issues[0]?.message ?? "Check the fields." };
-  const { productId, warehouseCode, sold, inStock } = p.data;
+  const { productId, warehouseCode, sold, stockQty } = p.data;
+  // A counted stock decides availability: 0 = out of stock, more = in stock.
+  const inStock = stockQty == null ? p.data.inStock : stockQty > 0;
   if (!sqlite.prepare("SELECT 1 FROM warehouses WHERE code = ?").get(warehouseCode)) return { error: "Unknown warehouse." };
 
   if (!sold) {
@@ -52,10 +56,11 @@ export async function savePrice(_prev: FormState, form: FormData): Promise<FormS
   if (list.data < price.data) return { error: "The list price cannot be below the sale price." };
   sqlite
     .prepare(
-      `INSERT INTO product_prices (productId, warehouseCode, priceCents, listCents, inStock) VALUES (?, ?, ?, ?, ?)
-       ON CONFLICT (productId, warehouseCode) DO UPDATE SET priceCents = excluded.priceCents, listCents = excluded.listCents, inStock = excluded.inStock`,
+      `INSERT INTO product_prices (productId, warehouseCode, priceCents, listCents, inStock, stockQty) VALUES (?, ?, ?, ?, ?, ?)
+       ON CONFLICT (productId, warehouseCode) DO UPDATE SET priceCents = excluded.priceCents, listCents = excluded.listCents,
+         inStock = excluded.inStock, stockQty = excluded.stockQty`,
     )
-    .run(productId, warehouseCode, price.data, list.data, inStock ? 1 : 0);
+    .run(productId, warehouseCode, price.data, list.data, inStock ? 1 : 0, stockQty);
   sqlite.prepare("UPDATE products SET updatedAt = ? WHERE id = ?").run(Date.now(), productId);
   return done("Saved.");
 }
@@ -139,13 +144,12 @@ const contentSchemas = {
       }),
     )
     .max(20),
-  qa: z.array(z.object({ question: text(500).min(1), answer: text(5000).min(1) })).max(100),
 };
 
 export async function saveContent(_prev: FormState, form: FormData): Promise<FormState> {
   await requireAdmin();
   const productId = id.safeParse(form.get("productId"));
-  const field = z.enum(["glance", "sections", "qa"]).safeParse(form.get("field"));
+  const field = z.enum(["glance", "sections"]).safeParse(form.get("field"));
   if (!productId.success || !field.success) return { error: "Invalid request." };
   let json: unknown;
   try {

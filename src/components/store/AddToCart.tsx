@@ -3,6 +3,7 @@
 import { ShoppingCart, X } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useRef, useState } from "react";
+import { useI18n } from "@/i18n/client";
 import { formatCents } from "@/lib/money";
 import { useCart } from "@/store/cart";
 
@@ -15,11 +16,10 @@ export type PickPrice = { warehouseCode: string; priceCents: number; listCents: 
  */
 export function useAddToCart() {
   const cart = useCart();
+  const { t } = useI18n();
   return (productId: number, warehouseCode: string, warehouseName: string, qty = 1) => {
     if (cart.add(productId, warehouseCode, qty)) return true;
-    const ok = window.confirm(
-      `Your cart holds items from another warehouse. One order ships from one warehouse.\n\nEmpty the cart and add this product from ${warehouseName}?`,
-    );
+    const ok = window.confirm(t("card.replaceCart", { warehouse: warehouseName }));
     if (ok) cart.switchWarehouse(productId, warehouseCode, qty);
     return ok;
   };
@@ -36,6 +36,7 @@ export function WarehouseAddButton({
   inStock: boolean;
 }) {
   const add = useAddToCart();
+  const { t } = useI18n();
   const [feedback, setFeedback] = useState("");
 
   return (
@@ -44,10 +45,10 @@ export function WarehouseAddButton({
         className="warehouse-add-button"
         type="button"
         disabled={!inStock}
-        onClick={() => setFeedback(add(productId, warehouse.code, warehouse.name) ? "Added to cart" : "")}
+        onClick={() => setFeedback(add(productId, warehouse.code, warehouse.name) ? t("card.added") : "")}
       >
         <ShoppingCart size={16} aria-hidden="true" />
-        <span>{inStock ? "Add to cart" : "OUT STOCK"}</span>
+        <span>{inStock ? t("common.addToCartLower") : t("common.outStockShort")}</span>
       </button>
       <p className="warehouse-cart-feedback" role="status" aria-live="polite">
         {feedback}
@@ -75,6 +76,7 @@ export function ChooseWarehouseButtons({
   classNames?: { wrapper?: string; primary?: string; secondary?: string };
 }) {
   const router = useRouter();
+  const { t, href } = useI18n();
   const add = useAddToCart();
   const cartWarehouse = useCart((s) => (s.lines.length ? s.warehouseCode : null));
   const dialog = useRef<HTMLDialogElement>(null);
@@ -90,8 +92,8 @@ export function ChooseWarehouseButtons({
     const w = warehouses.find((x) => x.code === code)!;
     if (!add(productId, code, w.name)) return;
     dialog.current?.close();
-    if (next === "cart") router.push("/cart/");
-    else setFeedback(`Added to cart from ${w.name}`);
+    if (next === "cart") router.push(href("/cart/"));
+    else setFeedback(t("card.addedFrom", { warehouse: w.name }));
   };
 
   const start = (next: "stay" | "cart") => {
@@ -106,10 +108,10 @@ export function ChooseWarehouseButtons({
     <>
       <div className={classNames.wrapper}>
         <button className={classNames.primary} type="button" disabled={disabled} onClick={() => start("stay")}>
-          {disabled ? "OUT STOCK" : "Add to Cart"}
+          {disabled ? t("common.outStockShort") : t("common.addToCart")}
         </button>
         <button className={classNames.secondary} type="button" disabled={disabled} onClick={() => start("cart")}>
-          Buy Now
+          {t("common.buyNow")}
         </button>
       </div>
       <p className="purchase-action-feedback" role="status" aria-live="polite">
@@ -122,11 +124,11 @@ export function ChooseWarehouseButtons({
         onClick={(e) => e.target === dialog.current && dialog.current.close()}
       >
         <div>
-          <button type="button" aria-label="Close" onClick={() => dialog.current?.close()}>
+          <button type="button" aria-label={t("common.close")} onClick={() => dialog.current?.close()}>
             <X size={20} aria-hidden="true" />
           </button>
-          <h2 id={`pick-${productId}`}>Choose a warehouse</h2>
-          <p>{productName} ships from one warehouse per order. Pick where it should ship from.</p>
+          <h2 id={`pick-${productId}`}>{t("card.chooseWarehouse")}</h2>
+          <p>{t("card.chooseWarehouseText", { name: productName })}</p>
           <div className="lp-warehouse-picker-options">
             {available.map(({ w, p }) => (
               <button key={w.code} type="button" disabled={!p.inStock} onClick={() => finish(w.code, then)}>
@@ -136,7 +138,7 @@ export function ChooseWarehouseButtons({
                 </span>
                 <span>
                   <strong>{formatCents(p.priceCents)}</strong>
-                  <small>{p.inStock ? "In stock" : "OUT STOCK"}</small>
+                  <small>{p.inStock ? t("common.inStock") : t("common.outStockShort")}</small>
                 </span>
               </button>
             ))}

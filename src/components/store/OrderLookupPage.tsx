@@ -1,48 +1,60 @@
 import { Check } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
+import { redirect } from "next/navigation";
 import { Suspense } from "react";
+import { getI18n } from "@/i18n/server";
+import type { MessageKey } from "@/i18n/translate";
+import { getCustomer, safeNext } from "@/lib/customer-auth";
+import { googleEnabled } from "@/lib/google-oauth";
+import { SignInForm } from "./account/AuthForms";
+import { AuthShell } from "./account/AuthShell";
 import { OrderLookupForm } from "./OrderLookupForm";
-import "@/styles/live/login.css";
 
-// /login/ and /account/ in v1: order lookup in the live login page layout (customer accounts are v2, docs/01).
+// /login/ (and /account/ when signed out): the live login layout with v2 sign-in next to the v1 order lookup.
 
-export function OrderLookupPage() {
+async function Story() {
+  const { t } = await getI18n();
   return (
-    <main className="login-shell">
-      <div className="login-topbar">
-        <Link href="/catalog/" className="brand" aria-label="LPPEPTIDE catalog">
-          <Image className="brand-logo" src="/brand/lppeptide-logo-center.png" alt="LPPEPTIDE" width={52} height={52} />
-          <span className="brand-copy">
-            <strong>LPPEPTIDE</strong>
-            <small>Source manufacturer</small>
-          </span>
-        </Link>
-      </div>
-      <section className="login-layout" aria-labelledby="login-title">
-        <div className="login-story">
-          <p className="eyebrow">Order status</p>
-          <h1 id="login-title">
-            <span className="desktop-title">Check an order, its payment status and tracking.</span>
-            <span className="mobile-title">Find your order</span>
-          </h1>
-          <p className="story-copy">
-            <span className="desktop-copy">Use the order number from your confirmation email and the email you checked out with.</span>
-            <span className="mobile-copy">Order number and checkout email.</span>
-          </p>
-          <ul className="trust-list trust-list-desktop">
-            {["Payment instructions and status", "Tracking number once shipped", "No account needed"].map((t) => (
-              <li key={t}>
-                <Check size={16} aria-hidden="true" />
-                <span>{t}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <Suspense>
-          <OrderLookupForm />
-        </Suspense>
-      </section>
-    </main>
+    <div className="login-story">
+      <p className="eyebrow">{t("auth.statusEyebrow")}</p>
+      <h1 id="login-title">
+        <span className="desktop-title">{t("auth.storyTitle")}</span>
+        <span className="mobile-title">{t("auth.storyMobile")}</span>
+      </h1>
+      <p className="story-copy">
+        <span className="desktop-copy">{t("auth.storyCopy")}</span>
+        <span className="mobile-copy">{t("auth.storyCopyMobile")}</span>
+      </p>
+      <ul className="trust-list trust-list-desktop">
+        {[t("auth.trust1"), t("auth.trust2"), t("auth.trust3")].map((x) => (
+          <li key={x}>
+            <Check size={16} aria-hidden="true" />
+            <span>{x}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
+}
+
+export async function OrderLookupPage({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }) {
+  return (
+    <AuthShell story={<Story />}>
+      <Suspense fallback={null}>
+        <SignInOrRedirect searchParams={searchParams} />
+      </Suspense>
+      <Suspense>
+        <OrderLookupForm />
+      </Suspense>
+    </AuthShell>
+  );
+}
+
+/** Signed in → the account page (or ?next=); otherwise the sign-in card. Reads cookies, so it streams. */
+async function SignInOrRedirect({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }) {
+  const [{ t, href }, sp, customer] = await Promise.all([getI18n(), searchParams, getCustomer()]);
+  const next = typeof sp.next === "string" ? safeNext(sp.next, "") || undefined : undefined;
+  if (customer) redirect(next ?? href("/account/"));
+  const code = typeof sp.error === "string" ? sp.error : "";
+  const error = /^google-[a-z]+$/.test(code) ? t(`auth.errors.${code}` as MessageKey) : undefined;
+  return <SignInForm next={next} googleEnabled={googleEnabled()} error={error && !error.startsWith("auth.") ? error : undefined} />;
 }

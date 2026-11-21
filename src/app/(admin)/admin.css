@@ -1,14 +1,59 @@
-/* Admin stylesheet: full Tailwind (with preflight), shadcn-like neutral UI with the brand navy as primary (doc 06). */
+/* Admin stylesheet: full Tailwind (with preflight). Plain back-office UI: neutral greys, thin borders, no shadows
+   or gradients, brand navy as the only accent (doc 06). System fonts like the storefront. */
 @import "tailwindcss";
 
 @theme {
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --color-navy: #0b1e40;
   --color-navy-btn: #071b3b;
+  --color-navy-deep: #050f24;
   --color-teal: #087a73;
+  --color-teal-soft: #2bb5a9;
 }
 
 body {
-  background: #f6f7f9;
-  color: #0f172a;
+  background: #f1f1f1;
+  color: #1f2328;
+}
+
+/* Login backdrop: CSS-only rising bubbles. Each bubble animates transform and opacity only (compositor work,
+   no layout or paint), so the page stays light. Position, size, speed and delay come from inline CSS variables. */
+.bubbles span {
+  position: absolute;
+  bottom: -12rem;
+  left: var(--x);
+  width: var(--s);
+  height: var(--s);
+  border-radius: 9999px;
+  background: radial-gradient(circle at 32% 28%, rgb(255 255 255 / 0.32), rgb(255 255 255 / 0.06) 55%, rgb(255 255 255 / 0) 72%);
+  box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.1);
+  opacity: 0;
+  animation: bubble-rise var(--d) linear var(--delay) infinite;
+  will-change: transform, opacity;
+}
+
+@keyframes bubble-rise {
+  0% {
+    transform: translate3d(0, 0, 0) scale(0.9);
+    opacity: 0;
+  }
+  12% {
+    opacity: var(--o, 0.7);
+  }
+  50% {
+    transform: translate3d(var(--drift), -60vh, 0) scale(1);
+  }
+  88% {
+    opacity: var(--o, 0.7);
+  }
+  100% {
+    transform: translate3d(0, calc(-100vh - 14rem), 0) scale(1.05);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bubbles span {
+    animation: none;
+  }
 }

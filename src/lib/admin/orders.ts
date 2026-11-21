@@ -1,8 +1,10 @@
 import { and, asc, count, desc, eq, gte, inArray, like, or, sql, type SQL } from "drizzle-orm";
-import { db } from "@/db";
+import { db, sqlite } from "@/db";
 import { ORDER_STATUSES, orderEvents, orderItems, orders, warehouses, type OrderStatus } from "@/db/schema";
 import type { OrderEmailData } from "@/lib/email";
 import { orderPath } from "@/lib/order-token";
+import { getSettings } from "@/lib/queries/settings";
+import { trackingUrl } from "@/lib/settings-schema";
 
 // Admin order reads (never cached: always current). Callers must have run requireAdmin().
 
@@ -74,12 +76,54 @@ export async function overview() {
       .where(and(eq(orderEvents.toStatus, "SHIPPED"), sql`${orderEvents.fromStatus} IS NOT ${orderEvents.toStatus}`, gte(orderEvents.createdAt, weekAgo))),
     listOrders({ page: 1 }),
   ]);
+  // Trend data for the overview: previous periods (for the deltas), 30 days of daily revenue, status mix, top products.
+  const DAY = 86_400_000;
+  const paidIn = `('PAID','PROCESSING','SHIPPED','DELIVERED')`;
+  const since30 = startOfDay.getTime() - 29 * DAY;
+  const prev = sqlite
+    .prepare(
+      `SELECT (SELECT count(*) FROM orders WHERE createdAt >= ? AND createdAt < ?) ordersYesterday,
+              (SELECT coalesce(sum(totalCents), 0) FROM orders WHERE status IN ${paidIn} AND createdAt >= ? AND createdAt < ?) revenuePrev7dCents,
+              (SELECT count(*) FROM order_events WHERE toStatus = 'SHIPPED' AND fromStatus IS NOT toStatus AND createdAt >= ? AND createdAt < ?) shippedPrev7d,
+              (SELECT coalesce(sum(totalCents), 0) FROM orders WHERE status = 'PENDING_PAYMENT') awaitingCents`,
+    )
+    .get(startOfDay.getTime() - DAY, startOfDay.getTime(), weekAgo.getTime() - 7 * DAY, weekAgo.getTime(), weekAgo.getTime() - 7 * DAY, weekAgo.getTime()) as {
+    ordersYesterday: number;
+    revenuePrev7dCents: number;
+    shippedPrev7d: number;
+    awaitingCents: number;
+  };
+  const byDay = new Map(
+    (
+      sqlite
+        .prepare(
+          `SELECT CAST((createdAt - ?) / ${DAY} AS INTEGER) d,sum(CASE WHEN status IN ${paidIn} THEN totalCents ELSE 0 END) cents, count(*) n
+             FROM orders WHERE createdAt >= ? GROUP BY d`,
+        )
+        .all(since30, since30) as { d: number; cents: number; n: number }[]
+    ).map((r) => [r.d, r]),
+  );
+  const daily = Array.from({ length: 30 }, (_, d) => ({ date: new Date(since30 + d * DAY), cents: byDay.get(d)?.cents ?? 0, orders: byDay.get(d)?.n ?? 0 }));
+  const statusMix = sqlite.prepare(`SELECT status, count(*) n FROM orders WHERE createdAt >= ? GROUP BY status`).all(since30) as { status: OrderStatus; n: number }[];
+  const topProducts = sqlite
+    .prepare(
+      `SELECT oi.productId id, oi.name, sum(oi.qty) qty, sum(oi.lineCents) cents
+         FROM order_items oi JOIN orders o ON o.id = oi.orderId
+        WHERE o.status IN ${paidIn} AND o.createdAt >= ?
+        GROUP BY oi.productId, oi.name ORDER BY cents DESC LIMIT 5`,
+    )
+    .all(since30) as { id: number; name: string; qty: number; cents: number }[];
+
   return {
     ordersToday: today.n,
     awaitingPayment: awaiting.n,
     revenue7dCents: revenue.cents,
     shipped7d: shipped.n,
-    latest: latest.rows.slice(0, 10),
+    ...prev,
+    daily,
+    statusMix: ORDER_STATUSES.map((s) => ({ status: s, n: statusMix.find((r) => r.status === s)?.n ?? 0 })),
+    topProducts,
+    latest: latest.rows.slice(0, 8),
   };
 }
 
@@ -102,7 +146,8 @@ export async function getOrderDetail(id: number) {
 export async function orderEmailData(id: number): Promise<OrderEmailData | null> {
   const o = await getOrderDetail(id);
   if (!o) return null;
-  const site = process.env.SITE_URL ?? "https://lppeptide.com";
+  const site = process.env.SITE_URL ?? "https://lppeptide.co";
+  const { carriers } = await getSettings();
   return {
     number: o.number,
     email: o.email,
@@ -124,5 +169,8 @@ export async function orderEmailData(id: number): Promise<OrderEmailData | null>
     orderUrl: `${site}${orderPath(o.number)}`,
     trackingNumber: o.trackingNumber,
     carrier: o.carrier,
+    trackingUrl: o.trackingNumber ? trackingUrl(carriers, o.carrier, o.trackingNumber) : null,
+    paymentRef: o.paymentRef,
+    paymentMethod: o.paymentMethod || null,
   };
 }

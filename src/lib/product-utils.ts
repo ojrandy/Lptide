@@ -42,4 +42,10 @@ export const productHref = (slug: string) => `/peptide/${slug}.html`;
 export const catalogPriceCents = (p: { prices: WarehousePrice[] }) =>
   p.prices.length ? Math.min(...p.prices.map((x) => x.listCents)) : 0;
 
-export const inStockAnywhere = (p: { prices: WarehousePrice[] }) => p.prices.some((x) => x.inStock);
+/** Buy-box "Product specification" text, as the live site formats it: "10mg x 10 vials" + "10 vials / box" -> "10mg x 10 vials /box". */
+export function specWithBox(specification: string, packageSize: string) {
+  const s = specification.trim().replace(/\s*\/\s*box\b/gi, " /box").replace(/\s+per\s+box\b/gi, " /box");
+  return !s || /\s\/box\b/i.test(s) ? s : /\bbox\b/i.test(packageSize) ? `${s} /box` : s;
+}
+
+export const inStockAnywhere =(p: { prices: WarehousePrice[] }) => p.prices.some((x) => x.inStock);

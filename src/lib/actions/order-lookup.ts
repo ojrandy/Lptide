@@ -2,6 +2,7 @@
 
 import { redirect } from "next/navigation";
 import { sqlite } from "@/db";
+import { formLocale, localePath } from "@/i18n/config";
 import { orderPath } from "@/lib/order-token";
 import { allow, clientIp } from "@/lib/rate-limit";
 import { orderLookupSchema } from "@/lib/validation";
@@ -22,5 +23,5 @@ export async function lookupOrder(_prev: LookupState, form: FormData): Promise<L
     | undefined;
   // Same message whether the number or the email is wrong (no order enumeration).
   if (!row) return { error: "We could not find an order with that number and email.", values };
-  redirect(orderPath(row.number));
+  redirect(localePath(formLocale(form), orderPath(row.number)));
 }

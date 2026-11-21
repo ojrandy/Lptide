@@ -22,6 +22,8 @@ type CartState = {
   setQty: (productId: number, qty: number) => void;
   remove: (productId: number) => void;
   clear: () => void;
+  /** Replaces the whole cart (used when loading the cart saved to the account). */
+  replace: (warehouseCode: string | null, lines: CartLine[]) => void;
 };
 
 export const MAX_QTY = 99;
@@ -56,6 +58,7 @@ export const useCart = create<CartState>()(
           return { lines, warehouseCode: lines.length ? s.warehouseCode : null };
         }),
       clear: () => set({ lines: [], warehouseCode: null }),
+      replace: (warehouseCode, lines) => set({ warehouseCode: lines.length ? warehouseCode : null, lines: lines.map((l) => ({ ...l, qty: clampQty(l.qty) })) }),
     }),
     // Rehydrated by <CartHydrator /> after mount, so server and first client render agree (no hydration mismatch).
     { name: "lp-cart", version: 1, skipHydration: true },

@@ -12,6 +12,8 @@ export function DetailTabs({ tabs }: { tabs: { id: string; label: string }[] }) 
       (entries) => {
         const visible = entries.filter((e) => e.isIntersecting).sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
         if (visible[0]) setActive(visible[0].target.id);
+        // Back above the first section (page top): no tab is highlighted, as on live.
+        else if (els[0] && els[0].getBoundingClientRect().top > window.innerHeight * 0.45) setActive(null);
       },
       { rootMargin: "-120px 0px -55% 0px" },
     );

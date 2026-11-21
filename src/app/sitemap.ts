@@ -1,11 +1,13 @@
 import type { MetadataRoute } from "next";
+import { HTML_LANG, LOCALES, localePath } from "@/i18n/config";
 import { productHref } from "@/lib/product-utils";
 import { getCatalog, getCategories } from "@/lib/queries/products";
 import { getSettings, getWarehouses } from "@/lib/queries/settings";
 
-// /sitemap.xml (docs/05): every public, indexable URL with its canonical form.
+// /sitemap.xml (docs/05): every public, indexable URL with its canonical form. v2: each entry lists its /es and /pt
+// versions as hreflang alternates (same as the pages' own <link rel="alternate">).
 
-const SITE = (process.env.SITE_URL ?? "https://lppeptide.com").replace(/\/$/, "");
+const SITE = (process.env.SITE_URL ?? "https://lppeptide.co").replace(/\/$/, "");
 
 const STATIC_PAGES = [
   "/",
@@ -33,7 +35,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     getSettings(),
   ]);
   const url = (path: string) => `${SITE}${path}`;
-  return [
+  const alternates = (path: string) => ({
+    languages: { ...Object.fromEntries(LOCALES.map((l) => [HTML_LANG[l], url(localePath(l, path))])), "x-default": url(path) },
+  });
+  const entries: MetadataRoute.Sitemap = [
     ...STATIC_PAGES.map((p) => ({ url: url(p), changeFrequency: "weekly" as const, priority: p === "/" ? 1 : 0.6 })),
     ...warehouses.map((w) => ({ url: url(`/warehouse/${w.code.toLowerCase()}/`), changeFrequency: "daily" as const, priority: 0.8 })),
     ...categories.map((c) => ({ url: url(`/category/${c.slug}/`), changeFrequency: "weekly" as const, priority: 0.7 })),
@@ -46,4 +51,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     })),
     ...[...new Set(coaCertificates.map((c) => c.sku.toLowerCase()))].map((code) => ({ url: url(`/coa/${code}/`), priority: 0.4 })),
   ];
+  return entries.map((e) => ({ ...e, alternates: alternates(e.url.slice(SITE.length)) }));
 }

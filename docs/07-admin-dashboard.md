@@ -52,3 +52,14 @@ Path `/admin`. Desktop first, usable on a phone. Built with small shadcn-style c
 | Status → SHIPPED | customer | carrier + tracking number |
 
 Email failures **never** fail the order. Log the error and show "email failed" on the order so an admin can resend.
+
+## v2 screens (docs/10)
+- **Overview**: + work queues (reviews, questions, affiliate applications) and a low-stock table.
+- **Order detail**: Payment card (method, reference, paid at, proof link), "Mark as Paid" accepts a proof file (private), carriers from Settings, tracking link, account/guest, referring affiliate and commission.
+- **Products**: counted stock per warehouse (empty = not counted); product page: es/pt translations of name, subtitle, description.
+- **Shipping** `/admin/shipping/`: rules per warehouse (countries, weight and item bands, flat/per item/per weight, free threshold, order, active) + "Preview a cart".
+- **Customers** `/admin/customers/`: accounts, orders, paid total, affiliate status.
+- **Affiliates** `/admin/affiliates/`: applications, approve/reject/suspend, rate, commissions, payout log and "Record payout"; program rules.
+- **Reviews & Q&A** `/admin/reviews/`: publish / reject / delete reviews; answer, publish, reject, delete questions.
+- **Settings**: payment methods (replaces the single instructions text), carriers and tracking URLs, warehouse low-stock threshold (fees moved to Shipping).
+- Emails added: payment confirmed (customer), low stock / new review / new question / affiliate application (store inbox), email verification and password reset (customer), affiliate decision (applicant).

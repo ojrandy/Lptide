@@ -121,3 +121,14 @@ PENDING_PAYMENT ──► PAID ──► PROCESSING ──► SHIPPED ──► 
 - product_prices ← `products/warehouse-prices.txt`, and stock ← `warehouseAvailability`
 - settings ← `site/notices.json`, `site/site-context.json`
 - admin ← `ADMIN_EMAIL` / `ADMIN_PASSWORD` env, only on first seed
+
+## v2 additions (migration 0003, details in docs/10)
+- `customers`, `customer_addresses`, `customer_carts` (accounts; orders.customerId set only after email verification).
+- `shipping_rules` replaces `warehouses.shippingRule` (column kept, unused). First active matching rule by `sort` prices the shipment; none = not orderable.
+- `orders` + customerId, paymentMethod (label snapshot), paymentRef (unique, LP + 8), paidAt, paymentProof (file in PRIVATE_DIR), affiliateId, locale.
+- `product_prices.stockQty` (null = not counted) and `warehouses.lowStockThreshold`.
+- `affiliates`, `affiliate_clicks`, `affiliate_commissions` (one per order: EARNED → PAID | VOID), `affiliate_payouts`.
+- `product_reviews`, `product_questions` (PENDING → APPROVED | REJECTED; imported rows `source='import'`) replace `products.reviews` / `products.qa` (dropped). Display rating/counts on `products` unchanged. `product_reviews.verifiedLabel` keeps the live badge text on imported reviews ("Verified Buyer - repeat order"); empty shows "Verified Buyer".
+- `product_translations` (productId + locale: name, subtitle, description).
+- Settings keys: `paymentMethods`, `carriers`, `affiliate`.
+- Order transitions add: PAID → paidAt, proof, commission, payment email; CANCELLED → stock restored, unpaid commission voided.

@@ -8,8 +8,11 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+  // No `partialPrefetching`: with it, Next 16.4 serves a param route's fallback shell (old prices) on the first
+  // request after updateTag() and only upgrades the page in the background. Without it that request re-renders.
   cacheComponents: true,
-  partialPrefetching: true,
+  // Dev only: lets other devices load the dev server's JS and HMR (Wi-Fi 192.168.1.178, Ethernet 2 192.168.56.1).
+  allowedDevOrigins: ["192.168.1.178", "192.168.56.1"],
   experimental: {
     // One styled 404 across the storefront and admin root layouts (src/app/global-not-found.tsx).
     globalNotFound: true,
@@ -22,9 +25,13 @@ const nextConfig: NextConfig = {
   },
   // The live site uses trailing slashes for pages (/about/). Product URLs end in .html (no slash): see src/proxy.ts.
   trailingSlash: true,
+  // Next's own slash redirect runs before src/proxy.ts, so /peptide/x would hop twice (→ /peptide/x/ → .html).
+  // The proxy adds trailing slashes itself, folding every URL fix into a single redirect.
+  skipTrailingSlashRedirect: true,
   images: {
     // Product images live in UPLOAD_DIR and are served by src/app/uploads/[...path]/route.ts.
-    localPatterns: [{ pathname: "/uploads/**" }, { pathname: "/brand/**" }, { pathname: "/scenes/**" }],
+    // /products/** = static page art in public/products (e.g. the company-page hero on /legal/terms/).
+    localPatterns: [{ pathname: "/uploads/**" }, { pathname: "/brand/**" }, { pathname: "/scenes/**" }, { pathname: "/products/**" }],
     formats: ["image/avif", "image/webp"],
   },
   async headers() {

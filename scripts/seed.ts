@@ -13,8 +13,11 @@ import {
   admins,
   categories,
   productPrices,
+  productQuestions,
+  productReviews,
   products,
   settings,
+  shippingRules,
   warehouses,
   type Section,
 } from "../src/db/schema";
@@ -90,6 +93,7 @@ const productIn = z.object({
       title: z.string().nullish(),
       content: z.string().nullish(),
       reviewDate: z.string(),
+      verifiedLabel: z.string().nullish(),
       hidden: z.boolean(),
       sort: z.number(),
     }),
@@ -103,6 +107,8 @@ const productIn = z.object({
 });
 
 const noticeIn = z.object({ title: z.string(), content: z.string(), enabled: z.boolean(), sort: z.number() });
+// Domain moved to lppeptide.co (2026-11-21): the captured supportEmail is the old lppeptide.com address.
+const SUPPORT_EMAIL = "info@lppeptide.co";
 const siteContextIn = z.object({ supportEmail: z.string(), supportPhone: z.string(), supportUrl: z.string() });
 
 // ---------- content fixes (doc 01) ----------
@@ -221,7 +227,7 @@ async function main() {
       )
       .onConflictDoUpdate({ target: categories.id, set: excludedSet(categories, ["id"]) });
 
-    // warehouses (shippingRule is admin-owned: set only while empty; values from the live Shipping Policy)
+    // warehouses (lowStockThreshold is admin-owned and never overwritten; shipping lives in shipping_rules, v2)
     await db
       .insert(warehouses)
       .values(
@@ -230,18 +236,22 @@ async function main() {
           name: w.displayName,
           tagline: TAGLINES[w.warehouseCode] ?? "",
           countries: w.supportedCountries.split(",").map((c) => c.trim()).filter(Boolean),
-          shippingRule: DEFAULT_SHIPPING_RULES[w.warehouseCode] ?? null,
           active: w.active,
           sort: w.sort,
         })),
       )
       .onConflictDoUpdate({
         target: warehouses.code,
-        set: {
-          ...excludedSet(warehouses, ["code", "shippingRule"]),
-          shippingRule: sql.raw(`coalesce("warehouses"."shippingRule", excluded."shippingRule")`),
-        },
+        set: excludedSet(warehouses, ["code", "shippingRule", "lowStockThreshold"]),
       });
+
+    // shipping rules (v2, admin-owned): the live Shipping Policy rates, inserted only for a warehouse with no rules
+    for (const w of warehouseRows) {
+      const has = sqlite.prepare("SELECT 1 FROM shipping_rules WHERE warehouseCode = ?").get(w.warehouseCode);
+      const defaults = DEFAULT_SHIPPING_RULES[w.warehouseCode] ?? [];
+      if (!has && defaults.length)
+        await db.insert(shippingRules).values(defaults.map((r) => ({ ...r, warehouseCode: w.warehouseCode })));
+    }
 
     // products
     for (const p of productRows) {
@@ -293,17 +303,6 @@ async function main() {
           linkUrl: g.linkUrl ?? null,
         })),
         sections,
-        qa: [...p.qaItems].sort(bySort).map((q) => ({ question: fix(q.question), answer: fix(q.answer) })),
-        reviews: p.reviews
-          .filter((r) => !r.hidden)
-          .sort(bySort)
-          .map((r) => ({
-            authorName: r.authorName,
-            rating: r.rating,
-            title: fix(r.title),
-            content: fix(r.content),
-            date: r.reviewDate,
-          })),
         ratingBreakdown: [...p.ratingBreakdown]
           .sort(bySort)
           .map((r) => ({ label: r.label, percent: r.percent, count: r.count })),
@@ -319,6 +318,51 @@ async function main() {
           // Drizzle adds $onUpdate columns to every upsert; keep updatedAt so a re-run changes nothing.
           set: { ...excludedSet(products, ["id", "createdAt", "updatedAt"]), updatedAt: sql.raw(`"updatedAt"`) },
         });
+
+      // Captured reviews and Q&A (v2 tables): imported once per product; moderation edits are never overwritten.
+      if (!sqlite.prepare("SELECT 1 FROM product_reviews WHERE productId = ? AND source = 'import'").get(p.id)) {
+        const reviews = p.reviews.filter((r) => !r.hidden).sort(bySort);
+        if (reviews.length)
+          await db.insert(productReviews).values(
+            reviews.map((r, i) => ({
+              productId: p.id,
+              authorName: r.authorName,
+              rating: r.rating,
+              title: fix(r.title),
+              content: fix(r.content),
+              reviewDate: String(r.reviewDate ?? "").slice(0, 10),
+              verified: true,
+              verifiedLabel: r.verifiedLabel?.trim() ?? "",
+              status: "APPROVED" as const,
+              source: "import" as const,
+              sort: i,
+            })),
+          );
+      } else {
+        // Reviews imported before verifiedLabel existed: fill the badge text once (never overwrites a set label).
+        const backfill = sqlite.prepare(
+          "UPDATE product_reviews SET verifiedLabel = ? WHERE productId = ? AND source = 'import' AND sort = ? AND verifiedLabel = ''",
+        );
+        p.reviews
+          .filter((r) => !r.hidden)
+          .sort(bySort)
+          .forEach((r, i) => backfill.run(r.verifiedLabel?.trim() ?? "", p.id, i));
+      }
+      if (!sqlite.prepare("SELECT 1 FROM product_questions WHERE productId = ? AND source = 'import'").get(p.id)) {
+        const qa = [...p.qaItems].sort(bySort);
+        if (qa.length)
+          await db.insert(productQuestions).values(
+            qa.map((q, i) => ({
+              productId: p.id,
+              question: fix(q.question),
+              answer: fix(q.answer),
+              status: "APPROVED" as const,
+              source: "import" as const,
+              sort: i,
+              answeredAt: new Date(0),
+            })),
+          );
+      }
     }
 
     // product_prices (+ stock from warehouseAvailability)
@@ -333,7 +377,7 @@ async function main() {
       )
       .onConflictDoUpdate({
         target: [productPrices.productId, productPrices.warehouseCode],
-        set: excludedSet(productPrices, ["productId", "warehouseCode"]),
+        set: excludedSet(productPrices, ["productId", "warehouseCode", "stockQty"]),
       });
 
     // settings: captured values are upserted, placeholders only inserted
@@ -355,7 +399,7 @@ async function main() {
         {
           key: "contact",
           value: settingsSchema.shape.contact.parse({
-            email: site.supportEmail,
+            email: SUPPORT_EMAIL,
             phone: site.supportPhone,
             telegram: site.supportUrl,
             telegramAdmins,
@@ -379,6 +423,12 @@ async function main() {
       .insert(settings)
       .values([
         { key: "paymentInstructions", value: PAYMENT_INSTRUCTIONS_PLACEHOLDER },
+        {
+          key: "paymentMethods",
+          value: settingsSchema.shape.paymentMethods.parse([
+            { id: "crypto", label: "Crypto (BTC / ETH / USDC)", instructions: PAYMENT_INSTRUCTIONS_PLACEHOLDER, enabled: true },
+          ]),
+        },
         // Live cart: 5% handling fee, $199.00 minimum (shipping counts), crypto payments.
         {
           key: "checkout",
@@ -388,7 +438,7 @@ async function main() {
             paymentNote: "Encrypted checkout · Crypto (BTC/ETH/USDC) · Card & ACH coming soon",
           }),
         },
-        { key: "storeInbox", value: process.env.STORE_INBOX || site.supportEmail },
+        { key: "storeInbox", value: process.env.STORE_INBOX || SUPPORT_EMAIL },
       ])
       .onConflictDoNothing();
 

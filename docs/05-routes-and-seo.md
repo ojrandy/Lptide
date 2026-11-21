@@ -35,7 +35,7 @@
 ## SEO checklist
 - [ ] `generateMetadata` on every page: title pattern `"{Page} | LPPEPTIDE"`, matching the live site.
 - [ ] Product title: `"{name} ({sku}) | LPPEPTIDE"`. Description: product `description`.
-- [ ] `alternates.canonical` on every page (`https://lppeptide.com/...`).
+- [ ] `alternates.canonical` on every page (`https://lppeptide.co/...`, from `SITE_URL`).
 - [ ] `src/app/sitemap.ts`: home, warehouses, catalog, categories, all enabled products, content pages.
 - [ ] `src/app/robots.ts`: allow all, disallow `/admin`, `/checkout`, `/order`, `/cart`.
 - [ ] Open Graph: product image on product pages, logo elsewhere.

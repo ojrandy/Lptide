@@ -1,6 +1,6 @@
 # LPPEPTIDE storefront + admin
 
-Rebuild of https://lppeptide.com: a look-alike storefront (same URLs, copy, products and prices), order capture with
+Rebuild of https://lppeptide.com, served at **https://lppeptide.co** (contact info@lppeptide.co): a look-alike storefront (same URLs, copy, products and prices), order capture with
 email notifications, and an admin dashboard. One Next.js 16 app, one SQLite file, one uploads folder.
 Project docs live in [`docs/`](docs/) (start with `01-project-brief.md` and `09-project-tracker.md`).
 
@@ -30,7 +30,8 @@ Without SMTP settings, emails are saved as `.eml` files in `data/mail/` so you c
 | `admin:create -- <email> <password>` | Creates an admin or resets a password (12+ characters). |
 | `assets:fetch` | Downloads product images and COA files into `UPLOAD_DIR` (skips existing files). |
 | `smoke -- <url>` | URL-parity and safety checks (all product URLs, redirects, 404s, admin gate). |
-| `check:pricing` | Shipping / handling / minimum rules against the examples published on the live site. |
+| `check:pricing` | Shipping / handling / minimum rules against the examples published on the live site, plus the v2 rules engine. |
+| `check:v2` | v2 business rules end to end on a throwaway copy of the database (stock, payment reference, referrals, commissions, account linking). |
 | `backup` | Consistent DB snapshot + uploads archive into `BACKUP_DIR` (default `./backups`), 14 days kept. |
 
 ## Deploy (VPS)
@@ -70,6 +71,14 @@ COA library. The page address (slug) can't be changed, so old links keep working
 **Settings.** Announcement bar, payment instructions (shown to customers after they order), handling fee and order
 minimum, each warehouse's shipping fees and countries, contact details and the store inbox, the order of the
 "hot products" on the home page, and your password.
+
+**v2 additions.**
+- **Shipping**: one or more rules per warehouse. The first active rule (lowest order number) matching the country, weight and number of items sets the fee. Use **Preview a cart** to check before saving changes.
+- **Paid orders**: attach the payment screenshot or PDF when you mark an order paid (only admins can open it). Customers quote the order's payment reference with their payment.
+- **Stock**: leave the quantity empty to manage stock with the In stock tick as before; enter a number to have orders count it down. You get an email when it reaches the warehouse's alert level.
+- **Customers** can create accounts; their orders and addresses appear in /account/. **Reviews & Q&A** wait in the admin until you publish them.
+- **Affiliates**: approve applications, then record each payout after sending the money.
+- **Languages**: the store is also at /es/ and /pt/. Product names and descriptions can be translated on the product page (optional).
 
 ## Notes
 

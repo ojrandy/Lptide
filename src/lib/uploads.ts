@@ -4,6 +4,7 @@ import { join, resolve } from "node:path";
 
 // Admin uploads (doc 08): allow-listed types checked by extension, MIME and file signature, ≤ 5 MB,
 // random file names, stored in UPLOAD_DIR (outside the app), served read-only by /uploads/[...path].
+// Private files (payment proofs, docs/10 V9) go to PRIVATE_DIR instead and are only served to admins.
 
 export const MAX_UPLOAD_BYTES = 5 * 1024 * 1024;
 
@@ -16,11 +17,13 @@ const KINDS = {
 type Kind = keyof typeof KINDS;
 
 /** Validates and stores an uploaded file. Returns its public path (/uploads/<folder>/<random>.<ext>) or an error. */
+export const privateDir = () => resolve(/*turbopackIgnore: true*/ process.env.PRIVATE_DIR ?? "./data/private");
+
 export async function saveUpload(
   file: unknown,
-  folder: "products" | "coa",
+  folder: "products" | "coa" | "payment-proofs",
   allowed: Kind[],
-): Promise<{ path: string } | { error: string }> {
+): Promise<{ path: string; name: string } | { error: string }> {
   if (!(file instanceof File) || file.size === 0) return { error: "Choose a file." };
   if (file.size > MAX_UPLOAD_BYTES) return { error: "The file is larger than 5 MB." };
   const ext = file.name.toLowerCase().split(".").pop() === "jpeg" ? "jpg" : (file.name.toLowerCase().split(".").pop() as Kind);
@@ -30,8 +33,9 @@ export async function saveUpload(
   if (!(kind.mime as readonly string[]).includes(file.type) || !kind.magic(buf)) return { error: "The file content does not match its type." };
 
   const name = `${randomBytes(16).toString("hex")}.${ext}`;
-  const dir = join(resolve(/*turbopackIgnore: true*/ process.env.UPLOAD_DIR ?? "./uploads"), folder);
+  const root = folder === "payment-proofs" ? privateDir() : resolve(/*turbopackIgnore: true*/ process.env.UPLOAD_DIR ?? "./uploads");
+  const dir = join(root, folder);
   await mkdir(dir, { recursive: true });
   await writeFile(join(/*turbopackIgnore: true*/ dir, name), buf, { flag: "wx" });
-  return { path: `/uploads/${folder}/${name}` };
+  return { path: `/uploads/${folder}/${name}`, name };
 }

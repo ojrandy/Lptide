@@ -6,9 +6,7 @@ import { resendOrderEmail, saveAdminNote, updateOrderStatus } from "@/lib/action
 import type { FormState } from "@/lib/actions/auth";
 import { Button, Field, FormMessage, Input, Select, STATUS_LABEL, Textarea } from "./ui";
 
-const CARRIERS = ["DHL", "UPS", "FedEx", "USPS", "Australia Post", "EMS", "Other"];
-
-export function StatusForm({ orderId, allowed }: { orderId: number; allowed: string[] }) {
+export function StatusForm({ orderId, allowed, carriers }: { orderId: number; allowed: string[]; carriers: string[] }) {
   const [state, action, pending] = useActionState<FormState, FormData>(updateOrderStatus, {});
   const [to, setTo] = useState(allowed[0] ?? "");
   if (allowed.length === 0) return <p className="text-sm text-slate-500">This order is closed. No further status changes.</p>;
@@ -31,7 +29,7 @@ export function StatusForm({ orderId, allowed }: { orderId: number; allowed: str
               <option value="" disabled>
                 Choose…
               </option>
-              {CARRIERS.map((c) => (
+              {carriers.map((c) => (
                 <option key={c}>{c}</option>
               ))}
             </Select>
@@ -40,6 +38,11 @@ export function StatusForm({ orderId, allowed }: { orderId: number; allowed: str
             <Input name="trackingNumber" required maxLength={80} pattern="[A-Za-z0-9 -]+" />
           </Field>
         </div>
+      )}
+      {to === "PAID" && (
+        <Field label="Proof of payment (optional)" hint="Screenshot or PDF of the transfer, up to 5 MB. Visible to admins only.">
+          <Input name="proof" type="file" accept="image/jpeg,image/png,image/webp,application/pdf" className="h-auto py-1" />
+        </Field>
       )}
       <Field label="Note for the timeline (optional)">
         <Input name="note" maxLength={500} placeholder={to === "PAID" ? "e.g. USDC tx 0x…" : ""} />
@@ -50,6 +53,8 @@ export function StatusForm({ orderId, allowed }: { orderId: number; allowed: str
           {pending ? "Saving…" : `Mark as ${STATUS_LABEL[to] ?? to}`}
         </Button>
         {to === "SHIPPED" && <span className="ml-3 text-xs text-slate-500">Sends the shipped email with tracking.</span>}
+        {to === "PAID" && <span className="ml-3 text-xs text-slate-500">Emails the customer that payment is confirmed.</span>}
+        {to === "CANCELLED" && <span className="ml-3 text-xs text-slate-500">Returns counted stock; voids an unpaid affiliate commission.</span>}
       </div>
     </form>
   );
@@ -71,7 +76,7 @@ export function NoteForm({ orderId, note }: { orderId: number; note: string }) {
   );
 }
 
-export function ResendEmail({ orderId, kind, label }: { orderId: number; kind: "confirmation" | "store" | "shipped"; label: string }) {
+export function ResendEmail({ orderId, kind, label }: { orderId: number; kind: "confirmation" | "store" | "shipped" | "paid"; label: string }) {
   const [state, action, pending] = useActionState<FormState, FormData>(resendOrderEmail, {});
   return (
     <form action={action} className="flex flex-wrap items-center gap-2">

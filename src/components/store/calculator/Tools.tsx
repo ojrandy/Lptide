@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { LocaleLink as Link } from "@/i18n/client";
 import { useMemo, useState } from "react";
 
 // Research tools, same formulas, defaults and rounding as the live calculator bundle.

@@ -22,6 +22,20 @@
       "when": 1795201159559,
       "tag": "0002_strange_speedball",
       "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1795253843121,
+      "tag": "0003_v2",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "6",
+      "when": 1795270129492,
+      "tag": "0004_nice_sheva_callister",
+      "breakpoints": true
     }
   ]
 }

@@ -1,23 +1,24 @@
 import type { ComponentProps, ReactNode } from "react";
 
-// Minimal shadcn-style primitives for the admin (Tailwind only, no extra packages). Keep them small.
+// Minimal primitives for the admin (Tailwind only, no extra packages). Plain back-office look: thin neutral
+// borders, small radii, no shadows. Keep them small.
 
 const cx = (...c: (string | false | null | undefined)[]) => c.filter(Boolean).join(" ");
 
 type Variant = "primary" | "outline" | "ghost" | "danger";
 const VARIANTS: Record<Variant, string> = {
   primary: "bg-navy-btn text-white hover:bg-navy disabled:opacity-50",
-  outline: "border border-slate-300 bg-white text-slate-900 hover:bg-slate-50 disabled:opacity-50",
-  ghost: "text-slate-700 hover:bg-slate-100",
+  outline: "border border-neutral-300 bg-white text-neutral-800 hover:bg-neutral-50 disabled:opacity-50",
+  ghost: "text-neutral-700 hover:bg-neutral-100",
   danger: "bg-red-600 text-white hover:bg-red-700 disabled:opacity-50",
 };
 
-export function Button({ variant = "primary", size = "md", className, ...props }: ComponentProps<"button"> & { variant?: Variant; size?: "sm" | "md" }) {
+export function Button({ variant = "primary", size = "md", className, ...props }: ComponentProps<"button"> & { variant?: Variant; size?: "sm" | "md" | "lg" }) {
   return (
     <button
       className={cx(
-        "inline-flex items-center justify-center gap-1.5 rounded-md font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy disabled:cursor-not-allowed",
-        size === "sm" ? "h-8 px-2.5 text-xs" : "h-9 px-3.5 text-sm",
+        "inline-flex items-center justify-center gap-1.5 rounded font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy disabled:cursor-not-allowed",
+        { sm: "h-8 px-2.5 text-xs", md: "h-9 px-3.5 text-sm", lg: "h-10 px-4 text-sm" }[size],
         VARIANTS[variant],
         className,
       )}
@@ -27,7 +28,7 @@ export function Button({ variant = "primary", size = "md", className, ...props }
 }
 
 const field =
-  "rounded-md border border-slate-300 bg-white py-1.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-navy focus:outline-2 focus:outline-navy/20 disabled:bg-slate-50";
+  "rounded border border-neutral-300 bg-white py-1.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-navy focus:outline-2 focus:outline-navy/20 disabled:bg-slate-50";
 
 /** Field classes, keeping the default width/height/padding only when the caller does not set its own. */
 function fieldClass(className = "", height: string) {
@@ -64,10 +65,10 @@ export function Field({ label, hint, children, className }: { label: string; hin
 
 export function Card({ title, actions, children, className }: { title?: ReactNode; actions?: ReactNode; children: ReactNode; className?: string }) {
   return (
-    <section className={cx("rounded-lg border border-slate-200 bg-white shadow-xs", className)}>
+    <section className={cx("rounded-md border border-neutral-200 bg-white", className)}>
       {(title || actions) && (
-        <header className="flex items-center justify-between gap-3 border-b border-slate-100 px-4 py-3">
-          {title && <h2 className="text-sm font-semibold text-slate-900">{title}</h2>}
+        <header className="flex items-center justify-between gap-3 border-b border-neutral-200 px-4 py-3">
+          {title && <h2 className="text-sm font-semibold text-neutral-900">{title}</h2>}
           {actions}
         </header>
       )}
@@ -77,12 +78,12 @@ export function Card({ title, actions, children, className }: { title?: ReactNod
 }
 
 const BADGES: Record<string, string> = {
-  PENDING_PAYMENT: "bg-amber-50 text-amber-800 ring-amber-200",
-  PAID: "bg-sky-50 text-sky-800 ring-sky-200",
-  PROCESSING: "bg-indigo-50 text-indigo-800 ring-indigo-200",
-  SHIPPED: "bg-teal-50 text-teal-800 ring-teal-200",
-  DELIVERED: "bg-emerald-50 text-emerald-800 ring-emerald-200",
-  CANCELLED: "bg-slate-100 text-slate-600 ring-slate-200",
+  PENDING_PAYMENT: "bg-amber-100 text-amber-900",
+  PAID: "bg-sky-100 text-sky-900",
+  PROCESSING: "bg-blue-100 text-blue-900",
+  SHIPPED: "bg-teal-100 text-teal-900",
+  DELIVERED: "bg-green-100 text-green-900",
+  CANCELLED: "bg-neutral-200 text-neutral-700",
 };
 
 export const STATUS_LABEL: Record<string, string> = {
@@ -96,7 +97,7 @@ export const STATUS_LABEL: Record<string, string> = {
 
 export function StatusBadge({ status }: { status: string }) {
   return (
-    <span className={cx("inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium ring-1 ring-inset", BADGES[status] ?? BADGES.CANCELLED)}>
+    <span className={cx("inline-flex items-center rounded px-1.5 py-0.5 text-xs font-medium whitespace-nowrap", BADGES[status] ?? BADGES.CANCELLED)}>
       {STATUS_LABEL[status] ?? status}
     </span>
   );
@@ -104,26 +105,26 @@ export function StatusBadge({ status }: { status: string }) {
 
 export function Badge({ children, tone = "slate" }: { children: ReactNode; tone?: "slate" | "green" | "red" | "amber" }) {
   const tones = {
-    slate: "bg-slate-100 text-slate-700",
-    green: "bg-emerald-50 text-emerald-700",
-    red: "bg-red-50 text-red-700",
-    amber: "bg-amber-50 text-amber-800",
+    slate: "bg-neutral-200 text-neutral-700",
+    green: "bg-green-100 text-green-900",
+    red: "bg-red-100 text-red-900",
+    amber: "bg-amber-100 text-amber-900",
   };
   return <span className={cx("inline-flex items-center rounded px-1.5 py-0.5 text-xs font-medium", tones[tone])}>{children}</span>;
 }
 
 export function Table({ children }: { children: ReactNode }) {
   return (
-    <div className="overflow-x-auto rounded-lg border border-slate-200 bg-white">
+    <div className="overflow-x-auto rounded border border-neutral-200 bg-white">
       <table className="w-full border-collapse text-left text-sm">{children}</table>
     </div>
   );
 }
 export const Th = ({ children, className }: { children?: ReactNode; className?: string }) => (
-  <th className={cx("border-b border-slate-200 bg-slate-50 px-3 py-2 text-xs font-medium whitespace-nowrap text-slate-600", className)}>{children}</th>
+  <th className={cx("border-b border-neutral-200 bg-neutral-50 px-3 py-2 text-xs font-medium whitespace-nowrap text-neutral-600", className)}>{children}</th>
 );
 export const Td = ({ children, className, colSpan }: { children?: ReactNode; className?: string; colSpan?: number }) => (
-  <td colSpan={colSpan} className={cx("border-b border-slate-100 px-3 py-2 align-middle", className)}>
+  <td colSpan={colSpan} className={cx("border-b border-neutral-100 px-3 py-2 align-middle", className)}>
     {children}
   </td>
 );
@@ -142,8 +143,8 @@ export function PageHeader({ title, description, actions }: { title: string; des
   return (
     <div className="mb-5 flex flex-wrap items-end justify-between gap-3">
       <div>
-        <h1 className="text-xl font-semibold text-slate-900">{title}</h1>
-        {description && <p className="mt-1 text-sm text-slate-500">{description}</p>}
+        <h1 className="text-xl font-semibold text-neutral-900">{title}</h1>
+        {description && <p className="mt-1 text-sm text-neutral-600">{description}</p>}
       </div>
       {actions}
     </div>

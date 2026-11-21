@@ -7,6 +7,9 @@ import { Card, PageHeader, StatusBadge, STATUS_LABEL, Table, Td, Th } from "@/co
 import { countryName } from "@/content/countries";
 import { getOrderDetail, TRANSITIONS } from "@/lib/admin/orders";
 import { requireAdmin } from "@/lib/auth";
+import { getSettings } from "@/lib/queries/settings";
+import { trackingUrl } from "@/lib/settings-schema";
+import { sqlite } from "@/db";
 import { formatCents } from "@/lib/money";
 import { orderPath } from "@/lib/order-token";
 
@@ -17,6 +20,15 @@ export default async function AdminOrderPage({ params }: PageProps<"/admin/order
   const id = Number((await params).id);
   const o = Number.isInteger(id) && id > 0 ? await getOrderDetail(id) : null;
   if (!o) notFound();
+  const { carriers } = await getSettings();
+  const account = o.customerId ? (sqlite.prepare("SELECT id, email FROM customers WHERE id = ?").get(o.customerId) as { id: number; email: string } | undefined) : undefined;
+  const affiliate = o.affiliateId
+    ? (sqlite
+        .prepare(
+          `SELECT a.id, a.code, c.status, c.amountCents FROM affiliates a LEFT JOIN affiliate_commissions c ON c.orderId = ? WHERE a.id = ?`,
+        )
+        .get(o.id, o.affiliateId) as { id: number; code: string; status: string | null; amountCents: number | null } | undefined)
+    : undefined;
 
   const address = [o.name, o.addressLine1, o.addressLine2, [o.postalCode, o.city, o.region].filter(Boolean).join(" "), countryName(o.country)]
     .filter(Boolean)
@@ -102,12 +114,46 @@ export default async function AdminOrderPage({ params }: PageProps<"/admin/order
 
         <div className="grid content-start gap-4">
           <Card title="Status">
-            <StatusForm orderId={o.id} allowed={TRANSITIONS[o.status]} />
+            <StatusForm orderId={o.id} allowed={TRANSITIONS[o.status]} carriers={carriers.map((c) => c.name)} />
             {o.trackingNumber && (
               <p className="mt-3 text-sm">
-                Tracking: <strong>{o.carrier}</strong> {o.trackingNumber}
+                Tracking: <strong>{o.carrier}</strong>{" "}
+                <a href={trackingUrl(carriers, o.carrier, o.trackingNumber)} target="_blank" rel="noopener noreferrer" className="text-navy underline">
+                  {o.trackingNumber}
+                </a>
               </p>
             )}
+          </Card>
+          <Card title="Payment">
+            <dl className="grid grid-cols-[auto_1fr] gap-x-3 gap-y-1 text-sm">
+              <dt className="text-slate-500">Method</dt>
+              <dd>{o.paymentMethod || "—"}</dd>
+              <dt className="text-slate-500">Reference</dt>
+              <dd className="font-mono">{o.paymentRef ?? o.number}</dd>
+              <dt className="text-slate-500">Paid</dt>
+              <dd>{o.paidAt ? dateTime(o.paidAt) : "not yet"}</dd>
+              <dt className="text-slate-500">Proof</dt>
+              <dd>
+                {o.paymentProof ? (
+                  <a href={`/admin/orders/${o.id}/proof/`} target="_blank" className="text-navy underline">
+                    View proof
+                  </a>
+                ) : (
+                  "—"
+                )}
+              </dd>
+              {affiliate && (
+                <>
+                  <dt className="text-slate-500">Referred by</dt>
+                  <dd>
+                    <Link href={`/admin/affiliates/${affiliate.id}/`} className="text-navy underline">
+                      {affiliate.code}
+                    </Link>
+                    {affiliate.amountCents != null && ` · commission ${formatCents(affiliate.amountCents)} (${affiliate.status?.toLowerCase()})`}
+                  </dd>
+                </>
+              )}
+            </dl>
           </Card>
           <Card title="Customer" actions={<CopyButton text={address} />}>
             <p className="font-medium">{o.name}</p>
@@ -123,6 +169,19 @@ export default async function AdminOrderPage({ params }: PageProps<"/admin/order
                 <strong>Customer note:</strong> {o.customerNote}
               </p>
             )}
+            <p className="mt-2 text-xs text-slate-500">
+              {account ? (
+                <>
+                  Account:{" "}
+                  <Link href={`/admin/customers/?q=${encodeURIComponent(account.email)}`} className="text-navy underline">
+                    {account.email}
+                  </Link>
+                </>
+              ) : (
+                "Guest checkout"
+              )}
+              {o.locale !== "en" && ` · store language: ${o.locale}`}
+            </p>
             <p className="mt-3 text-xs text-slate-400">IP {o.ip || "unknown"} (abuse tracing only)</p>
           </Card>
           <Card title="Internal note">
@@ -132,6 +191,7 @@ export default async function AdminOrderPage({ params }: PageProps<"/admin/order
             <div className="grid gap-2">
               <ResendEmail orderId={o.id} kind="confirmation" label="Resend confirmation to customer" />
               <ResendEmail orderId={o.id} kind="store" label="Resend store notification" />
+              {o.paidAt && <ResendEmail orderId={o.id} kind="paid" label="Resend payment confirmation" />}
               {o.trackingNumber && <ResendEmail orderId={o.id} kind="shipped" label="Resend shipped email" />}
             </div>
           </Card>

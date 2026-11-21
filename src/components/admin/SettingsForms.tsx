@@ -1,9 +1,11 @@
 "use client";
 
+import Link from "next/link";
 import { useActionState, type ReactNode } from "react";
 import { changePassword, type FormState } from "@/lib/actions/auth";
-import { saveAnnouncement, saveCheckout, saveContacts, saveHotProducts, savePayment, saveWarehouse } from "@/lib/actions/admin-settings";
-import { Button, Field, FormMessage, Input, Select, Textarea } from "./ui";
+import { saveAnnouncement, saveCarriers, saveCheckout, saveContacts, saveHotProducts, savePaymentMethods, saveWarehouse } from "@/lib/actions/admin-settings";
+import type { Carrier, PaymentMethod } from "@/lib/settings-schema";
+import { Button, Field, FormMessage, Input, Textarea } from "./ui";
 
 type Action = (prev: FormState, form: FormData) => Promise<FormState>;
 
@@ -39,11 +41,47 @@ export function AnnouncementForm({ value }: { value: { enabled: boolean; title: 
   );
 }
 
-export function PaymentForm({ value }: { value: string }) {
+export function PaymentMethodsForm({ methods }: { methods: PaymentMethod[] }) {
+  // Existing methods + one empty row to add a method.
+  const rows = [...methods, { id: `method-${methods.length + 1}`, label: "", instructions: "", enabled: true }];
   return (
-    <SettingsForm action={savePayment}>
-      <Field label="Payment instructions (Markdown)" hint="Shown on the order page and in the customer confirmation email, while the order waits for payment.">
-        <Textarea name="paymentInstructions" defaultValue={value} maxLength={5000} className="min-h-40 font-mono text-xs" />
+    <SettingsForm action={savePaymentMethods} submit="Save payment methods">
+      <p className="text-xs text-slate-500">
+        The customer picks one at checkout. The instructions (Markdown) show on the order page and in the confirmation email, with the
+        order&apos;s payment reference. Clear a label to remove a method.
+      </p>
+      {rows.map((m, i) => (
+        <fieldset key={i} className="grid gap-2 rounded-md border border-slate-200 p-3">
+          <legend className="px-1 text-xs font-medium text-slate-600">{m.label || "New method"}</legend>
+          <div className="grid gap-2 sm:grid-cols-[1fr_2fr]">
+            <Field label="Id">
+              <Input name="methodId" defaultValue={m.id} maxLength={30} className="font-mono" />
+            </Field>
+            <Field label="Label shown to customers">
+              <Input name="methodLabel" defaultValue={m.label} maxLength={80} placeholder="e.g. Bank transfer (USD)" />
+            </Field>
+          </div>
+          <Field label="Instructions (Markdown)">
+            <Textarea name="methodInstructions" defaultValue={m.instructions} maxLength={5000} className="min-h-24 font-mono text-xs" />
+          </Field>
+          <label className="flex items-center gap-2 text-sm">
+            <input type="checkbox" name="methodEnabled" value={m.id} defaultChecked={m.enabled} /> Enabled
+          </label>
+        </fieldset>
+      ))}
+    </SettingsForm>
+  );
+}
+
+export function CarriersForm({ carriers }: { carriers: Carrier[] }) {
+  return (
+    <SettingsForm action={saveCarriers}>
+      <Field label="Carriers" hint="One per line: code | Name | tracking URL with {number}. Used when marking orders shipped, in emails and on the tracking panel.">
+        <Textarea
+          name="carriers"
+          defaultValue={carriers.map((c) => `${c.code} | ${c.name} | ${c.trackingUrl}`).join("\n")}
+          className="min-h-40 font-mono text-xs"
+        />
       </Field>
     </SettingsForm>
   );
@@ -67,18 +105,9 @@ export function CheckoutRulesForm({ value }: { value: { handlingPercent: number;
   );
 }
 
-type Warehouse = {
-  code: string;
-  name: string;
-  tagline: string;
-  active: boolean;
-  countries: string[];
-  rule: { mode: string; firstCents: number; additionalCents: number; stepGrams: number; overrides: Record<string, { firstCents: number; additionalCents: number }> } | null;
-};
+type Warehouse = { code: string; name: string; tagline: string; active: boolean; countries: string[]; lowStockThreshold: number };
 
 export function WarehouseForm({ w }: { w: Warehouse }) {
-  const r = w.rule ?? { mode: "per_item", firstCents: 0, additionalCents: 0, stepGrams: 500, overrides: {} };
-  const d = (c: number) => (c / 100).toFixed(2);
   return (
     <SettingsForm action={saveWarehouse}>
       <input type="hidden" name="code" value={w.code} />
@@ -89,32 +118,13 @@ export function WarehouseForm({ w }: { w: Warehouse }) {
         <Field label="Header line">
           <Input name="tagline" defaultValue={w.tagline} maxLength={120} />
         </Field>
-        <Field label="Shipping is charged">
-          <Select name="mode" defaultValue={r.mode}>
-            <option value="per_item">Per item</option>
-            <option value="per_weight">Per weight step</option>
-          </Select>
-        </Field>
-        <Field label="Weight step (g)" hint="Per-weight only (500 = 0.5 kg).">
-          <Input name="stepGrams" type="number" min={50} max={10000} defaultValue={r.stepGrams} />
-        </Field>
-        <Field label="First item / first step (USD)">
-          <Input name="first" defaultValue={d(r.firstCents)} inputMode="decimal" />
-        </Field>
-        <Field label="Each additional (USD)">
-          <Input name="additional" defaultValue={d(r.additionalCents)} inputMode="decimal" />
+        <Field label="Low-stock alert at" hint="Counted stock at or below this emails the store inbox.">
+          <Input name="lowStockThreshold" type="number" min={0} max={10000} defaultValue={w.lowStockThreshold} />
         </Field>
       </div>
-      <Field label="Country overrides" hint='One per line: COUNTRY FIRST ADDITIONAL, e.g. "US 85 25".'>
-        <Textarea
-          name="overrides"
-          defaultValue={Object.entries(r.overrides)
-            .map(([c, o]) => `${c} ${d(o.firstCents)} ${d(o.additionalCents)}`)
-            .join("\n")}
-          className="min-h-16 font-mono text-xs"
-        />
-      </Field>
-      <p className="text-xs text-slate-500">Ships to: {w.countries.join(", ")}</p>
+      <p className="text-xs text-slate-500">
+        Ships to: {w.countries.join(", ")}. Shipping fees: <Link href="/admin/shipping/" className="text-navy underline">Shipping rules</Link>.
+      </p>
       <label className="flex items-center gap-2 text-sm">
         <input type="checkbox" name="active" defaultChecked={w.active} /> Active (shown in the store and accepts orders)
       </label>

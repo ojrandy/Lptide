@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { BasicsForm, CoaUpload, ContentEditor, ImageManager, QuickPrice } from "@/components/admin/ProductForms";
+import { TranslationForm } from "@/components/admin/GrowthForms";
 import { Card, PageHeader } from "@/components/admin/ui";
+import { sqlite } from "@/db";
 import { getAdminProduct, listCategories } from "@/lib/admin/products";
 import { requireAdmin } from "@/lib/auth";
 import { getWarehouses } from "@/lib/queries/settings";
@@ -15,6 +17,13 @@ export default async function AdminProductPage({ params }: PageProps<"/admin/pro
   const p = Number.isInteger(id) && id > 0 ? await getAdminProduct(id) : null;
   if (!p) notFound();
   const [categories, warehouses] = await Promise.all([listCategories(), getWarehouses()]);
+  const translations = sqlite.prepare("SELECT locale, name, subtitle, description FROM product_translations WHERE productId = ?").all(p.id) as {
+    locale: string;
+    name: string;
+    subtitle: string;
+    description: string;
+  }[];
+  const tr = (l: string) => translations.find((x) => x.locale === l) ?? { name: "", subtitle: "", description: "" };
 
   return (
     <>
@@ -33,7 +42,24 @@ export default async function AdminProductPage({ params }: PageProps<"/admin/pro
             <BasicsForm product={p} categories={categories} />
           </Card>
           <Card title="Content">
-            <ContentEditor productId={p.id} values={{ glance: p.glance, sections: p.sections, qa: p.qa }} />
+            <ContentEditor productId={p.id} values={{ glance: p.glance, sections: p.sections }} />
+          </Card>
+          <Card title="Translations (shown on /es and /pt)">
+            <div className="grid gap-6 lg:grid-cols-2">
+              {(["es", "pt"] as const).map((l) => (
+                <div key={l} className="grid gap-1">
+                  <p className="text-xs font-semibold text-slate-700">{l === "es" ? "Español" : "Português (Brasil)"}</p>
+                  <TranslationForm productId={p.id} locale={l} value={tr(l)} />
+                </div>
+              ))}
+            </div>
+            <p className="mt-2 text-xs text-slate-500">
+              Optional. Sections, Q&amp;A and specs stay English on every language, as on the live site. Reviews and questions are moderated in{" "}
+              <Link href="/admin/reviews/" className="text-navy underline">
+                Reviews &amp; Q&amp;A
+              </Link>
+              .
+            </p>
           </Card>
         </div>
         <div className="grid content-start gap-4">
@@ -47,7 +73,7 @@ export default async function AdminProductPage({ params }: PageProps<"/admin/pro
                     <QuickPrice
                       productId={p.id}
                       warehouseCode={w.code}
-                      price={price ? { priceCents: price.priceCents, listCents: price.listCents, inStock: price.inStock } : null}
+                      price={price ? { priceCents: price.priceCents, listCents: price.listCents, inStock: price.inStock, stockQty: price.stockQty } : null}
                     />
                   </div>
                 );

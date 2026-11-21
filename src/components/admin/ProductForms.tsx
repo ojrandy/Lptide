@@ -16,7 +16,7 @@ export function QuickPrice({
 }: {
   productId: number;
   warehouseCode: string;
-  price: { priceCents: number; listCents: number; inStock: boolean } | null;
+  price: { priceCents: number; listCents: number; inStock: boolean; stockQty: number | null } | null;
 }) {
   const [state, action, pending] = useActionState<FormState, FormData>(savePrice, {});
   const [sold, setSold] = useState(!!price);
@@ -33,9 +33,21 @@ export function QuickPrice({
             <Input name="price" defaultValue={price ? dollars(price.priceCents) : ""} placeholder="Sale" aria-label={`${warehouseCode} sale price`} inputMode="decimal" className="h-8 w-20 px-2" />
             <Input name="list" defaultValue={price ? dollars(price.listCents) : ""} placeholder="List" aria-label={`${warehouseCode} list price`} inputMode="decimal" className="h-8 w-20 px-2" />
           </div>
-          <label className="flex items-center gap-1.5 text-xs text-slate-600">
-            <input type="checkbox" name="inStock" defaultChecked={price?.inStock ?? true} /> In stock
-          </label>
+          <div className="flex items-center gap-2">
+            <label className="flex items-center gap-1.5 text-xs text-slate-600">
+              <input type="checkbox" name="inStock" defaultChecked={price?.inStock ?? true} /> In stock
+            </label>
+            <Input
+              name="stockQty"
+              type="number"
+              min={0}
+              defaultValue={price?.stockQty ?? ""}
+              placeholder="Qty"
+              title="Counted stock. Empty = not counted. When set, it decides in/out of stock and is reduced by orders."
+              aria-label={`${warehouseCode} stock quantity`}
+              className="h-7 w-16 px-1.5 text-xs"
+            />
+          </div>
         </>
       )}
       <div className="flex items-center gap-2">
@@ -144,10 +156,10 @@ export function BasicsForm({ product: p, categories }: { product: Product; categ
   );
 }
 
-export function ContentEditor({ productId, values }: { productId: number; values: Record<"glance" | "sections" | "qa", unknown> }) {
-  const [field, setField] = useState<"glance" | "sections" | "qa">("glance");
+export function ContentEditor({ productId, values }: { productId: number; values: Record<"glance" | "sections", unknown> }) {
+  const [field, setField] = useState<"glance" | "sections">("glance");
   const [state, action, pending] = useActionState<FormState, FormData>(saveContent, {});
-  const labels = { glance: "At a glance", sections: "Sections", qa: "Q&A" };
+  const labels = { glance: "At a glance", sections: "Sections" }; // Q&A: /admin/reviews/ (v2)
   return (
     <div className="grid gap-3">
       <div className="flex gap-1" role="tablist">

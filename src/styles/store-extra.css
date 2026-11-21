@@ -206,3 +206,480 @@
   text-decoration: none;
   background: #f4f7fa;
 }
+
+/* ---------- v2 (docs/10): accounts, checkout payment, reviews, tracking, support widget, language ---------- */
+
+.lp-form-ok {
+  color: #0c5e48;
+  background: #e9f8f1;
+  border-radius: 6px;
+  margin: 0;
+  padding: 10px 12px;
+  font-size: 14px;
+}
+.lp-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 10px 0;
+  color: #263647;
+  font-size: 14px;
+}
+.lp-secondary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 8px 14px;
+  color: #0b1e40;
+  font: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid #b9c7d3;
+  border-radius: 6px;
+}
+.lp-secondary-button:hover {
+  border-color: #0b1e40;
+}
+.lp-secondary-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.lp-link-button {
+  padding: 0;
+  color: #006878;
+  font: inherit;
+  font-weight: 700;
+  text-decoration: underline;
+  cursor: pointer;
+  background: none;
+  border: 0;
+}
+.lp-inline-form {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+.lp-form-stack {
+  display: grid;
+  gap: 12px;
+}
+.mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+/* Sign-in page: sign-in card + order lookup card stacked in the live login layout */
+.lp-auth-cards {
+  display: grid;
+  gap: 18px;
+  min-width: 0;
+}
+.lp-google-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #16212c;
+  text-decoration: none;
+  background: #fff;
+  border: 1px solid #ccd6df;
+}
+.lp-or {
+  margin: -4px 0;
+  color: #687586;
+  font-size: 13px;
+  text-align: center;
+}
+.lp-auth-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px;
+  margin: 0;
+  font-size: 13px;
+}
+.lp-auth-links a {
+  color: #006878;
+  font-weight: 700;
+}
+.login-card small {
+  color: #687586;
+  font-weight: 400;
+}
+
+/* Account dashboard */
+.lp-account {
+  display: grid;
+  gap: 18px;
+  width: min(1100px, 100%);
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+.lp-account-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: end;
+  gap: 12px;
+}
+.lp-account-header h1 {
+  margin: 4px 0;
+  color: #0b1e40;
+  font: 600 clamp(26px, 4vw, 34px) / 1.15 Georgia, "Times New Roman", serif;
+}
+.lp-account-header p {
+  margin: 0;
+  color: #536374;
+}
+.lp-account-header .eyebrow a {
+  color: inherit;
+}
+.lp-account-banner {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+  padding: 12px 14px;
+  color: #6b4a12;
+  background: #fff7e6;
+  border: 1px solid #f1d8a6;
+  border-radius: 8px;
+}
+.lp-account-banner p {
+  margin: 0;
+}
+.lp-account-card {
+  display: grid;
+  gap: 12px;
+  align-content: start;
+  min-width: 0;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #dce3eb;
+  border-radius: 8px;
+}
+.lp-account-card h2 {
+  margin: 0;
+  color: #0b1e40;
+  font-size: 18px;
+}
+.lp-account-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+}
+.lp-account-side {
+  display: grid;
+  gap: 18px;
+}
+.lp-table-wrap {
+  overflow-x: auto;
+}
+.lp-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+.lp-table th,
+.lp-table td {
+  padding: 8px 10px;
+  text-align: left;
+  border-bottom: 1px solid #eef2f5;
+  white-space: nowrap;
+}
+.lp-table th {
+  color: #536374;
+  font-size: 12px;
+  font-weight: 700;
+}
+.lp-table .num {
+  text-align: right;
+}
+.lp-table a {
+  color: #006878;
+  font-weight: 700;
+}
+.lp-address-list {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.lp-address-list li {
+  padding: 12px;
+  border: 1px solid #eef2f5;
+  border-radius: 6px;
+}
+.lp-address-list p {
+  margin: 0 0 6px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.lp-address-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  gap: 12px;
+}
+.lp-address-actions details,
+.lp-add-address {
+  flex: 1 1 100%;
+}
+.lp-address-actions summary,
+.lp-add-address summary {
+  color: #006878;
+  font-weight: 700;
+  cursor: pointer;
+}
+.lp-address-actions details[open] > form,
+.lp-add-address[open] > form {
+  margin-top: 12px;
+}
+.lp-pill {
+  display: inline-block;
+  padding: 1px 8px;
+  color: #0c5e48;
+  font-size: 12px;
+  font-weight: 700;
+  background: #e9f8f1;
+  border-radius: 999px;
+}
+.lp-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+.lp-stat {
+  display: grid;
+  gap: 4px;
+  padding: 16px;
+  background: #fff;
+  border: 1px solid #dce3eb;
+  border-radius: 8px;
+}
+.lp-stat span,
+.lp-stat small {
+  color: #536374;
+  font-size: 13px;
+}
+.lp-stat strong {
+  color: #0b1e40;
+  font-size: 24px;
+}
+.lp-copy-link {
+  display: flex;
+  gap: 8px;
+}
+.lp-copy-link input {
+  flex: 1;
+  min-width: 0;
+  min-height: 40px;
+  padding: 0 12px;
+  font: 14px ui-monospace, Menlo, Consolas, monospace;
+  border: 1px solid #ccd6df;
+  border-radius: 6px;
+}
+@media (max-width: 760px) {
+  .lp-account-grid,
+  .lp-stat-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Checkout: payment method, sign-in prompt; order page payment reference */
+.lp-payment-methods {
+  display: grid;
+  gap: 2px;
+  margin: 18px 0 0;
+  padding: 14px 16px;
+  border: 1px solid #dce3eb;
+  border-radius: 8px;
+}
+.lp-payment-methods legend {
+  padding: 0 4px;
+  color: #0b1e40;
+  font-weight: 700;
+}
+.lp-signin-prompt {
+  padding: 10px 12px;
+  background: #f3f8fb;
+  border-radius: 6px;
+}
+.lp-payment-ref {
+  display: grid;
+  gap: 2px;
+}
+.lp-payment-ref span {
+  color: #536374;
+  font-size: 13px;
+}
+.lp-payment-ref strong {
+  font: 700 20px ui-monospace, Menlo, Consolas, monospace;
+  letter-spacing: 0.04em;
+}
+
+/* Product page: review and question forms under the panels */
+.lp-panel-action {
+  margin-top: 16px;
+}
+.lp-review-form {
+  max-width: 640px;
+}
+.lp-stars {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.lp-stars legend {
+  margin-bottom: 4px;
+  font-weight: 700;
+}
+.lp-stars label {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #d99a32;
+}
+
+/* Tracking panel: local shipment result */
+.lp-tracking-result a {
+  font-weight: 700;
+}
+
+/* Footer language picker */
+.lp-language {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  font-size: 13px;
+}
+.lp-language select {
+  padding: 4px 8px;
+  color: inherit;
+  font: inherit;
+  background: transparent;
+  border: 1px solid currentColor;
+  border-radius: 6px;
+}
+.lp-language option {
+  color: #16212c;
+}
+
+/* Support widget (first-party; replaces the live third-party chat embed) */
+.lp-support {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 60;
+  display: grid;
+  justify-items: end;
+  gap: 10px;
+}
+.lp-support-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 46px;
+  padding: 0 16px;
+  color: #fff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  background: #071b3b;
+  border: 0;
+  border-radius: 999px;
+  box-shadow: 0 10px 24px #0b1e4040;
+}
+.lp-support-panel {
+  width: min(340px, calc(100vw - 32px));
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #dce3eb;
+  border-radius: 12px;
+  box-shadow: 0 24px 60px #16212c33;
+}
+.lp-support-panel header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px;
+  color: #fff;
+  background: #0b1e40;
+}
+.lp-support-panel header div {
+  display: grid;
+  flex: 1;
+}
+.lp-support-panel header small {
+  opacity: 0.8;
+}
+.lp-support-panel header button {
+  color: inherit;
+  cursor: pointer;
+  background: none;
+  border: 0;
+}
+.lp-support-hello {
+  margin: 0;
+  padding: 14px 14px 6px;
+  color: #0b1e40;
+  font-weight: 700;
+}
+.lp-support-panel nav {
+  display: grid;
+  padding: 4px 8px;
+}
+.lp-support-panel nav a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 8px;
+  color: #16212c;
+  font-size: 14px;
+  text-decoration: none;
+  border-radius: 6px;
+}
+.lp-support-panel nav a:hover {
+  background: #f3f8fb;
+}
+.lp-support-panel nav a span {
+  display: grid;
+}
+.lp-support-panel nav small {
+  color: #536374;
+}
+.lp-support-note {
+  margin: 0;
+  padding: 8px 14px 14px;
+  color: #536374;
+  font-size: 12px;
+}
+@media (max-width: 760px) {
+  /* Stay above the mobile purchase bar of product pages. */
+  .lp-support {
+    bottom: 84px;
+  }
+  .lp-support-button span {
+    display: none;
+  }
+  .lp-support-button {
+    width: 46px;
+    padding: 0;
+    justify-content: center;
+  }
+}
+
+/* Account pages with one card (register, password reset): centred instead of the two-column story layout. */
+.login-layout.lp-auth-single {
+  display: grid;
+  grid-template-columns: minmax(0, 480px);
+  justify-content: center;
+}
