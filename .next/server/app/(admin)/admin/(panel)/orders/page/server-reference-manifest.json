@@ -1,6 +1,6 @@
 {
   "node": {
-    "00ab90e0982ece697fd2c5c2b315e339559f3443d8": {
+    "0069294ebbdc2edb2ae3b5373617c436b8b5153da6": {
       "workers": {
         "app/(admin)/admin/(panel)/orders/page": {
           "moduleId": 26395,
@@ -10,7 +10,7 @@
       "exportedName": "pullCart",
       "filename": "src/lib/actions/customer.ts"
     },
-    "400a81e3a3ff2f0b247fc71ada1d93351c6fb9d3ec": {
+    "400ee5db51a6d986f2cfceb8d1bc1f904575b08bad": {
       "workers": {
         "app/(admin)/admin/(panel)/orders/page": {
           "moduleId": 26395,
@@ -20,17 +20,7 @@
       "exportedName": "pushCart",
       "filename": "src/lib/actions/customer.ts"
     },
-    "80327ea897df03b1b667068d5444f20fee988b031a": {
-      "workers": {
-        "app/(admin)/admin/(panel)/orders/page": {
-          "moduleId": 26395,
-          "async": false
-        }
-      },
-      "exportedName": "$$RSC_SERVER_CACHE_1",
-      "filename": "src/lib/queries/settings.ts"
-    },
-    "80cdccd5269ffc6ba29c0a09dbc7a7dbc281f8a26d": {
+    "8018e71dd474c0da3345f9407c1a931ff25760621b": {
       "workers": {
         "app/(admin)/admin/(panel)/orders/page": {
           "moduleId": 26395,
@@ -40,7 +30,17 @@
       "exportedName": "$$RSC_SERVER_CACHE_0",
       "filename": "src/lib/queries/settings.ts"
     },
-    "00fa4b04fd8780125842a2a0e462bbc7877dbc4301": {
+    "801c756ce7d94d9487124a71716f7dadee134baa25": {
+      "workers": {
+        "app/(admin)/admin/(panel)/orders/page": {
+          "moduleId": 26395,
+          "async": false
+        }
+      },
+      "exportedName": "$$RSC_SERVER_CACHE_1",
+      "filename": "src/lib/queries/settings.ts"
+    },
+    "00fa85075d48a58ffafd4c0662edcddd38c0c70c9b": {
       "workers": {
         "app/(admin)/admin/(panel)/orders/page": {
           "moduleId": 26395,
@@ -50,7 +50,7 @@
       "exportedName": "logout",
       "filename": "src/lib/actions/auth.ts"
     },
-    "6004d26cc60c62694d1ff4de4fafb4985cf59d70fa": {
+    "60a944910aba274698563b78e3a4426a3b6fb29216": {
       "workers": {
         "app/(admin)/admin/(panel)/orders/page": {
           "moduleId": 26395,
@@ -60,7 +60,7 @@
       "exportedName": "login",
       "filename": "src/lib/actions/auth.ts"
     },
-    "60f2dfe59228c6665157973ba42909c97db1aa8a02": {
+    "60cdacef163ac0e012ed3045474518c8c503f0f00e": {
       "workers": {
         "app/(admin)/admin/(panel)/orders/page": {
           "moduleId": 26395,
