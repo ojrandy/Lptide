@@ -1,0 +1,51 @@
+{
+  "status": 200,
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/(store)/layout,_N_T_/(store)/[lang]/layout,_N_T_/(store)/[lang]/(shop)/layout,_N_T_/(store)/[lang]/(shop)/coa/layout,_N_T_/(store)/[lang]/(shop)/coa/page,_N_T_/pt/coa,settings"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/!KHN0b3JlKQ/$d$lang",
+    "/!KHN0b3JlKQ/$d$lang/!KHNob3Ap/coa/__PAGE__"
+  ],
+  "prefetchHints": {
+    "hints": 49216,
+    "slots": {
+      "children": {
+        "hints": 49248,
+        "slots": {
+          "children": {
+            "hints": 49184,
+            "slots": {
+              "children": {
+                "hints": 49216,
+                "slots": {
+                  "children": {
+                    "hints": 49248,
+                    "slots": {
+                      "children": {
+                        "hints": 49312,
+                        "slots": null
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "routeCache": {
+    "key": "/route-cache/APP_PAGE/dff073a63748dbc8808a8af2f5a18db0d5c13c856b06a466ce1d10d40999a5b4/$/pt/coa",
+    "owner": {
+      "kind": "APP_PAGE",
+      "sourceRoute": "/(store)/[lang]/(shop)/coa/page"
+    },
+    "isFallback": false
+  }
+}

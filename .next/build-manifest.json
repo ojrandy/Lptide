@@ -1,0 +1,542 @@
+{
+  "pages": {
+    "/_app": []
+  },
+  "devFiles": [],
+  "polyfillFiles": [
+    "static/chunks/0cz1d0mv5g_q7.js"
+  ],
+  "lowPriorityFiles": [
+    "static/pHkx-GfVfOf6KDsTIPYt-/_buildManifest.js",
+    "static/pHkx-GfVfOf6KDsTIPYt-/_ssgManifest.js",
+    "static/pHkx-GfVfOf6KDsTIPYt-/_clientMiddlewareManifest.js"
+  ],
+  "rootMainFiles": [
+    "static/chunks/2f4ec9l3ry_5h.js",
+    "static/chunks/44bax-4eob5k0.js",
+    "static/chunks/1tijzc831_5jv.js",
+    "static/chunks/2qq9afzcih227.js",
+    "static/chunks/3t6i_3lvi_934.js",
+    "static/chunks/turbopack-2u1d16houkiyo.js"
+  ],
+  "rootMainFilesTree": {},
+  "pagesChunkGroupBootstrapParams": {
+    "/_not-found/page": {
+      "otherChunks": [
+        "static/chunks/2f4ec9l3ry_5h.js",
+        "static/chunks/44bax-4eob5k0.js",
+        "static/chunks/1tijzc831_5jv.js",
+        "static/chunks/2qq9afzcih227.js",
+        "static/chunks/3t6i_3lvi_934.js"
+      ],
+      "runtimeModuleIds": [
+        94553
+      ]
+    },
+    "/_global-error/page": {
+      "otherChunks": [
+        "static/chunks/2f4ec9l3ry_5h.js",
+        "static/chunks/44bax-4eob5k0.js",
+        "static/chunks/1tijzc831_5jv.js",
+        "static/chunks/2qq9afzcih227.js",
+        "static/chunks/3t6i_3lvi_934.js"
+      ],
+      "runtimeModuleIds": [
+        94553
+      ]
+    },
+    "/(admin)/admin/(panel)/page": {
+      "otherChunks": [
+        "static/chunks/2f4ec9l3ry_5h.js",
+        "static/chunks/44bax-4eob5k0.js",
+        "static/chunks/1tijzc831_5jv.js",
+        "static/chunks/2qq9afzcih227.js",
+        "static/chunks/3t6i_3lvi_934.js"
+      ],
+      "runtimeModuleIds": [
+        94553
+      ]
+    },
+    "/(admin)/admin/(panel)/affiliates/page": {
+      "otherChunks": [
+        "static/chunks/2f4ec9l3ry_5h.js",
+        "static/chunks/44bax-4eob5k0.js",
+        "static/chunks/1tijzc831_5jv.js",
+        "static/chunks/2qq9afzcih227.js",
+        "static/chunks/3t6i_3lvi_934.js"
+      ],
+      "runtimeModuleIds": [
+        94553
+      ]
+    },
+    "/(admin)/admin/(panel)/affiliates/[id]/page": {
+      "otherChunks": [
+        "static/chunks/2f4ec9l3ry_5h.js",
+        "static/chunks/44bax-4eob5k0.js",
+        "static/chunks/1tijzc831_5jv.js",
+        "static/chunks/2qq9afzcih227.js",
+        "static/chunks/3t6i_3lvi_934.js"
+      ],
+      "runtimeModuleIds": [
+        94553
+      ]
+    },
+    "/(admin)/admin/(panel)/customers/page": {
+      "otherChunks": [
+        "static/chunks/2f4ec9l3ry_5h.js",
+        "static/chunks/44bax-4eob5k0.js",
+        "static/chunks/1tijzc831_5jv.js",
+        "static/chunks/2qq9afzcih227.js",
+        "static/chunks/3t6i_3lvi_934.js"
+      ],
+      "runtimeModuleIds": [
+        94553
+      ]
+    },
+    "/(admin)/admin/(panel)/orders/page": {
+      "otherChunks": [
+        "static/chunks/2f4ec9l3ry_5h.js",
+        "static/chunks/44bax-4eob5k0.js",
+        "static/chunks/1tijzc831_5jv.js",
+        "static/chunks/2qq9afzcih227.js",
+        "static/chunks/3t6i_3lvi_934.js"
+      ],
+      "runtimeModuleIds": [
+        94553
+      ]
+    },
+    "/(admin)/admin/(panel)/orders/[id]/page": {
+      "otherChunks": [
+        "static/chunks/2f4ec9l3ry_5h.js",
+        "static/chunks/44bax-4eob5k0.js",
+        "static/chunks/1tijzc831_5jv.js",
+        "static/chunks/2qq9afzcih227.js",
+        "static/chunks/3t6i_3lvi_934.js"
+      ],
+      "runtimeModuleIds": [
+        94553
+      ]
+    },
+    "/(admin)/admin/(panel)/products/page": {
+      "otherChunks": [
+        "static/chunks/2f4ec9l3ry_5h.js",
+        "static/chunks/44bax-4eob5k0.js",
+        "static/chunks/1tijzc831_5jv.js",
+        "static/chunks/2qq9afzcih227.js",
+        "static/chunks/3t6i_3lvi_934.js"
+      ],
+      "runtimeModuleIds": [
+        94553
+      ]
+    },
+    "/(admin)/admin/(panel)/products/[id]/page": {
+      "otherChunks": [
+        "static/chunks/2f4ec9l3ry_5h.js",
+        "static/chunks/44bax-4eob5k0.js",
+        "static/chunks/1tijzc831_5jv.js",
+        "static/chunks/2qq9afzcih227.js",
+        "static/chunks/3t6i_3lvi_934.js"
+      ],
+      "runtimeModuleIds": [
+        94553
+      ]
+    },
+    "/(admin)/admin/(panel)/reviews/page": {
+      "otherChunks": [
+        "static/chunks/2f4ec9l3ry_5h.js",
+        "static/chunks/44bax-4eob5k0.js",
+        "static/chunks/1tijzc831_5jv.js",
+        "static/chunks/2qq9afzcih227.js",
+        "static/chunks/3t6i_3lvi_934.js"
+      ],
+      "runtimeModuleIds": [
+        94553
+      ]
+    },
+    "/(admin)/admin/(panel)/settings/page": {
+      "otherChunks": [
+        "static/chunks/2f4ec9l3ry_5h.js",
+        "static/chunks/44bax-4eob5k0.js",
+        "static/chunks/1tijzc831_5jv.js",
+        "static/chunks/2qq9afzcih227.js",
+        "static/chunks/3t6i_3lvi_934.js"
+      ],
+      "runtimeModuleIds": [
+        94553
+      ]
+    },
+    "/(admin)/admin/(panel)/shipping/page": {
+      "otherChunks": [
+        "static/chunks/2f4ec9l3ry_5h.js",
+        "static/chunks/44bax-4eob5k0.js",
+        "static/chunks/1tijzc831_5jv.js",
+        "static/chunks/2qq9afzcih227.js",
+        "static/chunks/3t6i_3lvi_934.js"
+      ],
+      "runtimeModuleIds": [
+        94553
+      ]
+    },
+    "/(admin)/admin/login/page": {
+      "otherChunks": [
+        "static/chunks/2f4ec9l3ry_5h.js",
+        "static/chunks/44bax-4eob5k0.js",
+        "static/chunks/1tijzc831_5jv.js",
+        "static/chunks/2qq9afzcih227.js",
+        "static/chunks/3t6i_3lvi_934.js"
+      ],
+      "runtimeModuleIds": [
+        94553
+      ]
+    },
+    "/(store)/[lang]/page": {
+      "otherChunks": [
+        "static/chunks/2f4ec9l3ry_5h.js",
+        "static/chunks/44bax-4eob5k0.js",
+        "static/chunks/1tijzc831_5jv.js",
+        "static/chunks/2qq9afzcih227.js",
+        "static/chunks/3t6i_3lvi_934.js"
+      ],
+      "runtimeModuleIds": [
+        94553
+      ]
+    },
+    "/(store)/[lang]/(shop)/about/page": {
+      "otherChunks": [
+        "static/chunks/2f4ec9l3ry_5h.js",
+        "static/chunks/44bax-4eob5k0.js",
+        "static/chunks/1tijzc831_5jv.js",
+        "static/chunks/2qq9afzcih227.js",
+        "static/chunks/3t6i_3lvi_934.js"
+      ],
+      "runtimeModuleIds": [
+        94553
+      ]
+    },
+    "/(store)/[lang]/(shop)/affiliate-program/page": {
+      "otherChunks": [
+        "static/chunks/2f4ec9l3ry_5h.js",
+        "static/chunks/44bax-4eob5k0.js",
+        "static/chunks/1tijzc831_5jv.js",
+        "static/chunks/2qq9afzcih227.js",
+        "static/chunks/3t6i_3lvi_934.js"
+      ],
+      "runtimeModuleIds": [
+        94553
+      ]
+    },
+    "/(store)/[lang]/(shop)/best-sellers/page": {
+      "otherChunks": [
+        "static/chunks/2f4ec9l3ry_5h.js",
+        "static/chunks/44bax-4eob5k0.js",
+        "static/chunks/1tijzc831_5jv.js",
+        "static/chunks/2qq9afzcih227.js",
+        "static/chunks/3t6i_3lvi_934.js"
+      ],
+      "runtimeModuleIds": [
+        94553
+      ]
+    },
+    "/(store)/[lang]/(shop)/cart/page": {
+      "otherChunks": [
+        "static/chunks/2f4ec9l3ry_5h.js",
+        "static/chunks/44bax-4eob5k0.js",
+        "static/chunks/1tijzc831_5jv.js",
+        "static/chunks/2qq9afzcih227.js",
+        "static/chunks/3t6i_3lvi_934.js"
+      ],
+      "runtimeModuleIds": [
+        94553
+      ]
+    },
+    "/(store)/[lang]/(shop)/catalog/page": {
+      "otherChunks": [
+        "static/chunks/2f4ec9l3ry_5h.js",
+        "static/chunks/44bax-4eob5k0.js",
+        "static/chunks/1tijzc831_5jv.js",
+        "static/chunks/2qq9afzcih227.js",
+        "static/chunks/3t6i_3lvi_934.js"
+      ],
+      "runtimeModuleIds": [
+        94553
+      ]
+    },
+    "/(store)/[lang]/(shop)/category/[slug]/page": {
+      "otherChunks": [
+        "static/chunks/2f4ec9l3ry_5h.js",
+        "static/chunks/44bax-4eob5k0.js",
+        "static/chunks/1tijzc831_5jv.js",
+        "static/chunks/2qq9afzcih227.js",
+        "static/chunks/3t6i_3lvi_934.js"
+      ],
+      "runtimeModuleIds": [
+        94553
+      ]
+    },
+    "/(store)/[lang]/(shop)/checkout/page": {
+      "otherChunks": [
+        "static/chunks/2f4ec9l3ry_5h.js",
+        "static/chunks/44bax-4eob5k0.js",
+        "static/chunks/1tijzc831_5jv.js",
+        "static/chunks/2qq9afzcih227.js",
+        "static/chunks/3t6i_3lvi_934.js"
+      ],
+      "runtimeModuleIds": [
+        94553
+      ]
+    },
+    "/(store)/[lang]/(shop)/coa/page": {
+      "otherChunks": [
+        "static/chunks/2f4ec9l3ry_5h.js",
+        "static/chunks/44bax-4eob5k0.js",
+        "static/chunks/1tijzc831_5jv.js",
+        "static/chunks/2qq9afzcih227.js",
+        "static/chunks/3t6i_3lvi_934.js"
+      ],
+      "runtimeModuleIds": [
+        94553
+      ]
+    },
+    "/(store)/[lang]/(shop)/coa/[code]/page": {
+      "otherChunks": [
+        "static/chunks/2f4ec9l3ry_5h.js",
+        "static/chunks/44bax-4eob5k0.js",
+        "static/chunks/1tijzc831_5jv.js",
+        "static/chunks/2qq9afzcih227.js",
+        "static/chunks/3t6i_3lvi_934.js"
+      ],
+      "runtimeModuleIds": [
+        94553
+      ]
+    },
+    "/(store)/[lang]/(shop)/contact/page": {
+      "otherChunks": [
+        "static/chunks/2f4ec9l3ry_5h.js",
+        "static/chunks/44bax-4eob5k0.js",
+        "static/chunks/1tijzc831_5jv.js",
+        "static/chunks/2qq9afzcih227.js",
+        "static/chunks/3t6i_3lvi_934.js"
+      ],
+      "runtimeModuleIds": [
+        94553
+      ]
+    },
+    "/(store)/[lang]/(shop)/cost-per-dose-calculator/page": {
+      "otherChunks": [
+        "static/chunks/2f4ec9l3ry_5h.js",
+        "static/chunks/44bax-4eob5k0.js",
+        "static/chunks/1tijzc831_5jv.js",
+        "static/chunks/2qq9afzcih227.js",
+        "static/chunks/3t6i_3lvi_934.js"
+      ],
+      "runtimeModuleIds": [
+        94553
+      ]
+    },
+    "/(store)/[lang]/(shop)/help/faq/page": {
+      "otherChunks": [
+        "static/chunks/2f4ec9l3ry_5h.js",
+        "static/chunks/44bax-4eob5k0.js",
+        "static/chunks/1tijzc831_5jv.js",
+        "static/chunks/2qq9afzcih227.js",
+        "static/chunks/3t6i_3lvi_934.js"
+      ],
+      "runtimeModuleIds": [
+        94553
+      ]
+    },
+    "/(store)/[lang]/(shop)/help/fees/page": {
+      "otherChunks": [
+        "static/chunks/2f4ec9l3ry_5h.js",
+        "static/chunks/44bax-4eob5k0.js",
+        "static/chunks/1tijzc831_5jv.js",
+        "static/chunks/2qq9afzcih227.js",
+        "static/chunks/3t6i_3lvi_934.js"
+      ],
+      "runtimeModuleIds": [
+        94553
+      ]
+    },
+    "/(store)/[lang]/(shop)/help/shipping/page": {
+      "otherChunks": [
+        "static/chunks/2f4ec9l3ry_5h.js",
+        "static/chunks/44bax-4eob5k0.js",
+        "static/chunks/1tijzc831_5jv.js",
+        "static/chunks/2qq9afzcih227.js",
+        "static/chunks/3t6i_3lvi_934.js"
+      ],
+      "runtimeModuleIds": [
+        94553
+      ]
+    },
+    "/(store)/[lang]/(shop)/legal/terms/page": {
+      "otherChunks": [
+        "static/chunks/2f4ec9l3ry_5h.js",
+        "static/chunks/44bax-4eob5k0.js",
+        "static/chunks/1tijzc831_5jv.js",
+        "static/chunks/2qq9afzcih227.js",
+        "static/chunks/3t6i_3lvi_934.js"
+      ],
+      "runtimeModuleIds": [
+        94553
+      ]
+    },
+    "/(store)/[lang]/(shop)/order/[number]/page": {
+      "otherChunks": [
+        "static/chunks/2f4ec9l3ry_5h.js",
+        "static/chunks/44bax-4eob5k0.js",
+        "static/chunks/1tijzc831_5jv.js",
+        "static/chunks/2qq9afzcih227.js",
+        "static/chunks/3t6i_3lvi_934.js"
+      ],
+      "runtimeModuleIds": [
+        94553
+      ]
+    },
+    "/(store)/[lang]/(shop)/peptide/[file]/page": {
+      "otherChunks": [
+        "static/chunks/2f4ec9l3ry_5h.js",
+        "static/chunks/44bax-4eob5k0.js",
+        "static/chunks/1tijzc831_5jv.js",
+        "static/chunks/2qq9afzcih227.js",
+        "static/chunks/3t6i_3lvi_934.js"
+      ],
+      "runtimeModuleIds": [
+        94553
+      ]
+    },
+    "/(store)/[lang]/(shop)/product-lookup/page": {
+      "otherChunks": [
+        "static/chunks/2f4ec9l3ry_5h.js",
+        "static/chunks/44bax-4eob5k0.js",
+        "static/chunks/1tijzc831_5jv.js",
+        "static/chunks/2qq9afzcih227.js",
+        "static/chunks/3t6i_3lvi_934.js"
+      ],
+      "runtimeModuleIds": [
+        94553
+      ]
+    },
+    "/(store)/[lang]/(shop)/reconstitution-calculator/page": {
+      "otherChunks": [
+        "static/chunks/2f4ec9l3ry_5h.js",
+        "static/chunks/44bax-4eob5k0.js",
+        "static/chunks/1tijzc831_5jv.js",
+        "static/chunks/2qq9afzcih227.js",
+        "static/chunks/3t6i_3lvi_934.js"
+      ],
+      "runtimeModuleIds": [
+        94553
+      ]
+    },
+    "/(store)/[lang]/(shop)/vial-duration-calculator/page": {
+      "otherChunks": [
+        "static/chunks/2f4ec9l3ry_5h.js",
+        "static/chunks/44bax-4eob5k0.js",
+        "static/chunks/1tijzc831_5jv.js",
+        "static/chunks/2qq9afzcih227.js",
+        "static/chunks/3t6i_3lvi_934.js"
+      ],
+      "runtimeModuleIds": [
+        94553
+      ]
+    },
+    "/(store)/[lang]/(shop)/warehouse/[code]/page": {
+      "otherChunks": [
+        "static/chunks/2f4ec9l3ry_5h.js",
+        "static/chunks/44bax-4eob5k0.js",
+        "static/chunks/1tijzc831_5jv.js",
+        "static/chunks/2qq9afzcih227.js",
+        "static/chunks/3t6i_3lvi_934.js"
+      ],
+      "runtimeModuleIds": [
+        94553
+      ]
+    },
+    "/(store)/[lang]/account/page": {
+      "otherChunks": [
+        "static/chunks/2f4ec9l3ry_5h.js",
+        "static/chunks/44bax-4eob5k0.js",
+        "static/chunks/1tijzc831_5jv.js",
+        "static/chunks/2qq9afzcih227.js",
+        "static/chunks/3t6i_3lvi_934.js"
+      ],
+      "runtimeModuleIds": [
+        94553
+      ]
+    },
+    "/(store)/[lang]/account/affiliate/page": {
+      "otherChunks": [
+        "static/chunks/2f4ec9l3ry_5h.js",
+        "static/chunks/44bax-4eob5k0.js",
+        "static/chunks/1tijzc831_5jv.js",
+        "static/chunks/2qq9afzcih227.js",
+        "static/chunks/3t6i_3lvi_934.js"
+      ],
+      "runtimeModuleIds": [
+        94553
+      ]
+    },
+    "/(store)/[lang]/account/verify/page": {
+      "otherChunks": [
+        "static/chunks/2f4ec9l3ry_5h.js",
+        "static/chunks/44bax-4eob5k0.js",
+        "static/chunks/1tijzc831_5jv.js",
+        "static/chunks/2qq9afzcih227.js",
+        "static/chunks/3t6i_3lvi_934.js"
+      ],
+      "runtimeModuleIds": [
+        94553
+      ]
+    },
+    "/(store)/[lang]/forgot-password/page": {
+      "otherChunks": [
+        "static/chunks/2f4ec9l3ry_5h.js",
+        "static/chunks/44bax-4eob5k0.js",
+        "static/chunks/1tijzc831_5jv.js",
+        "static/chunks/2qq9afzcih227.js",
+        "static/chunks/3t6i_3lvi_934.js"
+      ],
+      "runtimeModuleIds": [
+        94553
+      ]
+    },
+    "/(store)/[lang]/login/page": {
+      "otherChunks": [
+        "static/chunks/2f4ec9l3ry_5h.js",
+        "static/chunks/44bax-4eob5k0.js",
+        "static/chunks/1tijzc831_5jv.js",
+        "static/chunks/2qq9afzcih227.js",
+        "static/chunks/3t6i_3lvi_934.js"
+      ],
+      "runtimeModuleIds": [
+        94553
+      ]
+    },
+    "/(store)/[lang]/register/page": {
+      "otherChunks": [
+        "static/chunks/2f4ec9l3ry_5h.js",
+        "static/chunks/44bax-4eob5k0.js",
+        "static/chunks/1tijzc831_5jv.js",
+        "static/chunks/2qq9afzcih227.js",
+        "static/chunks/3t6i_3lvi_934.js"
+      ],
+      "runtimeModuleIds": [
+        94553
+      ]
+    },
+    "/(store)/[lang]/reset-password/page": {
+      "otherChunks": [
+        "static/chunks/2f4ec9l3ry_5h.js",
+        "static/chunks/44bax-4eob5k0.js",
+        "static/chunks/1tijzc831_5jv.js",
+        "static/chunks/2qq9afzcih227.js",
+        "static/chunks/3t6i_3lvi_934.js"
+      ],
+      "runtimeModuleIds": [
+        94553
+      ]
+    }
+  },
+  "chunkLoadingGlobal": "TURBOPACK"
+}

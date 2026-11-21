@@ -1,0 +1,56 @@
+{
+  "status": 200,
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/(store)/layout,_N_T_/(store)/[lang]/layout,_N_T_/(store)/[lang]/(shop)/layout,_N_T_/(store)/[lang]/(shop)/peptide/layout,_N_T_/(store)/[lang]/(shop)/peptide/[file]/layout,_N_T_/(store)/[lang]/(shop)/peptide/[file]/page,_N_T_/en/peptide/cjc-1295-without-dac-plus-ip-5mg-plus-10mg-cp10.html,settings,products"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/!KHN0b3JlKQ/$d$lang",
+    "/!KHN0b3JlKQ/$d$lang/!KHNob3Ap/peptide/$d$file/__PAGE__"
+  ],
+  "prefetchHints": {
+    "hints": 49216,
+    "slots": {
+      "children": {
+        "hints": 49248,
+        "slots": {
+          "children": {
+            "hints": 49184,
+            "slots": {
+              "children": {
+                "hints": 49216,
+                "slots": {
+                  "children": {
+                    "hints": 49248,
+                    "slots": {
+                      "children": {
+                        "hints": 49248,
+                        "slots": {
+                          "children": {
+                            "hints": 49312,
+                            "slots": null
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "routeCache": {
+    "key": "/route-cache/APP_PAGE/34e79123cd18f9cbf92201bbf6fb9f6139bbc9fe2d4871700af0c20cf9380c29/$/en/peptide/cjc-1295-without-dac-plus-ip-5mg-plus-10mg-cp10.html",
+    "owner": {
+      "kind": "APP_PAGE",
+      "sourceRoute": "/(store)/[lang]/(shop)/peptide/[file]/page"
+    },
+    "isFallback": false
+  }
+}

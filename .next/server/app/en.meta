@@ -1,0 +1,41 @@
+{
+  "status": 200,
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/(store)/layout,_N_T_/(store)/[lang]/layout,_N_T_/(store)/[lang]/page,_N_T_/en,products,settings"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/!KHN0b3JlKQ/$d$lang",
+    "/!KHN0b3JlKQ/$d$lang/__PAGE__"
+  ],
+  "prefetchHints": {
+    "hints": 49216,
+    "slots": {
+      "children": {
+        "hints": 49248,
+        "slots": {
+          "children": {
+            "hints": 49184,
+            "slots": {
+              "children": {
+                "hints": 49280,
+                "slots": null
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "routeCache": {
+    "key": "/route-cache/APP_PAGE/598fb76f4b00e58d6bdd9309a9b4dd3b05dffe6a376495e928bc9ab593a7936e/$/en",
+    "owner": {
+      "kind": "APP_PAGE",
+      "sourceRoute": "/(store)/[lang]/page"
+    },
+    "isFallback": false
+  }
+}

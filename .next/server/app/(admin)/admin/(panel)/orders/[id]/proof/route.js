@@ -1,0 +1,11 @@
+var R=require("../../../../../../../chunks/[turbopack]_runtime.js")("server/app/(admin)/admin/(panel)/orders/[id]/proof/route.js")
+R.c("server/chunks/[externals]__1oluju730crj1._.js")
+R.c("server/chunks/node_modules_next_dist_0ku_biribeqcf._.js")
+R.c("server/chunks/_08csgakn1t_u5._.js")
+R.c("server/chunks/[root-of-the-server]__12uj0887q1ayr._.js")
+R.c("server/chunks/_0y_sk3y8cs_ro._.js")
+R.c("server/chunks/node_modules_1k3_l2bhdxz9g._.js")
+R.c("server/chunks/node_modules_next_dist_1ixxkvkbot_zu._.js")
+R.c("server/chunks/1oeh_server_app_(admin)_admin_(panel)_orders_[id]_proof_route_actions_0ds82ht5wdqpv.js")
+R.m(95688)
+module.exports=R.m(95688).exports

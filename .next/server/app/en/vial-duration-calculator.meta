@@ -1,0 +1,51 @@
+{
+  "status": 200,
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/(store)/layout,_N_T_/(store)/[lang]/layout,_N_T_/(store)/[lang]/(shop)/layout,_N_T_/(store)/[lang]/(shop)/vial-duration-calculator/layout,_N_T_/(store)/[lang]/(shop)/vial-duration-calculator/page,_N_T_/en/vial-duration-calculator,settings"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/!KHN0b3JlKQ/$d$lang",
+    "/!KHN0b3JlKQ/$d$lang/!KHNob3Ap/vial-duration-calculator/__PAGE__"
+  ],
+  "prefetchHints": {
+    "hints": 49216,
+    "slots": {
+      "children": {
+        "hints": 49248,
+        "slots": {
+          "children": {
+            "hints": 49184,
+            "slots": {
+              "children": {
+                "hints": 49216,
+                "slots": {
+                  "children": {
+                    "hints": 49248,
+                    "slots": {
+                      "children": {
+                        "hints": 49312,
+                        "slots": null
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "routeCache": {
+    "key": "/route-cache/APP_PAGE/93f101cf9a7b46976f0f4965b23e5c27c6013d79edc010cb4fe001987f184ad4/$/en/vial-duration-calculator",
+    "owner": {
+      "kind": "APP_PAGE",
+      "sourceRoute": "/(store)/[lang]/(shop)/vial-duration-calculator/page"
+    },
+    "isFallback": false
+  }
+}

@@ -1,0 +1,3 @@
+module.exports=[58657,a=>{"use strict";var b=a.i(72131),c=a.i(60115),d=a.i(25602),e=a.i(58501);a.s(["ClearCartAfterOrder",0,function(){let a=(0,d.useCartHydrated)();return(0,b.useEffect)(()=>{if(a)try{let a=Number(sessionStorage.getItem(e.SUBMITTED_FLAG));a&&Date.now()-a<6e5&&(c.L.getState().clear(),sessionStorage.removeItem(e.SUBMITTED_FLAG))}catch{}},[a]),null}])},21935,a=>{"use strict";let b=new Intl.NumberFormat("en-US",{style:"currency",currency:"USD"});a.s(["f",0,function(a){return b.format(a/100)}])},51802,a=>{"use strict";a.s(["Z",0,a=>a.prices.length?Math.min(...a.prices.map(a=>a.listCents)):0,"s",0,a=>a.prices.some(a=>a.inStock),"z",0,a=>`/peptide/${a}.html`])}];
+
+//# sourceMappingURL=src_1oi-5_3-nz9qt._.js.map

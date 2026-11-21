@@ -1,0 +1,3 @@
+module.exports=[68016,r=>{r.v(e=>Promise.all(["server/chunks/[externals]__0e2regkf5bw64._.js","server/chunks/src_db_migrate_ts_0szx4igdr5hr1._.js"].map(e=>r.l(e))).then(()=>e(2521)))},23322,r=>{"use strict";async function e(){let{runMigrations:e}=await r.A(68016);try{await e()}catch(r){console.error("Startup migrations failed:",r)}}r.s(["register",0,e])}];
+
+//# sourceMappingURL=src_0_11b67vjh9zz._.js.map

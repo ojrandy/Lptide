@@ -1,0 +1,10 @@
+---
+# cPanel "Deploy HEAD Commit" for the `deploy` branch (built by .github/workflows/deploy.yml; docs/08).
+# Copies the standalone build into the Node.js app root and restarts Passenger. Data lives in ~/lppeptide-data.
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/alluiukz/lppeptide-app
+    - /bin/mkdir -p $DEPLOYPATH/tmp
+    - /bin/rm -rf $DEPLOYPATH/.next $DEPLOYPATH/node_modules $DEPLOYPATH/drizzle
+    - /bin/cp -R .next node_modules public drizzle server.js package.json $DEPLOYPATH/
+    - /bin/touch $DEPLOYPATH/tmp/restart.txt

@@ -1,0 +1,3 @@
+{
+  "/(store)/[lang]/account/verify/page": "app/(store)/[lang]/account/verify/page.js"
+}

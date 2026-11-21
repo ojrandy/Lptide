@@ -1,0 +1,3 @@
+module.exports=[72227,a=>{"use strict";var b=a.i(87924),c=a.i(50944),d=a.i(94808),e=a.i(8944);a.s(["LanguageSwitcher",0,function(){let{locale:a,t:f}=(0,d.useI18n)(),g=(0,c.useRouter)();return(0,b.jsxs)("label",{className:"lp-language",children:[(0,b.jsx)("span",{children:f("common.language")}),(0,b.jsx)("select",{value:a,onChange:a=>(a=>{let{path:b}=(0,e.o)(window.location.pathname);g.push((0,e.q)(a,b)+window.location.search+window.location.hash)})(a.target.value),children:e.H.map(a=>(0,b.jsx)("option",{value:a,lang:a,children:e.b[a]},a))})]})}])}];
+
+//# sourceMappingURL=src_components_store_LanguageSwitcher_tsx_1ig903t7ff7s0._.js.map

@@ -1,0 +1,52 @@
+{
+  "status": 200,
+  "headers": {
+    "link": "</_next/static/chunks/3w-30uyf9a2fc.css>; rel=preload; as=\"style\"",
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/(store)/layout,_N_T_/(store)/[lang]/layout,_N_T_/(store)/[lang]/(shop)/layout,_N_T_/(store)/[lang]/(shop)/vial-duration-calculator/layout,_N_T_/(store)/[lang]/(shop)/vial-duration-calculator/page"
+  },
+  "postponed": "1320:8[\"lang\"][0,{\"nextSegmentId\":0,\"rootFormatContext\":{\"insertionMode\":0,\"selectedValue\":null,\"tagScope\":0,\"viewTransition\":null},\"progressiveChunkSize\":12800,\"resumableState\":{\"idPrefix\":\"\",\"nextFormID\":0,\"streamingFormat\":0,\"bootstrapScripts\":[{\"src\":\"/_next/static/chunks/2f4ec9l3ry_5h.js\"}],\"instructions\":0,\"hasBody\":false,\"hasHtml\":false,\"unknownResources\":{\"font\":{}},\"dnsResources\":{},\"connectResources\":{\"default\":{},\"anonymous\":{},\"credentials\":{}},\"imageResources\":{},\"styleResources\":{\"/_next/static/chunks/3w-30uyf9a2fc.css\":[]},\"scriptResources\":{},\"moduleUnknownResources\":{},\"moduleScriptResources\":{}},\"replayNodes\":[[\"sl\",0,[[\"Context\",0,[[\"Context\",0,[[\"ServerInsertedHTMLProvider\",0,[[\"Context\",0,[[\"il\",0,[[\"aW\",0,[[\"aV\",0,[[\"az\",0,[[\"io\",0,[[\"Fragment\",0,[[\"Context\",2,[[\"Context\",0,[[\"Context\",0,[[\"Context\",0,[[\"Context\",0,[[\"Context\",0,[[\"Context\",0,[[\"aW\",0,[[\"aV\",0,[[\"az\",0,[[\"as\",0,[[\"ai\",0,[[\"is\",\"/!KHN0b3JlKQ/$d$lang/!KHNob3Ap/vial-duration-calculator/__PAGE__/_head\",[[\"Fragment\",\"h\",[[\"__next_metadata_boundary__\",2,[[\"div\",0,[[\"Suspense\",0,[],0,[\"Suspense Fallback\",0,[],null],0]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],\"replaySlots\":-1}]eJytWtuWo7iS/Zd8nTozXExW0mudB2NAhrJEgblJ3f0AyMlN2J6yza1X/fssgbMqK9PtPDNnnnAFhKStiNg7pMq/Hk7nw7fdw29/PTzvzlnx8Ntf3z89ZElWTLbf/3h4EnYSXVBBUGT6uFOflMVjJjwt1HSXUUFJFWnxWVEfF6r4+MfDp9///PT7Hw/Hdd3/AzyHz87z4xf95Ftf8fkffzz8+Scfcrc/fxv4jzZhl93Dbw9QP5S2seyt/NA77PzZalBLQFA6pa37NdGtsivTxjyTrfVoMdpmTV9TidVkq8U4tlkCVDGTgnKzsgUc0VMSKcyqDmUgFcdsDXMKnnIc9ScLqEICwsECqKWRImQNY9mgyalsn8iaHvmcm5VdpXJ4oWv7SGJYOuxUusFk18KVdbJqM+TrcevJtvIGbrOtycYsbtO303eITDbxwG2Gt+U2b8Nt3jyeGUy+xJ5ss+/aLbmNbrlta042K5x8mTHZZl97Xsvx62QTM26Ds62f1uebmNtQNNnEaS1+3XGb4/N5mTatOTAmmxuUky2YbIHBbZ7P52X2NEcgTDZ/wsHQeraduC2Y8LLQt5hwsvbokMRal0TKPtiHJx6zdB+e0lVX4ggJSUyYVR2FbB+yzcoeU9kWrOrQw1VXpkCVA9lrsXQOkrXNMqloU+CWThWqm/WpxJJazzkQ+l4N+dwXHIlTrMMY5qFkDiQqWhojxtdHgblPAbvMPtO6RmvttZYZ+u5Wa9OmV/h3WFLFdO8NSRSOVnVM/00sw/8KS22GgfAmx2tTzIZ/PbfdOBzp2i5SwAoLqJd0Xd/O4zAo421XZpOvdkwbuqVRzzFcaNSfNiu7wLJ3pE1QOntvoFHA96DN9nzdsNus7FMqU58CtUpE75A14ZgA9URW1iOKRbrK//nPh08P5yQ/Pfz2+8Npdz6X+/z08Oenh9M5YbuH32RB+PRwLpvd6Zw0x4ffxM+qIj1JqvIkLMT/fFSkx08Pu/5Ycj56elzwr7/t2oSVNDnP7t+5JaHe4XD+mnxLGpQ0Oz7bn98/zVy12NE02T1TSZaEz8kjlZ/THX1OF9LnzztZkLLsSUrlJ1H+/+Cq/anEkXLh+4yl8EwiRbCq42erCS84sk8kcl/to3ekoJ9zVQpPWFLPZKsJ6aDBjNfP3mO7tcs57yuNrTwE4YlEdMCRkBPZbmm8zBNgjtbaZlgKj7QJawuIPOZVEqk8XwYSa22290YLkCGVhJzPkYFQSGKvzfbwZAHzQlaaTLZakTVBTiV1SCR2IYPWpqUmJCDIcax1JDJPm1JzUxAWmRTkaaMKxD/kpFEHa62dcISOaZPlqWzXJLZHC6gDH3u31UYaa91UB2tTJDESkki9ZEOXT/OAXrEAZXSlHfl8qRxWyUqTk9g7WACJmey1aRQO1hqxbE+OWApy2kw5LWal1pKG21iRrrSRAnUgW00mkT0mscc2K63NSq1KJUXgtXn1KQgQj2nDpvrgPtmMNSBRz4hsF+lWW/qm9uwDle9DkTZu7hq9G4vHQyop+01pq1MtvYw7x/eMI3bisUwipUkF7ZStNZatPa4hFyw98frrEj4mr+fy1CPd7Rzf5U/F2c7xTkG4zxrzPI2z9oRsDR83gypsGpFtpL7LQNhRwHXu1+/dyDsnkTJzVa3BwFQhX+ukN6/WPnMYPeDYG3lc+TzWntu0YheJLN17drpHnL8qClib7uGP/KMg5HsjJ5NuojbdewWW3XwXqaK1pkcK8jwDppJG4WWK56/jXHPFOyQxvOaJdYmBkqW1eeH5QiYdZqMFlJauNCFrwoICntM8x7Uiidyca3QSdTkFBeO2ec1uzsfEknohDRvSiPuwC5+LbLU2azyWldpAItRmjXvhe/JjnYbIKChasuZ8yPsMVvM9wbKtZFwXOAcDsyRRN/Ue2Z51nF+/GHbgDsvWMsJgu1pO+uEZ8Mi/53Gga1vkvJlKPCaH0pd5DnuM1y6V2CldvcrLNWvp9przrzG9HQcQns9CMu3RvF8b1vM91NLyB85jNmiXVHZzynkh9hhZaUU2aB2OWG2twwsF7HTdmw7HbOaoaUzUpg05Zo3IfY4v9X+NVZ41YcV/b3hf8I7PQpXrCI5Ik0T9kc871wVq00g8ZjLiGFwS29XMibO+Z3HI+apJIlRMeVIjnoN8z0aoLzuoL09Ww3XSM3DMZjvX0ohdAh5DORRciWsaLJ3K4N9zTeK4Whp7YwDCwY/UCwV56VRoqlsc21zXh2ywHiP5le423iHlvNsoRRpNvaaxnXshIWvMauIrMRzSFf+2EOhaG53yqaUylTeTr1KlktASqW9xY542UXjZcI2PgpZzDZbOnCNf/z6TuOi4ZmaDcqBAPH2VvQFH6BvvLzYRq7/G5wuNxJLEtsrrdDdw3vEmzaC8d/mlDw7dqX/c/xwjjO3TGy6RqZxduO+Gx2arztjG61NSxNQXP6f78IybcHje2r/2Jg1hBISLX3sTwogx235io2HWTDVzoGuvy8ZDu5GpTAelIZHHdi971YQ1iYt57uHpv+ja/pY29nAfN+qy4Zc4hYGo+R/P77Wp1I+bfThma3jhWriRaLsR5/1yX/gjMGfOqlTBn2q/H++tB7/qtTZcb2X3lz70l17M/PH+bk7xMTOgjnTepwuOgzaNWZfKSNhcc2QjeYwC85iuYbvjcYtslu2F8nnbvz4vsTT+tS/2AvFf2Cv3An16jYtyIbHbkmhR8bzIxnv5cT1P/ZIfV9sq75Hobd0Abb5sP8xTYVMZ8rzG0yVtQmEjhReL44yh+gvecOrLhVS22TZSylTOOZZj2pDWBa81U6nSKW+KlprakEoe59ZJM2GFO6TXp+npL6cn1I3r07o+4fx8eV+9vM+u9uD6vP67KijnmwSEVSKpIl1Zj7vBPuBIqacziKixrOF8x3vp4GQ1U19yppH4deLyn1zYO37dTXz5Q7eUls7xNdMGDbtYE0jk5lgqGJbOLY3dvPuW5e6Ljq2KVWjA1gs9ayNetQp+kS0DFVnj5napaa6QT/0hj4e1Rm0qLcrn7XQWKlwpHOgPnp7PRLvBHhN55slgNLpJV5uwu555yuDl9wqO13eTfmy5ZpTWuDisAs+EPTTVH/4UMCEF1zEF5lq60aVRlr8dizTsNPdRqpiBvsWRN24k1OLtU0ciuIB6wUhlVw6wBBgFC+znHfTNEjdWTwCUYGPXsFS6tMnmetmjb3TiUM/3/btYejjlLu+51YEYc78A/XWZ214QCALHMz/nHv5njw/CEUdimzXhKYkWOfS1Mxm07dyju7k1Gv19bGqJKqPD41LEkjXgyhAcvV44Eaqxn8lwXHakQTX0DdHZ3sS2hf6Sc8H1XDCdLV7Nn8/vpj7Js/kZzqqqGVdldLH4w5+fH+Y1Mu+Y7Y8sA6aQRB67Ea/FB/FaOJErOBEp8JgNeFwK0IcCrqwRR24HK7uGFewRcAd0O15bON7DVN/AtL9igjOm8SNM8C0m5QNMEgFujxpDJA2UsOQKhMdEX0qoCQQ8Wgrys4Wjmw35uzhV9zD9yM/X9dRD58uSmdxXew5Na3iff2zYNWGH4+lMksPqXf51H+ASoR8WqCElBIEEJVdAI1ZwBQXoowJVUMRV3sHREPGtWNVhcD//3Bux8nmszFA3ulj44f8zVnXY8b4ZR32blsseAnFvmTbLgDrQ1bJCUz9HjjOnWC2NtVMqmXU2qFUqGS1qzBr6gYDGQMJ+wZCeC7DhPAFHBBDDFV44AHaODy8ZUPZX7X/hPfQB78k34iRz3vPDiffQDd5Dvuj5mwDe4IfpTo/311M8N3LYpUAtyBq2nKM3Y7AgjV3CyBpQZZakcnseL9JgGVdhCcdAhHpRw5GyzV67kGHW7kw6i1OfUltXznrZP56LP/cS+taN+BgDxzP5murKrd7hWQUGFNMo+xYaFn/e4r3hI96DEe4dH3Lu60hjCKiqJey7I/a9hvhFBf2lhHzE4K16qu3VB/V0S596+B9flszgvtqzW7+vJ5dp+ozlHHDcE7b3NfWRXklYgjIBWIB6PZLKEKCOR0enBdSxiIChoCgYSQRluLqFDa19/b5eodUtvZrqSveEjsdtfr7FJ5n7rGH8fvHvuL3/qL6cyKuQX8tIwj3Sgx7phggbsyD6UnGAJZHG6EnE+d26VV8rt87k+zkZ3MpJcc5Je41GHjv+fMfxq2vseH5OvPFFoNZ2DCaMaOTv9La1ijW/t/38ebBf88p13r+vRckVYINK5LsyBHAglVdD3Swd3VVI5TEoGQLSUYOqYLxVi37QfVCL+BZuaeKWYIopesmL19wSroTBWhWIRH3B7/Aw70NKTcNSKPAz+5ftew69znWHd4wBjUHn8P6qMhakcgeiQ4Xohkz8THb0WiAVKpGEqltYPaHYbAIUorvaYA03anSAF16j1NoOoh76QRcLP3+/wb7eGqezKwY5esc/1kf8U8HKrKBuKEgiDI+54Ph4gSssoIo1UHJHovNYFyW6yT8vazK6uzGt4I2YXvvk6x5Bf/kK48t4P2v25Tteq+/iOI9/J2ftwgGoQH4uw8YVYOUq2DcLBxgd9pcD8vGIqlqAvqHczNn6IEL9bgzFWzFEOx5D5QuasM3PN7Fz3MD9ZunBDUwf1SFiOLIGCMLS0QPZ8V0R6ZYC/VqCus2gTioIvAKN5s3c9EM43I+ZcStm/VXjh1njrb/X+Hd6YX1wBnhaIIn3+K5CokCB/Hwjwd7xwwJXSxFKRod0s4Q+/ZtcFH10P0bCzRjx3tLgvtqzH0Lhbd75gRoEg6hbuvtWI4aPNAJGweAAVyBNIMAR9kiHk8bDyu0gMGuHn+f8bIQA39IIF+nGPTzSTTycN8ylAEP1xf+VNmjBxjcEeIsLq4+4kNUOwMN0bhmzjvheAUd+tkElGusRArOAfr6Ao13fyreAueP9fMtu5dvUU06+proNdfg237Yk9gp+lzzfgyzH97g+6i15P5mNyLcW0F+KyPcYGusF0Q2BVEWN/ExB43KBfHiTGwLhJN67H4C3epRR5z2Kvx3D5xf/V5j8WcNOOYreYJm1/g4Wj/cfMqmWMokCGfmuRABWkG5WcDRrx9cY12kEjMWmOXZvsWzD5V1tRjfuB2aOYy70teef/j/rZxtrRRqpA4n6481zzPZ+DZHI6HCV97ByF3g0GQKuhCWjh5WhoMqr0Fg0uHIVVBmXZK+9raFtqFv3esjBuXXnMZ+jJ99YtINrj/2qjmx+P8n/D+jaP1rvuMH5CJfuVXg0BhyFJfLtCgFUQ52VKDJL4ls9bKyOVKwkunULlx8MwvhyX3O7j7p1P2AoUz2J8AxH8xky+C5e8zvj1lnmg7sBtXB8q8MjYrBxFTguBc4Xjm70eIQy9PECAbiYamlQ/jsDb+8G7A/O0Mbi1lnGme4GuK/2HDD3PZ5m6v8G+nI38B7XR/c4PaksEQHc4bGWSZULJPIKB5gN0UkBda/h5zU4BgtcXnGFovrv/n3A02fx//7nAd8/Pez22bfheN5R7XDZ0+U3voy/vn///j+4PaLw",
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/!KHN0b3JlKQ/$d$lang/!KHNob3Ap/vial-duration-calculator/__PAGE__"
+  ],
+  "prefetchHints": {
+    "hints": 49216,
+    "slots": {
+      "children": {
+        "hints": 49248,
+        "slots": {
+          "children": {
+            "hints": 49248,
+            "slots": {
+              "children": {
+                "hints": 49248,
+                "slots": {
+                  "children": {
+                    "hints": 49248,
+                    "slots": {
+                      "children": {
+                        "hints": 49312,
+                        "slots": null
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "routeCache": {
+    "key": "/route-cache/APP_PAGE/93f101cf9a7b46976f0f4965b23e5c27c6013d79edc010cb4fe001987f184ad4/$/[lang]/vial-duration-calculator",
+    "owner": {
+      "kind": "APP_PAGE",
+      "sourceRoute": "/(store)/[lang]/(shop)/vial-duration-calculator/page"
+    },
+    "isFallback": true
+  }
+}

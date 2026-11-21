@@ -1,0 +1,3 @@
+module.exports=[53494,a=>{"use strict";var b=a.i(66680);function c(a){return(0,b.createHmac)("sha256",function(){let a=process.env.AUTH_SECRET;if(!a||a.length<32)throw Error("AUTH_SECRET must be set (at least 32 characters). See .env.example.");return a}()).update(`order:${a.toUpperCase()}`).digest("base64url").slice(0,32)}a.s(["S",0,a=>`/order/${a}/?t=${c(a)}`,"F",0,function(a,d){if(!d)return!1;let e=Buffer.from(c(a)),f=Buffer.from(d);return e.length===f.length&&(0,b.timingSafeEqual)(e,f)}])}];
+
+//# sourceMappingURL=src_lib_order-token_ts_1xeegq9d3gny5._.js.map

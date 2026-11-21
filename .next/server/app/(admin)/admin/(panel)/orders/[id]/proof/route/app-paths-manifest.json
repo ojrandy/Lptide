@@ -1,0 +1,3 @@
+{
+  "/(admin)/admin/(panel)/orders/[id]/proof/route": "app/(admin)/admin/(panel)/orders/[id]/proof/route.js"
+}

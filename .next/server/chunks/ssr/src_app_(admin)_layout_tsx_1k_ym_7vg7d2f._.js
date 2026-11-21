@@ -1,0 +1,3 @@
+module.exports=[54479,a=>{"use strict";var b=a.i(7997),c=a.i(717);a.s(["default",0,function({children:a}){return(0,b.jsx)("html",{lang:"en",children:(0,b.jsx)("body",{suppressHydrationWarning:!0,className:"min-h-screen font-sans text-sm",children:(0,b.jsx)(c.Suspense,{fallback:(0,b.jsx)("p",{className:"p-8 text-slate-500",children:"Loading…"}),children:a})})})},"metadata",0,{title:{default:"Admin | LPPEPTIDE",template:"%s | LPPEPTIDE admin"},robots:{index:!1,follow:!1}}])},94220,function(a){a.n(a.i(54479))}];
+
+//# sourceMappingURL=src_app_%28admin%29_layout_tsx_1k_ym_7vg7d2f._.js.map

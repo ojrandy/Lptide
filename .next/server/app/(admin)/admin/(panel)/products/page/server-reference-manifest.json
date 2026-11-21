@@ -1,0 +1,145 @@
+{
+  "node": {
+    "0042cde33d1b74c5cf6827de341575a8bbea062021": {
+      "workers": {
+        "app/(admin)/admin/(panel)/products/page": {
+          "moduleId": 43296,
+          "async": false
+        }
+      },
+      "exportedName": "pullCart",
+      "filename": "src/lib/actions/customer.ts"
+    },
+    "408d7d0be85cf8c0239a1d3c7e46ea83ada321b9c9": {
+      "workers": {
+        "app/(admin)/admin/(panel)/products/page": {
+          "moduleId": 43296,
+          "async": false
+        }
+      },
+      "exportedName": "pushCart",
+      "filename": "src/lib/actions/customer.ts"
+    },
+    "804edbaefd23207a6d3fbedfb4277e302cc82b3813": {
+      "workers": {
+        "app/(admin)/admin/(panel)/products/page": {
+          "moduleId": 43296,
+          "async": false
+        }
+      },
+      "exportedName": "$$RSC_SERVER_CACHE_0",
+      "filename": "src/lib/queries/settings.ts"
+    },
+    "80e2d4d0053d6e98546c0849becd05b52475964916": {
+      "workers": {
+        "app/(admin)/admin/(panel)/products/page": {
+          "moduleId": 43296,
+          "async": false
+        }
+      },
+      "exportedName": "$$RSC_SERVER_CACHE_1",
+      "filename": "src/lib/queries/settings.ts"
+    },
+    "00449b90b1fdbc5f3c1b2609b918e385b95f47cef9": {
+      "workers": {
+        "app/(admin)/admin/(panel)/products/page": {
+          "moduleId": 43296,
+          "async": false
+        }
+      },
+      "exportedName": "logout",
+      "filename": "src/lib/actions/auth.ts"
+    },
+    "60273b77ac22517a1227bd94a7c3de812d5cd041b0": {
+      "workers": {
+        "app/(admin)/admin/(panel)/products/page": {
+          "moduleId": 43296,
+          "async": false
+        }
+      },
+      "exportedName": "changePassword",
+      "filename": "src/lib/actions/auth.ts"
+    },
+    "60cc2a2512aa5bda4407bfd0a09e76f870aa600b79": {
+      "workers": {
+        "app/(admin)/admin/(panel)/products/page": {
+          "moduleId": 43296,
+          "async": false
+        }
+      },
+      "exportedName": "login",
+      "filename": "src/lib/actions/auth.ts"
+    },
+    "602f4570a55b82bae7a38cb5565f37164ef338c34c": {
+      "workers": {
+        "app/(admin)/admin/(panel)/products/page": {
+          "moduleId": 43296,
+          "async": false
+        }
+      },
+      "exportedName": "removeImage",
+      "filename": "src/lib/actions/admin-products.ts"
+    },
+    "60c1b046909fee69218356c0fa1deb0f2d58276ed0": {
+      "workers": {
+        "app/(admin)/admin/(panel)/products/page": {
+          "moduleId": 43296,
+          "async": false
+        }
+      },
+      "exportedName": "saveBasics",
+      "filename": "src/lib/actions/admin-products.ts"
+    },
+    "60380b9066e43cbee2754e55f1b7883098cc651bfd": {
+      "workers": {
+        "app/(admin)/admin/(panel)/products/page": {
+          "moduleId": 43296,
+          "async": false
+        }
+      },
+      "exportedName": "saveContent",
+      "filename": "src/lib/actions/admin-products.ts"
+    },
+    "60279e3a17fc5a5e2f5f0d950913b3821931f8219e": {
+      "workers": {
+        "app/(admin)/admin/(panel)/products/page": {
+          "moduleId": 43296,
+          "async": false
+        }
+      },
+      "exportedName": "savePrice",
+      "filename": "src/lib/actions/admin-products.ts"
+    },
+    "60eac113c8f7be7b2e611068cb710b6731a5169c65": {
+      "workers": {
+        "app/(admin)/admin/(panel)/products/page": {
+          "moduleId": 43296,
+          "async": false
+        }
+      },
+      "exportedName": "setEnabled",
+      "filename": "src/lib/actions/admin-products.ts"
+    },
+    "60a2dd7a63eb9d8c4efa232486eb8171a17e7febbe": {
+      "workers": {
+        "app/(admin)/admin/(panel)/products/page": {
+          "moduleId": 43296,
+          "async": false
+        }
+      },
+      "exportedName": "uploadCoa",
+      "filename": "src/lib/actions/admin-products.ts"
+    },
+    "60104da47635b2d2fd1767442074594a355bb9e434": {
+      "workers": {
+        "app/(admin)/admin/(panel)/products/page": {
+          "moduleId": 43296,
+          "async": false
+        }
+      },
+      "exportedName": "uploadImage",
+      "filename": "src/lib/actions/admin-products.ts"
+    }
+  },
+  "edge": {}
+}

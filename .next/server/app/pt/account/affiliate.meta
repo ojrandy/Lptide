@@ -1,0 +1,52 @@
+{
+  "status": 200,
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/(store)/layout,_N_T_/(store)/[lang]/layout,_N_T_/(store)/[lang]/account/layout,_N_T_/(store)/[lang]/account/affiliate/layout,_N_T_/(store)/[lang]/account/affiliate/page,_N_T_/pt/account/affiliate,settings"
+  },
+  "postponed": "3582:[1,{\"nextSegmentId\":1,\"rootFormatContext\":{\"insertionMode\":0,\"selectedValue\":null,\"tagScope\":0,\"viewTransition\":null},\"progressiveChunkSize\":12800,\"resumableState\":{\"idPrefix\":\"\",\"nextFormID\":0,\"streamingFormat\":0,\"instructions\":96,\"hasBody\":true,\"hasHtml\":true,\"unknownResources\":{},\"dnsResources\":{},\"connectResources\":{\"default\":{},\"anonymous\":{},\"credentials\":{}},\"imageResources\":{},\"styleResources\":{\"/_next/static/chunks/3w-30uyf9a2fc.css\":null,\"/_next/static/chunks/1knfcmfi0b6j-.css\":null},\"scriptResources\":{\"/_next/static/chunks/2f4ec9l3ry_5h.js\":null,\"/_next/static/chunks/44bax-4eob5k0.js\":null,\"/_next/static/chunks/1tijzc831_5jv.js\":null,\"/_next/static/chunks/2qq9afzcih227.js\":null,\"/_next/static/chunks/3t6i_3lvi_934.js\":null,\"/_next/static/chunks/turbopack-2u1d16houkiyo.js\":null,\"/_next/static/chunks/0wj0noag-9_fs.js\":null,\"/_next/static/chunks/1feaf7x9atxyg.js\":null,\"/_next/static/chunks/215c5_uu_1kxq.js\":null,\"/_next/static/chunks/1fp4nmc4rnv7g.js\":null},\"moduleUnknownResources\":{},\"moduleScriptResources\":{\"/_next/static/chunks/2f4ec9l3ry_5h.js\":null}},\"replayNodes\":[[\"sl\",0,[[\"Context\",0,[[\"Context\",0,[[\"ServerInsertedHTMLProvider\",0,[[\"Context\",0,[[\"il\",0,[[\"aW\",0,[[\"aV\",0,[[\"az\",0,[[\"io\",0,[[\"Fragment\",0,[[\"Context\",2,[[\"Context\",0,[[\"Context\",0,[[\"Context\",0,[[\"Context\",0,[[\"Context\",0,[[\"Context\",0,[[\"aW\",0,[[\"aV\",0,[[\"az\",0,[[\"as\",0,[[\"ai\",0,[[\"__next_root_layout_boundary__\",1,[[\"Fragment\",\"c\",[[null,1,[[\"Activity\",\"(store)\",[[\"Context\",\"(store)\",[[null,2,[[\"Fragment\",0,[[\"E\",0,[[\"D\",0,[[\"Fragment\",0,[[\"n\",0,[[\"Fragment\",0,[[\"G\",0,[[\"Fragment\",0,[[null,0,[[\"l\",0,[[\"x\",0,[[\"w\",0,[[\"F\",0,[[\"Context\",0,[[\"Fragment\",\"c\",[[null,1,[[\"Activity\",\"lang|d\",[[\"Context\",\"lang|d\",[[null,2,[[\"Fragment\",0,[[\"E\",0,[[\"D\",0,[[\"Fragment\",0,[[\"n\",0,[[\"Fragment\",0,[[\"G\",0,[[\"Fragment\",0,[[null,0,[[\"l\",0,[[\"x\",0,[[\"w\",0,[[\"F\",0,[[\"Context\",0,[[\"Fragment\",\"c\",[[\"html\",1,[[\"body\",0,[[null,0,[[\"Context\",0,[[null,1,[[\"Activity\",\"account\",[[\"Context\",\"account\",[[null,2,[[\"Fragment\",0,[[\"E\",0,[[\"D\",0,[[\"Fragment\",0,[[\"n\",0,[[\"Fragment\",0,[[\"G\",0,[[\"Fragment\",0,[[null,0,[[\"Fragment\",0,[[\"x\",0,[[\"w\",0,[[\"F\",0,[[\"Context\",0,[[\"Fragment\",\"c\",[[null,1,[[\"Activity\",\"affiliate\",[[\"Context\",\"affiliate\",[[null,2,[[\"Fragment\",0,[[\"E\",0,[[\"D\",0,[[\"Fragment\",0,[[\"n\",0,[[\"Fragment\",0,[[\"G\",0,[[\"Fragment\",0,[[null,0,[[\"Fragment\",0,[[\"x\",0,[[\"w\",0,[[\"F\",0,[[\"Context\",0,[[\"Fragment\",\"c\",[[null,1,[[\"Activity\",\"__PAGE__\",[[\"Context\",\"__PAGE__\",[[null,2,[[\"Fragment\",0,[[\"E\",0,[[\"D\",0,[[\"Fragment\",0,[[\"n\",0,[[\"Fragment\",0,[[\"G\",0,[[\"Fragment\",0,[[null,0,[[\"Fragment\",0,[[\"x\",0,[[\"w\",0,[[\"F\",0,[[\"Context\",0,[[\"Fragment\",\"c\",[[\"Suspense\",0,[],0,[\"Suspense Fallback\",0,[],null],0]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],\"replaySlots\":null}]eJyNWtmWm7q2/Re/3pxzaUxSZIzzYAzIEEsETCftvR9oXHTC9i3bdHvk3+8QuJJKFds+T3IANVNzrrmWVPl7cb4cX/aLr38vnveXJF98/fvHp0USJfn47I8/F0/ccp/G0f45FUSB+xJ9TsXneJ8+x0vhy5e9yAlJ8iTE4hMv/rn49Mdfn/74c3HaVN2/wLP/bD1//qaeXeM7vvzrz8Vff7Eh94fLS89+NBG97hdfF1A9Fqa26ozs2FmHc4ED6RqL/hUL/oUEEmeUpy9G7V9xYJ5JYBfWwenTwDsbB+eUgo4a5bHwBf+MBflCdgoX9wpM1gZ7T/cbu7AK83saGpkP/DMJ0h4HXEZEs0nDVRYBfTA2JsWCf0prvzIAn8eAllEg80mv9CRUmuTgDAYgfSxwGZsjAT4XhU6THODZAPqVrBWR7JQ8qb0sFeQ+EuiV9EoTFwoXAS/DodKSQD9vC8WOgZ8ngpfFtcwR95iRWu6NjXLGATrFdZLFolmR0BwMIPds7P1OGdJQaWPR5IyNzpMQcVEgX5O+zcZ5QCcZIKXpWjmx+WLRL6O1IkahczQA4hPRaeLA740NosmBnLDgZWlNcwPIfFIoDanZM5rHa2VIgdyTnSKSwByi0KHbtdIkhVLGgsThAHG3PjkB/Cmu6ZBuzJz1SSasHgk6SkQzj3fKytWVZxfIbB/yuLYzW+vskD8dY0E6bAtT3q7NX+NO/F5wQM+MyyiQ6phTzslGocnGORHgXbHwVGzXZhuxMXfGZ6M4d0i1W8u1WStZu4nvGPiHpNYv4zgbh0s28PO2l7ltzdOt0LUJ8NsU0Iq8+94OnEsUSINRnmKjUqCny5Ct1Sja4u3aDcqdjUN6xKEzMF7ZPMaBPVPyfcDT+OCY8QFxycEvU0Cb+AB/6i8FPtsbMQq6swFQEx+cHIt2tg9k3tikpxRkWQJ0KQ7868jn7+PctOIcoxDedGJcQyAlcaVfmV4I8HsD0MEAUpOuFS6p/TwFTNNM40oeBXaWBhIXBW2WgpyyZ9Oa7YyNiQX5SmraxwHrQ69sLrJTmqR2aFIoPQlQk9T2le3Jz3VqPE1B3pANLCx6+WLUtGJ7gkVTSjZOw76NgV6QoGX7oCYH2qbgKfummZ7drxpD873detUYuu86Gjyx7xkP6cbkseicYoFxcixckWnYoSx2U4Ge4/UbXW5ok+5umn+L6f04gDA9c9G4R9N+bWnH9lCJi584T0mvXGPRzlLmC6FDyVrJk15pcUArY+NfU0DPt71pcUgnjxrHRE1ck1NS86zP6TX+b1xlSe2X7Pe2MM4f/cyXw11b4IDUUdCd2LxTXKAmDvhTIiKGwSahWU6eeOzgui2S0Gd+VUcBykedVIhpkO3ZANVVC9XV2ajzJgaOhkM6PV+3RRzQq8c4FH3OFvxryvgrNfZ9y+IMh7RJQ2fwgN+7gXxNQVZYJRrjFodmHwV+n/TG50A8F1iQqzEma+cYM9+tpTwOPMa3ttNaFrdcUuvl6Fe838dr9m3OpRtlsIqnJhVTcTv2lcpY4BoidA2u9fM28K9bIW/iwGuY12Dhwjzy7e8LCfM2qf0h6aVjCvjzd9HpcYBeokA6bANafQ8v1zTgCxKaMovTfc98xxlzRhoqw6jPWr+M66e+7fWjL/wcww/N8zsvEVMxubK+W8bNTp6wDbdWkPjY5b/EB/+Ca79/3pnydvN2jwglwF/+Nm9FKNGmZ7+wpX5SjzFzTDdOmwzHZiumYtpLNQkcun/dq9qvSJhPc/dP/5tuzJe4Nvv7uFGb9L/x5Hu84j6e32lioRu2B39INvDKcuFWSJstP+2X/eofnj55Vilz7hj73XBvPTj0x1wSA5pvWb4VbaaZKw748b395r2h/3x/V1NszATIQzrt0xWHXhOHtI1FxG1vGtkKDk2Bfoo3sNkz3gKTJgeueN51Y9wRMO4NjUP423ocj/8v9sq+Qje98SJdSWg3JFiWTBfJcE8fMhcxH/9NH7dn66xDvLOzPbT9tnuoU25bauK0xvM1rn1uK/hXg+EMofwbXp/lL8TFokl3gVTEYsawnOKaNDZ4mzOlMh51kzeprvSx4DBvHXMmLHGL1Oo8tu5qbKGq3Vrj1sKpfX1fvr5Pbs+9W3v7d5mnzG8i4JeRIPPp2vi8780jDqQqBox3hSY18zu7sErvbNRjXXJJA/776OW/vLCz3Kod/fJn3pKadOJXj2vU70OFI4GdYSGnWLg0aWhn7UuS2a95bJ2vfQ02ju8YW/6Wq+A30dBQntR2ZhaKYnPZWB8yPowNamJhWTwzTxfk3Bb8Pv3p0/64Z/veHCJx8klv0Noxr9b+VOuVx8J7/b2Gw+3dmD92LGcUxrA8rj1Hhx3U5Z/9U0C5GNzG5KhtqFobB0n2fixS0/NUR8l8AroGB86wFVCDd08tCeASqjklpVlawOBg4C2xm7XQ1QtcGx0BUIC1WcFCauM6meLlgF7S0UMd13XvYungqF1Wc8s90aZ6AbqbIjMdz+M4hmdqpxr+V40P/AEHfJPU/jkKlhl0lQvpld1Uo9uZMWjdfWxygUqtxcOKx4LR41LjLLVaWgGqsJuIcFi1pEYVdDXe2s1i20F3xbzgdi4YzxZv5s+md2Od5JiEeVJZTrhKrQ35n/3Z+WFaI3VOyeFEE6BzUeDQGb6WD/haWoHNWQHJ8ZD0eFhx0IUcLo0BB3YLS7OCJewQsHs0z9cODvcwVTOYDjdMcMI0PMIE32OSHmASCLA7VGs8qaGABZsjjBN1JaDa4/BgSMhNlpaq1+SfeCrvYfqpz7fx1EHr24rqrK/y7OtG/1F/tN/XfovD8UySwfKD/toHuHjo+jmqSQGBJ0DB5tCAJVxCDrooRyXkcZm1cNB4PMdV5Xv39WfPcOUyrnRf1dqQ+9n/F1eV37K6GQddExerDgL+YOgmTYDcp+tVicZ6jpwmTzGaNFTOsaBXSS+XsaA1qNYr6HocGjwBuzlFasbBmvkEHBBAFJd4aQHYWi68JkA63HL/q++hB74nzvAkMt9z/dH30IzvIZd33K0HZ/whYdhZfT3yuRX9NgZyTjawYR69Hbwlqc0CBkaPSr0gpd0xvkiNRVz6BRw8Hqp5BYeUbg/KlfRT7k6ECz/WKZVx86zX/WNa/LWX0DVm+NF6hmfsq8tru/yAZ+1pkI+D5MXXDNbO+V7/yPdggDvLhcz7WlJrHCorAbv2gF2nJm5eQnclIBdROBdPlbl+EE9z+amD//NtRTXWV3m2q4/xZFNFnbBcPIZ7xPYxph7lKwELUCQAc1CtBlJqHFTxYKlpDlXMI6BJKPAGEkARruewoY2r3s9XaD2Xr8a4Uh2uZbxN7Xt8gn5IanqOxjP3rLd3j+LLCpwSuZWIBNwh1euQqvGw1nOiriQLGAKptY4EzN+Nufha21Ui3tekN6dJftKkuUED4461Hzx+feOO6XP0jW9cauwGb8SIBvZObRoj38RAFr986c23vnKb959jUbA5WKMCubYIAexJ6VRQ1QtLtSVSOhQKGodUVKPSG+Zi0fXaB7GI53ALo7d4I6foVRdvvcVfc72xzhEJupzd4WFWhxSKggWfY2f2b7uPHnqb647vaD0avNZi9VWpLUlp90SFElE1kbiJaKkVR0pUIAGVc1gdLt9uPeSju7nB6GditIdXFqOpset51Xe9NuR+/X6HfbPTzheb9zL0wX+MR/5TwlIvoapJSCAUDxlnuXiJS8yhktZQsAeiMq7zAs36z+uatPYupyWc4fRWJ9/2CLqrNxhfx/sVs6/fsVj9wOM0/h3NmrkFUI7cTIS1zcHSlrCr5xbQWuyueuTiAZUVB11NmtVsdeShepdDfo5DtGccSt/QiG1q33Fn2Z79YqjeDKZHcYgoDoweAr+wVE+0XJtHqiFBtxKgalKokhICJ0eDPqtN14f9fc60Oc66W47vpxxv/HOO/5AvjAdngKclEliNb0sk8CTIzjcC7CzXz3G54qGgtUjVC+im/6BF3kX3OeJmOWK1pcb6Ks+uD7n3unM92fN6XjVU+32O6B/lCBh4vQVsjtQeBwfYIRWOOR6WdguBXlnsPOcmAwR4LkfYSNXu4RFm8TDf0Fcc9OXX/m9yg+JtXY2Dc15YPvJCWlkA9+O5ZUha4jo5HNjZBhVoqAYI9By62RIOZjWnN4/aw329JXN6G2vKsa8u73wVvtfbjoROzu6Sp3uQ1fAR16PaktWTyYBcYwndFY9ch6KhWhJV40iZV8hNJDSslsiFs97gcWf+3v0AnKtRBpXVKO5u8J9f+7/B5E457Jyh4B2WKdffweKw+kMk5UokgSci1xYIwBJS9RIOemW5CmV5GgFtua1P7XssO391NzejmfuByeOoDV3l+Vf/X/GzC5U8DuSeBN1p9hyzux9DJNBaXGYdLO0lHnSKgC1gQetgqUmodEo05DUubQmV2jU6KO9jaOerxr0asrfm7jymc/TYN+RN71Zjv4kjk91Psr8B3epH44M3WI9wqU6JB63HgV8g1ywRQBVUaYECvSCu0cHaaElJC6Iac7hcr+eG1/ua+Tpq7n5Ak8Z44uEFDvozpPADX9M7be4s8+BuQM4t12jxgCisbQkOK475haVqHR6gCF28RAAux1jqpf9LwPu7AfPBGVpbzp1lrPFugPVVnj1qf8RTj/Vfn77eDXzE9egepyOlwSOAWzxUIikzjgRObgG9JirJoerU7LwGB2+Jixsun5fX2X/+s/i0uETZefH1j8V5f7kUh+y8+OvT4nyJ6H7xVeS4T4tLUe/Pl6g+Lb7yX2RJeBJk6Ylb8v9++sJ/Wuy7U8H+C8DT5yX7+GXfRLRIo8vU+wd7EqXO8Xj5Hr1ENYrqPZvsrx8/Pi32h+SlP132qXK8HtLVC1vG3z9+/Ph/KZMRdA==",
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/!KHN0b3JlKQ/$d$lang",
+    "/!KHN0b3JlKQ/$d$lang/account/affiliate/__PAGE__"
+  ],
+  "prefetchHints": {
+    "hints": 49216,
+    "slots": {
+      "children": {
+        "hints": 49248,
+        "slots": {
+          "children": {
+            "hints": 49184,
+            "slots": {
+              "children": {
+                "hints": 49216,
+                "slots": {
+                  "children": {
+                    "hints": 49248,
+                    "slots": {
+                      "children": {
+                        "hints": 49312,
+                        "slots": null
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "routeCache": {
+    "key": "/route-cache/APP_PAGE/bb1fe3c7d5dc8d8e6ebc8d020519cdde9439e322adf2215a38c28986fdfdd39f/$/pt/account/affiliate",
+    "owner": {
+      "kind": "APP_PAGE",
+      "sourceRoute": "/(store)/[lang]/account/affiliate/page"
+    },
+    "isFallback": false
+  }
+}

@@ -1,0 +1,1012 @@
+{
+  "version": 3,
+  "pages404": true,
+  "appType": "app",
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [],
+  "headers": [
+    {
+      "source": "/:path*",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=(), payment=()"
+        }
+      ],
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))?(?:/)?$"
+    }
+  ],
+  "onMatchHeaders": [],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [],
+    "fallback": []
+  },
+  "dynamicRoutes": [
+    {
+      "page": "/admin/affiliates/[id]",
+      "regex": "^/admin/affiliates/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/admin/affiliates/(?<nxtPid>[^/]+?)(?:/)?$",
+      "prefetchSegmentDataRoutes": [
+        {
+          "destination": "/admin/affiliates/[id].segments/!KGFkbWluKQ/admin/!KHBhbmVsKQ/affiliates/$d$id$segment",
+          "source": "^/admin/affiliates/(?<nxtPid>[^/]+?)\\.segments/!KGFkbWluKQ/admin/!KHBhbmVsKQ/affiliates/\\$d\\$id(?<segment>/__PAGE__\\.segment\\.rsc|\\.segment\\.rsc)(?:/)?$",
+          "routeKeys": {
+            "nxtPid": "nxtPid"
+          }
+        }
+      ]
+    },
+    {
+      "page": "/admin/orders/[id]",
+      "regex": "^/admin/orders/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/admin/orders/(?<nxtPid>[^/]+?)(?:/)?$",
+      "prefetchSegmentDataRoutes": [
+        {
+          "destination": "/admin/orders/[id].segments/!KGFkbWluKQ/admin/!KHBhbmVsKQ/orders/$d$id$segment",
+          "source": "^/admin/orders/(?<nxtPid>[^/]+?)\\.segments/!KGFkbWluKQ/admin/!KHBhbmVsKQ/orders/\\$d\\$id(?<segment>/__PAGE__\\.segment\\.rsc|\\.segment\\.rsc)(?:/)?$",
+          "routeKeys": {
+            "nxtPid": "nxtPid"
+          }
+        }
+      ]
+    },
+    {
+      "page": "/admin/orders/[id]/proof",
+      "regex": "^/admin/orders/([^/]+?)/proof(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/admin/orders/(?<nxtPid>[^/]+?)/proof(?:/)?$"
+    },
+    {
+      "page": "/admin/products/[id]",
+      "regex": "^/admin/products/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/admin/products/(?<nxtPid>[^/]+?)(?:/)?$",
+      "prefetchSegmentDataRoutes": [
+        {
+          "destination": "/admin/products/[id].segments/!KGFkbWluKQ/admin/!KHBhbmVsKQ/products/$d$id$segment",
+          "source": "^/admin/products/(?<nxtPid>[^/]+?)\\.segments/!KGFkbWluKQ/admin/!KHBhbmVsKQ/products/\\$d\\$id(?<segment>/__PAGE__\\.segment\\.rsc|\\.segment\\.rsc)(?:/)?$",
+          "routeKeys": {
+            "nxtPid": "nxtPid"
+          }
+        }
+      ]
+    },
+    {
+      "page": "/uploads/[...path]",
+      "regex": "^/uploads/(.+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPpath": "nxtPpath"
+      },
+      "namedRegex": "^/uploads/(?<nxtPpath>.+?)(?:/)?$"
+    },
+    {
+      "page": "/[lang]",
+      "regex": "^/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPlang": "nxtPlang"
+      },
+      "namedRegex": "^/(?<nxtPlang>[^/]+?)(?:/)?$",
+      "prefetchSegmentDataRoutes": [
+        {
+          "destination": "/[lang].segments/!KHN0b3JlKQ/$d$lang$segment",
+          "source": "^/(?<nxtPlang>[^/]+?)\\.segments/!KHN0b3JlKQ/\\$d\\$lang(?<segment>/__PAGE__\\.segment\\.rsc|\\.segment\\.rsc)(?:/)?$",
+          "routeKeys": {
+            "nxtPlang": "nxtPlang"
+          }
+        }
+      ]
+    },
+    {
+      "page": "/[lang]/about",
+      "regex": "^/([^/]+?)/about(?:/)?$",
+      "routeKeys": {
+        "nxtPlang": "nxtPlang"
+      },
+      "namedRegex": "^/(?<nxtPlang>[^/]+?)/about(?:/)?$",
+      "prefetchSegmentDataRoutes": [
+        {
+          "destination": "/[lang]/about.segments/!KHN0b3JlKQ/$d$lang/!KHNob3Ap/about$segment",
+          "source": "^/(?<nxtPlang>[^/]+?)/about\\.segments/!KHN0b3JlKQ/\\$d\\$lang/!KHNob3Ap/about(?<segment>/__PAGE__\\.segment\\.rsc|\\.segment\\.rsc)(?:/)?$",
+          "routeKeys": {
+            "nxtPlang": "nxtPlang"
+          }
+        }
+      ]
+    },
+    {
+      "page": "/[lang]/account",
+      "regex": "^/([^/]+?)/account(?:/)?$",
+      "routeKeys": {
+        "nxtPlang": "nxtPlang"
+      },
+      "namedRegex": "^/(?<nxtPlang>[^/]+?)/account(?:/)?$",
+      "prefetchSegmentDataRoutes": [
+        {
+          "destination": "/[lang]/account.segments/!KHN0b3JlKQ/$d$lang/account$segment",
+          "source": "^/(?<nxtPlang>[^/]+?)/account\\.segments/!KHN0b3JlKQ/\\$d\\$lang/account(?<segment>/__PAGE__\\.segment\\.rsc|\\.segment\\.rsc)(?:/)?$",
+          "routeKeys": {
+            "nxtPlang": "nxtPlang"
+          }
+        }
+      ]
+    },
+    {
+      "page": "/[lang]/account/affiliate",
+      "regex": "^/([^/]+?)/account/affiliate(?:/)?$",
+      "routeKeys": {
+        "nxtPlang": "nxtPlang"
+      },
+      "namedRegex": "^/(?<nxtPlang>[^/]+?)/account/affiliate(?:/)?$",
+      "prefetchSegmentDataRoutes": [
+        {
+          "destination": "/[lang]/account/affiliate.segments/!KHN0b3JlKQ/$d$lang/account/affiliate$segment",
+          "source": "^/(?<nxtPlang>[^/]+?)/account/affiliate\\.segments/!KHN0b3JlKQ/\\$d\\$lang/account/affiliate(?<segment>/__PAGE__\\.segment\\.rsc|\\.segment\\.rsc)(?:/)?$",
+          "routeKeys": {
+            "nxtPlang": "nxtPlang"
+          }
+        }
+      ]
+    },
+    {
+      "page": "/[lang]/account/verify",
+      "regex": "^/([^/]+?)/account/verify(?:/)?$",
+      "routeKeys": {
+        "nxtPlang": "nxtPlang"
+      },
+      "namedRegex": "^/(?<nxtPlang>[^/]+?)/account/verify(?:/)?$",
+      "prefetchSegmentDataRoutes": [
+        {
+          "destination": "/[lang]/account/verify.segments/!KHN0b3JlKQ/$d$lang/account/verify$segment",
+          "source": "^/(?<nxtPlang>[^/]+?)/account/verify\\.segments/!KHN0b3JlKQ/\\$d\\$lang/account/verify(?<segment>/__PAGE__\\.segment\\.rsc|\\.segment\\.rsc)(?:/)?$",
+          "routeKeys": {
+            "nxtPlang": "nxtPlang"
+          }
+        }
+      ]
+    },
+    {
+      "page": "/[lang]/affiliate-program",
+      "regex": "^/([^/]+?)/affiliate\\-program(?:/)?$",
+      "routeKeys": {
+        "nxtPlang": "nxtPlang"
+      },
+      "namedRegex": "^/(?<nxtPlang>[^/]+?)/affiliate\\-program(?:/)?$",
+      "prefetchSegmentDataRoutes": [
+        {
+          "destination": "/[lang]/affiliate-program.segments/!KHN0b3JlKQ/$d$lang/!KHNob3Ap/affiliate-program$segment",
+          "source": "^/(?<nxtPlang>[^/]+?)/affiliate\\-program\\.segments/!KHN0b3JlKQ/\\$d\\$lang/!KHNob3Ap/affiliate\\-program(?<segment>/__PAGE__\\.segment\\.rsc|\\.segment\\.rsc)(?:/)?$",
+          "routeKeys": {
+            "nxtPlang": "nxtPlang"
+          }
+        }
+      ]
+    },
+    {
+      "page": "/[lang]/best-sellers",
+      "regex": "^/([^/]+?)/best\\-sellers(?:/)?$",
+      "routeKeys": {
+        "nxtPlang": "nxtPlang"
+      },
+      "namedRegex": "^/(?<nxtPlang>[^/]+?)/best\\-sellers(?:/)?$",
+      "prefetchSegmentDataRoutes": [
+        {
+          "destination": "/[lang]/best-sellers.segments/!KHN0b3JlKQ/$d$lang/!KHNob3Ap/best-sellers$segment",
+          "source": "^/(?<nxtPlang>[^/]+?)/best\\-sellers\\.segments/!KHN0b3JlKQ/\\$d\\$lang/!KHNob3Ap/best\\-sellers(?<segment>/__PAGE__\\.segment\\.rsc|\\.segment\\.rsc)(?:/)?$",
+          "routeKeys": {
+            "nxtPlang": "nxtPlang"
+          }
+        }
+      ]
+    },
+    {
+      "page": "/[lang]/cart",
+      "regex": "^/([^/]+?)/cart(?:/)?$",
+      "routeKeys": {
+        "nxtPlang": "nxtPlang"
+      },
+      "namedRegex": "^/(?<nxtPlang>[^/]+?)/cart(?:/)?$",
+      "prefetchSegmentDataRoutes": [
+        {
+          "destination": "/[lang]/cart.segments/!KHN0b3JlKQ/$d$lang/!KHNob3Ap/cart$segment",
+          "source": "^/(?<nxtPlang>[^/]+?)/cart\\.segments/!KHN0b3JlKQ/\\$d\\$lang/!KHNob3Ap/cart(?<segment>/__PAGE__\\.segment\\.rsc|\\.segment\\.rsc)(?:/)?$",
+          "routeKeys": {
+            "nxtPlang": "nxtPlang"
+          }
+        }
+      ]
+    },
+    {
+      "page": "/[lang]/catalog",
+      "regex": "^/([^/]+?)/catalog(?:/)?$",
+      "routeKeys": {
+        "nxtPlang": "nxtPlang"
+      },
+      "namedRegex": "^/(?<nxtPlang>[^/]+?)/catalog(?:/)?$",
+      "prefetchSegmentDataRoutes": [
+        {
+          "destination": "/[lang]/catalog.segments/!KHN0b3JlKQ/$d$lang/!KHNob3Ap/catalog$segment",
+          "source": "^/(?<nxtPlang>[^/]+?)/catalog\\.segments/!KHN0b3JlKQ/\\$d\\$lang/!KHNob3Ap/catalog(?<segment>/__PAGE__\\.segment\\.rsc|\\.segment\\.rsc)(?:/)?$",
+          "routeKeys": {
+            "nxtPlang": "nxtPlang"
+          }
+        }
+      ]
+    },
+    {
+      "sourcePage": "/[lang]/category/[slug]",
+      "page": "/en/category/[slug]",
+      "regex": "^/en/category/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPslug": "nxtPslug"
+      },
+      "namedRegex": "^/en/category/(?<nxtPslug>[^/]+?)(?:/)?$",
+      "skipInternalRouting": true,
+      "prefetchSegmentDataRoutes": [
+        {
+          "destination": "/en/category/[slug].segments/!KHN0b3JlKQ/$d$lang/!KHNob3Ap/category/$d$slug$segment",
+          "source": "^/en/category/(?<nxtPslug>[^/]+?)\\.segments/!KHN0b3JlKQ/\\$d\\$lang/!KHNob3Ap/category/\\$d\\$slug(?<segment>/__PAGE__\\.segment\\.rsc|\\.segment\\.rsc)(?:/)?$",
+          "routeKeys": {
+            "nxtPslug": "nxtPslug"
+          }
+        }
+      ]
+    },
+    {
+      "sourcePage": "/[lang]/category/[slug]",
+      "page": "/es/category/[slug]",
+      "regex": "^/es/category/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPslug": "nxtPslug"
+      },
+      "namedRegex": "^/es/category/(?<nxtPslug>[^/]+?)(?:/)?$",
+      "skipInternalRouting": true,
+      "prefetchSegmentDataRoutes": [
+        {
+          "destination": "/es/category/[slug].segments/!KHN0b3JlKQ/$d$lang/!KHNob3Ap/category/$d$slug$segment",
+          "source": "^/es/category/(?<nxtPslug>[^/]+?)\\.segments/!KHN0b3JlKQ/\\$d\\$lang/!KHNob3Ap/category/\\$d\\$slug(?<segment>/__PAGE__\\.segment\\.rsc|\\.segment\\.rsc)(?:/)?$",
+          "routeKeys": {
+            "nxtPslug": "nxtPslug"
+          }
+        }
+      ]
+    },
+    {
+      "sourcePage": "/[lang]/category/[slug]",
+      "page": "/pt/category/[slug]",
+      "regex": "^/pt/category/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPslug": "nxtPslug"
+      },
+      "namedRegex": "^/pt/category/(?<nxtPslug>[^/]+?)(?:/)?$",
+      "skipInternalRouting": true,
+      "prefetchSegmentDataRoutes": [
+        {
+          "destination": "/pt/category/[slug].segments/!KHN0b3JlKQ/$d$lang/!KHNob3Ap/category/$d$slug$segment",
+          "source": "^/pt/category/(?<nxtPslug>[^/]+?)\\.segments/!KHN0b3JlKQ/\\$d\\$lang/!KHNob3Ap/category/\\$d\\$slug(?<segment>/__PAGE__\\.segment\\.rsc|\\.segment\\.rsc)(?:/)?$",
+          "routeKeys": {
+            "nxtPslug": "nxtPslug"
+          }
+        }
+      ]
+    },
+    {
+      "page": "/[lang]/category/[slug]",
+      "regex": "^/([^/]+?)/category/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPlang": "nxtPlang",
+        "nxtPslug": "nxtPslug"
+      },
+      "namedRegex": "^/(?<nxtPlang>[^/]+?)/category/(?<nxtPslug>[^/]+?)(?:/)?$",
+      "prefetchSegmentDataRoutes": [
+        {
+          "destination": "/[lang]/category/[slug].segments/!KHN0b3JlKQ/$d$lang/!KHNob3Ap/category/$d$slug$segment",
+          "source": "^/(?<nxtPlang>[^/]+?)/category/(?<nxtPslug>[^/]+?)\\.segments/!KHN0b3JlKQ/\\$d\\$lang/!KHNob3Ap/category/\\$d\\$slug(?<segment>/__PAGE__\\.segment\\.rsc|\\.segment\\.rsc)(?:/)?$",
+          "routeKeys": {
+            "nxtPlang": "nxtPlang",
+            "nxtPslug": "nxtPslug"
+          }
+        }
+      ]
+    },
+    {
+      "page": "/[lang]/checkout",
+      "regex": "^/([^/]+?)/checkout(?:/)?$",
+      "routeKeys": {
+        "nxtPlang": "nxtPlang"
+      },
+      "namedRegex": "^/(?<nxtPlang>[^/]+?)/checkout(?:/)?$",
+      "prefetchSegmentDataRoutes": [
+        {
+          "destination": "/[lang]/checkout.segments/!KHN0b3JlKQ/$d$lang/!KHNob3Ap/checkout$segment",
+          "source": "^/(?<nxtPlang>[^/]+?)/checkout\\.segments/!KHN0b3JlKQ/\\$d\\$lang/!KHNob3Ap/checkout(?<segment>/__PAGE__\\.segment\\.rsc|\\.segment\\.rsc)(?:/)?$",
+          "routeKeys": {
+            "nxtPlang": "nxtPlang"
+          }
+        }
+      ]
+    },
+    {
+      "page": "/[lang]/coa",
+      "regex": "^/([^/]+?)/coa(?:/)?$",
+      "routeKeys": {
+        "nxtPlang": "nxtPlang"
+      },
+      "namedRegex": "^/(?<nxtPlang>[^/]+?)/coa(?:/)?$",
+      "prefetchSegmentDataRoutes": [
+        {
+          "destination": "/[lang]/coa.segments/!KHN0b3JlKQ/$d$lang/!KHNob3Ap/coa$segment",
+          "source": "^/(?<nxtPlang>[^/]+?)/coa\\.segments/!KHN0b3JlKQ/\\$d\\$lang/!KHNob3Ap/coa(?<segment>/__PAGE__\\.segment\\.rsc|\\.segment\\.rsc)(?:/)?$",
+          "routeKeys": {
+            "nxtPlang": "nxtPlang"
+          }
+        }
+      ]
+    },
+    {
+      "sourcePage": "/[lang]/coa/[code]",
+      "page": "/en/coa/[code]",
+      "regex": "^/en/coa/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPcode": "nxtPcode"
+      },
+      "namedRegex": "^/en/coa/(?<nxtPcode>[^/]+?)(?:/)?$",
+      "skipInternalRouting": true,
+      "prefetchSegmentDataRoutes": [
+        {
+          "destination": "/en/coa/[code].segments/!KHN0b3JlKQ/$d$lang/!KHNob3Ap/coa/$d$code$segment",
+          "source": "^/en/coa/(?<nxtPcode>[^/]+?)\\.segments/!KHN0b3JlKQ/\\$d\\$lang/!KHNob3Ap/coa/\\$d\\$code(?<segment>/__PAGE__\\.segment\\.rsc|\\.segment\\.rsc)(?:/)?$",
+          "routeKeys": {
+            "nxtPcode": "nxtPcode"
+          }
+        }
+      ]
+    },
+    {
+      "sourcePage": "/[lang]/coa/[code]",
+      "page": "/es/coa/[code]",
+      "regex": "^/es/coa/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPcode": "nxtPcode"
+      },
+      "namedRegex": "^/es/coa/(?<nxtPcode>[^/]+?)(?:/)?$",
+      "skipInternalRouting": true,
+      "prefetchSegmentDataRoutes": [
+        {
+          "destination": "/es/coa/[code].segments/!KHN0b3JlKQ/$d$lang/!KHNob3Ap/coa/$d$code$segment",
+          "source": "^/es/coa/(?<nxtPcode>[^/]+?)\\.segments/!KHN0b3JlKQ/\\$d\\$lang/!KHNob3Ap/coa/\\$d\\$code(?<segment>/__PAGE__\\.segment\\.rsc|\\.segment\\.rsc)(?:/)?$",
+          "routeKeys": {
+            "nxtPcode": "nxtPcode"
+          }
+        }
+      ]
+    },
+    {
+      "sourcePage": "/[lang]/coa/[code]",
+      "page": "/pt/coa/[code]",
+      "regex": "^/pt/coa/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPcode": "nxtPcode"
+      },
+      "namedRegex": "^/pt/coa/(?<nxtPcode>[^/]+?)(?:/)?$",
+      "skipInternalRouting": true,
+      "prefetchSegmentDataRoutes": [
+        {
+          "destination": "/pt/coa/[code].segments/!KHN0b3JlKQ/$d$lang/!KHNob3Ap/coa/$d$code$segment",
+          "source": "^/pt/coa/(?<nxtPcode>[^/]+?)\\.segments/!KHN0b3JlKQ/\\$d\\$lang/!KHNob3Ap/coa/\\$d\\$code(?<segment>/__PAGE__\\.segment\\.rsc|\\.segment\\.rsc)(?:/)?$",
+          "routeKeys": {
+            "nxtPcode": "nxtPcode"
+          }
+        }
+      ]
+    },
+    {
+      "page": "/[lang]/coa/[code]",
+      "regex": "^/([^/]+?)/coa/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPlang": "nxtPlang",
+        "nxtPcode": "nxtPcode"
+      },
+      "namedRegex": "^/(?<nxtPlang>[^/]+?)/coa/(?<nxtPcode>[^/]+?)(?:/)?$",
+      "prefetchSegmentDataRoutes": [
+        {
+          "destination": "/[lang]/coa/[code].segments/!KHN0b3JlKQ/$d$lang/!KHNob3Ap/coa/$d$code$segment",
+          "source": "^/(?<nxtPlang>[^/]+?)/coa/(?<nxtPcode>[^/]+?)\\.segments/!KHN0b3JlKQ/\\$d\\$lang/!KHNob3Ap/coa/\\$d\\$code(?<segment>/__PAGE__\\.segment\\.rsc|\\.segment\\.rsc)(?:/)?$",
+          "routeKeys": {
+            "nxtPlang": "nxtPlang",
+            "nxtPcode": "nxtPcode"
+          }
+        }
+      ]
+    },
+    {
+      "page": "/[lang]/contact",
+      "regex": "^/([^/]+?)/contact(?:/)?$",
+      "routeKeys": {
+        "nxtPlang": "nxtPlang"
+      },
+      "namedRegex": "^/(?<nxtPlang>[^/]+?)/contact(?:/)?$",
+      "prefetchSegmentDataRoutes": [
+        {
+          "destination": "/[lang]/contact.segments/!KHN0b3JlKQ/$d$lang/!KHNob3Ap/contact$segment",
+          "source": "^/(?<nxtPlang>[^/]+?)/contact\\.segments/!KHN0b3JlKQ/\\$d\\$lang/!KHNob3Ap/contact(?<segment>/__PAGE__\\.segment\\.rsc|\\.segment\\.rsc)(?:/)?$",
+          "routeKeys": {
+            "nxtPlang": "nxtPlang"
+          }
+        }
+      ]
+    },
+    {
+      "page": "/[lang]/cost-per-dose-calculator",
+      "regex": "^/([^/]+?)/cost\\-per\\-dose\\-calculator(?:/)?$",
+      "routeKeys": {
+        "nxtPlang": "nxtPlang"
+      },
+      "namedRegex": "^/(?<nxtPlang>[^/]+?)/cost\\-per\\-dose\\-calculator(?:/)?$",
+      "prefetchSegmentDataRoutes": [
+        {
+          "destination": "/[lang]/cost-per-dose-calculator.segments/!KHN0b3JlKQ/$d$lang/!KHNob3Ap/cost-per-dose-calculator$segment",
+          "source": "^/(?<nxtPlang>[^/]+?)/cost\\-per\\-dose\\-calculator\\.segments/!KHN0b3JlKQ/\\$d\\$lang/!KHNob3Ap/cost\\-per\\-dose\\-calculator(?<segment>/__PAGE__\\.segment\\.rsc|\\.segment\\.rsc)(?:/)?$",
+          "routeKeys": {
+            "nxtPlang": "nxtPlang"
+          }
+        }
+      ]
+    },
+    {
+      "page": "/[lang]/forgot-password",
+      "regex": "^/([^/]+?)/forgot\\-password(?:/)?$",
+      "routeKeys": {
+        "nxtPlang": "nxtPlang"
+      },
+      "namedRegex": "^/(?<nxtPlang>[^/]+?)/forgot\\-password(?:/)?$",
+      "prefetchSegmentDataRoutes": [
+        {
+          "destination": "/[lang]/forgot-password.segments/!KHN0b3JlKQ/$d$lang/forgot-password$segment",
+          "source": "^/(?<nxtPlang>[^/]+?)/forgot\\-password\\.segments/!KHN0b3JlKQ/\\$d\\$lang/forgot\\-password(?<segment>/__PAGE__\\.segment\\.rsc|\\.segment\\.rsc)(?:/)?$",
+          "routeKeys": {
+            "nxtPlang": "nxtPlang"
+          }
+        }
+      ]
+    },
+    {
+      "page": "/[lang]/help/faq",
+      "regex": "^/([^/]+?)/help/faq(?:/)?$",
+      "routeKeys": {
+        "nxtPlang": "nxtPlang"
+      },
+      "namedRegex": "^/(?<nxtPlang>[^/]+?)/help/faq(?:/)?$",
+      "prefetchSegmentDataRoutes": [
+        {
+          "destination": "/[lang]/help/faq.segments/!KHN0b3JlKQ/$d$lang/!KHNob3Ap/help/faq$segment",
+          "source": "^/(?<nxtPlang>[^/]+?)/help/faq\\.segments/!KHN0b3JlKQ/\\$d\\$lang/!KHNob3Ap/help/faq(?<segment>/__PAGE__\\.segment\\.rsc|\\.segment\\.rsc)(?:/)?$",
+          "routeKeys": {
+            "nxtPlang": "nxtPlang"
+          }
+        }
+      ]
+    },
+    {
+      "page": "/[lang]/help/fees",
+      "regex": "^/([^/]+?)/help/fees(?:/)?$",
+      "routeKeys": {
+        "nxtPlang": "nxtPlang"
+      },
+      "namedRegex": "^/(?<nxtPlang>[^/]+?)/help/fees(?:/)?$",
+      "prefetchSegmentDataRoutes": [
+        {
+          "destination": "/[lang]/help/fees.segments/!KHN0b3JlKQ/$d$lang/!KHNob3Ap/help/fees$segment",
+          "source": "^/(?<nxtPlang>[^/]+?)/help/fees\\.segments/!KHN0b3JlKQ/\\$d\\$lang/!KHNob3Ap/help/fees(?<segment>/__PAGE__\\.segment\\.rsc|\\.segment\\.rsc)(?:/)?$",
+          "routeKeys": {
+            "nxtPlang": "nxtPlang"
+          }
+        }
+      ]
+    },
+    {
+      "page": "/[lang]/help/shipping",
+      "regex": "^/([^/]+?)/help/shipping(?:/)?$",
+      "routeKeys": {
+        "nxtPlang": "nxtPlang"
+      },
+      "namedRegex": "^/(?<nxtPlang>[^/]+?)/help/shipping(?:/)?$",
+      "prefetchSegmentDataRoutes": [
+        {
+          "destination": "/[lang]/help/shipping.segments/!KHN0b3JlKQ/$d$lang/!KHNob3Ap/help/shipping$segment",
+          "source": "^/(?<nxtPlang>[^/]+?)/help/shipping\\.segments/!KHN0b3JlKQ/\\$d\\$lang/!KHNob3Ap/help/shipping(?<segment>/__PAGE__\\.segment\\.rsc|\\.segment\\.rsc)(?:/)?$",
+          "routeKeys": {
+            "nxtPlang": "nxtPlang"
+          }
+        }
+      ]
+    },
+    {
+      "page": "/[lang]/legal/terms",
+      "regex": "^/([^/]+?)/legal/terms(?:/)?$",
+      "routeKeys": {
+        "nxtPlang": "nxtPlang"
+      },
+      "namedRegex": "^/(?<nxtPlang>[^/]+?)/legal/terms(?:/)?$",
+      "prefetchSegmentDataRoutes": [
+        {
+          "destination": "/[lang]/legal/terms.segments/!KHN0b3JlKQ/$d$lang/!KHNob3Ap/legal/terms$segment",
+          "source": "^/(?<nxtPlang>[^/]+?)/legal/terms\\.segments/!KHN0b3JlKQ/\\$d\\$lang/!KHNob3Ap/legal/terms(?<segment>/__PAGE__\\.segment\\.rsc|\\.segment\\.rsc)(?:/)?$",
+          "routeKeys": {
+            "nxtPlang": "nxtPlang"
+          }
+        }
+      ]
+    },
+    {
+      "page": "/[lang]/login",
+      "regex": "^/([^/]+?)/login(?:/)?$",
+      "routeKeys": {
+        "nxtPlang": "nxtPlang"
+      },
+      "namedRegex": "^/(?<nxtPlang>[^/]+?)/login(?:/)?$",
+      "prefetchSegmentDataRoutes": [
+        {
+          "destination": "/[lang]/login.segments/!KHN0b3JlKQ/$d$lang/login$segment",
+          "source": "^/(?<nxtPlang>[^/]+?)/login\\.segments/!KHN0b3JlKQ/\\$d\\$lang/login(?<segment>/__PAGE__\\.segment\\.rsc|\\.segment\\.rsc)(?:/)?$",
+          "routeKeys": {
+            "nxtPlang": "nxtPlang"
+          }
+        }
+      ]
+    },
+    {
+      "sourcePage": "/[lang]/order/[number]",
+      "page": "/en/order/[number]",
+      "regex": "^/en/order/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPnumber": "nxtPnumber"
+      },
+      "namedRegex": "^/en/order/(?<nxtPnumber>[^/]+?)(?:/)?$",
+      "skipInternalRouting": true,
+      "prefetchSegmentDataRoutes": [
+        {
+          "destination": "/en/order/[number].segments/!KHN0b3JlKQ/$d$lang/!KHNob3Ap/order/$d$number$segment",
+          "source": "^/en/order/(?<nxtPnumber>[^/]+?)\\.segments/!KHN0b3JlKQ/\\$d\\$lang/!KHNob3Ap/order/\\$d\\$number(?<segment>/__PAGE__\\.segment\\.rsc|\\.segment\\.rsc)(?:/)?$",
+          "routeKeys": {
+            "nxtPnumber": "nxtPnumber"
+          }
+        }
+      ]
+    },
+    {
+      "sourcePage": "/[lang]/order/[number]",
+      "page": "/es/order/[number]",
+      "regex": "^/es/order/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPnumber": "nxtPnumber"
+      },
+      "namedRegex": "^/es/order/(?<nxtPnumber>[^/]+?)(?:/)?$",
+      "skipInternalRouting": true,
+      "prefetchSegmentDataRoutes": [
+        {
+          "destination": "/es/order/[number].segments/!KHN0b3JlKQ/$d$lang/!KHNob3Ap/order/$d$number$segment",
+          "source": "^/es/order/(?<nxtPnumber>[^/]+?)\\.segments/!KHN0b3JlKQ/\\$d\\$lang/!KHNob3Ap/order/\\$d\\$number(?<segment>/__PAGE__\\.segment\\.rsc|\\.segment\\.rsc)(?:/)?$",
+          "routeKeys": {
+            "nxtPnumber": "nxtPnumber"
+          }
+        }
+      ]
+    },
+    {
+      "sourcePage": "/[lang]/order/[number]",
+      "page": "/pt/order/[number]",
+      "regex": "^/pt/order/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPnumber": "nxtPnumber"
+      },
+      "namedRegex": "^/pt/order/(?<nxtPnumber>[^/]+?)(?:/)?$",
+      "skipInternalRouting": true,
+      "prefetchSegmentDataRoutes": [
+        {
+          "destination": "/pt/order/[number].segments/!KHN0b3JlKQ/$d$lang/!KHNob3Ap/order/$d$number$segment",
+          "source": "^/pt/order/(?<nxtPnumber>[^/]+?)\\.segments/!KHN0b3JlKQ/\\$d\\$lang/!KHNob3Ap/order/\\$d\\$number(?<segment>/__PAGE__\\.segment\\.rsc|\\.segment\\.rsc)(?:/)?$",
+          "routeKeys": {
+            "nxtPnumber": "nxtPnumber"
+          }
+        }
+      ]
+    },
+    {
+      "page": "/[lang]/order/[number]",
+      "regex": "^/([^/]+?)/order/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPlang": "nxtPlang",
+        "nxtPnumber": "nxtPnumber"
+      },
+      "namedRegex": "^/(?<nxtPlang>[^/]+?)/order/(?<nxtPnumber>[^/]+?)(?:/)?$",
+      "prefetchSegmentDataRoutes": [
+        {
+          "destination": "/[lang]/order/[number].segments/!KHN0b3JlKQ/$d$lang/!KHNob3Ap/order/$d$number$segment",
+          "source": "^/(?<nxtPlang>[^/]+?)/order/(?<nxtPnumber>[^/]+?)\\.segments/!KHN0b3JlKQ/\\$d\\$lang/!KHNob3Ap/order/\\$d\\$number(?<segment>/__PAGE__\\.segment\\.rsc|\\.segment\\.rsc)(?:/)?$",
+          "routeKeys": {
+            "nxtPlang": "nxtPlang",
+            "nxtPnumber": "nxtPnumber"
+          }
+        }
+      ]
+    },
+    {
+      "sourcePage": "/[lang]/peptide/[file]",
+      "page": "/en/peptide/[file]",
+      "regex": "^/en/peptide/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPfile": "nxtPfile"
+      },
+      "namedRegex": "^/en/peptide/(?<nxtPfile>[^/]+?)(?:/)?$",
+      "skipInternalRouting": true,
+      "prefetchSegmentDataRoutes": [
+        {
+          "destination": "/en/peptide/[file].segments/!KHN0b3JlKQ/$d$lang/!KHNob3Ap/peptide/$d$file$segment",
+          "source": "^/en/peptide/(?<nxtPfile>[^/]+?)\\.segments/!KHN0b3JlKQ/\\$d\\$lang/!KHNob3Ap/peptide/\\$d\\$file(?<segment>/__PAGE__\\.segment\\.rsc|\\.segment\\.rsc)(?:/)?$",
+          "routeKeys": {
+            "nxtPfile": "nxtPfile"
+          }
+        }
+      ]
+    },
+    {
+      "sourcePage": "/[lang]/peptide/[file]",
+      "page": "/es/peptide/[file]",
+      "regex": "^/es/peptide/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPfile": "nxtPfile"
+      },
+      "namedRegex": "^/es/peptide/(?<nxtPfile>[^/]+?)(?:/)?$",
+      "skipInternalRouting": true,
+      "prefetchSegmentDataRoutes": [
+        {
+          "destination": "/es/peptide/[file].segments/!KHN0b3JlKQ/$d$lang/!KHNob3Ap/peptide/$d$file$segment",
+          "source": "^/es/peptide/(?<nxtPfile>[^/]+?)\\.segments/!KHN0b3JlKQ/\\$d\\$lang/!KHNob3Ap/peptide/\\$d\\$file(?<segment>/__PAGE__\\.segment\\.rsc|\\.segment\\.rsc)(?:/)?$",
+          "routeKeys": {
+            "nxtPfile": "nxtPfile"
+          }
+        }
+      ]
+    },
+    {
+      "sourcePage": "/[lang]/peptide/[file]",
+      "page": "/pt/peptide/[file]",
+      "regex": "^/pt/peptide/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPfile": "nxtPfile"
+      },
+      "namedRegex": "^/pt/peptide/(?<nxtPfile>[^/]+?)(?:/)?$",
+      "skipInternalRouting": true,
+      "prefetchSegmentDataRoutes": [
+        {
+          "destination": "/pt/peptide/[file].segments/!KHN0b3JlKQ/$d$lang/!KHNob3Ap/peptide/$d$file$segment",
+          "source": "^/pt/peptide/(?<nxtPfile>[^/]+?)\\.segments/!KHN0b3JlKQ/\\$d\\$lang/!KHNob3Ap/peptide/\\$d\\$file(?<segment>/__PAGE__\\.segment\\.rsc|\\.segment\\.rsc)(?:/)?$",
+          "routeKeys": {
+            "nxtPfile": "nxtPfile"
+          }
+        }
+      ]
+    },
+    {
+      "page": "/[lang]/peptide/[file]",
+      "regex": "^/([^/]+?)/peptide/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPlang": "nxtPlang",
+        "nxtPfile": "nxtPfile"
+      },
+      "namedRegex": "^/(?<nxtPlang>[^/]+?)/peptide/(?<nxtPfile>[^/]+?)(?:/)?$",
+      "prefetchSegmentDataRoutes": [
+        {
+          "destination": "/[lang]/peptide/[file].segments/!KHN0b3JlKQ/$d$lang/!KHNob3Ap/peptide/$d$file$segment",
+          "source": "^/(?<nxtPlang>[^/]+?)/peptide/(?<nxtPfile>[^/]+?)\\.segments/!KHN0b3JlKQ/\\$d\\$lang/!KHNob3Ap/peptide/\\$d\\$file(?<segment>/__PAGE__\\.segment\\.rsc|\\.segment\\.rsc)(?:/)?$",
+          "routeKeys": {
+            "nxtPlang": "nxtPlang",
+            "nxtPfile": "nxtPfile"
+          }
+        }
+      ]
+    },
+    {
+      "page": "/[lang]/product-lookup",
+      "regex": "^/([^/]+?)/product\\-lookup(?:/)?$",
+      "routeKeys": {
+        "nxtPlang": "nxtPlang"
+      },
+      "namedRegex": "^/(?<nxtPlang>[^/]+?)/product\\-lookup(?:/)?$",
+      "prefetchSegmentDataRoutes": [
+        {
+          "destination": "/[lang]/product-lookup.segments/!KHN0b3JlKQ/$d$lang/!KHNob3Ap/product-lookup$segment",
+          "source": "^/(?<nxtPlang>[^/]+?)/product\\-lookup\\.segments/!KHN0b3JlKQ/\\$d\\$lang/!KHNob3Ap/product\\-lookup(?<segment>/__PAGE__\\.segment\\.rsc|\\.segment\\.rsc)(?:/)?$",
+          "routeKeys": {
+            "nxtPlang": "nxtPlang"
+          }
+        }
+      ]
+    },
+    {
+      "page": "/[lang]/reconstitution-calculator",
+      "regex": "^/([^/]+?)/reconstitution\\-calculator(?:/)?$",
+      "routeKeys": {
+        "nxtPlang": "nxtPlang"
+      },
+      "namedRegex": "^/(?<nxtPlang>[^/]+?)/reconstitution\\-calculator(?:/)?$",
+      "prefetchSegmentDataRoutes": [
+        {
+          "destination": "/[lang]/reconstitution-calculator.segments/!KHN0b3JlKQ/$d$lang/!KHNob3Ap/reconstitution-calculator$segment",
+          "source": "^/(?<nxtPlang>[^/]+?)/reconstitution\\-calculator\\.segments/!KHN0b3JlKQ/\\$d\\$lang/!KHNob3Ap/reconstitution\\-calculator(?<segment>/__PAGE__\\.segment\\.rsc|\\.segment\\.rsc)(?:/)?$",
+          "routeKeys": {
+            "nxtPlang": "nxtPlang"
+          }
+        }
+      ]
+    },
+    {
+      "page": "/[lang]/register",
+      "regex": "^/([^/]+?)/register(?:/)?$",
+      "routeKeys": {
+        "nxtPlang": "nxtPlang"
+      },
+      "namedRegex": "^/(?<nxtPlang>[^/]+?)/register(?:/)?$",
+      "prefetchSegmentDataRoutes": [
+        {
+          "destination": "/[lang]/register.segments/!KHN0b3JlKQ/$d$lang/register$segment",
+          "source": "^/(?<nxtPlang>[^/]+?)/register\\.segments/!KHN0b3JlKQ/\\$d\\$lang/register(?<segment>/__PAGE__\\.segment\\.rsc|\\.segment\\.rsc)(?:/)?$",
+          "routeKeys": {
+            "nxtPlang": "nxtPlang"
+          }
+        }
+      ]
+    },
+    {
+      "page": "/[lang]/reset-password",
+      "regex": "^/([^/]+?)/reset\\-password(?:/)?$",
+      "routeKeys": {
+        "nxtPlang": "nxtPlang"
+      },
+      "namedRegex": "^/(?<nxtPlang>[^/]+?)/reset\\-password(?:/)?$",
+      "prefetchSegmentDataRoutes": [
+        {
+          "destination": "/[lang]/reset-password.segments/!KHN0b3JlKQ/$d$lang/reset-password$segment",
+          "source": "^/(?<nxtPlang>[^/]+?)/reset\\-password\\.segments/!KHN0b3JlKQ/\\$d\\$lang/reset\\-password(?<segment>/__PAGE__\\.segment\\.rsc|\\.segment\\.rsc)(?:/)?$",
+          "routeKeys": {
+            "nxtPlang": "nxtPlang"
+          }
+        }
+      ]
+    },
+    {
+      "page": "/[lang]/vial-duration-calculator",
+      "regex": "^/([^/]+?)/vial\\-duration\\-calculator(?:/)?$",
+      "routeKeys": {
+        "nxtPlang": "nxtPlang"
+      },
+      "namedRegex": "^/(?<nxtPlang>[^/]+?)/vial\\-duration\\-calculator(?:/)?$",
+      "prefetchSegmentDataRoutes": [
+        {
+          "destination": "/[lang]/vial-duration-calculator.segments/!KHN0b3JlKQ/$d$lang/!KHNob3Ap/vial-duration-calculator$segment",
+          "source": "^/(?<nxtPlang>[^/]+?)/vial\\-duration\\-calculator\\.segments/!KHN0b3JlKQ/\\$d\\$lang/!KHNob3Ap/vial\\-duration\\-calculator(?<segment>/__PAGE__\\.segment\\.rsc|\\.segment\\.rsc)(?:/)?$",
+          "routeKeys": {
+            "nxtPlang": "nxtPlang"
+          }
+        }
+      ]
+    },
+    {
+      "sourcePage": "/[lang]/warehouse/[code]",
+      "page": "/en/warehouse/[code]",
+      "regex": "^/en/warehouse/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPcode": "nxtPcode"
+      },
+      "namedRegex": "^/en/warehouse/(?<nxtPcode>[^/]+?)(?:/)?$",
+      "skipInternalRouting": true,
+      "prefetchSegmentDataRoutes": [
+        {
+          "destination": "/en/warehouse/[code].segments/!KHN0b3JlKQ/$d$lang/!KHNob3Ap/warehouse/$d$code$segment",
+          "source": "^/en/warehouse/(?<nxtPcode>[^/]+?)\\.segments/!KHN0b3JlKQ/\\$d\\$lang/!KHNob3Ap/warehouse/\\$d\\$code(?<segment>/__PAGE__\\.segment\\.rsc|\\.segment\\.rsc)(?:/)?$",
+          "routeKeys": {
+            "nxtPcode": "nxtPcode"
+          }
+        }
+      ]
+    },
+    {
+      "sourcePage": "/[lang]/warehouse/[code]",
+      "page": "/es/warehouse/[code]",
+      "regex": "^/es/warehouse/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPcode": "nxtPcode"
+      },
+      "namedRegex": "^/es/warehouse/(?<nxtPcode>[^/]+?)(?:/)?$",
+      "skipInternalRouting": true,
+      "prefetchSegmentDataRoutes": [
+        {
+          "destination": "/es/warehouse/[code].segments/!KHN0b3JlKQ/$d$lang/!KHNob3Ap/warehouse/$d$code$segment",
+          "source": "^/es/warehouse/(?<nxtPcode>[^/]+?)\\.segments/!KHN0b3JlKQ/\\$d\\$lang/!KHNob3Ap/warehouse/\\$d\\$code(?<segment>/__PAGE__\\.segment\\.rsc|\\.segment\\.rsc)(?:/)?$",
+          "routeKeys": {
+            "nxtPcode": "nxtPcode"
+          }
+        }
+      ]
+    },
+    {
+      "sourcePage": "/[lang]/warehouse/[code]",
+      "page": "/pt/warehouse/[code]",
+      "regex": "^/pt/warehouse/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPcode": "nxtPcode"
+      },
+      "namedRegex": "^/pt/warehouse/(?<nxtPcode>[^/]+?)(?:/)?$",
+      "skipInternalRouting": true,
+      "prefetchSegmentDataRoutes": [
+        {
+          "destination": "/pt/warehouse/[code].segments/!KHN0b3JlKQ/$d$lang/!KHNob3Ap/warehouse/$d$code$segment",
+          "source": "^/pt/warehouse/(?<nxtPcode>[^/]+?)\\.segments/!KHN0b3JlKQ/\\$d\\$lang/!KHNob3Ap/warehouse/\\$d\\$code(?<segment>/__PAGE__\\.segment\\.rsc|\\.segment\\.rsc)(?:/)?$",
+          "routeKeys": {
+            "nxtPcode": "nxtPcode"
+          }
+        }
+      ]
+    },
+    {
+      "page": "/[lang]/warehouse/[code]",
+      "regex": "^/([^/]+?)/warehouse/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPlang": "nxtPlang",
+        "nxtPcode": "nxtPcode"
+      },
+      "namedRegex": "^/(?<nxtPlang>[^/]+?)/warehouse/(?<nxtPcode>[^/]+?)(?:/)?$",
+      "prefetchSegmentDataRoutes": [
+        {
+          "destination": "/[lang]/warehouse/[code].segments/!KHN0b3JlKQ/$d$lang/!KHNob3Ap/warehouse/$d$code$segment",
+          "source": "^/(?<nxtPlang>[^/]+?)/warehouse/(?<nxtPcode>[^/]+?)\\.segments/!KHN0b3JlKQ/\\$d\\$lang/!KHNob3Ap/warehouse/\\$d\\$code(?<segment>/__PAGE__\\.segment\\.rsc|\\.segment\\.rsc)(?:/)?$",
+          "routeKeys": {
+            "nxtPlang": "nxtPlang",
+            "nxtPcode": "nxtPcode"
+          }
+        }
+      ]
+    }
+  ],
+  "staticRoutes": [
+    {
+      "page": "/_global-error",
+      "regex": "^/_global\\-error(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_global\\-error(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/admin",
+      "regex": "^/admin(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin(?:/)?$"
+    },
+    {
+      "page": "/admin/affiliates",
+      "regex": "^/admin/affiliates(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/affiliates(?:/)?$"
+    },
+    {
+      "page": "/admin/customers",
+      "regex": "^/admin/customers(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/customers(?:/)?$"
+    },
+    {
+      "page": "/admin/login",
+      "regex": "^/admin/login(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/login(?:/)?$"
+    },
+    {
+      "page": "/admin/orders",
+      "regex": "^/admin/orders(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/orders(?:/)?$"
+    },
+    {
+      "page": "/admin/products",
+      "regex": "^/admin/products(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/products(?:/)?$"
+    },
+    {
+      "page": "/admin/reviews",
+      "regex": "^/admin/reviews(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/reviews(?:/)?$"
+    },
+    {
+      "page": "/admin/settings",
+      "regex": "^/admin/settings(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/settings(?:/)?$"
+    },
+    {
+      "page": "/admin/shipping",
+      "regex": "^/admin/shipping(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/shipping(?:/)?$"
+    },
+    {
+      "page": "/auth/google",
+      "regex": "^/auth/google(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/auth/google(?:/)?$"
+    },
+    {
+      "page": "/auth/google/callback",
+      "regex": "^/auth/google/callback(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/auth/google/callback(?:/)?$"
+    },
+    {
+      "page": "/robots.txt",
+      "regex": "^/robots\\.txt(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/robots\\.txt(?:/)?$"
+    },
+    {
+      "page": "/sitemap.xml",
+      "regex": "^/sitemap\\.xml(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/sitemap\\.xml(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "rsc",
+    "varyHeader": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "prefetchHeader": "next-router-prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSegmentHeader": "next-router-segment-prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments",
+    "clientParamParsing": true,
+    "dynamicRSCPrerender": true
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  },
+  "ppr": {
+    "chain": {
+      "headers": {
+        "next-resume": "1"
+      }
+    }
+  }
+}

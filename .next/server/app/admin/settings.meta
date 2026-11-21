@@ -1,0 +1,51 @@
+{
+  "status": 200,
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/(admin)/layout,_N_T_/(admin)/admin/layout,_N_T_/(admin)/admin/(panel)/layout,_N_T_/(admin)/admin/(panel)/settings/layout,_N_T_/(admin)/admin/(panel)/settings/page,_N_T_/admin/settings"
+  },
+  "postponed": "2755:[1,{\"nextSegmentId\":2,\"rootFormatContext\":{\"insertionMode\":0,\"selectedValue\":null,\"tagScope\":0,\"viewTransition\":null},\"progressiveChunkSize\":12800,\"resumableState\":{\"idPrefix\":\"\",\"nextFormID\":0,\"streamingFormat\":0,\"instructions\":96,\"hasBody\":true,\"hasHtml\":true,\"unknownResources\":{},\"dnsResources\":{},\"connectResources\":{\"default\":{},\"anonymous\":{},\"credentials\":{}},\"imageResources\":{},\"styleResources\":{\"/_next/static/chunks/39o_pk303-_vb.css\":null},\"scriptResources\":{\"/_next/static/chunks/2f4ec9l3ry_5h.js\":null,\"/_next/static/chunks/44bax-4eob5k0.js\":null,\"/_next/static/chunks/1tijzc831_5jv.js\":null,\"/_next/static/chunks/2qq9afzcih227.js\":null,\"/_next/static/chunks/3t6i_3lvi_934.js\":null,\"/_next/static/chunks/turbopack-2u1d16houkiyo.js\":null,\"/_next/static/chunks/0wj0noag-9_fs.js\":null,\"/_next/static/chunks/3dt1gfzop55yq.js\":null,\"/_next/static/chunks/0sfxpqbn__j0w.js\":null},\"moduleUnknownResources\":{},\"moduleScriptResources\":{\"/_next/static/chunks/2f4ec9l3ry_5h.js\":null}},\"replayNodes\":[[\"sl\",0,[[\"Context\",0,[[\"Context\",0,[[\"ServerInsertedHTMLProvider\",0,[[\"Context\",0,[[\"il\",0,[[\"aW\",0,[[\"aV\",0,[[\"az\",0,[[\"io\",0,[[\"Fragment\",0,[[\"Context\",2,[[\"Context\",0,[[\"Context\",0,[[\"Context\",0,[[\"Context\",0,[[\"Context\",0,[[\"Context\",0,[[\"aW\",0,[[\"aV\",0,[[\"az\",0,[[\"as\",0,[[\"ai\",0,[[\"__next_root_layout_boundary__\",1,[[\"Fragment\",\"c\",[[null,1,[[\"Activity\",\"(admin)\",[[\"Context\",\"(admin)\",[[null,2,[[\"Fragment\",0,[[\"E\",0,[[\"D\",0,[[\"Fragment\",0,[[\"n\",0,[[\"Fragment\",0,[[\"G\",0,[[\"Fragment\",0,[[null,0,[[\"l\",0,[[\"x\",0,[[\"w\",0,[[\"F\",0,[[\"Context\",0,[[\"Fragment\",\"c\",[[\"html\",1,[[\"body\",0,[[\"Suspense\",0,[[null,0,[[\"Activity\",\"admin\",[[\"Context\",\"admin\",[[null,2,[[\"Fragment\",0,[[\"E\",0,[[\"D\",0,[[\"Fragment\",0,[[\"n\",0,[[\"Fragment\",0,[[\"G\",0,[[\"Fragment\",0,[[null,0,[[\"l\",0,[[\"x\",0,[[\"w\",0,[[\"F\",0,[[\"Context\",0,[[\"Fragment\",\"c\",[[null,1,[[\"Activity\",\"(panel)\",[[\"Context\",\"(panel)\",[[null,2,[[\"Fragment\",0,[[\"E\",0,[[\"D\",0,[[\"Fragment\",0,[[\"n\",0,[[\"Fragment\",0,[[\"G\",0,[[\"Fragment\",0,[[null,0,[[\"Fragment\",0,[[\"x\",0,[[\"w\",0,[[\"F\",0,[[\"Context\",0,[[null,0,[[\"Context\",0,[[\"Fragment\",\"c\",[],{\"1\":1}]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null,[\"Suspense Fallback\",0,[],null],0]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],\"replaySlots\":null}]null",
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/!KGFkbWluKQ/admin/!KHBhbmVsKQ/settings/__PAGE__"
+  ],
+  "prefetchHints": {
+    "hints": 49216,
+    "slots": {
+      "children": {
+        "hints": 49248,
+        "slots": {
+          "children": {
+            "hints": 49248,
+            "slots": {
+              "children": {
+                "hints": 49248,
+                "slots": {
+                  "children": {
+                    "hints": 49248,
+                    "slots": {
+                      "children": {
+                        "hints": 49312,
+                        "slots": null
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "routeCache": {
+    "key": "/route-cache/APP_PAGE/f79c7400d7169bcc0dd874b0e3275833cc2d98b128701eb7865cf56cece7a0ec/$/admin/settings",
+    "owner": {
+      "kind": "APP_PAGE",
+      "sourceRoute": "/(admin)/admin/(panel)/settings/page"
+    },
+    "isFallback": false
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1795193451630,
+      "tag": "0000_dusty_mach_iv",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1795200494975,
+      "tag": "0001_faulty_skin",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1795201159559,
+      "tag": "0002_strange_speedball",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1795253843121,
+      "tag": "0003_v2",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "6",
+      "when": 1795270129492,
+      "tag": "0004_nice_sheva_callister",
+      "breakpoints": true
+    }
+  ]
+}
