@@ -35,7 +35,10 @@ jobs:
 
       # Pages are prerendered from the DB at build time: build against a freshly seeded copy of _capture.
       # The server's real DB is never touched here; the app migrates it itself at start.
-      - run: npm run db:migrate && npm run db:seed
+      # A copy of this catalog-only DB (no admin, no orders) ships as initial-data/ for the server's first start.
+      - run: |
+          npm run db:migrate && npm run db:seed
+          mkdir -p initial-data && cp data/lppeptide.db initial-data/
 
       - name: Build
         run: |
@@ -49,6 +52,8 @@ jobs:
           cp -r public "$B/"
           cp -r .next/static "$B/.next/"
           cp -r drizzle "$B/"
+          cp -r deploy/initial-uploads initial-data/uploads
+          cp -r initial-data "$B/"
           cp deploy/.cpanel.yml "$B/"
 
       - name: Commit to deploy branch

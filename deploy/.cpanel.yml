@@ -5,6 +5,6 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/alluiukz/lppeptide-app
     - /bin/mkdir -p $DEPLOYPATH/tmp
-    - /bin/rm -rf $DEPLOYPATH/.next $DEPLOYPATH/node_modules $DEPLOYPATH/drizzle
-    - /bin/cp -R .next node_modules public drizzle server.js package.json $DEPLOYPATH/
+    - /bin/rm -rf $DEPLOYPATH/.next $DEPLOYPATH/node_modules $DEPLOYPATH/drizzle $DEPLOYPATH/initial-data
+    - /bin/cp -R .next node_modules public drizzle initial-data server.js package.json $DEPLOYPATH/
     - /bin/touch $DEPLOYPATH/tmp/restart.txt
