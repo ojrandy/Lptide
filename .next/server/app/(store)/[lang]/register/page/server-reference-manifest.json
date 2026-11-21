@@ -1,6 +1,6 @@
 {
   "node": {
-    "0059371ef52783ea664241cead0a15d27ae9b6f4c9": {
+    "00420c2b84496fdba05471ea24e1f21836d5e85a01": {
       "workers": {
         "app/(store)/[lang]/register/page": {
           "moduleId": 38408,
@@ -10,7 +10,7 @@
       "exportedName": "pullCart",
       "filename": "src/lib/actions/customer.ts"
     },
-    "40d8b0d480376fc124c38bab676226ea136d90f1fc": {
+    "40a037789de4ae91db0702ee5a63c99427ec346a0a": {
       "workers": {
         "app/(store)/[lang]/register/page": {
           "moduleId": 38408,
@@ -20,17 +20,7 @@
       "exportedName": "pushCart",
       "filename": "src/lib/actions/customer.ts"
     },
-    "807f6638461c6ff33c00a98d5f150da80a73ebf745": {
-      "workers": {
-        "app/(store)/[lang]/register/page": {
-          "moduleId": 38408,
-          "async": false
-        }
-      },
-      "exportedName": "$$RSC_SERVER_CACHE_0",
-      "filename": "src/lib/queries/settings.ts"
-    },
-    "8088c0d60522a556c721921c2bf8b51cc987e6d307": {
+    "800f242d5331e2970ecbb58babdb7630e86c96377e": {
       "workers": {
         "app/(store)/[lang]/register/page": {
           "moduleId": 38408,
@@ -40,7 +30,17 @@
       "exportedName": "$$RSC_SERVER_CACHE_1",
       "filename": "src/lib/queries/settings.ts"
     },
-    "60a61092391587c1aa2f8045e3560d6736685392b9": {
+    "80eaf978c4b001032c1b30bf2cb96874b33b0702bc": {
+      "workers": {
+        "app/(store)/[lang]/register/page": {
+          "moduleId": 38408,
+          "async": false
+        }
+      },
+      "exportedName": "$$RSC_SERVER_CACHE_0",
+      "filename": "src/lib/queries/settings.ts"
+    },
+    "603d55ca63b42bebdfe72ed6083c7d57ead1b1b4f4": {
       "workers": {
         "app/(store)/[lang]/register/page": {
           "moduleId": 38408,
@@ -50,7 +50,7 @@
       "exportedName": "deleteAddress",
       "filename": "src/lib/actions/customer.ts"
     },
-    "60d820c98c1b756278e7e478b24f7cae1b76d8a3b4": {
+    "6088b97e4d8f74062eff8e6b6595067f2722ee7e12": {
       "workers": {
         "app/(store)/[lang]/register/page": {
           "moduleId": 38408,
@@ -60,7 +60,7 @@
       "exportedName": "register",
       "filename": "src/lib/actions/customer.ts"
     },
-    "607fbb517c44b9d8146c159217c86084ed83853fe6": {
+    "6089025eb807967edeb5c40b9ca1ac88478396615c": {
       "workers": {
         "app/(store)/[lang]/register/page": {
           "moduleId": 38408,
@@ -70,7 +70,7 @@
       "exportedName": "requestPasswordReset",
       "filename": "src/lib/actions/customer.ts"
     },
-    "60e523a9f99a32f58efc1f5595b98bdb06e0200a92": {
+    "60ebe3c7e3fbac97ce14d816faf23cb1a8ea694f8f": {
       "workers": {
         "app/(store)/[lang]/register/page": {
           "moduleId": 38408,
@@ -80,7 +80,7 @@
       "exportedName": "resendVerification",
       "filename": "src/lib/actions/customer.ts"
     },
-    "60d1447590e3cb1e46daabbb2a60ea1a540a233c10": {
+    "60a817382dc9a3d869e637de6450a422a67f60ee7c": {
       "workers": {
         "app/(store)/[lang]/register/page": {
           "moduleId": 38408,
@@ -90,7 +90,7 @@
       "exportedName": "resetPassword",
       "filename": "src/lib/actions/customer.ts"
     },
-    "60446b5083ba727e5c7ab4cf6499992fdc1a5aceac": {
+    "60dd5b3e5415ba0c5baec79758fe933428a349b8ea": {
       "workers": {
         "app/(store)/[lang]/register/page": {
           "moduleId": 38408,
@@ -100,7 +100,7 @@
       "exportedName": "saveAddress",
       "filename": "src/lib/actions/customer.ts"
     },
-    "6000b21af13db04327c4db9dd46a99e5b2a86432f9": {
+    "602714d5f587f369804d2af7cd78bd32f4795e6397": {
       "workers": {
         "app/(store)/[lang]/register/page": {
           "moduleId": 38408,
@@ -110,7 +110,7 @@
       "exportedName": "signIn",
       "filename": "src/lib/actions/customer.ts"
     },
-    "609503feb778ea603352abc35eec74a1e3f91b0767": {
+    "608c8e96a12280af9d4ec61e0c0219f3c52e2a6d32": {
       "workers": {
         "app/(store)/[lang]/register/page": {
           "moduleId": 38408,

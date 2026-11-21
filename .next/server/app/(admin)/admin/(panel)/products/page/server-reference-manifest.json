@@ -1,6 +1,6 @@
 {
   "node": {
-    "0059371ef52783ea664241cead0a15d27ae9b6f4c9": {
+    "00420c2b84496fdba05471ea24e1f21836d5e85a01": {
       "workers": {
         "app/(admin)/admin/(panel)/products/page": {
           "moduleId": 43296,
@@ -10,7 +10,7 @@
       "exportedName": "pullCart",
       "filename": "src/lib/actions/customer.ts"
     },
-    "40d8b0d480376fc124c38bab676226ea136d90f1fc": {
+    "40a037789de4ae91db0702ee5a63c99427ec346a0a": {
       "workers": {
         "app/(admin)/admin/(panel)/products/page": {
           "moduleId": 43296,
@@ -20,17 +20,7 @@
       "exportedName": "pushCart",
       "filename": "src/lib/actions/customer.ts"
     },
-    "807f6638461c6ff33c00a98d5f150da80a73ebf745": {
-      "workers": {
-        "app/(admin)/admin/(panel)/products/page": {
-          "moduleId": 43296,
-          "async": false
-        }
-      },
-      "exportedName": "$$RSC_SERVER_CACHE_0",
-      "filename": "src/lib/queries/settings.ts"
-    },
-    "8088c0d60522a556c721921c2bf8b51cc987e6d307": {
+    "800f242d5331e2970ecbb58babdb7630e86c96377e": {
       "workers": {
         "app/(admin)/admin/(panel)/products/page": {
           "moduleId": 43296,
@@ -40,7 +30,17 @@
       "exportedName": "$$RSC_SERVER_CACHE_1",
       "filename": "src/lib/queries/settings.ts"
     },
-    "00a8a35987064dceb9d006ad7051612fd494acef54": {
+    "80eaf978c4b001032c1b30bf2cb96874b33b0702bc": {
+      "workers": {
+        "app/(admin)/admin/(panel)/products/page": {
+          "moduleId": 43296,
+          "async": false
+        }
+      },
+      "exportedName": "$$RSC_SERVER_CACHE_0",
+      "filename": "src/lib/queries/settings.ts"
+    },
+    "000e8314ea534ce5391b8b9a6a97ce59161e8b687e": {
       "workers": {
         "app/(admin)/admin/(panel)/products/page": {
           "moduleId": 43296,
@@ -50,7 +50,7 @@
       "exportedName": "logout",
       "filename": "src/lib/actions/auth.ts"
     },
-    "60715bc175c9a1e292c67f9070c444c443177f4a9c": {
+    "6019cf4b2083252330b324fba35d1aadbdb0f65308": {
       "workers": {
         "app/(admin)/admin/(panel)/products/page": {
           "moduleId": 43296,
@@ -60,7 +60,7 @@
       "exportedName": "changePassword",
       "filename": "src/lib/actions/auth.ts"
     },
-    "6094a3b7cafe08bb675e8d39722db2077198cf9fcb": {
+    "60d1bf4d490e302b4c44058627069305c49f853bd8": {
       "workers": {
         "app/(admin)/admin/(panel)/products/page": {
           "moduleId": 43296,
@@ -70,7 +70,7 @@
       "exportedName": "login",
       "filename": "src/lib/actions/auth.ts"
     },
-    "6054e4fb5016463bb5abad549e870a56ed8c264ecc": {
+    "60eec045197f5de712b6b4fc62fc9cc9fa205c927d": {
       "workers": {
         "app/(admin)/admin/(panel)/products/page": {
           "moduleId": 43296,
@@ -80,7 +80,7 @@
       "exportedName": "removeImage",
       "filename": "src/lib/actions/admin-products.ts"
     },
-    "600e5ae4e6fe3a5e596ae01864291dcd5ab635555b": {
+    "6056544df3e0ad05a611ce57f4df597850f7630bdd": {
       "workers": {
         "app/(admin)/admin/(panel)/products/page": {
           "moduleId": 43296,
@@ -90,7 +90,7 @@
       "exportedName": "saveBasics",
       "filename": "src/lib/actions/admin-products.ts"
     },
-    "60b38e3bfbc13a734b56a0786f17883cbf7ba4182e": {
+    "6045f6c5e17f44ea0c1ce14ba617100f44fd93ea91": {
       "workers": {
         "app/(admin)/admin/(panel)/products/page": {
           "moduleId": 43296,
@@ -100,7 +100,7 @@
       "exportedName": "saveContent",
       "filename": "src/lib/actions/admin-products.ts"
     },
-    "6016a0ddd0500c30ac9d8d68f3d8238f5fca1b4454": {
+    "60a986fb9f3fa3e3f12397e2a9fb6e33a323b77a49": {
       "workers": {
         "app/(admin)/admin/(panel)/products/page": {
           "moduleId": 43296,
@@ -110,7 +110,7 @@
       "exportedName": "savePrice",
       "filename": "src/lib/actions/admin-products.ts"
     },
-    "60036625b2ba5fb497facf8a104b472bc5cfbb4619": {
+    "6038de374eeb3eb640f5d9a3866d13116d8fbedcdf": {
       "workers": {
         "app/(admin)/admin/(panel)/products/page": {
           "moduleId": 43296,
@@ -120,7 +120,7 @@
       "exportedName": "setEnabled",
       "filename": "src/lib/actions/admin-products.ts"
     },
-    "60c2e3ae2e235cc058966fc35cbae16f833f085b87": {
+    "600fda48c2ce438f5b0c2248ec94974fd1cf36b72b": {
       "workers": {
         "app/(admin)/admin/(panel)/products/page": {
           "moduleId": 43296,
@@ -130,7 +130,7 @@
       "exportedName": "uploadCoa",
       "filename": "src/lib/actions/admin-products.ts"
     },
-    "605d217e41864fa70900206bee6339b7d46dd7b5a1": {
+    "6058bbc072729210441d7af2910e4bf7ae397f8cd9": {
       "workers": {
         "app/(admin)/admin/(panel)/products/page": {
           "moduleId": 43296,
