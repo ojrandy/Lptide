@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { lang } from "next/root-params";
 import { CartHydrator } from "@/components/store/cart-widgets";
 import { SiteFooter } from "@/components/store/SiteFooter";
+import { SmartsuppChat } from "@/components/store/SmartsuppChat";
 import { SupportWidget } from "@/components/store/SupportWidget";
 import { I18nProvider } from "@/i18n/client";
 import { HTML_LANG, isLocale, LOCALES } from "@/i18n/config";
@@ -46,6 +47,7 @@ export default async function StoreLayout({ children }: LayoutProps<"/[lang]">) 
           <SiteFooter />
           <SupportWidget />
         </I18nProvider>
+        <SmartsuppChat />
       </body>
     </html>
   );
