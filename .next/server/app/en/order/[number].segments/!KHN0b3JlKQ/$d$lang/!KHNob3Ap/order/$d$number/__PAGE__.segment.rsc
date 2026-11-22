@@ -1,11 +1,11 @@
 4:"$Sreact.fragment"
-5:"/_next/static/chunks/1yl3wmxrdu1-r.js"
+5:"/_next/static/chunks/23rzr4o9sr1sh.js"
 6:"/_next/static/chunks/1feaf7x9atxyg.js"
-7:"/_next/static/chunks/3gc47zirdt08v.js"
+7:"/_next/static/chunks/1m2r6aicizn9m.js"
 8:"/_next/static/chunks/2_wfe6cz2rmvg.js"
 9:I[5014,["$5","$6","$7","$8"],"default"]
 a:I[83128,["$5","$6","$7","$8"],"ContextMenu"]
-b:"/_next/static/chunks/0843wwuoy7rd8.js"
+b:"/_next/static/chunks/0dc3usjir10sp.js"
 c:I[48085,["$5","$6","$7","$8","$b"],"LocaleLink"]
 d:I[5500,["$5","$6","$7","$8"],"Image"]
 e:I[83128,["$5","$6","$7","$8"],"NavLink"]
@@ -37,7 +37,7 @@ f:I[63969,["$5","$6","$7","$8"],"SearchDialog"]
 28:C
 2b:X
 2b:T4,lang2b:C
-0:{"t":{"t":{"s":"","h":49232,"c":"$Q1"},"h":{"r":["$","$4","h",{"children":[null,["$","$L22",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","2",{"name":"theme-color","content":"#0b1e40"}]]}],["$","$L24",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$25",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Your order | LPPEPTIDE"}],["$","meta","1",{"name":"description","content":"Browse the LPPEPTIDE research catalog, choose a fulfillment warehouse, and review product documentation before ordering."}],["$","meta","2",{"name":"robots","content":"noindex, nofollow"}],["$","meta","3",{"property":"og:title","content":"Your order | LPPEPTIDE"}],["$","meta","4",{"property":"og:description","content":"Browse the LPPEPTIDE research catalog, choose a fulfillment warehouse, and review product documentation before ordering."}],["$","meta","5",{"property":"og:site_name","content":"LPPEPTIDE"}],["$","meta","6",{"property":"og:image","content":"https://lppeptide.co/brand/lppeptide-logo-center.png"}],["$","meta","7",{"property":"og:type","content":"website"}],["$","meta","8",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","9",{"name":"twitter:title","content":"Your order | LPPEPTIDE"}],["$","meta","10",{"name":"twitter:description","content":"Browse the LPPEPTIDE research catalog, choose a fulfillment warehouse, and review product documentation before ordering."}],["$","meta","11",{"name":"twitter:image","content":"https://lppeptide.co/brand/lppeptide-logo-center.png"}],["$","link","12",{"rel":"icon","href":"/favicon.ico"}],["$","$L26","13",{}]]}]}],null]}],null]}],"p":"$@27","v":"$28","s":"$14"}},"a":"$@29","u":"$@2a","b":"C2TZu8jfuuA6nmUKycdfY","r":"$2b"}
+0:{"t":{"t":{"s":"","h":49232,"c":"$Q1"},"h":{"r":["$","$4","h",{"children":[null,["$","$L22",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","2",{"name":"theme-color","content":"#0b1e40"}]]}],["$","$L24",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$25",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Your order | LPPEPTIDE"}],["$","meta","1",{"name":"description","content":"Browse the LPPEPTIDE research catalog, choose a fulfillment warehouse, and review product documentation before ordering."}],["$","meta","2",{"name":"robots","content":"noindex, nofollow"}],["$","meta","3",{"property":"og:title","content":"Your order | LPPEPTIDE"}],["$","meta","4",{"property":"og:description","content":"Browse the LPPEPTIDE research catalog, choose a fulfillment warehouse, and review product documentation before ordering."}],["$","meta","5",{"property":"og:site_name","content":"LPPEPTIDE"}],["$","meta","6",{"property":"og:image","content":"https://lppeptide.co/brand/lppeptide-logo-center.png"}],["$","meta","7",{"property":"og:type","content":"website"}],["$","meta","8",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","9",{"name":"twitter:title","content":"Your order | LPPEPTIDE"}],["$","meta","10",{"name":"twitter:description","content":"Browse the LPPEPTIDE research catalog, choose a fulfillment warehouse, and review product documentation before ordering."}],["$","meta","11",{"name":"twitter:image","content":"https://lppeptide.co/brand/lppeptide-logo-center.png"}],["$","link","12",{"rel":"icon","href":"/favicon.ico"}],["$","$L26","13",{}]]}]}],null]}],null]}],"p":"$@27","v":"$28","s":"$14"}},"a":"$@29","u":"$@2a","b":"Xbke_yQJumMiYxvV5-DeB","r":"$2b"}
 2c:I[57496,["$5","$6","$7","$8"],"CartCount"]
 2d:I[39756,["$20"],"default"]
 2e:I[37457,["$20"],"default"]
@@ -47,7 +47,7 @@ f:I[63969,["$5","$6","$7","$8"],"SearchDialog"]
 11:["$","$L2d",null,{"parallelRouterKey":"children","template":["$","$L2e",null,{}]}]
 16:["$","$4","c",{"children":[null,["$","$L2d",null,{"parallelRouterKey":"children","template":["$","$L2e",null,{}]}]]}]
 1a:["$","$4","c",{"children":[null,["$","$L2d",null,{"parallelRouterKey":"children","template":["$","$L2e",null,{}]}]]}]
-1d:["$","$4","c",{"children":[["$","div",null,{"className":"site-shell","children":["$","main",null,{"className":"cart-page","children":["$","$25",null,{"fallback":["$","header",null,{"className":"cart-heading","children":["$","h1",null,{"children":"Loading your order…"}]}],"children":"$L2f"}]}]}],[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/0gu4mu_i7uaoy.css","precedence":"next"}],["$","script","script-0",{"src":"/_next/static/chunks/0843wwuoy7rd8.js","async":true}]],["$","$L30",null,{"children":["$","$25",null,{"name":"Next.MetadataOutlet","children":"$@31"}]}]]}]
+1d:["$","$4","c",{"children":[["$","div",null,{"className":"site-shell","children":["$","main",null,{"className":"cart-page","children":["$","$25",null,{"fallback":["$","header",null,{"className":"cart-heading","children":["$","h1",null,{"children":"Loading your order…"}]}],"children":"$L2f"}]}]}],[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/0gu4mu_i7uaoy.css","precedence":"next"}],["$","script","script-0",{"src":"/_next/static/chunks/0dc3usjir10sp.js","async":true}]],["$","$L30",null,{"children":["$","$25",null,{"name":"Next.MetadataOutlet","children":"$@31"}]}]]}]
 2a:false
 31:null
 29:null
