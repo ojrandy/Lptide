@@ -11,10 +11,11 @@ const SMARTSUPP_KEY = "4708b9e8f232e8d88809ce7dca422ca8432c8798";
 export function SmartsuppChat() {
   return (
     <>
-      <Script id="smartsupp" strategy="lazyOnload">
+      {/* Not id="smartsupp": an element id becomes window.smartsupp, and the snippet would then skip loading. */}
+      <Script id="smartsupp-init" strategy="lazyOnload">
         {`var _smartsupp = window._smartsupp || {};
 _smartsupp.key = '${SMARTSUPP_KEY}';
-_smartsupp.alignX = 'left';
+_smartsupp.orientation = 'left';
 _smartsupp.offsetY = window.matchMedia('(max-width: 760px)').matches ? 84 : 16;
 window._smartsupp = _smartsupp;
 window.smartsupp||(function(d) {
