@@ -75,7 +75,7 @@ export function CompanyPage({ page, asideExtra }: { page: CompanyPageContent; as
           </div>
           {page.heroImage && (
             <div className="company-hero-media" aria-hidden="true">
-              <Image src={page.heroImage} alt="" width={640} height={480} sizes="(max-width: 760px) 100vw, 480px" priority />
+              <Image src={page.heroImage} alt="" width={640} height={480} sizes="(max-width: 760px) 100vw, 480px" preload fetchPriority="high" />
             </div>
           )}
         </section>

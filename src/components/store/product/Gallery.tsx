@@ -13,7 +13,7 @@ export function Gallery({ images, alt }: { images: string[]; alt: string }) {
   return (
     <div className="product-gallery">
       <div className="product-hero-image">
-        {images[i] && <Image src={images[i]} alt={alt} width={800} height={800} sizes="(max-width: 760px) 100vw, 480px" priority />}
+        {images[i] && <Image src={images[i]} alt={alt} width={800} height={800} sizes="(max-width: 760px) 100vw, 480px" preload fetchPriority="high" />}
         {many && (
           <>
             <button type="button" className="product-gallery-arrow product-gallery-arrow--previous" aria-label="Previous image" onClick={() => go(-1)}>

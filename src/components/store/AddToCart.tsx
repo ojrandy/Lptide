@@ -2,7 +2,7 @@
 
 import { ShoppingCart, X } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { useI18n } from "@/i18n/client";
 import { formatCents } from "@/lib/money";
 import { useCart } from "@/store/cart";
@@ -79,8 +79,8 @@ export function ChooseWarehouseButtons({
   const { t, href } = useI18n();
   const add = useAddToCart();
   const cartWarehouse = useCart((s) => (s.lines.length ? s.warehouseCode : null));
-  const dialog = useRef<HTMLDialogElement>(null);
-  const [then, setThen] = useState<"stay" | "cart">("stay");
+  // The picker is only mounted while open: a pre-rendered <dialog> per card was ~40% of /catalog/'s DOM.
+  const [picking, setPicking] = useState<"stay" | "cart" | null>(null);
   const [feedback, setFeedback] = useState("");
 
   const available = warehouses
@@ -91,7 +91,7 @@ export function ChooseWarehouseButtons({
   const finish = (code: string, next: "stay" | "cart") => {
     const w = warehouses.find((x) => x.code === code)!;
     if (!add(productId, code, w.name)) return;
-    dialog.current?.close();
+    setPicking(null);
     if (next === "cart") router.push(href("/cart/"));
     else setFeedback(t("card.addedFrom", { warehouse: w.name }));
   };
@@ -99,8 +99,7 @@ export function ChooseWarehouseButtons({
   const start = (next: "stay" | "cart") => {
     const preferred = inStock.find((x) => x.w.code === cartWarehouse) ?? (inStock.length === 1 ? inStock[0] : null);
     if (preferred) return finish(preferred.w.code, next);
-    setThen(next);
-    dialog.current?.showModal();
+    setPicking(next);
   };
 
   const disabled = inStock.length === 0;
@@ -117,34 +116,39 @@ export function ChooseWarehouseButtons({
       <p className="purchase-action-feedback" role="status" aria-live="polite">
         {feedback}
       </p>
-      <dialog
-        ref={dialog}
-        className="storefront-context-search lp-warehouse-picker"
-        aria-labelledby={`pick-${productId}`}
-        onClick={(e) => e.target === dialog.current && dialog.current.close()}
-      >
-        <div>
-          <button type="button" aria-label={t("common.close")} onClick={() => dialog.current?.close()}>
-            <X size={20} aria-hidden="true" />
-          </button>
-          <h2 id={`pick-${productId}`}>{t("card.chooseWarehouse")}</h2>
-          <p>{t("card.chooseWarehouseText", { name: productName })}</p>
-          <div className="lp-warehouse-picker-options">
-            {available.map(({ w, p }) => (
-              <button key={w.code} type="button" disabled={!p.inStock} onClick={() => finish(w.code, then)}>
-                <span>
-                  <strong>{w.name}</strong>
-                  <small>{w.tagline}</small>
-                </span>
-                <span>
-                  <strong>{formatCents(p.priceCents)}</strong>
-                  <small>{p.inStock ? t("common.inStock") : t("common.outStockShort")}</small>
-                </span>
-              </button>
-            ))}
+      {picking && (
+        <dialog
+          ref={(el) => {
+            if (el && !el.open) el.showModal();
+          }}
+          className="storefront-context-search lp-warehouse-picker"
+          aria-labelledby={`pick-${productId}`}
+          onClose={() => setPicking(null)}
+          onClick={(e) => e.target === e.currentTarget && setPicking(null)}
+        >
+          <div>
+            <button type="button" aria-label={t("common.close")} onClick={() => setPicking(null)}>
+              <X size={20} aria-hidden="true" />
+            </button>
+            <h2 id={`pick-${productId}`}>{t("card.chooseWarehouse")}</h2>
+            <p>{t("card.chooseWarehouseText", { name: productName })}</p>
+            <div className="lp-warehouse-picker-options">
+              {available.map(({ w, p }) => (
+                <button key={w.code} type="button" disabled={!p.inStock} onClick={() => finish(w.code, picking)}>
+                  <span>
+                    <strong>{w.name}</strong>
+                    <small>{w.tagline}</small>
+                  </span>
+                  <span>
+                    <strong>{formatCents(p.priceCents)}</strong>
+                    <small>{p.inStock ? t("common.inStock") : t("common.outStockShort")}</small>
+                  </span>
+                </button>
+              ))}
+            </div>
           </div>
-        </div>
-      </dialog>
+        </dialog>
+      )}
     </>
   );
 }

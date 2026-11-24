@@ -19,7 +19,7 @@ export async function LandingHeader() {
         <SearchDialog variant="landing" buttonClassName="header-icon-button" />
       </nav>
       <Link href={href("/")} className="landing-brand" aria-label={t("common.brandHome")}>
-        <Image src="/brand/lppeptide-logo-center.png" alt="LPPEPTIDE" width={44} height={44} priority />
+        <Image src="/brand/lppeptide-logo-center.png" alt="LPPEPTIDE" width={44} height={44} loading="eager" />
         <strong>LPPEPTIDE</strong>
       </Link>
       <nav className="primary-nav" aria-label={t("nav.primary")}>

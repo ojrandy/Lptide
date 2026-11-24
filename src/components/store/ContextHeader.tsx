@@ -24,7 +24,7 @@ export async function ContextHeader() {
       <header className="storefront-context-main">
         <ContextMenu warehouses={warehouses} />
         <Link href={href("/")} className="storefront-context-brand" aria-label={t("common.brandHome")}>
-          <Image src="/brand/lppeptide-logo-center.png" alt="LPPEPTIDE" width={38} height={38} priority />
+          <Image src="/brand/lppeptide-logo-center.png" alt="LPPEPTIDE" width={38} height={38} loading="eager" />
           <strong>LPPEPTIDE</strong>
         </Link>
         <nav className="storefront-context-primary" aria-label={t("nav.warehouseNav")}>

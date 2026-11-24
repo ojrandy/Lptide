@@ -94,13 +94,13 @@ export default async function HomePage() {
                       id={`warehouse-${warehouse.code}-product-rail`}
                       label={label}
                       heading={
-                        <div>
+                        <div key="heading">
                           <h3 id={titleId}>{label}</h3>
                           <p>{warehouseDispatch[warehouse.code] ?? warehouse.tagline}</p>
                         </div>
                       }
                       action={
-                        <Link href={`/warehouse/${warehouse.code.toLowerCase()}/`}>
+                        <Link key="action" href={`/warehouse/${warehouse.code.toLowerCase()}/`}>
                           View full inventory <ExternalLink size={14} aria-hidden="true" />
                         </Link>
                       }
