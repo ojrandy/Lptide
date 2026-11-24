@@ -1,6 +1,6 @@
 {
   "node": {
-    "00b71d128514a82dd845cbe6db1a4ce387f971ed2f": {
+    "00e1750c9403e95b09a96d53ca2b3ac9497231aebf": {
       "workers": {
         "app/(admin)/admin/(panel)/shipping/page": {
           "moduleId": 5460,
@@ -10,7 +10,7 @@
       "exportedName": "pullCart",
       "filename": "src/lib/actions/customer.ts"
     },
-    "40cc7fe3b1fd074f7ffa632e88d171edaf05a10948": {
+    "40100b05e7880ccf61d853946588ff3ed2a262c03f": {
       "workers": {
         "app/(admin)/admin/(panel)/shipping/page": {
           "moduleId": 5460,
@@ -20,17 +20,7 @@
       "exportedName": "pushCart",
       "filename": "src/lib/actions/customer.ts"
     },
-    "806dad0482741127baafc323a8caa1a074d8fee48c": {
-      "workers": {
-        "app/(admin)/admin/(panel)/shipping/page": {
-          "moduleId": 5460,
-          "async": false
-        }
-      },
-      "exportedName": "$$RSC_SERVER_CACHE_1",
-      "filename": "src/lib/queries/settings.ts"
-    },
-    "80c1ec24b31d2ee58ff59016c3ccac87cb2ae621f0": {
+    "8085c5f00543f6d55aa3096b6790176d7d1455bd70": {
       "workers": {
         "app/(admin)/admin/(panel)/shipping/page": {
           "moduleId": 5460,
@@ -40,7 +30,17 @@
       "exportedName": "$$RSC_SERVER_CACHE_0",
       "filename": "src/lib/queries/settings.ts"
     },
-    "00119d4fd30a34cebc975d054e841536686545fca4": {
+    "80f1b829adc51d6f37d8ca4e5d86cf8ce3d12889fd": {
+      "workers": {
+        "app/(admin)/admin/(panel)/shipping/page": {
+          "moduleId": 5460,
+          "async": false
+        }
+      },
+      "exportedName": "$$RSC_SERVER_CACHE_1",
+      "filename": "src/lib/queries/settings.ts"
+    },
+    "001cdc375423bc04acab935c4034d33a5724b3086f": {
       "workers": {
         "app/(admin)/admin/(panel)/shipping/page": {
           "moduleId": 5460,
@@ -50,17 +50,7 @@
       "exportedName": "logout",
       "filename": "src/lib/actions/auth.ts"
     },
-    "605d6db6faed2fac87270d7dcd3bc1e923436219c0": {
-      "workers": {
-        "app/(admin)/admin/(panel)/shipping/page": {
-          "moduleId": 5460,
-          "async": false
-        }
-      },
-      "exportedName": "login",
-      "filename": "src/lib/actions/auth.ts"
-    },
-    "60ab159f6bb1b53aba98bdf588335074ef100f7c42": {
+    "6065dffe828d3395e8e82a67dd006d59a1bea660c0": {
       "workers": {
         "app/(admin)/admin/(panel)/shipping/page": {
           "moduleId": 5460,
@@ -70,7 +60,17 @@
       "exportedName": "changePassword",
       "filename": "src/lib/actions/auth.ts"
     },
-    "600cb63b41fb4ec8ac1fea5f47c52d3d282041447a": {
+    "60e4d6d43147b4f051755b6888e134196b13718d88": {
+      "workers": {
+        "app/(admin)/admin/(panel)/shipping/page": {
+          "moduleId": 5460,
+          "async": false
+        }
+      },
+      "exportedName": "login",
+      "filename": "src/lib/actions/auth.ts"
+    },
+    "6060a0e5e0b26d4b1e1dd82fc1a51363b80fa611dc": {
       "workers": {
         "app/(admin)/admin/(panel)/shipping/page": {
           "moduleId": 5460,
@@ -80,7 +80,7 @@
       "exportedName": "deleteShippingRule",
       "filename": "src/lib/actions/admin-shipping.ts"
     },
-    "6086d9b31f6dc067bf5c39fdc78af998481ed9242c": {
+    "6035da29cb8738f82b3dd6a942cb7621bc41cc1655": {
       "workers": {
         "app/(admin)/admin/(panel)/shipping/page": {
           "moduleId": 5460,
@@ -90,7 +90,7 @@
       "exportedName": "previewShipping",
       "filename": "src/lib/actions/admin-shipping.ts"
     },
-    "602497989505894875a393d05f504ac2e75a377e76": {
+    "60488bbaea64865a9ebea052c2bed9512f4524a957": {
       "workers": {
         "app/(admin)/admin/(panel)/shipping/page": {
           "moduleId": 5460,

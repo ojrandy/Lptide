@@ -1,6 +1,6 @@
 {
   "node": {
-    "00b71d128514a82dd845cbe6db1a4ce387f971ed2f": {
+    "00e1750c9403e95b09a96d53ca2b3ac9497231aebf": {
       "workers": {
         "app/(store)/[lang]/(shop)/checkout/page": {
           "moduleId": 50077,
@@ -10,7 +10,7 @@
       "exportedName": "pullCart",
       "filename": "src/lib/actions/customer.ts"
     },
-    "40cc7fe3b1fd074f7ffa632e88d171edaf05a10948": {
+    "40100b05e7880ccf61d853946588ff3ed2a262c03f": {
       "workers": {
         "app/(store)/[lang]/(shop)/checkout/page": {
           "moduleId": 50077,
@@ -20,17 +20,7 @@
       "exportedName": "pushCart",
       "filename": "src/lib/actions/customer.ts"
     },
-    "806dad0482741127baafc323a8caa1a074d8fee48c": {
-      "workers": {
-        "app/(store)/[lang]/(shop)/checkout/page": {
-          "moduleId": 50077,
-          "async": false
-        }
-      },
-      "exportedName": "$$RSC_SERVER_CACHE_1",
-      "filename": "src/lib/queries/settings.ts"
-    },
-    "80c1ec24b31d2ee58ff59016c3ccac87cb2ae621f0": {
+    "8085c5f00543f6d55aa3096b6790176d7d1455bd70": {
       "workers": {
         "app/(store)/[lang]/(shop)/checkout/page": {
           "moduleId": 50077,
@@ -40,7 +30,17 @@
       "exportedName": "$$RSC_SERVER_CACHE_0",
       "filename": "src/lib/queries/settings.ts"
     },
-    "60b31c0c90c5e34ba947574ffaf8ed1069b0a1ff41": {
+    "80f1b829adc51d6f37d8ca4e5d86cf8ce3d12889fd": {
+      "workers": {
+        "app/(store)/[lang]/(shop)/checkout/page": {
+          "moduleId": 50077,
+          "async": false
+        }
+      },
+      "exportedName": "$$RSC_SERVER_CACHE_1",
+      "filename": "src/lib/queries/settings.ts"
+    },
+    "6031d53df057717c5b94aa0e9f01384b462eda0405": {
       "workers": {
         "app/(store)/[lang]/(shop)/checkout/page": {
           "moduleId": 50077,
@@ -50,7 +50,7 @@
       "exportedName": "placeOrder",
       "filename": "src/lib/actions/checkout.ts"
     },
-    "407e3120d5a2ce4d2da2acb86f966d7138bc078698": {
+    "408f776184767fd516b31dcc4ef4c2b0df4a613113": {
       "workers": {
         "app/(store)/[lang]/(shop)/checkout/page": {
           "moduleId": 50077,
