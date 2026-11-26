@@ -1,6 +1,6 @@
 {
   "node": {
-    "00e1750c9403e95b09a96d53ca2b3ac9497231aebf": {
+    "004436f3d87109f9950d324b955e6cb3063212217e": {
       "workers": {
         "app/(store)/[lang]/(shop)/category/[slug]/page": {
           "moduleId": 96139,
@@ -10,7 +10,7 @@
       "exportedName": "pullCart",
       "filename": "src/lib/actions/customer.ts"
     },
-    "40100b05e7880ccf61d853946588ff3ed2a262c03f": {
+    "40e27bb18dd6d2d11d70cb2139b10f6a8672a89c0c": {
       "workers": {
         "app/(store)/[lang]/(shop)/category/[slug]/page": {
           "moduleId": 96139,
@@ -20,7 +20,7 @@
       "exportedName": "pushCart",
       "filename": "src/lib/actions/customer.ts"
     },
-    "8085c5f00543f6d55aa3096b6790176d7d1455bd70": {
+    "806df04a484accfdd569b35ad2be0ee803a81e1781": {
       "workers": {
         "app/(store)/[lang]/(shop)/category/[slug]/page": {
           "moduleId": 96139,
@@ -30,7 +30,7 @@
       "exportedName": "$$RSC_SERVER_CACHE_0",
       "filename": "src/lib/queries/settings.ts"
     },
-    "80f1b829adc51d6f37d8ca4e5d86cf8ce3d12889fd": {
+    "80b231c3238a5246af697e59123cafa78a88ab34f7": {
       "workers": {
         "app/(store)/[lang]/(shop)/category/[slug]/page": {
           "moduleId": 96139,
@@ -40,17 +40,7 @@
       "exportedName": "$$RSC_SERVER_CACHE_1",
       "filename": "src/lib/queries/settings.ts"
     },
-    "805982cf0e8f3c41b10800da8b8acf9ca83d5d9109": {
-      "workers": {
-        "app/(store)/[lang]/(shop)/category/[slug]/page": {
-          "moduleId": 96139,
-          "async": false
-        }
-      },
-      "exportedName": "$$RSC_SERVER_CACHE_1",
-      "filename": "src/lib/queries/products.ts"
-    },
-    "80a831a19c5a4121568c9d981e26a5321cba3730b8": {
+    "80076d86aa7c82b1632a6ab2c034d12b4d8711c50e": {
       "workers": {
         "app/(store)/[lang]/(shop)/category/[slug]/page": {
           "moduleId": 96139,
@@ -60,7 +50,7 @@
       "exportedName": "$$RSC_SERVER_CACHE_0",
       "filename": "src/lib/queries/products.ts"
     },
-    "80de9e2a54d524f2225d3bd89141422f497514c3c6": {
+    "80175ef8f28499eecdec33b8af06047956f9beb87b": {
       "workers": {
         "app/(store)/[lang]/(shop)/category/[slug]/page": {
           "moduleId": 96139,
@@ -70,7 +60,17 @@
       "exportedName": "$$RSC_SERVER_CACHE_3",
       "filename": "src/lib/queries/products.ts"
     },
-    "c0c28ea1cfc2ccf4310c4e8a028c6628bea6bb30d1": {
+    "80c0b8aef713cdc41daaa2a6a21560cb292daed6f2": {
+      "workers": {
+        "app/(store)/[lang]/(shop)/category/[slug]/page": {
+          "moduleId": 96139,
+          "async": false
+        }
+      },
+      "exportedName": "$$RSC_SERVER_CACHE_1",
+      "filename": "src/lib/queries/products.ts"
+    },
+    "c07b4522d202c6bb8fb47db05fe07e48fdcfc377b6": {
       "workers": {
         "app/(store)/[lang]/(shop)/category/[slug]/page": {
           "moduleId": 96139,
@@ -80,7 +80,7 @@
       "exportedName": "$$RSC_SERVER_CACHE_2",
       "filename": "src/lib/queries/products.ts"
     },
-    "e0236076e13d8c2f079953141a8158daa12b5d32d7": {
+    "e033ceb144a119ecd900fa6c535312b72fa55f1a2b": {
       "workers": {
         "app/(store)/[lang]/(shop)/category/[slug]/page": {
           "moduleId": 96139,

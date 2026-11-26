@@ -35,9 +35,9 @@ R.c("server/chunks/ssr/src_app_(admin)_admin_(panel)_loading_tsx_0jim-t0udis1j._
 R.c("server/chunks/ssr/1oeh_server_app_(admin)_admin_(panel)_products_[id]_page_actions_0_jai3j_1pmff.js")
 R.c("server/chunks/ssr/src_lib_customer-auth_ts_1ejsqpnrowev6._.js")
 R.c("server/chunks/ssr/src_lib_affiliate_ts_0ga_ooghq0vqv._.js")
-R.c("server/chunks/ssr/src_lib_actions_admin-affiliates_ts_1bn9pz2kycael._.js")
-R.c("server/chunks/ssr/src_lib_actions_admin-products_ts_053hv31o-bq_i._.js")
 R.c("server/chunks/ssr/[root-of-the-server]__161twg5skajv2._.js")
+R.c("server/chunks/ssr/src_lib_actions_admin-products_ts_053hv31o-bq_i._.js")
+R.c("server/chunks/ssr/src_lib_actions_admin-affiliates_ts_1bn9pz2kycael._.js")
 R.c("server/chunks/ssr/[root-of-the-server]__1grfus_hcewqi._.js")
 R.m(92824)
 module.exports=R.m(92824).exports
