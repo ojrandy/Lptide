@@ -677,6 +677,20 @@
   }
 }
 
+/* Smartsupp's widget ignores _smartsupp.orientation and pins itself bottom-right with inline styles,
+   on top of .lp-support. Move it left: the bubble always, the opened window only above phone width
+   (on phones it may go full-screen). */
+#smartsupp-widget-container > div[style*="9999px"] {
+  left: 16px !important;
+  right: auto !important;
+}
+@media (min-width: 761px) {
+  #smartsupp-widget-container > div {
+    left: 16px !important;
+    right: auto !important;
+  }
+}
+
 /* Account pages with one card (register, password reset): centred instead of the two-column story layout. */
 .login-layout.lp-auth-single {
   display: grid;
