@@ -1,6 +1,6 @@
 {
   "node": {
-    "004436f3d87109f9950d324b955e6cb3063212217e": {
+    "00ebdd39a2aac8ca7a7beae56a536c969076b50593": {
       "workers": {
         "app/(admin)/admin/(panel)/orders/page": {
           "moduleId": 26395,
@@ -10,7 +10,7 @@
       "exportedName": "pullCart",
       "filename": "src/lib/actions/customer.ts"
     },
-    "40e27bb18dd6d2d11d70cb2139b10f6a8672a89c0c": {
+    "403694c403301584961e47049713f6fada7fdf7389": {
       "workers": {
         "app/(admin)/admin/(panel)/orders/page": {
           "moduleId": 26395,
@@ -20,17 +20,7 @@
       "exportedName": "pushCart",
       "filename": "src/lib/actions/customer.ts"
     },
-    "806df04a484accfdd569b35ad2be0ee803a81e1781": {
-      "workers": {
-        "app/(admin)/admin/(panel)/orders/page": {
-          "moduleId": 26395,
-          "async": false
-        }
-      },
-      "exportedName": "$$RSC_SERVER_CACHE_0",
-      "filename": "src/lib/queries/settings.ts"
-    },
-    "80b231c3238a5246af697e59123cafa78a88ab34f7": {
+    "80216c99f3a8d1641a1f4cddc5ce4c75999ba48817": {
       "workers": {
         "app/(admin)/admin/(panel)/orders/page": {
           "moduleId": 26395,
@@ -40,7 +30,17 @@
       "exportedName": "$$RSC_SERVER_CACHE_1",
       "filename": "src/lib/queries/settings.ts"
     },
-    "00bc1bf62795ac0e752eb5d032de9f17d9de09f112": {
+    "809cfd83290926a80954f25418ba61632ba772bfc5": {
+      "workers": {
+        "app/(admin)/admin/(panel)/orders/page": {
+          "moduleId": 26395,
+          "async": false
+        }
+      },
+      "exportedName": "$$RSC_SERVER_CACHE_0",
+      "filename": "src/lib/queries/settings.ts"
+    },
+    "00af0741039be3846820b9bc96d3ccaddd1882bf89": {
       "workers": {
         "app/(admin)/admin/(panel)/orders/page": {
           "moduleId": 26395,
@@ -50,7 +50,7 @@
       "exportedName": "logout",
       "filename": "src/lib/actions/auth.ts"
     },
-    "60a74d93c02454ce3f087a7fb01ad8fc473a5f4688": {
+    "60033e88060e946fdaf861afd3134638b985d80a30": {
       "workers": {
         "app/(admin)/admin/(panel)/orders/page": {
           "moduleId": 26395,
@@ -60,7 +60,7 @@
       "exportedName": "changePassword",
       "filename": "src/lib/actions/auth.ts"
     },
-    "60d070a2a81caede2ee492508f41a98226f509b039": {
+    "60940abe9a81ddafa42622d353c17dd1a059123481": {
       "workers": {
         "app/(admin)/admin/(panel)/orders/page": {
           "moduleId": 26395,

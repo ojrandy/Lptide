@@ -1,11 +1,11 @@
 4:"$Sreact.fragment"
 5:"/_next/static/chunks/23rzr4o9sr1sh.js"
 6:"/_next/static/chunks/1feaf7x9atxyg.js"
-7:"/_next/static/chunks/3h5z_d9drohms.js"
+7:"/_next/static/chunks/1upssb0i3yaq0.js"
 8:"/_next/static/chunks/2_wfe6cz2rmvg.js"
 9:I[5014,["$5","$6","$7","$8"],"default"]
 a:I[83128,["$5","$6","$7","$8"],"ContextMenu"]
-b:"/_next/static/chunks/2375sjpyqaugu.js"
+b:"/_next/static/chunks/2sude_pwq73c8.js"
 c:I[48085,["$5","$6","$7","$8","$b"],"LocaleLink"]
 d:I[5500,["$5","$6","$7","$8","$b"],"Image"]
 e:I[83128,["$5","$6","$7","$8"],"NavLink"]
@@ -37,7 +37,7 @@ f:I[63969,["$5","$6","$7","$8"],"SearchDialog"]
 28:T4,lang28:C
 2b:X
 2b:T4,lang2b:C
-0:{"t":{"t":{"s":"","h":49232,"c":"$Q1"},"h":{"r":["$","$4","h",{"children":[null,["$","$L22",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","2",{"name":"theme-color","content":"#0b1e40"}]]}],["$","$L24",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$25",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Shipping Policy | LPPEPTIDE"}],["$","meta","1",{"name":"description","content":"How LPPEPTIDE calculates shipping for United States, Australia, and Asia warehouse orders and helps customers track delivery."}],["$","link","2",{"rel":"canonical","href":"https://lppeptide.co/es/help/shipping/"}],["$","link","3",{"rel":"alternate","hrefLang":"en","href":"https://lppeptide.co/help/shipping/"}],["$","link","4",{"rel":"alternate","hrefLang":"es-ES","href":"https://lppeptide.co/es/help/shipping/"}],["$","link","5",{"rel":"alternate","hrefLang":"pt-BR","href":"https://lppeptide.co/pt/help/shipping/"}],["$","link","6",{"rel":"alternate","hrefLang":"x-default","href":"https://lppeptide.co/help/shipping/"}],["$","meta","7",{"property":"og:title","content":"Shipping Policy | LPPEPTIDE"}],["$","meta","8",{"property":"og:description","content":"How LPPEPTIDE calculates shipping for United States, Australia, and Asia warehouse orders and helps customers track delivery."}],["$","meta","9",{"property":"og:site_name","content":"LPPEPTIDE"}],["$","meta","10",{"property":"og:image","content":"https://lppeptide.co/brand/lppeptide-logo-center.png"}],["$","meta","11",{"property":"og:type","content":"website"}],["$","meta","12",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","13",{"name":"twitter:title","content":"Shipping Policy | LPPEPTIDE"}],["$","meta","14",{"name":"twitter:description","content":"How LPPEPTIDE calculates shipping for United States, Australia, and Asia warehouse orders and helps customers track delivery."}],["$","meta","15",{"name":"twitter:image","content":"https://lppeptide.co/brand/lppeptide-logo-center.png"}],["$","link","16",{"rel":"icon","href":"/favicon.ico"}],["$","$L26","17",{}]]}]}],null]}],null]}],"p":"$@27","v":"$28","s":"$14"}},"a":"$@29","u":"$@2a","b":"7aaqcl_steX3WL62bS0Rl","r":"$2b"}
+0:{"t":{"t":{"s":"","h":49232,"c":"$Q1"},"h":{"r":["$","$4","h",{"children":[null,["$","$L22",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","2",{"name":"theme-color","content":"#0b1e40"}]]}],["$","$L24",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$25",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Shipping Policy | LPPEPTIDE"}],["$","meta","1",{"name":"description","content":"How LPPEPTIDE calculates shipping for United States, Australia, and Asia warehouse orders and helps customers track delivery."}],["$","link","2",{"rel":"canonical","href":"https://lppeptide.co/es/help/shipping/"}],["$","link","3",{"rel":"alternate","hrefLang":"en","href":"https://lppeptide.co/help/shipping/"}],["$","link","4",{"rel":"alternate","hrefLang":"es-ES","href":"https://lppeptide.co/es/help/shipping/"}],["$","link","5",{"rel":"alternate","hrefLang":"pt-BR","href":"https://lppeptide.co/pt/help/shipping/"}],["$","link","6",{"rel":"alternate","hrefLang":"x-default","href":"https://lppeptide.co/help/shipping/"}],["$","meta","7",{"property":"og:title","content":"Shipping Policy | LPPEPTIDE"}],["$","meta","8",{"property":"og:description","content":"How LPPEPTIDE calculates shipping for United States, Australia, and Asia warehouse orders and helps customers track delivery."}],["$","meta","9",{"property":"og:site_name","content":"LPPEPTIDE"}],["$","meta","10",{"property":"og:image","content":"https://lppeptide.co/brand/lppeptide-logo-center.png"}],["$","meta","11",{"property":"og:type","content":"website"}],["$","meta","12",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","13",{"name":"twitter:title","content":"Shipping Policy | LPPEPTIDE"}],["$","meta","14",{"name":"twitter:description","content":"How LPPEPTIDE calculates shipping for United States, Australia, and Asia warehouse orders and helps customers track delivery."}],["$","meta","15",{"name":"twitter:image","content":"https://lppeptide.co/brand/lppeptide-logo-center.png"}],["$","link","16",{"rel":"icon","href":"/favicon.ico"}],["$","$L26","17",{}]]}]}],null]}],null]}],"p":"$@27","v":"$28","s":"$14"}},"a":"$@29","u":"$@2a","b":"UT7dl7gR9x-pwfYQnj6nD","r":"$2b"}
 2c:I[57496,["$5","$6","$7","$8"],"CartCount"]
 2d:I[39756,["$20"],"default"]
 2e:I[37457,["$20"],"default"]
@@ -61,7 +61,7 @@ f:I[63969,["$5","$6","$7","$8"],"SearchDialog"]
 38:["$","h2","15",{"children":"Lost or damaged shipments"}]
 39:["$","p","16",{"children":"If tracking has not updated for several business days, or the parcel arrives damaged, contact support with your order number and tracking number so the fulfillment team can review the shipment."}]
 3a:["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/2-ihftkav7_6b.css","precedence":"next"}]
-3b:["$","script","script-0",{"src":"/_next/static/chunks/2375sjpyqaugu.js","async":true}]
+3b:["$","script","script-0",{"src":"/_next/static/chunks/2sude_pwq73c8.js","async":true}]
 3c:["$","$L3d",null,{"children":["$","$25",null,{"name":"Next.MetadataOutlet","children":"$@3e"}]}]
 3e:null
 29:null

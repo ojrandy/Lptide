@@ -1,6 +1,6 @@
 {
   "node": {
-    "004436f3d87109f9950d324b955e6cb3063212217e": {
+    "00ebdd39a2aac8ca7a7beae56a536c969076b50593": {
       "workers": {
         "app/(admin)/admin/(panel)/affiliates/page": {
           "moduleId": 18019,
@@ -10,7 +10,7 @@
       "exportedName": "pullCart",
       "filename": "src/lib/actions/customer.ts"
     },
-    "40e27bb18dd6d2d11d70cb2139b10f6a8672a89c0c": {
+    "403694c403301584961e47049713f6fada7fdf7389": {
       "workers": {
         "app/(admin)/admin/(panel)/affiliates/page": {
           "moduleId": 18019,
@@ -20,17 +20,7 @@
       "exportedName": "pushCart",
       "filename": "src/lib/actions/customer.ts"
     },
-    "806df04a484accfdd569b35ad2be0ee803a81e1781": {
-      "workers": {
-        "app/(admin)/admin/(panel)/affiliates/page": {
-          "moduleId": 18019,
-          "async": false
-        }
-      },
-      "exportedName": "$$RSC_SERVER_CACHE_0",
-      "filename": "src/lib/queries/settings.ts"
-    },
-    "80b231c3238a5246af697e59123cafa78a88ab34f7": {
+    "80216c99f3a8d1641a1f4cddc5ce4c75999ba48817": {
       "workers": {
         "app/(admin)/admin/(panel)/affiliates/page": {
           "moduleId": 18019,
@@ -40,7 +30,17 @@
       "exportedName": "$$RSC_SERVER_CACHE_1",
       "filename": "src/lib/queries/settings.ts"
     },
-    "00bc1bf62795ac0e752eb5d032de9f17d9de09f112": {
+    "809cfd83290926a80954f25418ba61632ba772bfc5": {
+      "workers": {
+        "app/(admin)/admin/(panel)/affiliates/page": {
+          "moduleId": 18019,
+          "async": false
+        }
+      },
+      "exportedName": "$$RSC_SERVER_CACHE_0",
+      "filename": "src/lib/queries/settings.ts"
+    },
+    "00af0741039be3846820b9bc96d3ccaddd1882bf89": {
       "workers": {
         "app/(admin)/admin/(panel)/affiliates/page": {
           "moduleId": 18019,
@@ -50,7 +50,7 @@
       "exportedName": "logout",
       "filename": "src/lib/actions/auth.ts"
     },
-    "60a74d93c02454ce3f087a7fb01ad8fc473a5f4688": {
+    "60033e88060e946fdaf861afd3134638b985d80a30": {
       "workers": {
         "app/(admin)/admin/(panel)/affiliates/page": {
           "moduleId": 18019,
@@ -60,7 +60,7 @@
       "exportedName": "changePassword",
       "filename": "src/lib/actions/auth.ts"
     },
-    "60d070a2a81caede2ee492508f41a98226f509b039": {
+    "60940abe9a81ddafa42622d353c17dd1a059123481": {
       "workers": {
         "app/(admin)/admin/(panel)/affiliates/page": {
           "moduleId": 18019,
@@ -70,7 +70,7 @@
       "exportedName": "login",
       "filename": "src/lib/actions/auth.ts"
     },
-    "60a461ce32b56158187e7a34dd70882cd96ffcaa68": {
+    "609e135062a884dd86118c97648ec12355f84a6f1b": {
       "workers": {
         "app/(admin)/admin/(panel)/affiliates/page": {
           "moduleId": 18019,
@@ -80,7 +80,7 @@
       "exportedName": "decideAffiliate",
       "filename": "src/lib/actions/admin-affiliates.ts"
     },
-    "600e8b5c1cd037ebeb1e2d462bc363a3c20fc5ba21": {
+    "6046540d947306dfd4b2726ee84d84251b2e79e01e": {
       "workers": {
         "app/(admin)/admin/(panel)/affiliates/page": {
           "moduleId": 18019,
@@ -90,7 +90,7 @@
       "exportedName": "recordPayout",
       "filename": "src/lib/actions/admin-affiliates.ts"
     },
-    "609573592fff112aedc22cb154c9e28b8eef82d5d3": {
+    "6033762930bb2976e7ffbe4c17b31c3b9fa22f24bd": {
       "workers": {
         "app/(admin)/admin/(panel)/affiliates/page": {
           "moduleId": 18019,
@@ -100,7 +100,7 @@
       "exportedName": "saveAffiliateRules",
       "filename": "src/lib/actions/admin-affiliates.ts"
     },
-    "6079965bde2440797d1f6de89793bdced19f3ef28f": {
+    "60792a4e4a00e9d0cc8bc6c335afb6a32bd7ec1aa5": {
       "workers": {
         "app/(admin)/admin/(panel)/affiliates/page": {
           "moduleId": 18019,
@@ -110,7 +110,7 @@
       "exportedName": "moderateQuestion",
       "filename": "src/lib/actions/admin-reviews.ts"
     },
-    "6062bf76db778fc0a056e8552b51f9b0aed9f5f35a": {
+    "60b36516e5eb317dba90a77b259244c30d62602ac2": {
       "workers": {
         "app/(admin)/admin/(panel)/affiliates/page": {
           "moduleId": 18019,
@@ -120,7 +120,7 @@
       "exportedName": "moderateReview",
       "filename": "src/lib/actions/admin-reviews.ts"
     },
-    "60dc1535587afa234d9b7183632d8e8f40ac6a4df6": {
+    "6003f74a16bc74398428ecfe773ecb7048e3dd3750": {
       "workers": {
         "app/(admin)/admin/(panel)/affiliates/page": {
           "moduleId": 18019,
