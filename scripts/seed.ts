@@ -21,6 +21,7 @@ import {
   warehouses,
   type Section,
 } from "../src/db/schema";
+import { WORLD_COUNTRIES } from "../src/content/countries";
 import { DEFAULT_SHIPPING_RULES } from "../src/lib/pricing";
 import { settingsSchema } from "../src/lib/settings-schema";
 
@@ -165,6 +166,9 @@ const TAGLINES: Record<string, string> = {
   AUSFC: "Ships to Australia only",
 };
 
+// The live CNFC list stops at ~40 countries; the client wants checkout open to every country (2026-11-26).
+const WORLDWIDE = new Set(["CNFC"]);
+
 // "Factory hot products by warehouse" order on the live home page (read from the live page, 2026-11-20).
 // BAC Water 3ml, BAC Water 10ml, RT10, RT20, RT30, TSM10, BPC-157 10mg, TR30, NAD+ 500mg, MOTS-C 10mg, GHK-CU 100mg.
 const HOT_PRODUCTS = [26049, 26050, 26001, 26002, 26003, 26010, 26021, 26007, 26015, 26017, 26028];
@@ -236,7 +240,9 @@ async function main() {
           code: w.warehouseCode,
           name: w.displayName,
           tagline: TAGLINES[w.warehouseCode] ?? "",
-          countries: w.supportedCountries.split(",").map((c) => c.trim()).filter(Boolean),
+          countries: WORLDWIDE.has(w.warehouseCode)
+            ? WORLD_COUNTRIES
+            : w.supportedCountries.split(",").map((c) => c.trim()).filter(Boolean),
           active: w.active,
           sort: w.sort,
         })),
